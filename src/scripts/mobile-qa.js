@@ -3,8 +3,10 @@
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const EDGE = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
-const OUT = '<home>/AppData/Local/hermes/profiles/engineer/cache/scratch/shots2';
+const OUT = process.env.MOBILE_QA_OUT ||
+  path.join(os.homedir(), 'AppData', 'Local', 'hermes', 'profiles', 'engineer', 'cache', 'scratch', 'shots2');
 const PORT = 9333;
 const BASE = 'http://127.0.0.1:5050';
 const PAGES = process.argv.slice(2).length ? process.argv.slice(2) : ['/', '/neighborhoods', '/neighborhoods/west-end', '/businesses', '/businesses/a-bread-affair-node-3698942864', '/search?q=coffee', '/itineraries', '/itineraries/chinatown-bar', '/claim', '/privacy', '/concierge'];
@@ -12,7 +14,7 @@ const WIDTHS = [375, 768];
 fs.mkdirSync(OUT, { recursive: true });
 
 (async () => {
-  const proc = spawn(EDGE, ['--headless=new', '--disable-gpu', `--remote-debugging-port=${PORT}`, '--user-data-dir=<home>/AppData/Local/hermes/profiles/engineer/cache/scratch/shots-profile2', 'about:blank'], { stdio: 'ignore' });
+  const proc = spawn(EDGE, ['--headless=new', '--disable-gpu', `--remote-debugging-port=${PORT}`, `--user-data-dir=${path.join(os.homedir(), 'AppData', 'Local', 'hermes', 'profiles', 'engineer', 'cache', 'scratch', 'shots-profile2')}`, 'about:blank'], { stdio: 'ignore' });
   await new Promise((r) => setTimeout(r, 2500));
   const targets = await (await fetch(`http://127.0.0.1:${PORT}/json`)).json();
   const page = targets.find((t) => t.type === 'page');
