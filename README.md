@@ -1,6 +1,6 @@
 # Vancouver Neighborhood Directory & Experience Curator (Plan 3.1)
 
-**Project Location:** `C:\Users\jayng\Documents\Projects\vancouver-directory-mvp`  
+**Project Location:** `<project-root>`  
 **Status:** ✅ **Fully Built & Server Running Locally** (`http://localhost:5050`)  
 **Stack:** Node.js + Express + Nunjucks + Prisma + SQLite  
 
@@ -16,7 +16,7 @@ A modern local directory and experience curator for Vancouver, British Columbia.
 
 ### 1. Run the Server
 ```bash
-cd "C:\Users\jayng\Documents\Projects\vancouver-directory-mvp"
+cd "<project-root>"
 
 # Install Node modules
 npm install

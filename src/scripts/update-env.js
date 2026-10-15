@@ -4,7 +4,7 @@
  * Sets / corrects the non-secret site settings so the file matches how the site actually runs:
  *   PORT=5050 (the site listens on 5050; 3000 was stale)
  *   SITE_NOINDEX=true
- *   CONTACT_EMAIL=jayngai718@gmail.com
+ *   CONTACT_EMAIL=contact@example.com
  *   PUBLIC_BASE_URL=http://127.0.0.1:5050  (change to the tunnel hostname once it exists)
  *
  * Existing keys are rewritten in place; missing keys are appended. Everything else, including
@@ -18,7 +18,7 @@ const ENV = path.join(__dirname, '..', '..', '.env');
 const WANTED = [
   ['PORT', '5050'],
   ['SITE_NOINDEX', 'true'],
-  ['CONTACT_EMAIL', 'jayngai718@gmail.com'],
+  ['CONTACT_EMAIL', 'contact@example.com'],
   ['PUBLIC_BASE_URL', 'http://127.0.0.1:5050']
 ];
 

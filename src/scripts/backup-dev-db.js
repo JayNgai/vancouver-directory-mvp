@@ -7,7 +7,7 @@
  * `backup()` C API, so VACUUM INTO is the supported equivalent.)
  *
  * Retention: 14 days. Older files are deleted after a successful backup.
- * Destination: C:\Users\jayng\AppData\Local\Directory-Services\backups (override with
+ * Destination: <home>\AppData\Local\Directory-Services\backups (override with
  * DIRECTORY_BACKUP_DIR).
  *
  * Restore note (also in the hosting runbook):
@@ -23,7 +23,7 @@ const { DatabaseSync } = require('node:sqlite');
 const DB = process.env.DIRECTORY_DB ||
   path.join(__dirname, '..', '..', 'prisma', 'dev.db');
 const OUT_DIR = process.env.DIRECTORY_BACKUP_DIR ||
-  'C:/Users/jayng/AppData/Local/Directory-Services/backups';
+  '<home>/AppData/Local/Directory-Services/backups';
 const RETENTION_DAYS = Number(process.env.DIRECTORY_BACKUP_RETENTION_DAYS || 14);
 
 function stamp() {

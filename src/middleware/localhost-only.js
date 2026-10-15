@@ -52,7 +52,7 @@ function isLoopback(req) {
 function adminAccess(req) {
   // Cloudflare Access authenticated users are trusted even through the tunnel.
   const cfAccessEmail = (req.headers['cf-access-authenticated-user-email'] || '').toLowerCase();
-  const allowedEmail = (process.env.CONTACT_EMAIL || 'jayngai718@gmail.com').toLowerCase();
+  const allowedEmail = (process.env.CONTACT_EMAIL || 'contact@example.com').toLowerCase();
   if (cfAccessEmail === allowedEmail) {
     return { allowed: true, reason: null, proxyHeaders: [] };
   }

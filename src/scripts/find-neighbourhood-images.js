@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const UA = 'VancouverDirectory/1.0 (jayngai718@gmail.com) editorial image review';
+const UA = 'VancouverDirectory/1.0 (contact@example.com) editorial image review';
 const NEIGHBOURHOODS = [
   ['Gastown', 'Gastown Vancouver'], ['Kitsilano', 'Kitsilano Vancouver'],
   ['Downtown Vancouver', 'Downtown Vancouver Robson Street'], ['Yaletown', 'Yaletown Vancouver'],

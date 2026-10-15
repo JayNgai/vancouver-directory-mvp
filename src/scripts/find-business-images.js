@@ -1,7 +1,7 @@
 /** Item 4 helper: Commons candidates for the 8 hand-verified businesses. Writes data/business-image-candidates.json. */
 const fs = require('fs');
 const path = require('path');
-const UA = 'VancouverDirectory/1.0 (jayngai718@gmail.com) business image review';
+const UA = 'VancouverDirectory/1.0 (contact@example.com) business image review';
 const NAMES = ['A Bread Affair', 'Blue Water Cafe', 'Caffe La Tana', 'Caffè Cittadella', 'Coffee Central Roasting', 'Dhamaka', 'Medina Cafe', 'The Alibi Room'];
 const ALLOWED = /^(CC0|Public domain|CC BY( \d\.\d)?|CC BY-SA( \d\.\d)?|PD)/i;
 const strip = (s) => String(s || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();

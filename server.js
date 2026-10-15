@@ -67,7 +67,7 @@ nunjucks.configure(path.join(__dirname, 'templates'), {
 });
 app.set('view engine', 'html');
 app.locals.noindex = indexingDisabled();
-app.locals.contactEmail = process.env.CONTACT_EMAIL || 'jayngai718@gmail.com';
+app.locals.contactEmail = process.env.CONTACT_EMAIL || 'contact@example.com';
 app.locals.publicBaseUrl = (process.env.PUBLIC_BASE_URL || `http://localhost:${PORT}`).replace(/\/$/, '');
 
 // Mount Routes
