@@ -1,0 +1,101 @@
+/* Mobile layer, shared by all three themes. Linked after the theme CSS in base.html.
+   Breakpoints: 768px (tablet) and 600px (phone). Uses the theme's own CSS variables where they exist. */
+
+/* Nothing should push the page sideways. */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, iframe { max-width: 100%; height: auto; }
+p, li, dd, dt, h1, h2, h3, h4 { overflow-wrap: anywhere; }
+
+/* Touch targets: at least 44px on anything tappable. */
+a.btn, .btn, .btn-claim, .page-link, .tag-badge, button, .pill, .pill-group a,
+.nav-links a, .breadcrumb a { min-height: 44px; display: inline-flex; align-items: center; }
+.nav-links a { padding: 6px 2px; }
+
+input[type="text"], input[type="search"], input[type="email"], input[type="tel"], textarea, select {
+    font-size: 16px; /* stops iOS zooming on focus */
+    min-height: 44px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container { padding: 0 16px; }
+    /* Nav stacks at tablet width too: logo, search, then a wrapping link row. */
+    .navbar { padding: 0.75rem 0; }
+    .nav-container { flex-direction: column; align-items: stretch; gap: 10px; }
+    .logo { font-size: 1.25rem; text-align: center; }
+    .navbar form[action="/search"] { margin: 0 !important; max-width: none !important; flex: none !important; width: 100%; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 4px 14px; font-size: 0.95rem; }
+    .nav-links li { display: flex; }
+
+    .hero { padding: 48px 16px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.05rem; }
+    .section-title { font-size: 1.6rem; margin: 28px 0 14px; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important; gap: 16px; }
+    /* Inline grids in neighbourhood and search templates: two columns at tablet width. */
+    [style*="minmax(280px"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .detail-card { padding: 22px; }
+    .detail-title { font-size: 1.7rem; }
+}
+
+@media (max-width: 600px) {
+    /* Navigation: logo, search and links stack. Search gets a full row. */
+    .navbar { padding: 0.75rem 0; }
+    .nav-container { flex-direction: column; align-items: stretch; gap: 10px; }
+    .logo { font-size: 1.25rem; text-align: center; }
+    .navbar form[action="/search"] { margin: 0 !important; max-width: none !important; flex: none !important; width: 100%; }
+    .navbar form[action="/search"] input { width: 100%; }
+    .nav-links {
+        flex-wrap: wrap; justify-content: center; gap: 4px 14px; font-size: 0.95rem;
+    }
+    .nav-links li { display: flex; }
+    .btn-claim { padding: 6px 14px; }
+
+    /* Single-column cards that fill the width. */
+    .grid, [style*="minmax(280px"], [style*="minmax(240px"] { grid-template-columns: 1fr !important; gap: 14px; }
+    .card { width: 100%; }
+    .card:hover { transform: none; }
+    .card-img { height: 170px; }
+    .card-body { padding: 18px; }
+    .card-title { font-size: 1.2rem; }
+
+    /* Search bars: the pill wrapper and its form stack vertically and fill the width.
+       The wrapper and form are inline-styled, so these selectors match their inline style text. */
+    div[style*="border-radius: 50px"][style*="display: flex"] { flex-direction: column !important; border-radius: 16px !important; max-width: 100% !important; padding: 8px !important; gap: 8px; }
+    form[style*="display: flex; width: 100%"] { flex-direction: column !important; width: 100% !important; gap: 8px; }
+    div[style*="border-radius: 50px"][style*="display: flex"] input,
+    form[style*="display: flex; width: 100%"] input,
+    div[style*="border-radius: 50px"][style*="display: flex"] button,
+    form[style*="display: flex; width: 100%"] button { width: 100% !important; border-radius: 12px !important; box-sizing: border-box; }
+    .navbar input[name="q"] { border-radius: 20px; }
+
+    /* Detail pages: definition lists become one column. */
+    .detail-list { grid-template-columns: 1fr; gap: 4px 0; }
+    .detail-list dt { margin-top: 10px; }
+    .detail-card { padding: 18px; }
+    .detail-actions { flex-direction: column; }
+    .detail-actions .btn, .detail-actions a { width: 100%; justify-content: center; }
+    .hours-table { max-width: 100%; }
+    .hours-table th { width: auto; white-space: nowrap; }
+    .hours-table td { white-space: normal; }
+    .breadcrumb { font-size: 0.85rem; }
+
+    /* Hero and headings. */
+    .hero { padding: 36px 16px; }
+    .hero h1 { font-size: 1.8rem; letter-spacing: -0.5px; }
+    .section-title { font-size: 1.4rem; }
+
+    /* Pagination stacks. */
+    .pagination-bar { flex-direction: column; align-items: stretch; text-align: center; }
+    .pagination-controls { justify-content: center; }
+
+    /* Tag and pill groups wrap. */
+    .tag-list, .pill-group { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* Admin tables scroll sideways in their own box, not the page. */
+    .admin-table { display: block; overflow-x: auto; white-space: nowrap; }
+
+    /* Footer */
+    .footer { padding: 28px 0; }
+    .footer p { font-size: 0.85rem; }
+}

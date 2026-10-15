@@ -1,0 +1,26 @@
+id,name,website,description,verdict,matched_words,ratio,checked_url,note
+osm-648735254,2010 Olympic Cauldron,,2010 Olympic Flame Cauldron,null,0/4,0.0,,no website to check against
+cmv77gjmt000gt42peavxg30d,49th Parallel Coffee & Lucky's Doughnuts,https://49thcoffee.com,Iconic Kitsilano coffee shop paired with freshly fried gourmet Lucky Doughnuts.,null,0/8,0.0,http://49thcoffee.com/about,page does not corroborate the description
+osm-node-12765481501,Bagheera,https://bagheera.bar,"Bagheera is a hidden speakeasy cocktail bar in Vancouver's Chinatown, accessed through the fictional Happy Valley Turf Club. With Jungle Book-themed decor, it offers expertly crafted cocktails and small Indian dishes in a cozy atmosphere.",null,3/25,0.12,http://bagheera.bar,fetch-failed-http-404
+osm-node-5031440452,Blnd Tger Dumplings,,"Front for the speakeasy bar Laowai, but also serves dumplings",null,0/4,0.0,,no website to check against
+osm-node-1383405341,Chocolate Arts,https://chocolatearts.com/,chocolate coffee and more...,null,0/1,0.0,http://chocolatearts.com/about,venue name not found on page
+osm-node-4405012018,"J, N & Z Deli",http://www.jnzdeli.com/,Homemade sausages and smoked meats.,null,0/4,0.0,https://www.jnzdeli.com/about,venue name not found on page
+osm-node-1151271753,JJ Bean,https://jjbeancoffee.com/,"This is the original JJ Bean location and serves only drinks, no food.",null,2/4,0.5,http://jjbeancoffee.com,fetch-failed-http-404
+cmv77gjn6000qt42p16j548ck,Kingyo Izakaya,,"Energetic Japanese tapas izakaya serving inventive dishes, bento boxes, and craft cocktails.",null,0/10,0.0,,no website to check against
+osm-node-12603425141,Kranky Café,https://www.krankycafe.ca,"A lively neighbourhood cafe in Mount Pleasant, offering locally roasted coffee, light breakfast and lunch options, along with freshly baked goods made in-house.",null,4/16,0.25,http://www.krankycafe.ca,fetch-failed-http-404
+osm-node-12765476601,Laowai,https://laowai.ca,"Laowai is a 1930s Shanghai-inspired speakeasy hidden behind the unassuming BLND TGER dumpling shop in Chinatown, where the secret code ""7"" unlocks a world of theatrical cocktails and share plates.",null,0/20,0.0,http://laowai.ca/about,venue name not found on page
+osm-node-14003797014,Masala Meats,,Open past 18:30 Fridays.,null,0/3,0.0,,no website to check against
+cmv77gjmw000it42p9jf3mr7j,Miku Vancouver,https://mikurestaurant.com,Gourmet waterfront Japanese dining famous for flame-seared Aburi sushi overlooking Burrard Inlet.,null,7/12,0.58,http://mikurestaurant.com/about,page does not corroborate the description
+osm-node-5837330140,N.S.C.S. Discovery Café,,"Open mid May through mid September. Good, very reasonably priced breakfasts, lunch and dinner. Licensed. Beer on tap. Staffed with culinary school students.",null,0/14,0.0,,no website to check against
+cmv77gjmi0008t42pdfg6pkg0,Nemesis Coffee Gastown,https://nemesis.coffee,Hip specialty coffee spot offering artisanal espresso and freshly baked in-house pastries.,null,1/9,0.11,http://nemesis.coffee,fetch-failed-http-404
+osm-node-4281486742,Oyster Express,https://www.oysterexpress.ca/,excellent locally sourced fresh oysters served in unique atmosphere.,null,0/8,0.0,http://www.oysterexpress.ca,fetch-failed-http-404
+osm-node-9021676218,Panaderia Latina Bakery,https://www.panaderialatinabakery.ca/,latin american products,null,1/3,0.33,http://www.panaderialatinabakery.ca,fetch-failed-http-404
+cmv77gjmr000et42pycc5kbl2,Rain or Shine Ice Cream,https://rainorshineicecream.com,"Handcrafted, small-batch ice cream made with locally sourced BC organic dairy and seasonal ingredients.",null,2/10,0.2,http://rainorshineicecream.com,fetch-failed-http-404
+osm-way-292351757,Sing Sing,http://singsingyvr.com/,"Lively, late-night watering hole serving craft beer & Asian comfort fare in a lofty, modern space.",null,0/13,0.0,,fetch-failed-http-404
+osm-node-3501506777,Starbucks,,Store with Starbucks Reserve,null,0/2,0.0,,no website to check against
+cmv77gjmo000ct42p1b8goym1,The Local Kitsilano,,"Bustling beachfront patio pub serving craft beers, burgers, and fish tacos right across from Kits Beach.",null,0/12,0.0,,no website to check against
+osm-node-9834061650,To Live For,https://tolivefor.ca/,Café & bakery serving 100% dairy and egg free vegan food.,null,2/4,0.5,http://tolivefor.ca,fetch-failed-http-404
+cmv77gjn1000mt42p084pnji4,Vancouver Art Gallery 1931 Gallery Bistro,https://vanartgallery.bc.ca,Major art museum housed in a landmark heritage courthouse with a lovely outdoor bistro patio.,null,0/10,0.0,http://vanartgallery.bc.ca/about,page does not corroborate the description
+cmv77gjmf0006t42ppl0ul9k4,Water St. Cafe,https://waterstreetcafe.ca,Classic Italian dining overlooking the famous Gastown Steam Clock with daily live jazz upstairs.,null,5/12,0.42,http://waterstreetcafe.ca,fetch-failed-http-404
+osm-way-292786642,Wise Club & Hall,https://www.wisehall.ca/,Long-running performing arts & concert venue with a downstairs tavern featuring billiards & Wi-Fi.,null,0/10,0.0,http://www.wisehall.ca,fetch-failed-http-404
+osm-node-10676546417,Yuan Coffee,https://www.instagram.com/yuancoffeeyvr,Speciality coffee shop.,null,0/1,0.0,http://www.instagram.com/yuancoffeeyvr/about,page does not corroborate the description

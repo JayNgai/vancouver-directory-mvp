@@ -1,0 +1,269 @@
+name_a,address_a,name_b,address_b,similarity,distance_m,same_address
+Deville Coffee,325 Seymour Street,Hugo's Coffee,555 West Hastings Street,0.493,83.7,False
+HellCrust Pizza,"433 Seymour St, Vancouver",Freshslice Pizza,"549 W Pender St., Vancouver",0.49,86.6,False
+Nuba,207 West Hastings Street,Subway,"139 West Hastings Street, Vancouver",0.57,95.6,False
+Nemesis Coffee Gastown,"302 W Hastings St, Vancouver, BC V6B 2N4",Estratto coffee,"336 W Pender St, Vancouver",0.462,89.7,False
+Bean Around The World,175 West Hastings Street,Meat & Bread,370 Cambie Street,0.552,11.2,False
+Fable Kitchen,"1944 W 4th Ave, Vancouver",RedBeef Noodle Kitchen,"1947 W 4th Ave, Vancouver",0.597,25.7,False
+La Ruota,2004 West 4th Avenue,La Routa Pizzeria,2002 West 4th Avenue,0.532,5.4,False
+Steamworks,375 Water Street,Starbucks,601 West Cordova Street,0.6,110.6,False
+Pinche Taco Shop,367 Seymour Street,Chronic Tacos,"601 W Cordova St, Vancouver",0.524,100.7,False
+Medina Cafe,"780 Richards St, Vancouver, BC V6B 3A4",Giovane Caffè,418 West Georgia Street,0.475,114.9,False
+Giovane Caffè,418 West Georgia Street,Blenz Coffee,"345 Robson St, Vancouver",0.456,89.7,False
+Aladdin Cafe,615 Robson Street,Bahar Bakery & Cafe,579 Robson Street,0.461,36.0,False
+Aladdin Cafe,615 Robson Street,Taf's Cafe,829 Granville Street,0.518,116.4,False
+Coast Restaurant,1054 Alberni Street,Eh! Restaurant,1050 Alberni Street,0.721,11.5,False
+The Parlour,1011 Hamilton Street,Earls,1095 Mainland Street Vancouver,0.475,103.4,False
+Elisa,1109 Hamilton Street,Earls,1095 Mainland Street Vancouver,0.57,63.8,False
+Kingyo Izakaya,"871 Denman St, Vancouver, BC V6G 2L9",Damaskino Shawarma,835 Denman Street,0.475,60.4,False
+Tonkotsu Ramen Tsukiya,740 Denman Street,Tetsu Sushi Bar,775 Denman Street,0.462,41.4,False
+Handson Steak and Frites,847 Denman Street,Breka Bakery & Cafe,821 Denman Street,0.464,56.6,False
+Nook,791 Denman Street,The Cozy Wok,"854 Denman St, Vancouver",0.475,119.4,False
+Khaghan Restaurant,851 Denman Street,Madangcoul Korean Restaurant,"847 Denman St, Vancouver",0.578,14.1,False
+Kev's Épicerie,"Vancouver, BC",Peaked Pies Vancouver,"975 Denman St, Vancouver",0.456,47.4,False
+VanLove Sushi,1755 Robson Street,Momo Sushi,"833 Bidwell St, Vancouver",0.578,99.6,False
+Waves Coffee House,492 West Hastings Street,Khyber Chai House,"436 Richards St, Vancouver",0.489,60.5,False
+Liuyishou Hotpot Robson,1542 Robson Street,Sulbing Cafe Robson,1610 Robson Street,0.452,86.3,False
+Sura Korean,1518 Robson Street,Tå Bom Korean Cuisine,1536 Robson Street,0.475,19.5,False
+Bartholomew,1026 Mainland Street,Banter Room,1039 Mainland Street,0.518,28.3,False
+Hula Poke,"701 W Georgia St, Vancouver",Flaming Wok,"701 W Georgia St, Vancouver",0.475,85.9,True
+Nine Bar Coffee,477 Davie Street,Coo Coo Coffee,"477 Davie St, Vancouver",0.524,15.2,True
+Mister,1141 Mainland Street,Unni Pasteries,"1207 Hamilton Street, Vancouver, BC",0.475,104.5,False
+Buro Coffee Bar,10 Water Street,Milano Coffee,"36 Powell St, Vancouver",0.543,108.1,False
+Milano Espresso Lounge,36 Powell Street,Milano Coffee,"36 Powell St, Vancouver",0.489,12.6,True
+Moulin Rouge,998 Granville Street,Mean Poutine,"718 Nelson St, Vancouver",0.475,53.1,False
+Granville Kebab & Poutine,1011 Granville Street,Mean Poutine,"718 Nelson St, Vancouver",0.487,28.9,False
+Yaletown Brewing Company,"Vancouver, BC",Yaletown Liquor Store,"1116 Hamilton St, Vancouver",0.464,34.5,False
+Granville Room,957 Granville Street,Good Co. Granville,965 Granville Street Vancouver,0.475,16.7,False
+Aidan’s Coffee & Food,"Vancouver, BC",JJ Bean Coffee Roasters,"353 Burrard St, Vancouver",0.454,95.9,False
+Cactus Club Cafe,"1530 West Broadway, Vancouver, BC",Caspian Flame,"1521 West Broadway, Vancouver, BC",0.459,47.5,False
+Cactus Club Cafe,"1530 West Broadway, Vancouver, BC",Pearl Cafe,"1513 West Broadway, Vancouver, BC",0.512,56.1,False
+The Corner Store Cafe,"Anderson Street, Vancouver, BC",Tru Cafe,"1500 West 2nd Avenue, Vancouver, BC",0.456,28.6,False
+Viet Flavour Restaurant,1822 West Broadway,Papaya Hut Restaurant,2435 Burrard Street,0.518,74.6,False
+Viet Flavour Restaurant,1822 West Broadway,Kits Indian Restaurant,"2445 Burrard St, Vancouver",0.633,70.0,False
+Papaya Hut Restaurant,2435 Burrard Street,Kits Indian Restaurant,"2445 Burrard St, Vancouver",0.53,7.0,False
+DS Indian Kitchen,2445 Burrard Street,Kits Indian Restaurant,"2445 Burrard St, Vancouver",0.536,10.0,True
+Indian Burgers Joint,"3608 Kingsway, Vancouver, BC",Indian Burger Joint Kingsway,"3608 Kingsway, Vancouver",0.752,3.0,True
+La Playita Seafood,360 Cambie Street,La Taqueria,"322 W Hastings St, Vancouver",0.459,87.9,False
+Sushi Star,750 Nelson Street,Sushi Jin,"750 Nelson St, Vancouver",0.6,19.6,True
+Sushi King House,"8176 Granville Street, Vancouver, BC",Sushi Wow,"8273 Granville Street, Vancouver, BC",0.532,35.4,False
+Sushi King House,"8176 Granville Street, Vancouver, BC",Sushi Bar Shu,"8099 Granville Street, Vancouver, BC",0.59,85.2,False
+Sushi Wow,"8273 Granville Street, Vancouver, BC",Sushi Bar Shu,"8099 Granville Street, Vancouver, BC",0.518,77.5,False
+Sushi Van,"2566 Granville Street, Vancouver, BC",Sushi Master,"1509 West Broadway, Vancouver, BC",0.633,99.6,False
+4 Brothers Pizza,"1232 Howe Street, Vancouver, BC",Freshslice Pizza,"771 Davie Street, Vancouver",0.534,82.8,False
+Breka Bakery & Cafe,740 West Hastings Street,Trees Organic Coffee,450 Granville Street,0.463,93.6,False
+Breka Bakery & Cafe,740 West Hastings Street,Awesome Bagel & More,323 Howe Street,0.486,109.7,False
+Kirin Restaurant,1172 Alberni Street,"Paul Bakery, Café & Restaurant","1164 Robson Street, Vancouver, BC",0.566,110.7,False
+Coast Restaurant,1054 Alberni Street,Carlino Restaurant,1115 Alberni Street,0.726,109.0,False
+Carlino Restaurant,1115 Alberni Street,Eh! Restaurant,1050 Alberni Street,0.674,111.0,False
+The Greek Gastown,221 Carrall Street,The Blarney Stone,216 Carrall Street,0.512,36.9,False
+The Blarney Stone,216 Carrall Street,Gastronomy Gastown,62 East Cordova Street,0.552,113.8,False
+Joyeaux Café and Restaurant,551 Howe Street,Broyé Cafe & Bakery,"530 Hornby St, Vancouver",0.554,63.7,False
+The Bagel Stop,"595 Burrard Street, Vancouver, BC",WA-BAGEL,"666 Burrard Street, Vancouver, BC",0.528,118.7,False
+Mount Everest Kitchen & Bar,2204 York Avenue,Mộc Vietnamese Kitchen + Bar,1516 Yew Street,0.676,89.7,False
+Mount Everest Kitchen & Bar,2204 York Avenue,KITS Cafe & Eyewear,1500 Yew Street,0.456,107.8,False
+KITS Cafe & Eyewear,1500 Yew Street,Viva Cafe & Bakery,1555 Yew Street,0.602,57.7,False
+Paradiso Italian Gelato,1520 Yew Street,Paradiso Caffè e Gelato,"1520 Yew St, Vancouver",0.659,7.4,True
+Italian Kitchen,860 Burrard Street,Taylight Local Craft Beer & Kitchen,"990 Smithe St, Vancouver",0.512,77.7,False
+Shizen Ya,965 Hornby Street,Sushi Today,989 Hornby Street,0.475,27.0,False
+Pokerrito,"991 Hornby St, Vancouver",Pokey Okey,"995 Hornby St, Vancouver",0.5,13.5,False
+Chit Chat Burger Bar,955 Granville Street,Burger Crush,755 Nelson Street,0.475,75.5,False
+Il Nido Italian Restaurant,780 Thurlow Street,Kawasho Japanese Restaurant,"770 Thurlow St, Vancouver",0.574,11.9,False
+Limegee Bubble Tea,589 West Pender Street,Bubble Waffle Cafe,555 West Hastings Street,0.475,110.3,False
+PiCaDo,605 West Pender Street,Pholicious,430 West Pender Street,0.475,102.4,False
+CinCin Ristorante + Bar,1154 Robson Street,Kosoo Korean Restaurant Chicken and BBQ,"1128 Robson St, Vancouver",0.475,46.4,False
+La Bellisse Cafe,1126 Robson Street,Deville Coffee,"745 Thurlow Street, Vancouver, BC",0.507,119.5,False
+La Bellisse Cafe,1126 Robson Street,Forêt Noire Café,"1126 Robson St, Vancouver",0.475,31.2,True
+Napoletana Pizza,1210 Robson Street,Freshslice Pizza,"1192 Robson Street, Vancouver, BC",0.475,39.7,False
+Guu Davie,1239 Davie Street,Davie Social,1202 Davie Street,0.452,55.3,False
+Davie's the Best,1157 Davie Street,Davie Social,1202 Davie Street,0.554,91.6,False
+Davie's the Best,1157 Davie Street,Davie Village Bakery,"1216 Davie St, Vancouver",0.534,115.0,False
+Davie Social,1202 Davie Street,Davie Village Bakery,"1216 Davie St, Vancouver",0.475,25.1,False
+City Square Pizza,"1112 DAVIE St, Vancouver",Yummy Slice Pizza,"1168 Davie St, Vancouver",0.559,19.1,False
+Akihana Sushi,1205 Davie Street,Okami Sushi,1226 Bute Street,0.633,69.4,False
+Akihana Sushi,1205 Davie Street,Tom Sushi,1175 Davie Street,0.518,69.1,False
+Akihana Sushi,1205 Davie Street,The Italians,1220 Bute Street,0.452,58.8,False
+Okami Sushi,1226 Bute Street,Tom Sushi,1175 Davie Street,0.76,67.1,False
+Stepho's Souvlaki Greek Taverna,"1124 Davie St, Vancouver",Takis' Taverna,"1106 Davie St, Vancouver",0.518,39.2,False
+Kadoya Japanese Restaurant,"1063 Davie St, Vancouver",Denny's Restaurant,"1098 Davie St, Vancouver",0.648,28.9,False
+Kadoya Japanese Restaurant,"1063 Davie St, Vancouver",Samurai Japanese Restaurant,"1108 Davie St, Vancouver",0.789,83.1,False
+Denny's Restaurant,"1098 Davie St, Vancouver",Samurai Japanese Restaurant,"1108 Davie St, Vancouver",0.549,56.7,False
+Taishoken Ramen,"515 Abbott St, Vancouver",TINA Vietnamese (Vancouver),"88 W Pender St, Vancouver",0.507,85.3,False
+Mount Everest Kitchen & Grill,538 Seymour Street,Pho Quynh Express (Granville),562 Granville Street,0.459,107.5,False
+Tableau,1181 Melville Street,Starbucks,"580 Bute Street, Vancouver, BC",0.475,56.0,False
+Gillaneh Restaurant,1072 Denman Street,Chef Ron Restaurant & Bar,1037 Denman Street,0.496,64.3,False
+Gillaneh Restaurant,1072 Denman Street,Cafe Portrait,1120 Denman Street,0.475,71.8,False
+Gillaneh Restaurant,1072 Denman Street,España Restaurant,1118 Denman Street,0.686,67.8,False
+Noah's Cafe,1096 Denman Street,BenGong's Tea,1112 Denman Street,0.475,21.5,False
+Noah's Cafe,1096 Denman Street,D'oro Gelato e Caffè,"1094 Denman St, Vancouver",0.503,4.3,False
+Chef Ron Restaurant & Bar,1037 Denman Street,Persian BBQ & Bar,"1072 Denman St, Vancouver",0.496,63.7,False
+España Restaurant,1118 Denman Street,Taqueria Jalisco Mexican Restaurant,1184 Denman Street,0.548,92.9,False
+Hook Cantina,1210 Denman Street,Hook Restaurant,"1210 Denman St, Vancouver",0.563,3.0,True
+Bayside Lounge,1755 Davie Street,Babylon Cafe,1156 Denman Street,0.512,65.6,False
+Babylon Restaurant & Bar,1162 Denman Street,Hook Restaurant,"1210 Denman St, Vancouver",0.556,108.4,False
+Akira Sushi,1069 Denman Street,Big Bang Sushi,1103 Denman Street,0.532,38.2,False
+Bombay Kitchen On Denman,1061 Denman Street,Bombay Kitchen + Bar,"Vancouver, BC",0.702,4.1,False
+Babylon Restaurant & Bar,1162 Denman Street,Bombay Kitchen + Bar,"Vancouver, BC",0.475,118.8,False
+Donair Drive,770 Nelson Street,Fresh Donair,1009 Granville Street,0.475,60.9,False
+Cafe Rico,Robson Street,Alfa Tea Concept,1331 Robson Street,0.456,73.2,False
+Rice & Noodle,1236 Robson Street,Horin Ramen + Sake,1226 Robson Street,0.489,24.6,False
+bb.q Chicken,1517 Robson Street,Kyochon Chicken,1471 Robson Street,0.563,66.0,False
+Hello Kitty Cafe,1274 Robson Street,Little Cafe,1258 Robson Street,0.633,13.5,False
+Browns Social House,649 Cambie Street,Browns Socialhouse Queen Elizabeth Theatre,"675 Cambie St, Vancouver",0.561,17.7,False
+Kinton Ramen,420 Robson Street,JINYA Ramen Bar,541 Robson Street,0.563,103.1,False
+Fable Diner & Bar,755 Richards Street,Bahar Bakery & Cafe,579 Robson Street,0.475,101.2,False
+Honey Salt,"39 Smithe Street, Vancouver, BC",Passione Gelato,"55 Smithe Street, Vancouver, BC",0.456,113.8,False
+Pizza Hut,"4540 West 10th Avenue, Vancouver, BC",Pizza Pizza,"4580 West 10th Avenue, Vancouver, BC",0.57,81.0,False
+Cazba Restaurant,"1103 Davie St, Vancouver",Thai Basil Restaurant,"1215 Thurlow St, Vancouver",0.719,58.5,False
+Breaking Bean,"551 Cardero Street, Vancouver, BC",Breakingbeankafe.com,"551 Cardero St, Vancouver",0.691,3.2,True
+Le Petit Belge,340 Robson Street,Le Parfait,812 Homer Street,0.475,52.8,False
+New Town Bakery & Restaurant,"148 East Pender Street, Vancouver, BC",El Torito Mexican Restaurant,"139 Keefer Street, Vancouver, BC",0.622,74.4,False
+Elysian Coffee Roasters,590 West Broadway Vancouver,Elysian Coffee Broadway,"590 W Broadway, Vancouver",0.743,3.7,True
+DD Mau Chinatown,"145 East Pender Street, Vancouver, BC",Chinatown BBQ,"130 East Pender Street, Vancouver, BC",0.59,55.9,False
+Good Co. Bars,"2904 Main Street, Vancouver, BC",Good Co. Main Street,"2904 Main St, Vancouver",0.695,15.5,True
+Happy Lemon,"3520 Kingsway, Vancouver, BC",Happy Tree House BBQ,"3502 Kingsway, Vancouver, BC",0.49,40.7,False
+Mazahr Lebanese Kitchen,"1488 West 11th Avenue, Vancouver, BC",Mangia's Sandwiches,"2690 Granville Street, Vancouver, BC",0.452,48.2,False
+Freshslice Pizza,"2418 Granville Street, Vancouver, BC",La Pache Pizza,"1539 West Broadway, Vancouver, BC",0.507,113.6,False
+Granville Kebab & Poutine,1011 Granville Street,Granville Room,957 Granville Street,0.51,93.8,False
+Granville Island Brewing Taproom,"South Granville, Vancouver, BC (street address not mapped)",Granville Island Licorice Parlour,"1550 Anderson Street, Vancouver, BC",0.672,58.2,False
+Time Out Market Vancouver,"650 West 41st Avenue, Vancouver, BC",Time Out Express,"Oakridge, Vancouver, BC (street address not mapped)",0.674,31.3,False
+Kamei on Broadway,"601 West Broadway, Vancouver, BC",Elysian Coffee Broadway,"590 W Broadway, Vancouver",0.522,115.6,False
+Kim Son,"Fairview, Vancouver, BC (street address not mapped)",Kojima Ramen,"Fairview, Vancouver, BC (street address not mapped)",0.5,33.0,False
+Trees,"255 East Broadway, Vancouver, BC",Freshii,"270 East Broadway, Vancouver, BC",0.475,33.2,False
+Cream Pony,"2190 Main Street, Vancouver, BC",Cartems Donuterie,"2190 Main St, Vancouver",0.493,23.1,True
+Mali Thai Food,"2710 Main Street, Vancouver, BC",Mali Thai Restaurant,"2710 Main St, Vancouver",0.559,8.1,True
+Rongsi Thai Bar & Bistro,"2650 Main Street, Vancouver, BC",Mali Thai Restaurant,"2710 Main St, Vancouver",0.496,59.4,False
+Sushi Yama,"371 East Broadway, Vancouver, BC",Hime Sushi,"315 East Broadway, Vancouver, BC",0.475,105.0,False
+Stuarts Quality Baked Goods,"South Granville, Vancouver, BC (street address not mapped)",Stuart's Bakery,"1689 Johnston St, Vancouver",0.543,7.3,False
+Lee's Donuts,"1689 Johnston Street, Vancouver, BC",Laurelle's Fine Foods,"1689 Johnston Street, Vancouver, BC",0.461,36.5,True
+Bon Macaron Patisserie,"1689 Johnston Street, Vancouver, BC",Elbo Jamaican Patties,"1689 Johnston Street, Vancouver, BC",0.619,25.2,True
+Olympia Pizza,3205 West Broadway Vancouver,Yummy Slice Pizza,"3210 W Broadway, Vancouver",0.507,39.0,False
+Donair Dude,"3209 West Broadway, Vancouver",McDonald's,"3308 W. Broadway, Vancouver",0.452,117.5,False
+Meat & Bread,796 West Broadway Vancouver,Banana Leaf on Broadway,"820 West Broadway, Vancouver, BC",0.462,60.4,False
+Meat & Bread,796 West Broadway Vancouver,A&W,"777 West Broadway, Vancouver, BC",0.554,44.9,False
+A&W,"Fairview, Vancouver, BC (street address not mapped)",Salad House,"555 West 12th Avenue, Vancouver, BC",0.452,12.8,False
+Lumiere Cafe,521 West Broadway Vancouver,Whole Foods Cafe,"Fairview, Vancouver, BC (street address not mapped)",0.475,68.2,False
+Peaceful Restaurant,532 West Broadway Vancouver,Seaport City Seafood Restaurant,"2425 Cambie Street, Vancouver, BC",0.608,116.0,False
+Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,Krsma Indian Restaurant,"5207 Victoria Dr, Vancouver",0.532,36.5,False
+Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,Kalvin's Restaurant,"5225 Victoria Dr, Vancouver",0.661,25.0,False
+Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,Golden Swan Restaurant,"5380 Victoria Dr, Vancouver",0.543,107.4,False
+Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",0.526,104.9,False
+Krsma Indian Restaurant,"5207 Victoria Dr, Vancouver",Kalvin's Restaurant,"5225 Victoria Dr, Vancouver",0.679,12.5,False
+Krsma Indian Restaurant,"5207 Victoria Dr, Vancouver",Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",0.619,69.0,False
+Krsma Indian Restaurant,"5207 Victoria Dr, Vancouver",Hoa Phuong Do Restaurant,"5088 Victoria Dr, Vancouver",0.606,103.4,False
+Kalvin's Restaurant,"5225 Victoria Dr, Vancouver",Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",0.682,79.9,False
+Kalvin's Restaurant,"5225 Victoria Dr, Vancouver",Hoa Phuong Do Restaurant,"5088 Victoria Dr, Vancouver",0.619,115.0,False
+Hapag Ihaw-Ihaw Restaurant,"5432 Victoria Dr, Vancouver",Golden Swan Restaurant,"5380 Victoria Dr, Vancouver",0.475,63.0,False
+Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",Hoa Phuong Do Restaurant,"5088 Victoria Dr, Vancouver",0.518,36.6,False
+LienHiep Restaurant,"5083 Victoria Dr, Vancouver",Western Lake Chinese Seafood Restaurant,"4989 Victoria Dr, Vancouver",0.524,89.2,False
+LienHiep Restaurant,"5083 Victoria Dr, Vancouver",Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",0.633,75.0,False
+LienHiep Restaurant,"5083 Victoria Dr, Vancouver",Hoa Phuong Do Restaurant,"5088 Victoria Dr, Vancouver",0.53,41.0,False
+Solly's Bagelry,"378 West 7th Avenue, Vancouver, BC",Small Victory Bakery,"388 West 6th Avenue, Vancouver, BC",0.543,99.3,False
+Poplar Korean Restaurant,6501 Victoria Drive Vancouver,Nirvana Restaurant,"6482 Victoria Drive, Vancouver, BC",0.633,51.6,False
+Blenz Coffee,695 West Broadway Vancouver,Song Cafe,"2525 Heather Street, Vancouver, BC",0.452,45.5,False
+Dynasty Seafood Restaurant,"777 West Broadway, Vancouver, BC",Shanghai Lu Restaurant,"705 West Broadway, Vancouver, BC",0.554,105.6,False
+Song Cafe,"2525 Heather Street, Vancouver, BC",K Cafe,"2533 Heather Street, Vancouver, BC",0.633,14.5,False
+Jack's Spot,"3615 Kingsway, Vancouver, BC",Snackshot,"3595 Kingsway, Vancouver, BC",0.57,40.3,False
+Tim Hortons,Vancouver,Triple O's,Vancouver,0.452,26.0,False
+Lee Loy B.B.Q Meats Co.,"Sunset, Vancouver, BC (street address not mapped)",Lee Loy BBQ,"6340 Fraser St, Vancouver",0.55,1.5,False
+Super Great Pizza,"3388 Vanness Avenue, Vancouver, BC",Freshslice Pizza,"Renfrew-Collingwood, Vancouver, BC (street address not mapped)",0.461,55.3,False
+Sunflower Kitchen,"5125 Joyce Street, Vancouver, BC",Sunflower Bubble Tea,"5125 Joyce St, Vancouver",0.616,1.3,True
+Megabite Pizza,"Commercial Drive, Vancouver, BC (street address not mapped)",Uncle Fatih's Pizza,"1685 East Broadway, Vancouver, BC",0.518,65.5,False
+Uncle Fatih's Pizza,"1685 East Broadway, Vancouver, BC",Yummy Slice Pizza,"2582 Commercial Dr, Vancouver",0.475,109.9,False
+Belgian Fries,"1885 Commercial Drive, Vancouver, BC",Giancarlo Cafe,"1865 Commercial Drive, Vancouver, BC",0.493,11.1,False
+Sal y Limón Mexican Cuisine,"1752 Commercial Drive, Vancouver, BC",Delhi Fusion Indian Cuisine,"1859 Commercial Drive, Vancouver, BC",0.563,84.7,False
+Fire Pizza,"1918 Commercial Drive, Vancouver, BC",4 Brothers' Pizza,"Commercial Drive, Vancouver, BC (street address not mapped)",0.585,5.5,False
+Prado Cafe,"1938 Commercial Drive, Vancouver, BC",Giancarlo Cafe,"1865 Commercial Drive, Vancouver, BC",0.554,96.9,False
+Ginger Sushi,"1437 Commercial Drive, Vancouver, BC",Cozen Sushi,"1441 Commercial Drive, Vancouver, BC",0.578,9.5,False
+Aunt Jen's Pizzeria,"1417 Commercial Drive, Vancouver, BC",Sopra Sotto Pizzeria,"1510 Commercial Drive, Vancouver, BC",0.585,80.4,False
+The Hanoi Corner,"2017 Commercial Drive, Vancouver, BC",Chancho Tortilleria,"2096 Commercial Drive, Vancouver, BC",0.552,70.1,False
+Loula's Taverna + Bar,"1608 Commercial Drive, Vancouver, BC",Nasa Bakery & Cafe,"1678 Commercial Drive, Vancouver, BC",0.486,44.8,False
+Viet Family Restaurant,"1414 Commercial Drive, Vancouver, BC",Arriva Ristorante,"1537 Commercial Drive, Vancouver, BC",0.487,116.6,False
+Off The Rail Tasting Room,"1351 Adanac Street, Vancouver, BC",Off The Rail Brewing,"1351 Adanac St, Vancouver",0.616,3.3,True
+Off The Rail Tasting Room,"1351 Adanac Street, Vancouver, BC",Bomber Tasting Room,"Commercial Drive, Vancouver, BC (street address not mapped)",0.712,115.2,False
+Bomber Tasting Room,"Commercial Drive, Vancouver, BC (street address not mapped)",Bomber Brewing,"1488 Adanac St, Vancouver",0.576,4.9,False
+Bomber Brewing,"1488 Adanac St, Vancouver",Off The Rail Brewing,"1351 Adanac St, Vancouver",0.633,110.5,False
+Superflux Beer Store,"Clark Drive, Vancouver, BC",Superflux Beer Company,"505 Clark Dr, Vancouver",0.724,5.3,False
+Yolks,"1598 East Hastings Street, Vancouver, BC",Finfolk,"1600 Franklin Street, Vancouver, BC",0.475,111.1,False
+Doe Coffee,"2263 East Hastings Street, Vancouver, BC",Platform 7 Coffee,"2331 East Hastings Street, Vancouver, BC",0.563,92.6,False
+Hong Hong Bakery,"2449 East Hastings Street, Vancouver, BC",Tall Shadow Bakery,"2474 East Hastings Street, Vancouver, BC",0.503,44.8,False
+The Saigonville Restaurant,"2129 East Hastings Street, Vancouver, BC",Pho Win Vietnamese Restaurant,"2138 E Hastings St, Vancouver",0.596,24.8,False
+Golden Seafood Restaurant,"2425 Nanaimo Street, Vancouver, BC",Golden Spring,"2461 Nanaimo Street, Vancouver, BC",0.5,25.9,False
+Parallel 49 Tasting Room & Beer Store,"Grandview-Woodland, Vancouver, BC (street address not mapped)",Parallel 49 Street Kitchen,"Grandview-Woodland, Vancouver, BC (street address not mapped)",0.585,9.8,False
+Parallel 49 Tasting Room & Beer Store,"Grandview-Woodland, Vancouver, BC (street address not mapped)",Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",0.576,16.6,False
+Parallel 49 Street Kitchen,"Grandview-Woodland, Vancouver, BC (street address not mapped)",Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",0.609,6.8,False
+In and Out Donair,"2406 Nanaimo Street, Vancouver, BC",In & Win Donair,"2406 Nanaimo St, Vancouver",0.782,2.9,True
+The Pie Shoppe,"1875 Powell Street, Vancouver, BC",Nabi House,"1889 Powell Street, Vancouver, BC",0.475,21.1,False
+Vietnamese Tea House,"2526 East Hastings Street, Vancouver, BC",Le Pho Vietnamese Restaurant,"2503 E Hastings St, Vancouver",0.554,52.0,False
+Thai Son Restaurant,"2800 East 1st Avenue, Vancouver, BC",East One Seafood Restaurant,"2800 East 1st Avenue, Vancouver, BC",0.62,61.6,True
+Gold Train Express Restaurant,"3320 Kingsway, Vancouver, BC",Cantonese BBQ Seafood Restaurant,"3320 Kingsway, Vancouver, BC",0.498,16.7,True
+Max's Restaurant,"3545 Kingsway, Vancouver, BC",Todak Todak Restaurant,"3510 Kingsway, Vancouver, BC",0.65,98.5,False
+Cho Sun Korean BBQ,"3486 Kingsway, Vancouver, BC",Sun Chicken,"Killarney, Vancouver, BC (street address not mapped)",0.459,32.0,False
+Happy Day Cafe,"3312 Kingsway, Vancouver, BC",Milk & Sugar Cafe,"3365 Kingsway, Vancouver, BC",0.461,110.4,False
+Chuanyue Chinese Restaurant,"8329 Oak St, Vancouver",Applause Japanese Restaurant,"8269 Oak St, Vancouver",0.622,63.5,False
+Talay Thai Restaurant,"8369 Granville Street, Vancouver, BC",Keumsan Korean Restaurant,"8363 Granville Street, Vancouver, BC",0.537,5.7,False
+Baskin-Robbins,"490 Southwest Marine Drive, Vancouver, BC",Dublin Crossing,"466 SW Marine Dr, Vancouver",0.524,80.3,False
+Red Star Seafood Restaurant,"8298 Granville Street, Vancouver, BC",别不同茶餐厅 Ming Tak Hong Kong Style Restaurant,"8363 Granville Street, Vancouver",0.46,29.4,False
+Lucky Fortune Seafood Restaurant,"8012 Granville Street, Vancouver, BC",Pearl House Restaurant,"7994 Granville Street, Vancouver, BC",0.528,46.1,False
+Lucky Fortune Seafood Restaurant,"8012 Granville Street, Vancouver, BC",Tai Tung Chinese Seafood Restaurant,"8012 Granville St, Vancouver",0.681,5.5,True
+Pearl House Restaurant,"7994 Granville Street, Vancouver, BC",Tai Tung Chinese Seafood Restaurant,"8012 Granville St, Vancouver",0.467,45.8,False
+Rib & Chicken,"8167 Granville Street, Vancouver, BC",A & S Fusion,"8028 Granville Street, Vancouver, BC",0.459,100.3,False
+Keumsan Korean Restaurant,"8363 Granville Street, Vancouver, BC",别不同茶餐厅 Ming Tak Hong Kong Style Restaurant,"8363 Granville Street, Vancouver",0.538,18.3,True
+Tatos Kitchen,"232 Keefer Street, Vancouver, BC",Virtuous Pie,"583 Main Street, Vancouver, BC",0.456,94.8,False
+The Boss Bakery & Restaurant,"532 Main Street, Vancouver, BC",El Torito Mexican Restaurant,"139 Keefer Street, Vancouver, BC",0.563,119.1,False
+Sio Bread,"636 Main Street, Vancouver, BC",Bao Bei,"163 Keefer Street, Vancouver, BC",0.475,117.8,False
+Vancouver Soup Company,"292 East 1st Avenue, Vancouver, BC",Red Truck Beer Company,"295 E 1st Ave, Vancouver",0.503,87.0,False
+L & G Bubble Tea,"5816 Fraser Street, Vancouver, BC",Green Leaf Bubble Tea,"5756 Fraser Street, Vancouver, BC",0.633,55.0,False
+Good Choice Restaurant,"6007 Fraser Street, Vancouver, BC",Vegan Fried Chick'un,"5932 Fraser Street, Vancouver, BC",0.452,78.4,False
+Shoom Restaurant,"6555 Fraser Street, Vancouver, BC",Yu Xiang Yuan Restaurant,"6591 Fraser Street, Vancouver, BC",0.522,20.9,False
+Pho Hong Restaurant,"Sunset, Vancouver, BC (street address not mapped)",So Hyang Korean Cuisine,"6345 Fraser Street, Vancouver, BC",0.452,29.3,False
+Pho Hong Restaurant,"Sunset, Vancouver, BC (street address not mapped)",Ho Yuen Kee Restaurant,"6236 Fraser Street, Vancouver, BC",0.695,117.6,False
+Pampanga's Cuisine,"6094 Fraser Street, Vancouver, BC",Sal y Limón Mexican Cuisine,"6196 Fraser Street, Vancouver, BC",0.507,108.2,False
+Freshii,"6541 Main Street, Vancouver, BC",Freshslice Pizza,"6533 Main Street, Vancouver, BC",0.578,7.3,False
+Original Tandoori Kitchen,"7215 Main Street, Vancouver, BC",Fraserview Tandoori House,"7271 Main St, Vancouver",0.532,33.1,False
+Beaucoup Bakery Cafe,"Oakridge, Vancouver, BC (street address not mapped)",Beaucoup Creamery,"Oakridge, Vancouver, BC (street address not mapped)",0.668,22.3,False
+España,"Oakridge, Vancouver, BC (street address not mapped)",Santo Taco,"Oakridge, Vancouver, BC (street address not mapped)",0.475,6.3,False
+Nana’s Green Tea,"2135 W 41st Ave., Vancouver",Secret Garden Tea Company,"2138 W 40th Ave, Vancouver",0.463,94.5,False
+@26 Viet Cafe,"2044 West 41st Avenue, Vancouver, BC",Fish Cafe,"2053 W 41st Ave, Vancouver",0.543,38.2,False
+ASA Sushi,"2178 West 41st Avenue, Vancouver, BC",Shota Sushi,"5688 Yew St, Vancouver",0.76,60.5,False
+Ajisai Sushi Bar,"2081 West 42nd Avenue, Vancouver, BC",Ajisai 2 Go,"2087 West 42nd Avenue, Vancouver, BC",0.563,26.1,False
+Ben Gong's Tea,"3318 Cambie St, Vancouver",Cafe Gloucester,"3338 Cambie St., Vancouver",0.459,10.0,False
+The Lion's Den Cafe,"651 East 15th Avenue, Vancouver, BC",Be Cafe,"639 East 15th Avenue, Vancouver, BC",0.518,14.1,False
+33 Brewing Experiment,"Mount Pleasant, Vancouver, BC (street address not mapped)",33 Acres Brewing,"Mount Pleasant, Vancouver, BC (street address not mapped)",0.514,15.0,False
+33 Brewing Experiment,"Mount Pleasant, Vancouver, BC (street address not mapped)",33 Acres Brewing Company,"15 W 8th Ave, Vancouver",0.549,14.1,False
+Dallas Pizza & Souvlaki,"613 East Broadway, Vancouver, BC",Dallas Pizza Ltd.,"613 E Broadway, Vancouver",0.591,15.3,True
+Moodbe Cafe,"381 East Broadway, Vancouver, BC",VT's Cafe,"370 East Broadway, Vancouver, BC",0.475,87.3,False
+Kranky Café,"228 East 4th Avenue, Vancouver, BC",Sula Cafe,"260 East 5th Avenue, Vancouver, BC",0.57,100.4,False
+La Bise Canelés,"1689 Johnston Street, Vancouver, BC",Kaisereck Delicatessen,"1689 Johnston Street, Vancouver, BC",0.462,46.9,True
+A Bread Affair,"1680 Johnston Street, Vancouver, BC",Terra Breads,"1689 Johnston Street, Vancouver, BC",0.512,41.5,False
+Terra Breads,"1689 Johnston Street, Vancouver, BC",Northern Bars,"1669 Johnston Street, Vancouver, BC",0.532,7.0,False
+The Stock Market,"1689 Johnston Street, Vancouver, BC",The Market Grill,"1689 Johnston Street, Vancouver, BC",0.475,11.6,True
+Jay Nok,"127 West 2nd Avenue, Vancouver, BC",Nook,"195 West 2nd Avenue, Vancouver, BC",0.518,109.7,False
+Mario's Gelati,"88 East 1st Avenue, Vancouver, BC",Amato Gelato & Cafè,"78 East 1st Avenue, Vancouver, BC",0.489,14.1,False
+Mix the Bakery,"4430 West 10th Avenue, Vancouver, BC",Kumi Sushi Bar,"4422 W 10th Ave, Vancouver",0.475,21.4,False
+Sun Sushi,"4512 West 10th Avenue, Vancouver, BC",Koi Sushi,"4532 W 10th Ave, Vancouver",0.633,34.8,False
+Four Olives Restaurant,"4510 West 10th Avenue, Vancouver, BC",Bombay Masala Indian Restaurant,"4473 W 10th Ave, Vancouver",0.538,94.3,False
+Pho Thai Son Restaurant,"6471 Victoria Drive, Vancouver, BC",Mnimes Restaurant,"6459 Victoria Drive, Vancouver, BC",0.617,19.9,False
+Galaxy Bakery,"Victoria-Fraserview, Vancouver, BC (street address not mapped)",Mei Yee Bakery,"5692 Victoria Dr, Vancouver",0.563,97.0,False
+Shun Jing Lou Seafood Restaurant,"5822 Victoria Drive, Vancouver, BC",Super Stars Restaurant,"5822 Victoria Dr, Vancouver",0.563,8.5,True
+Jun Yuan Restaurant,"5728 Victoria Drive, Vancouver, BC",Kim Phung Restaurant,"5764 Victoria Drive, Vancouver, BC",0.633,58.5,False
+Fat Boy Kitchen,"6943 Victoria Drive, Vancouver, BC",The One BBQ Kitchen,"6978 Victoria Drive, Vancouver, BC",0.633,54.0,False
+Fat Boy Kitchen,"6943 Victoria Drive, Vancouver, BC",GoMigs Kitchen,"6929 Victoria Dr, Vancouver",0.59,15.0,False
+The One BBQ Kitchen,"6978 Victoria Drive, Vancouver, BC",GoMigs Kitchen,"6929 Victoria Dr, Vancouver",0.59,66.6,False
+iSushi Japanese Restaurant,"3883 Rupert Street, Vancouver, BC",Paramount Chinese Seafood Restaurant,"3823 Rupert Street, Vancouver, BC",0.552,56.1,False
+iSushi Japanese Restaurant,"3883 Rupert Street, Vancouver, BC",Dami Sushi & Korean Restaurant,"3280 East 22nd Avenue, Vancouver, BC",0.688,63.5,False
+Paramount Chinese Seafood Restaurant,"3823 Rupert Street, Vancouver, BC",Dami Sushi & Korean Restaurant,"3280 East 22nd Avenue, Vancouver, BC",0.559,24.0,False
+Come Along Seafood Restaurant,"2550 Kingsway, Vancouver, BC",Kwan Luck Seafood Restaurant,"2516 Kingsway, Vancouver, BC",0.667,78.5,False
+Come Along Seafood Restaurant,"2550 Kingsway, Vancouver, BC",Yue Ting Seafood Restaurant,"2532 Kingsway, Vancouver, BC",0.78,45.0,False
+Kwan Luck Seafood Restaurant,"2516 Kingsway, Vancouver, BC",Yue Ting Seafood Restaurant,"2532 Kingsway, Vancouver, BC",0.691,36.4,False
+K & H Seafood Restaurant,"3415 Kingsway, Vancouver, BC",Kroren Uyghur Restaurant,"3377 Kingsway, Vancouver, BC",0.532,100.0,False
+Sabra Kosher Bakery and Restaurant,"3844 Oak St, Vancouver",Sun Garden Chinese Restaurant,"3832 Oak St, Vancouver",0.513,18.3,False
+Restaurant Yugo,"4265 Main St, Vancouver",Heritage Restaurant & Bar,"4242 Main St, Vancouver",0.498,56.1,False
+Restaurant Yugo,"4265 Main St, Vancouver",Sawasdee Thai Restaurant,"4250 Main St, Vancouver",0.487,53.9,False
+The Main,"4210 Main St, Vancouver",MeeT on Main,"4288 Main St, Vancouver",0.475,80.8,False
+Heritage Restaurant & Bar,"4242 Main St, Vancouver",Sawasdee Thai Restaurant,"4250 Main St, Vancouver",0.484,15.1,False
+Yum Yai Thai Food,"3755 Main St, Vancouver",Bob Likes Thai Food,"3755 Main Street, Vancouver",0.633,20.7,True
+Aperture Coffee Bar,"4124 Main St, Vancouver",Blenz Coffee,"4198 Main St, Vancouver",0.49,84.9,False
+Talavera Mexican Coffee Shop,"4363 Main St, Vancouver",Las Tortas Mexican Gourmet Sandwiches,"4328 Main St, Vancouver",0.468,20.8,False
+Daikichi Sushi,"1346 Burrard St, Vancouver",Osaka Sushi,"1361 Burrard St, Vancouver",0.608,35.1,False
+Aphrodite's Organic Pie Shop,"3598 W 4th Ave, Vancouver",Aphrodite's Organic Cafe,"3605 W 4th Ave, Vancouver",0.767,32.8,False

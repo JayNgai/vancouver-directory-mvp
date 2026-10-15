@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}{{ business.name }} - {{ business.neighborhood.name }}{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 25px;">
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span>&rsaquo;</span>
+        <a href="/neighborhoods">Neighborhoods</a> <span>&rsaquo;</span>
+        <a href="/neighborhoods/{{ business.neighborhood.slug }}">{{ business.neighborhood.name }}</a> <span>&rsaquo;</span>
+        <span class="breadcrumb-current">{{ business.name }}</span>
+    </nav>
+
+    <div class="detail-card">
+        {% set icon = {'Restaurant': '🍽️', 'Cafe': '☕', 'Bar / Pub': '🍺', 'Bakery': '🥐', 'Dessert': '🍰', 'Fast Food': '🍔'}[business.category] or '📍' %}
+        {% if business.imageUrl %}
+        <figure style="margin: 0 0 18px;">
+            <img src="{{ business.imageUrl }}" alt="{{ business.name }}" style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 8px;" loading="lazy">
+            <figcaption style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">{{ business.imageAttribution }}</figcaption>
+        </figure>
+        {% else %}
+        <div aria-hidden="true" style="height: 140px; border-radius: 8px; margin: 0 0 18px; display: flex; align-items: center; justify-content: center; background: #f1f5f9; font-size: 3.5rem;">{{ icon }}</div>
+        {% endif %}
+        <div class="detail-header">
+            <div>
+                <div class="card-subtitle">{{ business.category }}{% if business.primaryCategory and business.primaryCategory != business.category %} &bull; {{ business.primaryCategory }}{% endif %}</div>
+                <h1 class="detail-title">{{ business.name }}</h1>
+                {% if business.cityLicenceStatus == 'Issued' %}
+                <span class="badge-licence">✓ City of Vancouver licensed business{% if business.cityLicenceDataDate %} <span class="badge-asof">as of {{ business.cityLicenceDataDate }}</span>{% endif %}</span>
+                {% endif %}
+            </div>
+        </div>
+
+        <dl class="detail-list">
+            <dt>Neighborhood</dt>
+            <dd><a href="/neighborhoods/{{ business.neighborhood.slug }}">{{ business.neighborhood.name }}</a></dd>
+
+            <dt>Address</dt>
+            <dd>{{ business.address }}</dd>
+
+            {% if business.displayPhone %}
+            <dt>Phone</dt>
+            <dd><a href="/out/click_phone/{{ business.slug }}">{{ business.displayPhone }}</a></dd>
+            {% endif %}
+
+            {% if business.website %}
+            <dt>Website</dt>
+            <dd><a href="/out/click_website/{{ business.slug }}" rel="nofollow noopener">{{ business.website }}</a></dd>
+            {% endif %}
+
+            {% if business.displayHours %}
+            <dt>Opening hours</dt>
+            <dd>{% if business.hoursRows %}<table class="hours-table"><tbody>
+                {% for r in business.hoursRows %}<tr>{% if r.label %}<th scope="row">{{ r.label }}</th><td>{% for t in r.times %}<div>{{ t }}</div>{% endfor %}</td>{% else %}<td colspan="2">{{ r.times[0] }}</td>{% endif %}</tr>
+                {% endfor %}</tbody></table>{% else %}{{ business.displayHours }}{% endif %}</dd>
+            {% endif %}
+
+            {% if business.displayLiquorHours %}
+            <dt>Alcohol service</dt>
+            <dd><div class="hours-lead">Licensed to serve alcohol{% if business.liquorLicenceType %} ({{ business.liquorLicenceType }}){% endif %}</div>
+                {% if business.liquorRows %}<table class="hours-table"><tbody>
+                {% for r in business.liquorRows %}<tr><th scope="row">{{ r.label }}</th><td>{% for t in r.times %}<div>{{ t }}</div>{% endfor %}</td></tr>
+                {% endfor %}</tbody></table>{% else %}{{ business.displayLiquorHours }}{% endif %}</dd>
+            {% endif %}
+
+            {% if business.latitude %}
+            <dt>Coordinates</dt>
+            <dd>{{ business.latitude | round(5) }}, {{ business.longitude | round(5) }}</dd>
+            {% endif %}
+        </dl>
+
+        {% if business.parsedTags.length %}
+        <div class="tag-list" style="margin: 10px 0 18px 0;">
+            {% for tag in business.parsedTags %}
+            <a href="/search?q={{ tag }}" class="tag-badge" style="text-decoration: none;">#{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if business.description %}
+        <p style="color: #475569; margin-bottom: 18px;">{{ business.description }}</p>
+        {% endif %}
+
+        <div class="detail-actions">
+            <a class="btn" href="/out/click_maps_reviews/{{ business.slug }}" rel="nofollow noopener">See reviews on Google Maps</a>
+            <a class="btn btn-secondary" href="/claim?business={{ business.slug }}">Own this business? Claim it</a>
+        </div>
+
+        {% if mapsEmbedUrl %}
+        <div style="margin: 8px 0 18px 0;">
+            <iframe title="Map of {{ business.name }}" src="{{ mapsEmbedUrl }}" width="100%" height="320"
+                    style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        {% endif %}
+
+        <p class="detail-note">
+            Listing details come from the sources credited in the footer. We do not show ratings,
+            review counts, prices or "verified" labels: those cannot be confirmed from free data.
+        </p>
+    </div>
+</div>
+{% endblock %}

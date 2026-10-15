@@ -1,0 +1,35 @@
+kept_id,kept_name,kept_address,removed_id,removed_name,removed_address,distance_m,reason
+osm-563321283,Alibi Room,157 Alexander Street Vancouver,osm_428480613737499b,Alibi Room,157 Alexander Street,0.0,same name + same address or within 30m
+osm-286316995,The Cambie,300 Cambie Street Vancouver,osm_c8edda4bac3847b9,The Cambie,300 Cambie Street,0.0,same name + same address or within 30m
+osm-338846654,New Amsterdam Cafe,Vancouver,osm_2f3f4563f20b4e44,New Amsterdam Cafe,"Vancouver, BC",0.0,same name + same address or within 30m
+osm-571309050,Starbucks,1099 Robson Street Vancouver,osm_0796669474b345fa,Starbucks,1099 Robson Street,0.0,same name + same address or within 30m
+osm-505751513,Steamworks,375 Water Street Vancouver,osm_c3a5516ef3024562,Steamworks,375 Water Street,0.0,same name + same address or within 30m
+osm-505797244,The Waffle Co.,1725 Robson Street Vancouver,osm_771346c3d63f4547,The Waffle Co.,1725 Robson Street,0.0,same name + same address or within 30m
+osm-513053838,Ignite Pizzeria,987 Mainland Street Vancouver,osm_9c9a1036217049c4,Ignite Pizzeria,987 Mainland Street,0.0,same name + same address or within 30m
+osm-638771020,Waves Coffee House,900 Howe Street Vancouver,osm_c90af86771264ef9,Waves Coffee House,900 Howe Street,0.0,same name + same address or within 30m
+osm-638771021,Lennox Pub,800 Granville Street Vancouver,osm_c709f608367345ea,Lennox Pub,800 Granville Street,0.0,same name + same address or within 30m
+osm-644342018,Folke,2585 West Broadway Vancouver,osm_0bd0c4ef9c004e2b,Folke,2585 West Broadway,0.0,same name + same address or within 30m
+osm-644342020,Thomas Haas Chocolates,2539 West Broadway Vancouver,osm_34fa1fe86320434b,Thomas Haas Chocolates,2539 West Broadway,0.0,same name + same address or within 30m
+osm-644348654,Platform 7,2300 West Broadway Vancouver,osm_3c88689d324a48fc,Platform 7,"Vancouver, BC",0.0,same name + same address or within 30m
+osm-644348666,Evelyn's Coffee and Grill,2176 West Broadway Vancouver,osm_6edba5a4e96f4ee7,Evelyn's Coffee and Grill,2176 West Broadway,0.0,same name + same address or within 30m
+osm-644351081,Denny's,1759 West Broadway Vancouver,osm_11eeab7e985a4196,Denny's,1759 West Broadway,0.0,same name + same address or within 30m
+osm-644351089,Leopold's Tavern,1619 West Broadway Vancouver,osm_d141f8474d7244f9,Leopold's Tavern,1619 West Broadway,0.0,same name + same address or within 30m
+osm-649986553,Shogun,518 Hornby Street Vancouver,osm_2689ad87b25a455f,Shogun,518 Hornby Street,0.0,same name + same address or within 30m
+osm-651055563,Flamingo Cafe,999 Granville Street Vancouver,osm_5ea5c08e17014316,Flamingo Cafe,999 Granville Street,0.0,same name + same address or within 30m
+osm-651055566,Good Co. Granville,965 Granville Street Vancouver,osm_9cae0e423c334df7,Good Co. Granville,965 Granville Street,0.0,same name + same address or within 30m
+osm-652955235,Cactus Club Cafe,357 Davie Street Vancouver,osm_a43f35dc8ed34d5d,Cactus Club Cafe,357 Davie Street,0.0,same name + same address or within 30m
+osm-652955238,Analog Coffee,338 Helmcken Street Vancouver,osm_5bf906f2803142c5,Analog Coffee,338 Helmcken Street,0.0,same name + same address or within 30m
+osm-652955240,Earls,1095 Mainland Street Vancouver,osm_d58b939bbb924853,Earls,1095 Mainland Street,0.0,same name + same address or within 30m
+osm-768411410,Earls,1601 West Broadway Vancouver,osm_b7f3fe7db67240a5,Earls,"Vancouver, BC",0.0,same name + same address or within 30m
+osm-652955244,The Greek by Anatoli,1043 Mainland Street Vancouver,osm_20d113979eee4df7,The Greek by Anatoli,1043 Mainland Street,0.0,same name + same address or within 30m
+osm-652955247,The Keg,1011 Mainland Street Vancouver,osm_2977606036ec479d,The Keg,1011 Mainland Street,0.0,same name + same address or within 30m
+osm-652956529,Lupo,869 Hamilton Street Vancouver,osm_6035cb11fea040bf,Lupo,869 Hamilton Street,0.0,same name + same address or within 30m
+osm-703754968,Water Street Cafe,300 Water Street Vancouver,osm_f02e889c114d4299,Water Street Cafe,300 Water Street,0.0,same name + same address or within 30m
+osm-724597025,Indishspensable,Vancouver,osm_14252f6fb1ca47af,Indishspensable,"Vancouver, BC",0.0,same name + same address or within 30m
+osm-724597034,Coquette,2685 Arbutus Street Vancouver,osm_aeaee9be2f9e4ba0,Coquette,"Vancouver, BC",0.0,same name + same address or within 30m
+osm-724597036,Trees Organic,2655 Arbutus Street Vancouver,osm_7b24de214e204ce2,Trees Organic,2655 Arbutus Street,0.0,same name + same address or within 30m
+osm-736729137,Bubble World Tea House,1325 Robson Street Vancouver,osm_3fa34de49a7c4681,Bubble World Tea House,1325 Robson Street,0.0,same name + same address or within 30m
+osm-773916863,Local Public Eatery,3 Alexander Street Vancouver,osm_5dbb489e70e0403a,Local Public Eatery,3 Alexander Street,0.0,same name + same address or within 30m
+osm-779225247,Lee's Donuts,199 Water Street Vancouver,osm_e388c6d8afaf4d86,Lee's Donuts,199 Water Street,0.0,same name + same address or within 30m
+osm-node-582802138,The Ivanhoe Pub,"1038 Main Street, Vancouver, BC",osm-582802138,The Ivanhoe Pub,1038 Main Street Vancouver,0.0,same name + same address or within 30m
+osm-node-582802371,Hunnybee Bruncheonette,"789 Gore Avenue, Vancouver, BC",osm-582802371,Hunnybee Bruncheonette,789 Gore Avenue Vancouver,0.0,same name + same address or within 30m

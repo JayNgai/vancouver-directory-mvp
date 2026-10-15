@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}What this site collects{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 30px; max-width: 820px;">
+    <h1 class="section-title">What this site collects, and why</h1>
+    <p style="color: #475569;">
+        We are a small local directory for Vancouver. We collect the minimum we need to run the
+        site and to show businesses that people are interested in their listing. This page says
+        exactly what that means. Questions or a deletion request:
+        <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a>.
+    </p>
+
+    <div class="detail-card">
+        <h2 style="margin-top: 0; font-size: 1.2rem;">What we record when you browse</h2>
+        <ul>
+            <li><strong>What you did:</strong> which listing page you opened, that you used search, and which outbound links you clicked (website, phone, Google Maps reviews, or “claim it”).</li>
+            <li><strong>When:</strong> the date and time of the action.</li>
+            <li><strong>Where you came from:</strong> the website name that linked you here, if any. We keep only that site’s name, not the full address.</li>
+            <li><strong>A daily visitor code:</strong> a scrambled code built from your IP address and browser string. It cannot be turned back into your IP address, it cannot identify you, and the code changes every day, so it cannot follow you over time.</li>
+        </ul>
+
+        <h2 style="font-size: 1.2rem;">What we do NOT collect</h2>
+        <ul>
+            <li>We do <strong>not</strong> store your IP address.</li>
+            <li>We do <strong>not</strong> store your browser or device string.</li>
+            <li>We do <strong>not</strong> set cookies or use advertising trackers.</li>
+            <li>We do <strong>not</strong> sell or share anything with anyone.</li>
+            <li>We do <strong>not</strong> record visitors who send “Do Not Track”, and we ignore automated bots.</li>
+        </ul>
+
+        <h2 style="font-size: 1.2rem;">If you send a claim request</h2>
+        <p style="color: #475569;">
+            We keep the name, role, email, optional phone number and optional message you send,
+            plus the date you agreed we could contact you. <strong>We use your email address for
+            one thing only: to contact you about the listing you claimed.</strong> It is not added
+            to any mailing list, and it is never shared or sold.
+        </p>
+
+        <h2 style="font-size: 1.2rem;">How long we keep things</h2>
+        <ul>
+            <li><strong>Browsing records:</strong> kept for 12 months, then deleted. They exist only as counts.</li>
+            <li><strong>Claim requests:</strong> kept for 12 months from the last contact about that listing, then deleted. Ask us at any time and we will delete yours sooner.</li>
+            <li><strong>Backups:</strong> daily database backups are kept for 14 days, then overwritten. A deletion request is applied to the live database, and the change ages out of backups within 14 days.</li>
+        </ul>
+
+        <h2 style="font-size: 1.2rem;">Why we collect the browsing record</h2>
+        <p style="color: #475569;">
+            It tells a business owner how many people looked at their listing and clicked through
+            to their own website or phone number. That is the honest number we can report if a
+            business pays for a featured placement, and it is the only reason this record exists.
+        </p>
+
+        <h2 style="font-size: 1.2rem;">Contact</h2>
+        <p style="color: #475569;">
+            Email <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a> for any question, a
+            correction to a listing, or a deletion request.
+            {% if publicBaseUrl %}This site: <a href="{{ publicBaseUrl }}">{{ publicBaseUrl }}</a>.{% endif %}
+        </p>
+    </div>
+</div>
+{% endblock %}

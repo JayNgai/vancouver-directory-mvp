@@ -1,0 +1,16 @@
+kept_id,kept_name,kept_address,removed_id,removed_name,removed_address
+osm-703754968,Water Street Cafe,300 Water Street Vancouver,cmv77gjmf0006t42ppl0ul9k4,Water St. Cafe,"300 Water St, Vancouver, BC V6B 1B6"
+osm_d35ba2bba5e24fa0,Nemesis,302 West Hastings Street,cmv77gjmi0008t42pdfg6pkg0,Nemesis Coffee Gastown,"302 W Hastings St, Vancouver, BC V6B 2N4"
+cmv77gjn1000mt42p084pnji4,Vancouver Art Gallery 1931 Gallery Bistro,"750 Hornby St, Vancouver, BC V6Z 2H7",osm_32f45d4c57344806,1931 Gallery Bistro,"Vancouver, BC"
+overture-7b2aa154-3979-4782-81fb-3d3d86f5db70,Panago Pizza,"1267 Pacific Blvd, Vancouver",osm-node-8377010347,Panago,"1267 Pacific Street, Vancouver, BC"
+osm_b2c1d136c3fb4bbd,Kingyo,871 Denman Street,cmv77gjn6000qt42p16j548ck,Kingyo Izakaya,"871 Denman St, Vancouver, BC V6G 2L9"
+overture-c6770d84-3760-4a81-8a66-36e259e6137a,JJ Bean Coffee Roasters,"353 Burrard St, Vancouver",osm_1bd8bca856994666,JJ Bean,Burrard Street
+overture-46b33869-9979-46fe-a1e8-412f24999c13,JJ Bean Coffee Roasters,"2904 W Broadway, Vancouver",osm-644342008,JJ Bean,2904 Mackenzie Street Vancouver
+overture-5ed95ebb-350f-47c1-9362-0ff5a506abf4,Bean Around the World Coffees,"4456 W 10th Ave, Vancouver",osm-node-8748457713,Bean Around The World,"Point Grey, Vancouver, BC (street address not mapped)"
+overture-789a0e2b-0338-40b6-a6a0-33c876b07390,Le Pho Vietnamese Restaurant,"2503 E Hastings St, Vancouver",osm-node-2945450342,Le Pho,"Hastings-Sunrise, Vancouver, BC (street address not mapped)"
+overture-80b3ee04-6d22-4566-aab2-15b1cfddb34e,Dublin Crossing,"466 SW Marine Dr, Vancouver",osm-node-4351939531,Dublin Crossing Irish Pub,"466 Southwest Marine Drive, Vancouver, BC"
+overture-7ff56ffd-a695-461a-b634-5c2cc855ed75,New Novelty Sweet and Restaurant,"6669 Fraser St, Vancouver",osm-node-6758654385,New Novelty Restaurant,"Sunset, Vancouver, BC (street address not mapped)"
+overture-9a0baa7c-8680-4d6b-95e8-6479f1bd5f67,Panago Pizza,"1278 W Broadway, Vancouver",osm-node-866150578,Panago,"South Granville, Vancouver, BC (street address not mapped)"
+overture-d8e8adf6-ef20-4428-80cc-909e6030d2fe,Quesada Burritos & Tacos,"2430 Commercial Dr, Vancouver",osm-node-1723548138,Quesada,"Commercial Drive, Vancouver, BC (street address not mapped)"
+overture-e9b3dd28-b5fa-49e4-be7a-10a9a7d85519,Quesada Burritos & Tacos,"703 SE Marine Dr, Vancouver",osm-node-12803435985,Quesada,"703 Southeast Marine Drive, Vancouver, BC"
+overture-d1804ab3-93c5-41fc-a96b-87b28384e067,33 Acres Brewing Company,"15 W 8th Ave, Vancouver",osm-node-6339114663,33 Acres Brewing,"Mount Pleasant, Vancouver, BC (street address not mapped)"

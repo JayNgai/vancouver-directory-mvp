@@ -1,0 +1,21 @@
+id,name,address,category,overture_confidence,city_licence_type
+overture-982945ac-e9fa-4f10-8cc9-d03a15579b83,Mon Garenne Bakery shop,"4021 Macdonald St, Vancouver",Bakery,0.3825666308403015,Issued
+overture-ba2d0642-0f27-452e-9d03-576ed23aaaa8,Tkw Burgers Inc,"6491 Oak St, Vancouver",Fast Food,0.30238431692123413,Issued
+overture-ec3e5013-324e-4bbb-83e9-a20b7b19b0c4,Maple Cafe,"5750 Oak St, Vancouver",Restaurant,0.2962697446346283,Issued
+overture-da418bed-7781-4523-a373-e1f323210cbb,Feenie’s,"650 W 41st Ave, Vancouver",Restaurant,0.26963290572166443,Issued
+overture-1ce0ea8b-e706-439c-9f46-07fd4cebddd5,Sphere Coffee Bar,"5898 Cambie St., Vancouver",Cafe,0.3321306109428406,Issued
+overture-cc68db36-5d53-4f78-a2b0-0a3c48f3f95a,Noct. Coffee,"4807 Main St, Vancouver",Cafe,0.2950661778450012,Issued
+overture-4bac4a72-b338-4973-9b84-fe35e4c32298,Mitchie Matcha Cafe,"4385 Main St, Vancouver",Cafe,0.473197877407074,Issued
+overture-feac13fd-78f7-480c-8cdd-ad7620140cee,Mei Wei Fang,"642 SE Marine Dr, Vancouver",Restaurant,0.2090865671634674,Issued
+overture-a96359cf-ef0d-454d-b57e-e3b4cd096141,J.R Taste Of Ceylon,"3929 Knight St, Vancouver",Restaurant,0.19754615426063538,Issued
+overture-86d1a5c1-3886-42cc-8d0f-bb0a445e7d8f,Knight Street Liquor Store,"1408 E 57th Ave, Vancouver",Bar / Pub,0.21222874522209167,Issued
+overture-040fa998-9906-4820-81c5-21f8eb034c70,SUMU Restaurant,"888 Burrard St, Vancouver",Restaurant,0.3010464906692505,Issued
+overture-4f9a445f-d9c2-4c7c-a9cf-63be87d1f396,Date Café & Bar,"927 Seymour St, Vancouver",Cafe,0.22725029289722443,Issued
+overture-3ac91197-e36c-4c6a-891b-35495a7940d3,ThaiLicious,"1943 Cornwall Ave, Vancouver",Restaurant,0.3008238673210144,Issued
+overture-b53f1318-71ca-4d29-98e1-b4bfc5533787,Kim Son Vietnamese Food,"555 W 12th Ave, Vancouver",Restaurant,0.41166168451309204,Issued
+overture-d3e7af55-4f6f-44be-bd34-234c7ffdfcd2,The Hestia Hearth Cafe,"628 Abbott St, Vancouver",Cafe,0.28655144572257996,Issued
+overture-a8f209b0-07c5-42cb-bfbd-db0b34e43007,Amberdo Cafe & Bakery,"1328 W Georgia St, Vancouver",Cafe,0.2939769923686981,Issued
+overture-d16737e9-d086-490a-b431-89c8c8e328c6,New King Sweets & Restaurant,"6443 Victoria Dr, Vancouver",Restaurant,0.23964691162109375,Issued
+overture-f62c7136-04f3-47f4-9385-bcbeb9697738,Pho Anh Vu East Vancouver,"2155 Kingsway, Vancouver",Restaurant,0.33667194843292236,Issued
+overture-bc00be54-474a-4f03-8dab-f50c4cbb51ff,Yummyslice Pizza,"2140 E Hastings St, Vancouver",Restaurant,0.2746707797050476,Issued
+overture-b2c78931-a79c-4964-8ce9-c2b901af0ce1,The Rose Cafe,"2251 Kingsway, Vancouver",Cafe,0.35176825523376465,Issued

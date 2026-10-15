@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Concierge - Vancouver Directory{% endblock %}
+
+{% block content %}
+<style>
+  .concierge-wrap { max-width: 880px; margin: 24px auto; padding: 0 14px; color: var(--foreground, #0f172a); }
+  .concierge-card { background: var(--card, #ffffff); border: 1px solid var(--border, #e2e8f0); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .concierge-prompt { width: 100%; min-height: 110px; font-size: 1.1rem; line-height: 1.4; padding: 14px; border: 1px solid var(--border, #cbd5e1); border-radius: 12px; resize: vertical; box-sizing: border-box; font-family: inherit; }
+  .concierge-prompt:focus { outline: 2px solid var(--accent, #007bff); outline-offset: 1px; }
+  .concierge-label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--muted-foreground, #64748b); text-transform: uppercase; letter-spacing: 0.04em; margin: 18px 0 8px; }
+  .pill-group { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { min-height: 44px; min-width: 44px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--border, #cbd5e1); background: var(--card, #fff); color: var(--foreground, #0f172a); font-size: 0.95rem; cursor: pointer; font-family: inherit; }
+  .pill[aria-pressed="true"] { background: var(--accent, #007bff); border-color: var(--accent, #007bff); color: #fff; font-weight: 600; }
+  .pill:focus-visible { outline: 2px solid var(--accent, #007bff); outline-offset: 2px; }
+  .hood-details { margin-top: 16px; }
+  .hood-details summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; color: var(--accent, #007bff); font-weight: 600; }
+  .hood-details select { width: 100%; min-height: 44px; padding: 10px; margin-top: 8px; border: 1px solid var(--border, #cbd5e1); border-radius: 8px; font-size: 1rem; }
+  .hood-note { font-size: 0.9rem; color: var(--muted-foreground, #64748b); margin-top: 8px; }
+  .generate-btn { width: 100%; min-height: 52px; margin-top: 22px; background: var(--accent, #007bff); color: #fff; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+  .generate-btn:disabled { opacity: 0.6; cursor: wait; }
+  .loading-box { display: none; text-align: center; padding: 24px 12px; color: var(--muted-foreground, #475569); }
+  .spinner { width: 32px; height: 32px; margin: 0 auto 10px; border: 3px solid var(--border, #cbd5e1); border-top-color: var(--accent, #007bff); border-radius: 50%; animation: spin 0.9s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .results { display: none; margin-top: 24px; }
+  .step-card { border-left: 4px solid var(--accent, #007bff); padding: 14px; margin-bottom: 12px; background: var(--card, #fff); border-radius: 0 10px 10px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.06); cursor: pointer; }
+  .swap-section { background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px dashed var(--border, #cbd5e1); margin-top: 18px; }
+  .swap-row { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
+  .swap-card { flex: 0 0 240px; min-height: 44px; border: 1px solid var(--border, #d1d5db); background: #fff; padding: 12px; border-radius: 10px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .swap-card.selected { border-color: var(--accent, #007bff); box-shadow: 0 0 0 2px var(--accent, #007bff); }
+  .swap-hint { font-size: 0.9rem; color: var(--muted-foreground, #64748b); margin: 0 0 10px; }
+  @media (min-width: 720px) {
+    .concierge-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
+    .swap-row { flex-wrap: wrap; overflow-x: visible; }
+    .swap-card { flex: 0 0 calc(50% - 6px); }
+  }
+  @media (max-width: 380px) { .concierge-prompt { font-size: 1rem; } }
+</style>
+
+<div class="concierge-wrap">
+    <h1 style="margin: 8px 0 4px;">✨ Smart Concierge</h1>
+    <p style="margin: 0 0 16px; color: var(--muted-foreground, #475569);">Tell us what you feel like. We will build a walking day from real listings, and you can swap any stop.</p>
+
+    <form id="conciergeForm" class="concierge-card" novalidate>
+        <label for="prompt" class="concierge-label">What do you feel like?</label>
+        <textarea id="prompt" class="concierge-prompt" placeholder="What do you feel like? e.g. coffee crawl in Gastown, 3 hours, afternoon"></textarea>
+        <div id="hoodNote" class="hood-note" aria-live="polite"></div>
+
+        <div class="concierge-grid">
+            <div>
+                <span class="concierge-label">Categories</span>
+                <div id="categoryPills" class="pill-group">
+                    {% for c in categoryOptions %}<button type="button" class="pill" aria-pressed="false" data-category="{{ c }}">{{ c }}</button>{% endfor %}
+                </div>
+            </div>
+            <div>
+                <span class="concierge-label">Time of day</span>
+                <div id="timePills" class="pill-group">
+                    <button type="button" class="pill" aria-pressed="false" data-time="morning">Morning</button>
+                    <button type="button" class="pill" aria-pressed="false" data-time="afternoon">Afternoon</button>
+                    <button type="button" class="pill" aria-pressed="false" data-time="evening">Evening</button>
+                    <button type="button" class="pill" aria-pressed="true" data-time="flexible">Flexible</button>
+                </div>
+
+                <span class="concierge-label">Time available</span>
+                <div id="durationPills" class="pill-group">
+                    <button type="button" class="pill" aria-pressed="false" data-duration="2h">2 hours</button>
+                    <button type="button" class="pill" aria-pressed="true" data-duration="4h">4 hours</button>
+                    <button type="button" class="pill" aria-pressed="false" data-duration="8h">8 hours</button>
+                </div>
+
+                <details class="hood-details">
+                    <summary>Choose a neighbourhood instead</summary>
+                    <select id="neighborhood" aria-label="Neighbourhood">
+                        <option value="">Anywhere in Vancouver</option>
+                        {% for n in neighborhoods %}
+                        <option value="{{ n.id }}">{{ n.name }}</option>
+                        {% endfor %}
+                    </select>
+                </details>
+            </div>
+        </div>
+
+        <button type="submit" id="generateBtn" class="generate-btn">Generate my day</button>
+    </form>
+
+    <div id="loading" class="loading-box" role="status">
+        <div class="spinner" aria-hidden="true"></div>
+        <p style="margin: 0;">✨ Our Concierge is crafting your perfect day...</p>
+    </div>
+
+    <div id="resultsArea" class="results">
+        <h2 style="margin: 0 0 6px;">Your custom itinerary</h2>
+        <p class="swap-hint">On a computer, drag an alternative onto a stop. On a phone, tap an alternative, then tap the stop to replace.</p>
+        <div id="itinerarySteps"></div>
+
+        <div id="swapSection" class="swap-section">
+            <h3 style="margin: 0 0 6px;">Swap options</h3>
+            <div id="swapOptions" class="swap-row"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentSteps = [];
+let currentSwaps = [];
+let selectedSwap = null;
+
+// ---- toggles ----
+function setSingle(groupId, attr, value) {
+    document.querySelectorAll('#' + groupId + ' .pill').forEach((b) => {
+        b.setAttribute('aria-pressed', b.dataset[attr] === value ? 'true' : 'false');
+    });
+}
+function activeSingle(groupId, attr) {
+    const b = document.querySelector('#' + groupId + ' .pill[aria-pressed="true"]');
+    return b ? b.dataset[attr] : null;
+}
+document.querySelectorAll('#timePills .pill').forEach((b) => b.addEventListener('click', () => setSingle('timePills', 'time', b.dataset.time)));
+document.querySelectorAll('#durationPills .pill').forEach((b) => b.addEventListener('click', () => setSingle('durationPills', 'duration', b.dataset.duration)));
+document.querySelectorAll('#categoryPills .pill').forEach((b) => b.addEventListener('click', () => {
+    b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+}));
+function activeCategories() {
+    return Array.from(document.querySelectorAll('#categoryPills .pill[aria-pressed="true"]')).map((b) => b.dataset.category);
+}
+
+// ---- hint only: the server does the real parsing of neighbourhood names ----
+document.getElementById('prompt').addEventListener('input', updateHoodNote);
+function updateHoodNote() {
+    const text = document.getElementById('prompt').value.toLowerCase();
+    const hoods = Array.from(document.querySelectorAll('#neighborhood option')).filter((o) => o.value);
+    const hit = hoods.find((o) => text.includes(o.textContent.toLowerCase()));
+    document.getElementById('hoodNote').textContent = hit ? `Neighbourhood: ${hit.textContent} (from your prompt)` : '';
+}
+
+// ---- auto-submit from a link like /concierge?activity=coffee ----
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const activity = params.get('activity');
+    if (activity) {
+        document.getElementById('prompt').value = activity;
+        updateHoodNote();
+        setTimeout(() => document.getElementById('conciergeForm').dispatchEvent(new Event('submit', { cancelable: true, bubbles: true })), 50);
+    }
+});
+
+// ---- generate ----
+document.getElementById('conciergeForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('generateBtn');
+    btn.disabled = true;
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('resultsArea').style.display = 'none';
+
+    const payload = {
+        activity: document.getElementById('prompt').value,
+        categories: activeCategories(),
+        duration: activeSingle('durationPills', 'duration') || '4h',
+        timeOfDay: activeSingle('timePills', 'time') || 'flexible',
+        neighborhoodId: document.getElementById('neighborhood').value
+    };
+
+    try {
+        const response = await fetch('/api/concierge', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const res = await response.json();
+        if (res.success) {
+            currentSteps = res.data.steps;
+            currentSwaps = res.data.swapOptions;
+            selectedSwap = null;
+            document.getElementById('resultsArea').style.display = 'block';
+            renderItinerary();
+        } else {
+            alert('Could not build an itinerary: ' + (res.error || 'unknown error'));
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to generate itinerary.');
+    } finally {
+        document.getElementById('loading').style.display = 'none';
+        btn.disabled = false;
+    }
+});
+
+function esc(v) {
+    return String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function renderItinerary() {
+    const stepsHtml = currentSteps.map((step, idx) => `
+        <div class="step-card" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" ondrop="drop(event, ${idx})" onclick="tapStep(${idx})" id="step-${idx}">
+            <h4 style="margin: 0 0 4px; color: var(--accent, #007bff); font-size: 1.05em;">${esc(step.time)}</h4>
+            <strong style="font-size: 1.1em;">${esc(step.business.name)}</strong>
+            <p style="margin: 2px 0; color: var(--muted-foreground, #555);">${esc(step.business.category)} • ${esc(step.business.address)}${step.business.displayHours ? ' • 🕒 ' + esc(step.business.displayHours) : ''}</p>
+            <div style="margin-top: 10px; background: #f8fafc; padding: 10px; border-radius: 8px; font-size: 0.9em;">
+                <div style="margin-bottom: 4px;"><strong>⏳ Est. time:</strong> ${esc(step.estimatedDuration)}</div>
+                <div><strong>💡 Why here:</strong> ${esc(step.why)}</div>
+            </div>
+            ${step.walkToNextMinutes != null ? `<div style="font-size: 0.85em; color: var(--muted-foreground, #64748b); margin-top: 6px;">Walk to next stop: about ${esc(step.walkToNextMinutes)} min</div>` : ''}
+        </div>
+    `).join('');
+    document.getElementById('itinerarySteps').innerHTML = stepsHtml || '<p>No spots found. Try broader terms.</p>';
+
+    const swapsHtml = currentSwaps.map((biz, idx) => `
+        <div draggable="true" ondragstart="drag(event, ${idx})" ondragend="dragEnd(event)" onclick="tapSwap(${idx})"
+             class="swap-card${selectedSwap === idx ? ' selected' : ''}" id="swap-${idx}">
+            <div style="font-weight: 700; margin-bottom: 4px;">${esc(biz.name)}</div>
+            <div style="color: var(--muted-foreground, #555); margin-bottom: 4px;">${esc(biz.category)}${biz.displayHours ? ' • 🕒 ' + esc(biz.displayHours) : ''}</div>
+            ${biz.distanceFromStopMetres != null ? `<div style="color: var(--muted-foreground, #555); font-size: 0.85em;">${esc(biz.distanceFromStopMetres)} m from ${esc(biz.swapForStop)}</div>` : ''}
+            <div style="color: var(--accent, #007bff); font-size: 0.85em; margin-top: 6px;">Tap, then tap a stop · or drag on a computer</div>
+        </div>
+    `).join('');
+    document.getElementById('swapOptions').innerHTML = swapsHtml || '<p style="color: var(--muted-foreground, #777);">No extra options available.</p>';
+}
+
+// ---- tap-to-swap (touch screens) ----
+function tapSwap(idx) {
+    selectedSwap = selectedSwap === idx ? null : idx;
+    renderItinerary();
+}
+function tapStep(idx) {
+    if (selectedSwap === null) return;
+    swapInto(idx, selectedSwap);
+    selectedSwap = null;
+    renderItinerary();
+}
+
+// ---- drag and drop (computers) ----
+function allowDrop(ev) {
+    ev.preventDefault();
+    ev.currentTarget.style.background = "#e6f2ff";
+}
+function dragLeave(ev) {
+    ev.currentTarget.style.background = "#fff";
+}
+function drag(ev, swapIdx) {
+    ev.dataTransfer.setData("swapIdx", swapIdx);
+    ev.target.style.opacity = "0.5";
+}
+function dragEnd(ev) {
+    ev.target.style.opacity = "1";
+}
+function drop(ev, stepIdx) {
+    ev.preventDefault();
+    ev.currentTarget.style.background = "#fff";
+    const swapIdx = ev.dataTransfer.getData("swapIdx");
+    if (swapIdx !== "") {
+        swapInto(stepIdx, Number(swapIdx));
+        renderItinerary();
+    }
+}
+function swapInto(stepIdx, swapIdx) {
+    const oldBusiness = currentSteps[stepIdx].business;
+    currentSteps[stepIdx].business = currentSwaps[swapIdx];
+    currentSwaps[swapIdx] = oldBusiness;
+}
+</script>
+{% endblock %}

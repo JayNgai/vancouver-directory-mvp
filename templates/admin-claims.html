@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Admin — claims{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 24px;">
+    <h1 class="section-title" style="margin-top: 0;">Claims (local only)</h1>
+    <p style="color: #64748b; font-size: 0.9rem;">
+        These pages answer only to 127.0.0.1 requests. A real login is still required before the
+        site is hosted anywhere. Nothing here is shown publicly, and no listing is marked in any
+        special way while a claim is in review.
+    </p>
+
+    <div class="pagination-bar">
+        <div class="pagination-count">
+            {% for status in statuses %}{{ status }}: {{ counts[status] or 0 }}{% if not loop.last %} &bull; {% endif %}{% endfor %}
+            &bull; total: {{ claims.length }}
+        </div>
+        <div class="pagination-controls">
+            <a class="page-link{% if not selectedStatus %} page-link-disabled{% endif %}" href="/admin/claims">All</a>
+            {% for status in statuses %}
+            <a class="page-link{% if selectedStatus == status %} page-link-disabled{% endif %}" href="/admin/claims?status={{ status }}">{{ status }}</a>
+            {% endfor %}
+            <a class="page-link" href="/admin/claims.csv">Export CSV</a>
+        </div>
+    </div>
+
+    <div class="detail-card" style="overflow-x: auto;">
+        <table class="admin-table">
+            <thead>
+                <tr><th>Received</th><th>Listing</th><th>Name</th><th>Role</th><th>Email</th><th>Phone</th><th>Message</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+                {% for claim in claims %}
+                <tr>
+                    <td>{{ claim.createdAtText }}</td>
+                    <td><a href="/businesses/{{ claim.business.slug }}">{{ claim.business.name }}</a><br><span style="color:#94a3b8;">{{ claim.business.neighborhood.name if claim.business.neighborhood else '' }}</span></td>
+                    <td>{{ claim.name }}</td>
+                    <td>{{ claim.role }}</td>
+                    <td><a href="mailto:{{ claim.email }}">{{ claim.email }}</a></td>
+                    <td>{{ claim.phone or '' }}</td>
+                    <td style="max-width: 320px;">{{ claim.message or '' }}</td>
+                    <td>
+                        <form method="POST" action="/admin/claims/{{ claim.id }}/status" style="display:flex; gap:6px;">
+                            <input type="hidden" name="return_status" value="{{ selectedStatus }}">
+                            <select name="status" class="form-input" style="padding:4px 8px;">
+                                {% for status in statuses %}
+                                <option value="{{ status }}" {% if claim.status == status %}selected{% endif %}>{{ status }}</option>
+                                {% endfor %}
+                            </select>
+                            <button type="submit" class="page-link">Save</button>
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <tr><td colspan="8" style="color:#64748b;">No claims yet.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <p style="font-size: 0.85rem;"><a href="/admin">Admin home</a> &bull; <a href="/admin/revenue">Revenue</a></p>
+</div>
+{% endblock %}

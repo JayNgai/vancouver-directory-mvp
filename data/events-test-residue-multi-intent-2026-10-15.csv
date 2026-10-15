@@ -1,0 +1,9 @@
+id,type,businessId,path,createdAt,referrerHost,visitorHash
+"cmv8yftix00006pu224rg24jz","search","","/search?q=sushi",1792033436986,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftjh00016pu2kk78qbes","search","","/search?q=sushi",1792033437006,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftjz00026pu2wwszxuym","search","","/search?q=Gastown",1792033437023,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftq100036pu28wsj9p50","page_view_detail","osm_c3a5516ef3024562","/businesses/steamworks",1792033437242,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftqa00046pu2xglo8uvq","page_view_detail","cmv77gjmr000et42pycc5kbl2","/businesses/rain-or-shine-ice-cream",1792033437250,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftqh00056pu2pkx5c760","page_view_detail","overture-cd04be74-342f-44d5-bd71-13b20f1d39ac","/businesses/sip-song-thai-cuisine-13b20f1d",1792033437257,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftqn00066pu2q84xpd3m","page_view_detail","cmv77gjmy000kt42pvui0qz1f","/businesses/medina-cafe",1792033437263,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8yftqt00076pu20qcu3uki","page_view_detail","cmv77gjmy000kt42pvui0qz1f","/businesses/medina-cafe",1792033437270,"","3087575b87fb771dcac33fb980ebb0e4"

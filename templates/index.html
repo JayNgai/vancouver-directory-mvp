@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Vancouver Neighborhood Directory & Experience Curator{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container" style="text-align: center;">
+        <h1 style="font-size: 3rem; margin-bottom: 12px; color: #fff7ed;">Discover & Design Your Vancouver Experience</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; color: #cbd5e1;">Search any venue, neighborhood, street, phone number, or tag — all in one place.</p>
+        
+        <div style="max-width: 780px; margin: 0 auto 20px auto; background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 12px 35px rgba(0,0,0,0.25);">
+            <form action="/search" method="GET" style="display: flex; width: 100%; margin: 0;">
+                <input type="text" name="q" placeholder="🔍 Search anything (e.g. Gastown, Miku, Water St, 604-689-2832, #patio, Italian)..." required style="flex: 1; border: none; padding: 16px 25px; font-size: 1.1rem; border-radius: 50px 0 0 50px; outline: none; color: #0f172a;">
+                <button type="submit" class="btn" style="background: #e05638; color: white; border: none; padding: 16px 32px; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 1.05rem;">Smart Search</button>
+            </form>
+        </div>
+
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
+            <span style="color: #cbd5e1; font-size: 0.9rem; align-self: center;">Popular Searches:</span>
+            <a href="/search?q=Gastown" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">Gastown</a>
+            <a href="/search?q=Water+St" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">Water St</a>
+            <a href="/search?q=Sushi" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">Sushi</a>
+            <a href="/search?q=patio" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">#patio</a>
+            <a href="/concierge" style="background: #d97706; color: white; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; font-weight: 600;">✨ Custom Day Concierge</a>
+        </div>
+        
+        <a href="/itineraries" style="color: #cbd5e1; text-decoration: underline; font-size: 0.95rem;">Or browse pre-made itineraries &rarr;</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">Explore Flagship Neighborhoods</h2>
+    <div class="grid">
+        {% for n in neighborhoods %}
+        <a href="/neighborhoods/{{ n.slug }}" class="card">
+            {% if n.imageUrl %}<img src="{{ n.imageUrl }}" class="card-img" alt="{{ n.name }}" loading="lazy">{% else %}<div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ n.name }}</span></div>{% endif %}
+            <div class="card-body">
+                <div class="card-subtitle">{{ n.citySection }}</div>
+                <h3 class="card-title">{{ n.name }}</h3>
+                <p class="card-desc">{{ n.description }}</p>
+                <span style="color: #2b6cb0; font-weight: 600; font-size: 0.9rem;">Explore Guide &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <h2 class="section-title">Curated Experience Itineraries</h2>
+    <div class="grid">
+        {% for itin in itineraries %}
+        <a href="/itineraries/{{ itin.slug }}" class="card" style="border-top: 4px solid #38a169;">
+            <div class="card-body">
+                <div class="card-subtitle">{{ itin.neighborhood.name if itin.neighborhood else 'Vancouver' }} &bull; {{ itin.duration }}</div>
+                <h3 class="card-title">{{ itin.title }}</h3>
+                <p class="card-desc">{{ itin.description }}</p>
+                <span class="btn" style="background: #38a169; align-self: flex-start;">View Route & Export Map &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

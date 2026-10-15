@@ -1,0 +1,94 @@
+{
+  "Gastown": {
+    "description": "Gastown is where Vancouver began: a grid of brick Victorian storefronts, cobblestone streets and the steam-powered clock that draws a crowd every hour. The food and drink scene leans into its history, with converted warehouses, cocktail bars that treat the old-fashioned seriously, and small restaurants serving seasonal West Coast plates. Water Street and the blocks around Maple Tree Square fill up in the evening, while the quieter side streets reward a slow walk. It is busy and touristy in summer, but locals still come for the dependable kitchens and the atmosphere after dark.",
+    "metaDescription": "Explore Gastown's cobblestone streets, historic cocktail bars and West Coast restaurants, from the Steam Clock to the old Water Street warehouses."
+  },
+  "Kitsilano": {
+    "description": "Kitsilano, known locally as Kits, has an easygoing, outdoors-first character. Its food scene is shaped by the beach and the bike lanes: bright cafes serving smoothie bowls and espresso, casual spots for fish and chips after a swim, and a long run of independent restaurants along West 4th Avenue and Broadway. Vine Street and the blocks near the seawall draw people who want something light and healthy, and the wine bars and patios turn lively on warm evenings. It feels like a neighbourhood that lives most of its life outside.",
+    "metaDescription": "Find Kitsilano's beachside cafes, casual seafood, healthy bowls and West 4th Avenue restaurants, a short walk from the seawall and English Bay."
+  },
+  "Downtown Vancouver": {
+    "description": "Downtown is the busiest part of the city, and its food scene reflects that range. Robson Street and the blocks around Burrard offer quick lunches, noodle counters, late-night ramen and well-known chains, while the older hotels and office towers house formal dining rooms for business lunches and special occasions. Vancouver's Asian food culture is well represented here, from dim sum and Japanese izakaya to Korean barbecue. Because it draws commuters, shoppers and visitors all day, many kitchens stay open later than in the residential neighbourhoods.",
+    "metaDescription": "Discover downtown Vancouver's restaurants, from Robson Street lunch counters and late-night ramen to Asian kitchens and formal dining near Burrard."
+  },
+  "Yaletown": {
+    "description": "Yaletown was once a rail-yard warehouse district, and its brick buildings and high ceilings now hold some of the city's most polished restaurants. Patios along Hamilton and Mainland Streets fill with after-work crowds in summer, and the menus lean toward seafood, steak, and modern West Coast cooking. Many of the bars focus on wine and craft cocktails, and the neighbourhood's compact layout makes it easy to move from a long dinner to a nightcap. It is one of the city's most walkable places to eat well, and it feels a little more upscale than most of the city.",
+    "metaDescription": "Discover Yaletown's warehouse-conversion restaurants, patios and wine bars, with seafood, modern West Coast cooking and cocktails near the Roundhouse."
+  },
+  "West End": {
+    "description": "The West End is one of the densest residential neighbourhoods in North America, and its food scene grows from that. Denman and Davie Streets carry a long-running mix of cafes, casual neighbourhood restaurants and Japanese, Korean and Vietnamese kitchens, and the bakeries and dessert shops are busy throughout the day. Stanley Park and English Bay sit at its edge, so takeout and patio meals often follow a walk along the seawall. The area is relaxed and unpretentious, with a strong sense of community among the residents and the small local owners who run most of its restaurants.",
+    "metaDescription": "Explore the West End's Denman and Davie Street restaurants, bakeries and casual Asian kitchens, steps from Stanley Park and the English Bay beaches."
+  },
+  "Mount Pleasant": {
+    "description": "Mount Pleasant sits between the downtown core and Main Street, and its food scene is shaped by the artists, makers and young families who live there. Main Street and the blocks around Kingsway hold a cluster of independent coffee shops, craft breweries, and small restaurants with a more experimental streak. The neighbourhood is also known for its breweries and taprooms, which are popular on weekend afternoons. It is quieter and less polished than downtown, which is part of its appeal for people who want a local spot rather than a destination.",
+    "metaDescription": "Discover Mount Pleasant's independent coffee shops, craft breweries and Main Street restaurants, a creative neighbourhood between downtown and Kingsway."
+  },
+  "Commercial Drive": {
+    "description": "The Drive, as Commercial Drive is known, is one of the city's most distinctive food streets. Its Italian heritage shows in long-running espresso bars, bakeries and gelaterias, and the newer cafes sit alongside them without losing the neighbourhood's character. Restaurants here cover a wide range, from Ethiopian and Vietnamese to Mexican and vegan, and many are small, owner-run places with loyal regulars. The street stays lively late into the evening, especially around the Drive's busier intersections, and the mix of cultures makes it one of the most interesting places in the city to eat.",
+    "metaDescription": "Explore Commercial Drive's Italian espresso bars, bakeries, and global restaurants, from Ethiopian and Vietnamese to Mexican and vegan kitchens."
+  },
+  "Strathcona": {
+    "description": "Strathcona is the city's oldest residential neighbourhood, and its food scene is closely tied to its immigrant history and its place next to Chinatown. Pender and Keefer Streets hold long-established Chinese bakeries, herbal shops and noodle houses, while the neighbourhood's newer restaurants bring in Filipino, Indian and Vietnamese cooking. Many of the older buildings have been restored, and some of the kitchens have been run by the same families for generations. It rewards visitors who are willing to wander and try something unfamiliar.",
+    "metaDescription": "Find Strathcona's long-running Chinese bakeries, noodle houses and Filipino, Indian and Vietnamese kitchens along Pender and Keefer Streets."
+  },
+  "Chinatown": {
+    "description": "Vancouver's Chinatown is one of the oldest in North America, and its food culture is a central part of its identity. Shops along Pender and Keefer Streets sell fresh produce, dried goods and herbal medicine, and the restaurants include dim sum houses, bakeries known for barbecue pork buns and egg tarts, and casual spots for congee and noodles. Many of the family businesses have operated here for decades. The neighbourhood is best explored slowly and in daylight, when the markets are busy and the history of the area is easiest to read in its streets and buildings.",
+    "metaDescription": "Explore Vancouver's Chinatown, one of North America's oldest, with dim sum houses, bakeries, herbal shops and family-run noodle restaurants."
+  },
+  "Coal Harbour": {
+    "description": "Coal Harbour is a waterfront neighbourhood of glass towers, marinas and seawall promenades, and its food scene reflects the views. Restaurants along the water focus on patios, seafood, and cocktails timed for sunset over the North Shore Mountains. Many are polished and suited to business dinners or special occasions, and the hotel dining rooms here are some of the city's best-known. Its restaurants are less about bargain eating and more about the setting, so visitors and residents often choose it for a celebratory evening.",
+    "metaDescription": "Discover Coal Harbour's waterfront restaurants and patios, with seafood, sunset cocktails and North Shore Mountain views along the seawall promenade."
+  },
+  "Point Grey": {
+    "description": "Point Grey is a quiet, largely residential part of the west side, close to the University of British Columbia and the beaches at Jericho and Locarno. Its food scene is small and neighbourhood-focused, with cafes near the university, family-run restaurants along the main commercial strips, and a few places that draw people from across the city. Many residents shop at the nearby Kitsilano and Kerrisdale commercial areas, so the local choices are practical rather than destination-driven. It is a good place to find a dependable, unhurried meal.",
+    "metaDescription": "Find Point Grey's neighbourhood cafes and family-run restaurants near UBC, a short drive from Jericho Beach and Locarno Beach on the city's west side."
+  },
+  "Kerrisdale": {
+    "description": "Kerrisdale is one of the city's most established shopping villages, with a main street of independent shops, bakeries, and cafes that have served the same loyal customers for decades. Its restaurants lean toward relaxed dining, with a lot of brunch, Italian and French-influenced kitchens, and wine bars that suit an early evening. Tree-lined streets and a slower pace give it a village feel, and many of its better-known spots are close to the Kerrisdale Arena and the main commercial strip on West 41st Avenue. It suits people who want a leisurely afternoon of eating and browsing.",
+    "metaDescription": "Explore Kerrisdale's independent cafes, brunch spots and wine bars along West 41st Avenue, a tree-lined village with a leisurely, old-fashioned pace."
+  },
+  "Marpole": {
+    "description": "Marpole is a working neighbourhood on the Fraser River, and its food scene reflects its mix of long-time residents and newer families. Granville Street and the blocks around Marine Drive hold family-run restaurants, bakeries and casual Asian kitchens, many of them serving the local community rather than visitors. The river and the nearby industrial areas give the neighbourhood a direct, practical character. It is a good place to find an everyday meal and a sense of what life in the city is like outside the tourist core.",
+    "metaDescription": "Discover Marpole's family-run restaurants, bakeries and casual Asian kitchens along Granville Street and Marine Drive, beside the Fraser River."
+  },
+  "South Granville": {
+    "description": "South Granville, the stretch of Granville Street south of the bridge, is one of the city's most established dining corridors. Its restaurants include long-running neighbourhood favourites, French and Italian bistros, and a number of upscale kitchens that suit a long lunch or a dinner out. Many of the shops and cafes are clustered around the Oak and Granville intersection, and the street has a polished, residential feel. It attracts people from across the city who want a dependable table rather than a trendy opening.",
+    "metaDescription": "Explore South Granville's dining corridor, with long-running neighbourhood restaurants, French and Italian bistros and upscale kitchens south of the bridge."
+  },
+  "False Creek": {
+    "description": "False Creek is a waterfront neighbourhood where the city's newer residential towers meet a seawall shared by cyclists, walkers and paddlers. Its food scene is built around the water, with casual patios, fish and chips near the marinas, and cafes that suit a walk along the seawall. Many restaurants are attached to the hotels and condominium towers, and the Olympic Village area has grown into a neighbourhood with its own mix of grocery stores, bakeries and sit-down restaurants. It is practical and relaxed, with the water as the main draw.",
+    "metaDescription": "Discover False Creek's seawall cafes, waterfront patios and fish and chips near the marinas and Olympic Village, along the Burrard Street bridge."
+  },
+  "Fairview": {
+    "description": "Fairview sits on the slope above False Creek and the city's downtown, and its food scene reflects the mix of hospital workers, students, and long-time residents. The main commercial strips along West Broadway hold cafes, casual restaurants, and a number of specialty shops, and the neighbourhood has a solid base of everyday restaurants rather than a single dining street. The views over downtown are among the best in the city, which makes some of its patios and rooftop spots popular in summer. It is an easy place to eat well without a reservation.",
+    "metaDescription": "Find Fairview's everyday restaurants and cafes along West Broadway, with patios and views of downtown Vancouver from the slope above False Creek."
+  },
+  "Grandview-Woodland": {
+    "description": "Grandview-Woodland is one of the most diverse neighbourhoods in Vancouver, stretching from the Drive to the waterfront. Its food scene is one of the city's most varied, with Italian bakeries, Latin American taquerias, Filipino and Portuguese restaurants, and a strong run of independent coffee shops. Commercial Drive's southern blocks and the streets near Grandview Park hold many long-running family businesses alongside newer owner-run kitchens. It is a neighbourhood for people who like to eat their way around the city, one block at a time.",
+    "metaDescription": "Explore Grandview-Woodland's Italian bakeries, taquerias, Filipino and Portuguese restaurants and independent cafes, from the Drive to the waterfront."
+  },
+  "Hastings-Sunrise": {
+    "description": "Hastings-Sunrise is a residential area in the northeast of the city, and its food scene serves the families and workers who live there. Hastings Street and the blocks around Nanaimo Street hold a practical mix of Chinese, Japanese and Vietnamese restaurants, cafes, and bakeries, many of them run by the same families for years. The neighbourhood is less polished than the central districts, which makes it a good place to find everyday food at local prices. It is quieter after dark, and most of its restaurants close earlier than in the West End.",
+    "metaDescription": "Discover Hastings-Sunrise's family-run Chinese, Japanese and Vietnamese restaurants and bakeries along Hastings Street, a practical neighbourhood."
+  },
+  "Killarney": {
+    "description": "Killarney is a residential neighbourhood in the southeast of the city, known for its community centre, parks, and tree-lined streets. Its food scene is built around everyday needs: bakeries, grocery-adjacent cafes, and family restaurants that serve a loyal local crowd. Many of its restaurants reflect the area's mix of Chinese, Korean and Vietnamese residents, and the commercial strips along Kingsway and Victoria Drive hold a good range of affordable options. It is a quiet, practical neighbourhood, and most people come here for the neighbours rather than the restaurants.",
+    "metaDescription": "Find Killarney's family restaurants, bakeries and cafes along Kingsway and Victoria Drive, a quiet southeast neighbourhood near its community centre."
+  },
+  "Oakridge": {
+    "description": "Oakridge is a residential neighbourhood centred on the shopping area around 41st Avenue and Cambie Street, and its food scene serves the families who live nearby. The main commercial strip holds a steady mix of cafes, casual restaurants, and bakeries, many of them open for breakfast and lunch on weekdays. It is one of the city's more suburban-feeling districts, with a slower pace and fewer late-night venues. For residents, the neighbourhood's restaurants are the everyday places to meet, eat, and catch up.",
+    "metaDescription": "Explore Oakridge's everyday cafes, bakeries and family restaurants around 41st Avenue and Cambie Street, a quiet residential shopping area in Vancouver."
+  },
+  "Renfrew-Collingwood": {
+    "description": "Renfrew-Collingwood is a large residential area in east Vancouver, and its food scene is centred on the commercial strips along Kingsway, Renfrew Street and Joyce Street. Many of the restaurants serve families, with Chinese, Vietnamese, Filipino and Latin American kitchens, and the bakeries and cafes are busiest on weekend mornings. The area is affordable compared with the central districts, and many local businesses have operated for years. Its restaurants are practical and welcoming, rather than trendy, and reward a visit for the everyday food.",
+    "metaDescription": "Discover Renfrew-Collingwood's family restaurants and bakeries along Kingsway, Renfrew Street and Joyce Street, a welcoming east Vancouver neighbourhood."
+  },
+  "Sunset": {
+    "description": "Sunset is a residential neighbourhood in south-central Vancouver, close to Main Street and the Fraser River. Its food scene is mostly everyday and neighbourhood-focused, with cafes, bakeries and family restaurants serving the nearby homes and the Main Street corridor. Many of its restaurants reflect the mix of Chinese, Vietnamese and South Asian communities that live in the area. It is a practical neighbourhood for finding a reliable meal, and it is quieter and less busy than the central districts. Its streets are calm, and the local restaurants depend on regulars more than passing visitors.",
+    "metaDescription": "Find Sunset's neighbourhood cafes, bakeries and family restaurants near Main Street and the Fraser River, serving the homes of south-central Vancouver."
+  },
+  "Victoria-Fraserview": {
+    "description": "Victoria-Fraserview is a large residential area in southeast Vancouver, and its food scene follows Victoria Drive and Fraser Street. The neighbourhood is known for its wide range of Asian restaurants, including Chinese, Filipino, Vietnamese and Korean kitchens, alongside bakeries, cafes and a number of long-running family businesses. Many of the restaurants are small and owner-run, and the area's food is among the most affordable in the city. It is a place to explore on foot, with a lot of options within a few blocks.",
+    "metaDescription": "Explore Victoria-Fraserview's Chinese, Filipino, Vietnamese and Korean restaurants along Victoria Drive and Fraser Street, with affordable family dining."
+  }
+}

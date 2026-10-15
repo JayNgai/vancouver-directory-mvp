@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Claim received{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 40px; max-width: 700px;">
+    <div class="detail-card">
+        <h1 class="section-title" style="margin-top: 0;">Thank you — your claim request is with us</h1>
+        <p style="color: #475569;">
+            We have recorded your request for <strong>{{ business.name }}</strong>.
+            We will contact you to confirm that you own or manage this business before anything
+            on the listing is changed. Please allow a few business days for a reply.
+        </p>
+        <p style="color: #475569;">
+            Nothing has been changed or confirmed automatically, and the listing is not marked in
+            any special way while we review your request.
+        </p>
+        <p style="font-size: 0.85rem; color: #64748b;">Reference: {{ claimId }}</p>
+        <p style="color: #475569;">
+            Need to add something? Email
+            <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a> and quote the reference above.
+            Your email address is used only to contact you about this listing.
+        </p>
+        <div class="detail-actions">
+            <a class="btn" href="/businesses/{{ business.slug }}">Back to the listing</a>
+            <a class="btn btn-secondary" href="/neighborhoods/{{ business.neighborhood.slug }}">More in {{ business.neighborhood.name }}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

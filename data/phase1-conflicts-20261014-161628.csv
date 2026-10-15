@@ -1,0 +1,19 @@
+kept_id,kept_name,removed_id,field,kept_value,removed_value
+osm-563321283,Alibi Room,cmv77gjml000at42p9gzsiyr9,website,https://alibi.ca/,https://alibi.ca
+osm-563321283,Alibi Room,cmv77gjml000at42p9gzsiyr9,slug,alibi-room,the-alibi-room
+osm_690545b051c3463a,49th Parallel & Lucky's Doughnuts Cafe,cmv77gjmt000gt42peavxg30d,website,https://49thcoffee.com/pages/west-4th,https://49thcoffee.com
+osm_690545b051c3463a,49th Parallel & Lucky's Doughnuts Cafe,cmv77gjmt000gt42peavxg30d,slug,49th-parallel-&-luckys-doughnuts-cafe,49th-parallel-kitsilano
+cmv77gjmy000kt42pvui0qz1f,Medina Cafe,osm_3c54b90dea544f49,phone,(604) 879-3114,+1-604-879-3114
+cmv77gjmy000kt42pvui0qz1f,Medina Cafe,osm_3c54b90dea544f49,website,https://medinacafe.com,https://www.medinacafe.com/
+cmv77gjmy000kt42pvui0qz1f,Medina Cafe,osm_3c54b90dea544f49,slug,medina-cafe,cafe-medina
+cmv77gjn3000ot42pu54dkygr,Blue Water Cafe,osm_b7402ddadb0e4a71,phone,(604) 688-8078,+1-604-688-8078
+cmv77gjn3000ot42pu54dkygr,Blue Water Cafe,osm_b7402ddadb0e4a71,website,https://bluewatercafe.net,https://bluewatercafe.net/
+cmv77gjn3000ot42pu54dkygr,Blue Water Cafe,osm_b7402ddadb0e4a71,slug,blue-water-cafe,blue-water-cafe-+-raw-bar
+osm-node-14060329910,Bubble Waffle Cafe,osm-node-14060335690,slug,bubble-waffle-cafe-node-14060329910,bubble-waffle-cafe-node-14060335690
+osm-way-1527718449,Time Out Market Vancouver,osm-way-1527718450,hours,Su-Th 11:00-22:00; Fr-Sa 11:00-23:00,"Su-Th 11:00-22:00; Fr,Sa 11:00-23:00"
+osm-way-1527718449,Time Out Market Vancouver,osm-way-1527718450,slug,time-out-market-vancouver-way-1527718449,time-out-market-bar-way-1527718450
+osm-way-1527718449,Time Out Market Vancouver,osm-way-1527724158,hours,Su-Th 11:00-22:00; Fr-Sa 11:00-23:00,"Su-Th 11:00-22:00; Fr,Sa 11:00-23:00"
+osm-way-1527718449,Time Out Market Vancouver,osm-way-1527724158,slug,time-out-market-vancouver-way-1527718449,time-out-market-bar-way-1527724158
+osm-way-1527718449,Time Out Market Vancouver,osm-way-1527718465,slug,time-out-market-vancouver-way-1527718449,time-out-bar-way-1527718465
+osm-node-14113588301,Loreto Brunch and Dinner,osm-node-5784581798,hours,Su-Th 08:00-21:00; Fr-Sa 08:00-22:00,Mo-Su 08:00-22:00
+osm-node-14113588301,Loreto Brunch and Dinner,osm-node-5784581798,slug,loreto-brunch-and-dinner-node-14113588301,loreto-brunch-diner-node-5784581798

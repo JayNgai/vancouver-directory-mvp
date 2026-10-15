@@ -1,0 +1,53 @@
+{
+  "status": "DRAFT for review. No database changes have been made from this file.",
+  "newCategories": [
+    "Arts & Culture", "Shopping & Retail", "Outdoors & Recreation", "Entertainment", "Nightlife",
+    "Health & Wellness", "Family & Kids", "Accommodation", "Services"
+  ],
+  "overtureToCategory": {
+    "Arts & Culture": ["art_gallery", "art_museum", "museum", "historic_site", "cultural_center", "arts_and_crafts_store"],
+    "Shopping & Retail": ["clothing_store", "womens_clothing_store", "mens_clothing_store", "fashion_boutique", "shoe_store", "bookstore", "jewelry_store", "electronics_store", "sporting_goods_store", "gift_shop", "flowers_and_gifts_store", "bike_store", "grocery_store", "convenience_store", "health_food_store", "specialty_foods_store", "second_hand_store", "home_goods_store", "furniture_store", "pet_store", "liquor_store"],
+    "Outdoors & Recreation": ["park", "beach", "sports_and_recreation", "sport_league"],
+    "Entertainment": ["music_venue", "theatre_venue", "cinema", "bowling_alley", "amusement_park", "arts_and_entertainment", "comedy_club"],
+    "Nightlife": ["bar", "pub", "brewery", "cocktail_bar", "wine_bar", "dance_club", "nightclub", "lounge"],
+    "Health & Wellness": ["dental_clinic", "general_dentistry", "gym", "fitness_trainer", "yoga_studio", "pilates_studio", "massage_therapy", "spa", "medical_spa", "physical_therapy", "chiropractic", "acupuncture", "naturopathic_medicine", "hair_salon", "beauty_salon", "barber", "nail_salon", "skin_care_and_makeup", "doctors_office", "optometry", "eyewear_store"],
+    "Family & Kids": ["preschool", "child_care", "daycare"],
+    "Accommodation": ["hotel", "lodging", "bed_and_breakfast", "hostel", "motel", "guest_house"],
+    "Services": ["bank", "bank_or_credit_union", "atm", "post_office", "government_office", "library", "community_center", "pharmacy", "automotive_repair", "car_rental_service", "laundry_service", "dry_cleaning", "travel_agent", "veterinarian"]
+  },
+  "overtureRejected_examples": ["real_estate_agent", "professional_service", "software_development", "attorney_or_law_firm", "corporate_or_business_office", "marketing_agency", "contractor", "home_service", "b2b_*", "financial_service", "insurance_agency", "mortgage_broker", "accountant", "building_supply_store", "auto_dealer", "parking", "christian_place_of_worship", "elementary_school", "college_university"],
+  "cityLicenceToCategory": {
+    "Entertainment Facility": "Entertainment",
+    "Theatre": "Entertainment",
+    "Exhibition Centre": "Arts & Culture",
+    "Artist Studio": "Arts & Culture",
+    "Hotel or Motel": "Accommodation",
+    "Bed and Breakfast": "Accommodation",
+    "Liquor Establishment": "Nightlife",
+    "Beauty Services": "Health & Wellness",
+    "Health Enhancement Services": "Health & Wellness",
+    "Fitness Centre": "Health & Wellness",
+    "Sport and Fitness Instruction": "Health & Wellness",
+    "Retail Dealer": "Shopping & Retail",
+    "Pharmacy": "Services",
+    "Financial Institution": "Services",
+    "Laundry Services": "Services",
+    "Marina Operator": "Outdoors & Recreation"
+  },
+  "cityLicenceReviewNeeded": {
+    "Health Care Professionals and Services": "19,100 licences, includes doctors and dentists. Map only after an Overture match, not by type alone.",
+    "Personal Services": "Ambiguous; could be salons or non-consumer services.",
+    "Retail Dealer": "9,531 licences, includes wholesale-like retail. Require Overture match before adding.",
+    "Tourism Services": "Could be tours or agencies. Review individually.",
+    "Venue": "109 licences. Unclear whether consumer-facing.",
+    "Special Events": "Event organisers, not venues. Excluded by default."
+  },
+  "cityLicenceExcluded": ["Long-term Rental", "Short-term Rental Operator", "General Contractor", "Trade Contractor", "Architectural and Engineering Services", "Consulting and Management Services", "Legal Services", "Information Communication Technology", "Mining Services", "Wholesale Dealer - Food", "Wholesale Dealer - Non-Food", "Warehouse Operator - Food", "Warehouse Operator - Non-Food", "Logistics Services", "Food Manufacturer Assembler and Processor", "Non-Food Manufacturer Assembler and Processor", "Restaurant", "Limited Service Food Establishment", "Caterer", "Gas Station", "Parking Area / Garage", "Street Vendor", "Temp Liquor Licence Amendment", "Liquor License Application", "Cannabis Licence Application", "Retail Dealer - Cannabis", "Business Support Services", "Real Estate Services", "Design Services", "Marketing Public Relations Advertising and Event Services", "Brokerage Services", "Insurance Services", "Building Repair and Maintenance", "Vehicle Repair Detailing and Washing Services", "Security Services", "Waste Collection and Hauling Services"],
+  "openQuestions": [
+    "Pharmacies, libraries and community centres moved to Services per Alfred's reply.",
+    "Veterinarians placed in Services (no Pets category was approved); confirm or create Pets.",
+    "Schools: excluded (Education is not in the approved nine). Confirm.",
+    "Financial Institution (banks) goes to Services; confirm it should not be a separate Finance category.",
+    "Liquor Retail Store (355 in City data) is excluded because liquor_store is listed under Shopping; confirm."
+  ]
+}

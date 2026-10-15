@@ -1,0 +1,27 @@
+{
+  "A Bread Affair": [],
+  "Blue Water Cafe": [],
+  "Caffe La Tana": [],
+  "Caffè Cittadella": [],
+  "Coffee Central Roasting": [],
+  "Dhamaka": [],
+  "Medina Cafe": [],
+  "The Alibi Room": [
+    {
+      "title": "File:Dinner at the Alibi Room (9241684022).jpg",
+      "licence": "CC BY 2.0",
+      "allowed": true,
+      "artist": "Ruth Hartnup from Vancouver, Canada",
+      "landscape": true,
+      "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Dinner_at_the_Alibi_Room_%289241684022%29.jpg/1280px-Dinner_at_the_Alibi_Room_%289241684022%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "title": "File:Beer at the Alibi Room (9241684612).jpg",
+      "licence": "CC BY 2.0",
+      "allowed": true,
+      "artist": "Ruth Hartnup from Vancouver, Canada",
+      "landscape": true,
+      "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Beer_at_the_Alibi_Room_%289241684612%29.jpg/1280px-Beer_at_the_Alibi_Room_%289241684612%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+  ]
+}

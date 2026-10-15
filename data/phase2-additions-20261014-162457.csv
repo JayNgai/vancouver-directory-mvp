@@ -1,0 +1,779 @@
+name,address,category,phone,website,lat,lon,overture_confidence,city_licence_type,city_licence_status,city_licence_data_date
+Sip Song Thai Cuisine,"3626 W 16th Ave, Vancouver",Restaurant,+17783029898,http://www.sipsongthai.com/,49.257667541503906,-123.18576049804688,0.9795556664466858,Restaurant,Issued,2026-10-01
+Bread Culture,"5525 Dunbar St, Vancouver",Bakery,+16043364288,,49.236202239990234,-123.185546875,0.9122123122215271,Limited Service Food Establishment,Issued,2026-10-14
+Red Tuna Japanese Restaurant,"3592 W 41st Ave, Vancouver",Restaurant,+16042667355,http://www.redtuna.ca,49.23462677001953,-123.18453979492188,0.9984943878650665,Restaurant,Issued,2026-10-01
+Cosy Inn Cafe,"4455 Dunbar St, Vancouver",Restaurant,+16042243133,https://cosyinncafe.com,49.24658203125,-123.18531799316406,0.9946595501899719,Restaurant,Issued,2026-10-14
+Bento Sushi,"4221 Dunbar St, Vancouver",Restaurant,+19055130028,https://www.bentosushi.com/,49.24866485595703,-123.18534851074219,0.9985076335668563,Limited Service Food Establishment,Issued,2026-10-01
+Kirala Sushi,"4288 Dunbar St, Vancouver",Restaurant,+16045689668,https://sunsenfoods.ca/en/category/restaurants/kirala-sushi,49.24831008911133,-123.18509674072266,0.5598957538604736,Limited Service Food Establishment,Issued,2026-10-01
+Domino's Pizza,"4298 Dunbar St, Vancouver",Restaurant,+16047330188,https://pizza.dominos.ca/Vancouver-British-Columbia-10057/,49.2481803894043,-123.18505859375,0.9996967941522599,Limited Service Food Establishment,Issued,2026-10-01
+Tim Hortons,"3463 Dunbar Street, Vancouver",Cafe,+16045584009,https://locations.timhortons.ca/en/bc/vancouver/3463-dunbar-st/,49.25606918334961,-123.18550872802734,0.9999759294807911,Limited Service Food Establishment,Issued,2026-10-01
+SaBi Tea Arts,"3675 W 16th Ave, Vancouver",Restaurant,+16049928617,http://www.sabiteaarts.com/,49.258121490478516,-123.18562316894531,0.989739694595337,Limited Service Food Establishment,Issued,2026-10-01
+Perchance,"3363 Dunbar Street, Vancouver",Cafe,(778) 832-0187,http://perchancetea.com,49.25678253173828,-123.18537902832031,0.77,Limited Service Food Establishment,Issued,2026-10-01
+La Notte Restaurant,"3307 Dunbar St, Vancouver",Restaurant,(604) 222-4033,http://www.lanotte.ca,49.25722122192383,-123.18533325195312,0.77,Restaurant,Issued,2026-10-01
+Kuma Japanese Restaurant,"3446 Dunbar St, Vancouver",Restaurant,+16047390170,http://www.vancouverplus.ca,49.256080627441406,-123.18504333496094,0.9987467855215073,Restaurant,Issued,2026-10-01
+Bigsby the Bakehouse,"4894 MacKenzie St, Vancouver",Bakery,+16042672253,https://www.bigsbythebakehouse.com/,49.2425651550293,-123.170166015625,0.9907024961709976,Limited Service Food Establishment,Issued,2026-10-01
+Butter Baked Goods Ltd,"4907 MacKenzie St, Vancouver",Bakery,+16042214333,http://www.butterbakedgoods.com/,49.242149353027344,-123.17041015625,0.9972529220581055,Limited Service Food Establishment,Issued,2026-10-01
+Sugarless Cafe,"3188 MacDonald St, Vancouver",Restaurant,+17786831933,http://www.sugarless.cafe/,49.25796890258789,-123.16820526123047,0.7421540021896362,Restaurant,Issued,2026-10-01
+La Buca,"4025 MacDonald Street, Vancouver",Restaurant,(604) 730-6988,http://www.labuca.ca,49.25065994262695,-123.16808319091797,0.77,Restaurant,Issued,2026-10-01
+Ridge Gardens Restaurant,"4009 Macdonald Street, Vancouver",Restaurant,(604) 736-5231,http://www.ridgegardenrestaurant.ca,49.25077438354492,-123.1680908203125,0.77,Restaurant,Issued,2026-10-01
+Mon Garenne Bakery shop,"4021 Macdonald St, Vancouver",Bakery,+16047141212,https://www.yelp.ca/biz/mon-garenne-vancouver,49.25068664550781,-123.16812133789062,0.3825666308403015,Limited Service Food Establishment,Issued,2026-10-01
+WineMaster,"4107 MacDonald St, Vancouver",Bar / Pub,+16047319463,http://www.mywinemaster.com/,49.24991226196289,-123.16800689697266,0.925463096499443,Liquor Retail Store,Issued,2026-10-14
+Tachia Bakery and Deli,"4111 Macdonald St, Vancouver",Bakery,+16047317766,,49.249656677246094,-123.16793823242188,0.7874059677124023,Limited Service Food Establishment,Issued,2026-10-01
+Yuwa Japanese Cuisine,"2775 W 16th Ave, Vancouver",Restaurant,+16047319378,http://www.zestjapanese.com,49.257877349853516,-123.1678237915039,0.9979521119594574,Restaurant,Issued,2026-10-14
+La Glace,"2785 W 16th Ave, Vancouver",Dessert,+16044280793,http://laglace.ca,49.25785446166992,-123.16793823242188,0.9997868582606315,Limited Service Food Establishment,Issued,2026-10-14
+Sweet Obsession,"2611 W 16th Ave, Vancouver",Bakery,+16047390555,http://www.sweetobsession.ca,49.25779342651367,-123.16522979736328,0.9986074143350124,Limited Service Food Establishment,Issued,2026-10-01
+Minerva Pizza & Steak House,"2411 W 41st Ave, Vancouver",Restaurant,+16042631774,http://www.minervas.ca/,49.2347412109375,-123.16168975830078,0.9970532357692719,Restaurant,Issued,2026-10-01
+cathy’s,"5687 Balsam St, Vancouver",Cafe,(604) 261-1800,http://www.grandmamascafe.ca,49.235042572021484,-123.16146087646484,0.77,Limited Service Food Establishment,Issued,2026-10-14
+Penny Penny Coffee,"2285 W 41st Ave, Vancouver",Cafe,+16043262965,http://pennypenny.com/,49.23480987548828,-123.15934753417969,0.7569364309310913,Restaurant,Issued,2026-10-14
+Vegan Shoku,"2260 W 41st Ave, Vancouver",Restaurant,+16045666556,http://www.veganshoku.com/,49.23448181152344,-123.1593246459961,0.9860038501024246,Restaurant,Issued,2026-10-01
+Shota Sushi,"5688 Yew St, Vancouver",Restaurant,+16042638068,http://www.shotasushi.ca,49.2349967956543,-123.1575927734375,0.99807776927948,Restaurant,Issued,2026-10-01
+Starbucks,"2193 W. 41st Ave, Vancouver",Cafe,+16042640954,http://www.starbucks.ca/,49.234683990478516,-123.15760803222656,0.9999638039469719,Restaurant,Issued,2026-10-01
+Baan Wasana Thai Restaurant,"2143 W 41st Ave, Vancouver",Restaurant,+17783718971,http://www.baanwasana.com/,49.23470687866211,-123.15674591064453,0.9954697561264038,Restaurant,Issued,2026-10-01
+Porkoro Cutlet Express,"2135 W 41st Ave, Vancouver",Restaurant,+16049288318,,49.23477554321289,-123.15653228759766,0.7207435965538025,Limited Service Food Establishment,Issued,2026-10-14
+Nana’s Green Tea,"2135 W 41st Ave., Vancouver",Dessert,(604) 263-5054,http://www.nanasgreentea.com,49.23469161987305,-123.15648651123047,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Secret Garden Tea Company,"2138 W 40th Ave, Vancouver",Restaurant,+16042613070,http://www.secretgardentea.com/,49.235496520996094,-123.15607452392578,0.987819904088974,Restaurant,Issued,2026-10-14
+Neptune Eats Kerrisdale,"2106 W 41st Ave, Vancouver",Restaurant,(604) 559-1108,http://neptuneeatskerrisdale.com,49.23445510864258,-123.1560287475586,0.77,Restaurant,Issued,2026-10-01
+Subway,"5623 West Boulevard, Vancouver",Fast Food,+16046772211,http://www.subway.com/,49.235206604003906,-123.15567016601562,0.9994175474762916,Limited Service Food Establishment,Issued,2026-10-01
+China Lan Lanzhou Beef Noodles,"5555 West Blvd, Vancouver",Restaurant,+16045599488,http://chinalanlanzhoubeefnoodle.business.site,49.236026763916016,-123.15583038330078,0.9923438429832458,Restaurant,Issued,2026-10-14
+West Coast Liquor Company,"5503 West Blvd, Vancouver",Bar / Pub,+16046691121,http://www.westcoastliquor.com/,49.2363166809082,-123.15565490722656,0.9979556351900101,Liquor Retail Store,Issued,2026-10-14
+Homeslice Cafe and Bakery,"5335 West Blvd, Vancouver",Bakery,+16044233668,http://www.homesliceyvr.ca/,49.237911224365234,-123.15554809570312,0.9801375269889832,Limited Service Food Establishment,Issued,2026-10-01
+Finest at Sea,"4675 Arbutus Street, Vancouver",Restaurant,(604) 266-1904,http://www.finestatsea.com,49.244178771972656,-123.15382385253906,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"4665 Arbutus Street, Vancouver",Fast Food,6042677775,https://restaurants.subway.com/canada/bc/vancouver/4665-arbutus-street?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=50510&utm_campaign=evergreen-2020&y_source=1_MTQ5MTg5ODUtNDgzLWxvY2F0aW9uLndlYnNpdGU%3D,49.24455642700195,-123.15396881103516,0.9655,Limited Service Food Establishment,Issued,2026-10-01
+McDonald's,"2095 West 41st Ave, Vancouver",Fast Food,+16047181055,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MTk1MTgtNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.234718322753906,-123.15474700927734,0.999925500124693,Restaurant,Issued,2026-10-14
+Kerrisdale Nakamura Japanese Cuisine,"2055 W 41st Ave, Vancouver",Restaurant,+16042664200,http://www.adoniatea.com,49.234642028808594,-123.15357208251953,0.9979954600334168,Restaurant,Issued,2026-10-01
+Adonia Tea House,"2057 W 41st Ave, Vancouver",Restaurant,+16042610049,http://www.adoniatea.com/,49.23465347290039,-123.15361022949219,0.9987953156232834,Restaurant,Issued,2026-10-01
+Fish Cafe,"2053 W 41st Ave, Vancouver",Restaurant,+16045633474,http://www.fishcafe.ca,49.23468780517578,-123.15350341796875,0.9986506849527359,Restaurant,Issued,2026-10-14
+Sushi Bar Ajisai,"2081 W 42nd Ave, Vancouver",Restaurant,+16042661428,https://sushibarajisai.com/,49.233909606933594,-123.15373992919922,0.9987639218568802,Restaurant,Issued,2026-10-14
+MACU Tea - Kerrisdale,"5971 West Blvd, Vancouver",Restaurant,+16042696228,https://www.macutea.com.tw/,49.232154846191406,-123.15594482421875,0.6682193875312805,Limited Service Food Establishment,Issued,2026-10-01
+Chatime,"6075 W Boulevard, Vancouver",Cafe,(604) 559-7729,http://www.chatimebc.com,49.2310676574707,-123.15594482421875,0.77,Restaurant,Issued,2026-10-01
+别不同茶餐厅 Ming Tak Hong Kong Style Restaurant,"8363 Granville Street, Vancouver",Fast Food,6042631388,http://www.mingtak.ca/,49.210845947265625,-123.14045715332031,0.9655,Restaurant,Issued,2026-10-01
+PinYueXuan seafood restaurant,"8532 Granville St, Vancouver",Restaurant,+16042647663,https://static.wixstatic.com/ugd/9c87d9_acc8c671193047b9ab1d1addaa8d5ae7.pdf,49.209228515625,-123.14018249511719,0.9800853163003922,Restaurant,Issued,2026-10-01
+Tai Tung Chinese Seafood Restaurant,"8012 Granville St, Vancouver",Restaurant,+16042616328,http://taitungseafood.com/,49.212890625,-123.1402587890625,0.9068203264474869,Restaurant,Issued,2026-10-01
+Bean Around the World Coffees,"2977 Granville St, Vancouver",Cafe,+16047328273,https://batwcoffee.myshopify.com/pages/bean-around-the-world-granville,49.25918197631836,-123.13895416259766,0.9980080586671829,Limited Service Food Establishment,Issued,2026-10-01
+Truffles Fine Foods,"5151 Oak St, Vancouver",Fast Food,(604) 505-4961,http://trufflesfinefoods.com,49.2393798828125,-123.12891387939453,0.77,Restaurant,Issued,2026-10-01
+Tkw Burgers Inc,"6491 Oak St, Vancouver",Fast Food,+16042660502,,49.22673797607422,-123.12897491455078,0.30238431692123413,Limited Service Food Establishment,Issued,2026-10-01
+Chuanyue Chinese Restaurant,"8329 Oak St, Vancouver",Restaurant,+16042632836,,49.21036911010742,-123.13050842285156,0.9314072132110596,Limited Service Food Establishment,Issued,2026-10-01
+Applause Japanese Restaurant,"8269 Oak St, Vancouver",Restaurant,(604) 263-8968,http://www.applauserestaurant.ca,49.21092987060547,-123.1303482055664,0.77,Restaurant,Issued,2026-10-01
+Maple Cafe,"5750 Oak St, Vancouver",Restaurant,+12364714593,https://www.maplecafebc.com/,49.233604431152344,-123.12765502929688,0.2962697446346283,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"3890 Oak St, Vancouver",Fast Food,+16047324576,https://restaurants.subway.com/canada/bc/vancouver/3890-oak-st?y_source=1_MTQ5MjExMTctODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.2509651184082,-123.12727355957031,0.9996650053441525,Limited Service Food Establishment,Issued,2026-10-01
+Pallet Coffee Roasters - Oak Street,"3820 Oak St, Vancouver",Cafe,+16047301849,http://www.palletcoffeeroasters.com,49.251609802246094,-123.12733459472656,0.9953678840398789,Limited Service Food Establishment,Issued,2026-10-01
+Sabra Kosher Bakery and Restaurant,"3844 Oak St, Vancouver",Restaurant,+16047334912,http://www.sabrakosherrestaurant.com/,49.2513313293457,-123.12737274169922,0.9922149777412415,Restaurant,Issued,2026-10-01
+Sun Garden Chinese Restaurant,"3832 Oak St, Vancouver",Restaurant,+16047333922,http://www.sungardendelivery.com/,49.251495361328125,-123.12737274169922,0.9888947910070419,Limited Service Food Establishment,Issued,2026-10-01
+cowdog,"3720 Oak St, Vancouver",Cafe,+16048616260,https://cowdog.coffee,49.252357482910156,-123.12710571289062,0.9894755619764328,Limited Service Food Establishment,Issued,2026-10-01
+Rayhan,"3170 Oak St, Vancouver",Restaurant,+16047313553,https://www.rayhanrestaurant.ca,49.25737762451172,-123.12714385986328,0.9740126651525497,Restaurant,Issued,2026-10-01
+Nava Creative Kosher Cuisine,"950 West 41st Ave, Vancouver",Cafe,(604) 676-7632,http://www.navacreative.com,49.233551025390625,-123.1267318725586,0.77,Restaurant,Issued,2026-10-01
+Libations Liquor Store,"962 W King Edward Ave, Vancouver",Bar / Pub,+16047399463,http://www.libations.ca,49.2485237121582,-123.12567901611328,0.9967375906407833,Liquor Retail Store,Issued,2026-10-01
+Osaka Sushi,"960 W King Edward Ave, Vancouver",Restaurant,6045580828,http://www.osakasushi.zomi.menu/,49.249114990234375,-123.12548828125,0.9655,Restaurant,Issued,2026-10-01
+City 1 Cafe,"954 W King Edward Ave, Vancouver",Restaurant,+16045691199,http://eatinginvancouver.ca,49.24859619140625,-123.12545013427734,0.9859763383865356,Limited Service Food Establishment,Issued,2026-10-01
+Mandarin Hong Kong Cafe,"904 W King Edward Ave, Vancouver",Restaurant,+16046200518,http://Mandarin.com/,49.24864959716797,-123.12530517578125,0.9924426078796387,Restaurant,Issued,2026-10-14
+Ramson’s Pizza and Bar,"758 W 16th Ave, Vancouver",Restaurant,+16043361107,http://ramsonspizzaandbar.com/,49.256927490234375,-123.12127685546875,0.982028603553772,Restaurant,Issued,2026-10-01
+Feenie’s,"650 W 41st Ave, Vancouver",Restaurant,,,49.23176193237305,-123.11959838867188,0.26963290572166443,Limited Service Food Establishment,Issued,2026-10-14
+Dublin Crossing,"466 SW Marine Dr, Vancouver",Restaurant,+16044288577,http://www.dublincrossingvancouver.com/,49.20948791503906,-123.1158447265625,0.9990334010124207,Restaurant,Issued,2026-10-01
+Marine Gateway Liquor Store,"460 SW Marine Dr, Vancouver",Bar / Pub,+16044282566,http://www.marinegateway.com/,49.209598541259766,-123.11616516113281,0.975927472114563,Liquor Retail Store,Issued,2026-10-01
+Pink Elephant Cafe,"5601 Dunbar Street, Vancouver",Cafe,+16045663633,http://www.pinkelephantcafe.ca/,49.21010971069336,-123.11639404296875,0.9889113903045654,Restaurant,Issued,2026-10-14
+CoCo Fresh Tea and Juice,"491 SW Marine Dr, Vancouver",Cafe,+16044281939,http://www.coco-tea.ca,49.21063995361328,-123.11686706542969,0.9848109483718872,Limited Service Food Establishment,Issued,2026-10-01
+Freshslice Pizza,"4075 Cambie St, Vancouver",Restaurant,6044286777,https://www.freshslice.com/,49.24941635131836,-123.11582946777344,0.9033570677042008,Restaurant,Issued,2026-10-14
+Tim Hortons,"4065 Cambie St, Vancouver",Cafe,+16044282768,http://www.timhortons.com/,49.249427795410156,-123.11565399169922,0.9999620716691017,Limited Service Food Establishment,Issued,2026-10-14
+Starbucks,"5504 Cambie St, Vancouver",Cafe,+16046282335,http://www.starbucks.ca/,49.235252380371094,-123.11583709716797,0.9999746931970119,Limited Service Food Establishment,Issued,2026-10-01
+Sphere Coffee Bar,"5898 Cambie St., Vancouver",Cafe,+16045666660,http://www.spherecoffeebar.com/,49.23179626464844,-123.11592102050781,0.3321306109428406,Limited Service Food Establishment,Issued,2026-10-14
+Bonjour Banh Mi,"5556 Cambie St., Vancouver",Restaurant,+17788955556,https://www.bonjourbanhmivan.ca/,49.23488235473633,-123.11590576171875,0.9854428613185883,Limited Service Food Establishment,Issued,2026-10-01
+Landmark Hotpot House,"4023 Cambie St., Vancouver",Restaurant,+16048722868,http://www.landmarkhotpot.com/,49.249820709228516,-123.1155014038086,0.9988240772485732,Restaurant,Issued,2026-10-01
+Thai Away Home,"3315 Cambie St, Vancouver",Restaurant,+16048738424,http://www.thaiaway.com/,49.25571060180664,-123.11534118652344,0.9959127235412598,Limited Service Food Establishment,Issued,2026-10-01
+June,"3305 Cambie St., Vancouver",Bar / Pub,+12365211620,http://www.juneoncambie.com/,49.255821228027344,-123.1153793334961,0.9719173300266266,Liquor Establishment,Issued,2026-10-01
+Tropika on Cambie,"2975 Cambie St, Vancouver",Restaurant,(604) 879-6002,http://www.tropikagroup.com,49.2589225769043,-123.11527252197266,0.77,Restaurant,Issued,2026-10-01
+Lemonade Gluten Free Bakery,"3385 Cambie St, Vancouver",Bakery,+16048739993,https://lemonadeglutenfreebakery.ca/,49.255218505859375,-123.1152572631836,0.9935210257768631,Limited Service Food Establishment,Issued,2026-10-01
+JJ Bean Coffee Roasters,"3399 Cambie St., Vancouver",Cafe,+16045582262,http://jjbeancoffeeroasters7.placeweb.site,49.255088806152344,-123.11531829833984,0.992452085018158,Restaurant,Issued,2026-10-01
+Old Xian's Food Noodle & Mart,"4008 Cambie St., Vancouver",Restaurant,+16043360071,http://www.oldxiansfood.ca/,49.249961853027344,-123.11507415771484,0.9867962598800659,Restaurant,Issued,2026-10-01
+Rain or Shine Ice Cream,"3382 Cambie St., Vancouver",Dessert,+16048769986,http://www.rainorshineicecream.com,49.25514221191406,-123.11500549316406,0.9968969935178756,Limited Service Food Establishment,Issued,2026-10-01
+Ben Gong's Tea,"3318 Cambie St, Vancouver",Cafe,+16043361137,http://bengongstea.ca,49.255615234375,-123.1150131225586,0.9853731989860535,Limited Service Food Establishment,Issued,2026-10-01
+Hot Cha Cafe,"3306 Cambie St., Vancouver",Cafe,+16043369338,http://www.hotchacafe.com,49.25570297241211,-123.11502838134766,0.9985004472732544,Limited Service Food Establishment,Issued,2026-10-01
+Cafe Gloucester,"3338 Cambie St., Vancouver",Cafe,+16048733338,http://www.cafegloucester.ca/,49.25552749633789,-123.11504364013672,0.998608872294426,Restaurant,Issued,2026-10-01
+Sushi 7,"3488 Cambie St., Vancouver",Restaurant,+16047098150,https://sushi7vancouver.com,49.25419235229492,-123.11506652832031,0.9978933137655258,Restaurant,Issued,2026-10-14
+Paragon Tea Room,"3432 Cambie St., Vancouver",Restaurant,+16046168386,https://www.paragontearoom.com,49.25453186035156,-123.1150131225586,0.998467024564743,Limited Service Food Establishment,Issued,2026-10-14
+Starbucks,"3492 Cambie St, Vancouver",Cafe,+16048723911,http://www.starbucks.ca/,49.25404357910156,-123.11498260498047,0.9999726594567299,Limited Service Food Establishment,Issued,2026-10-01
+Dong Tai Xiang Shanghai Dim Sum,"3250 Cambie St., Vancouver",Restaurant,+16044233088,http://www.dong-tai-xiang-shanghai-dim-sum.business.site,49.25633239746094,-123.11494445800781,0.9771101474761963,Restaurant,Issued,2026-10-01
+Dutch Wooden Shoe Cafe,"3292 Cambie St, Vancouver",Cafe,+16048740922,https://www.thedutchwoodenshoecafe.ca/,49.25601577758789,-123.11488342285156,0.9998152730464935,Restaurant,Issued,2026-10-01
+Potluck Hawker Eatery,"3424 Cambie Street, Vancouver",Restaurant,(604) 423-9344,http://www.potluckyvr.ca,49.2545051574707,-123.11488342285156,0.77,Restaurant,Issued,2026-10-01
+Feast & Fallow,"305 W 41st Ave, Vancouver",Cafe,+16047233433,http://Www.feastandfallow.com/,49.2336311340332,-123.11227416992188,0.9951093310117721,Limited Service Food Establishment,Issued,2026-10-01
+The Mighty Oak,"198 W 18th Ave, Vancouver",Cafe,+16045681946,http://www.TheMightyOak.ca/,49.2546501159668,-123.10961151123047,0.9980562734603882,Limited Service Food Establishment,Issued,2026-10-14
+C Market Coffee,"195 E. 36th Avenue, Vancouver",Cafe,(604) 949-0305,https://www.cmarket.ca,49.23831558227539,-123.10192108154297,0.77,Restaurant,Issued,2026-10-14
+Uncle Mings Kitchen,"8181 Main St, Vancouver",Restaurant,+16043277658,,49.21166229248047,-123.10234832763672,0.9283978939056396,Restaurant,Issued,2026-10-01
+Fraserview Tandoori House,"7271 Main St, Vancouver",Restaurant,+16043241111,,49.21879959106445,-123.10204315185547,0.82557213306427,Limited Service Food Establishment,Issued,2026-10-01
+Liquor 56,"7219 Main St, Vancouver",Bar / Pub,+16045667156,https://order.online/store/liquor-56-vancouver-23355760/?hideModal=true&pickup=true&redirected=true,49.21905517578125,-123.10199737548828,0.9897511899471283,Liquor Retail Store,Issued,2026-10-01
+Canan 2 For 1 Pizza,"7270 Main St, Vancouver",Restaurant,(604) 324-4441,http://canan2for1pizza.com,49.21870040893555,-123.10162353515625,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Van. Tea Cafe,"5688 Main St, Vancouver",Restaurant,+16045659983,https://vanteacafe.com,49.23342514038086,-123.10112762451172,0.9985131967067719,Restaurant,Issued,2026-10-01
+Subway,"5698 Main Street, Vancouver",Fast Food,+16043277824,http://www.subway.com/,49.233211517333984,-123.10131072998047,0.9998635173141956,Limited Service Food Establishment,Issued,2026-10-01
+Tandoori Oven,"6452 Main St, Vancouver",Restaurant,+16045653355,http://tandooriovenrestaurant.com/,49.22614288330078,-123.10147857666016,0.9987194222211838,Limited Service Food Establishment,Issued,2026-10-01
+Dhamaka,"6560 Main St, Vancouver",Restaurant,+12362057599,https://dhamakarestaurant.com/,49.22512435913086,-123.10148620605469,0.9782193899154663,Restaurant,Issued,2026-10-01
+Mary Brown's Chicken,"6549 Main St, Vancouver",Fast Food,+16048954356,https://marybrowns.com/locations/,49.22518539428711,-123.1017837524414,0.9999746413767338,Limited Service Food Establishment,Issued,2026-10-01
+41st & Main Liquor Store,"5679 Main St, Vancouver",Bar / Pub,+16042071149,,49.23343276977539,-123.101806640625,0.5158972144126892,Liquor Retail Store,Issued,2026-10-01
+Bon Cafe,"4909 Main St, Vancouver",Restaurant,+16043251199,https://boncafepho.com,49.2403564453125,-123.10164642333984,0.9977249801158905,Limited Service Food Establishment,Issued,2026-10-01
+Sweet Thea Bakery,"4789 Main St, Vancouver",Bakery,+16042260895,http://www.sweetthea.com/,49.24276351928711,-123.10160064697266,0.992668349146843,Restaurant,Issued,2026-10-01
+McDonald's,"4445 Main St., Vancouver",Fast Food,+16048728310,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MjAxNDEtNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.245243072509766,-123.10147094726562,0.9999685722351074,Restaurant,Issued,2026-10-01
+Noct. Coffee,"4807 Main St, Vancouver",Cafe,,http://Noct.Coffee/,49.2418098449707,-123.10179901123047,0.2950661778450012,Restaurant,Issued,2026-10-14
+Toshi Sushi,"181 E 16th Ave, Vancouver",Restaurant,+16048745173,http://m.facebook.com/Toshi-Sushi-133112986718262,49.25666046142578,-123.10186767578125,0.9950448274612427,Restaurant,Issued,2026-10-01
+District Eleven,"4063 Main St, Vancouver",Restaurant,+16045662021,http://district-eleven.ca/,49.24929428100586,-123.10145568847656,0.9978136092424392,Restaurant,Issued,2026-10-14
+Zakkushi Dining on Main,"4075 Main St, Vancouver",Restaurant,+16048749455,https://zakkushi.com/zakkushi/dining-main/,49.2491455078125,-123.10142517089844,0.9955980181694031,Restaurant,Issued,2026-10-01
+Restaurant Yugo,"4265 Main St, Vancouver",Restaurant,(604) 620-7878,http://restaurantyugo.com,49.24748611450195,-123.10139465332031,0.77,Restaurant,Issued,2026-10-01
+Beeryani Indian Cuisine,"4129 Main St, Vancouver",Restaurant,+18773622685,http://beeryanidenman.com,49.248355865478516,-123.10128784179688,0.8565114045143127,Limited Service Food Establishment,Issued,2026-10-01
+Yum Yai Thai Food,"3755 Main St, Vancouver",Restaurant,+16045688538,http://Www.yumyaithaifood.com/,49.25136184692383,-123.10128021240234,0.9594555950164795,Limited Service Food Establishment,Issued,2026-10-01
+Brewery Creek Cold Beer and Wine,"3045 Main St, Vancouver",Bar / Pub,+16048723373,http://brewcreek.ca/,49.25788116455078,-123.10139465332031,0.9863372445106506,Liquor Retail Store,Issued,2026-10-01
+Kaori Izakaya (Sushi & Grill),"3043 Main St, Vancouver",Restaurant,+16046755053,http://kaoriizakaya.com,49.25799560546875,-123.10131072998047,0.9979188811779022,Restaurant,Issued,2026-10-01
+El Camino's,"3250 Main St, Vancouver",Restaurant,+16048756246,http://www.elcaminos.ca,49.25619888305664,-123.10106658935547,0.998869001865387,Restaurant,Issued,2026-10-01
+Sushi Hil,"3330 Main St, Vancouver",Restaurant,+12364829060,https://www.sushihil.com/,49.25533676147461,-123.10114288330078,0.9972848916053771,Restaurant,Issued,2026-10-01
+The Fish Counter,"3825 Main St, Vancouver",Restaurant,(604) 876-3474,http://www.thefishcounter.com,49.25079345703125,-123.10114288330078,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Liberty Bakery,"3699 Main St, Vancouver",Bakery,+16047099999,http://liberty-bakery.com/,49.25190353393555,-123.10111999511719,0.9987206149101258,Limited Service Food Establishment,Issued,2026-10-01
+Hawkers Delight Deli,"4127 Main St, Vancouver",Restaurant,+16047098188,https://order.online/business/hawkers-delight-deli-21039,49.24838638305664,-123.10118865966797,0.997664811015129,Limited Service Food Establishment,Issued,2026-10-01
+The Main,"4210 Main St, Vancouver",Bar / Pub,+16045584047,http://www.themainonmain.ca/,49.2474479675293,-123.10104370117188,0.9964903277158738,Restaurant,Issued,2026-10-01
+MeeT on Main,"4288 Main St, Vancouver",Restaurant,+16046961010,https://eatmeet.ca/,49.24672317504883,-123.10108947753906,0.9988806134462357,Restaurant,Issued,2026-10-14
+Chickpea,"4298 Main St, Vancouver",Restaurant,+16046200602,http://www.ilovechickpea.ca/,49.2465705871582,-123.10111236572266,0.9997972284853458,Restaurant,Issued,2026-10-01
+Ivy's Kitchen Vietnamese Restaurant,"4598 Main St, Vancouver",Restaurant,+16048733345,,49.24337387084961,-123.10111999511719,0.9812993407249451,Restaurant,Issued,2026-10-14
+Continental Coffee,"4295 Main St, Vancouver",Cafe,+16045597712,http://www.continental-coffee.ca,49.24732971191406,-123.10130310058594,0.9944995242357254,Limited Service Food Establishment,Issued,2026-10-01
+Popeyes Louisiana Kitchen,"4413 - Main St, Vancouver",Restaurant,6042676500,https://www.popeyeschicken.ca/,49.245635986328125,-123.10127258300781,0.9655,Restaurant,Issued,2026-10-14
+Talavera Mexican Coffee Shop,"4363 Main St, Vancouver",Cafe,+17787100480,,49.24646759033203,-123.101318359375,0.9963501662015914,Limited Service Food Establishment,Issued,2026-10-14
+Mitchie Matcha Cafe,"4385 Main St, Vancouver",Cafe,+16723808307,,49.24629211425781,-123.10145568847656,0.473197877407074,Limited Service Food Establishment,Issued,2026-10-14
+East is East,"4433 Main St, Vancouver",Restaurant,+16045654401,http://www.eastiseast.ca/,49.24541091918945,-123.10138702392578,0.9986624199151993,Restaurant,Issued,2026-10-01
+PlayScape Cafe,"4892 Main St, Vancouver",Cafe,+16049247529,http://www.playscapecafe.com/,49.240787506103516,-123.10124969482422,0.9960551589727402,Restaurant,Issued,2026-10-01
+Heritage Restaurant & Bar,"4242 Main St, Vancouver",Restaurant,+16045596058,http://heritageasianeatery.com/,49.247127532958984,-123.1008529663086,0.994140072464943,Restaurant,Issued,2026-10-14
+Breka Bakery & Cafe,"4554 Main St, Vancouver",Bakery,+16045590900,http://www.breka.ca,49.24385070800781,-123.10096740722656,0.9988417208194733,Limited Service Food Establishment,Issued,2026-10-01
+Las Tortas Mexican Gourmet Sandwiches,"4328 Main St, Vancouver",Restaurant,+16047080445,http://www.lastortas.ca/,49.246437072753906,-123.10103607177734,0.7834904193878174,Restaurant,Issued,2026-10-01
+Trafiq Cafe & Bakery,"4216 Main St, Vancouver",Bakery,+16046482244,http://trafiq.ca,49.24732971191406,-123.10102844238281,0.9975627744197846,Restaurant,Issued,2026-10-01
+Sawasdee Thai Restaurant,"4250 Main St, Vancouver",Restaurant,+16048764030,http://www.sawasdeethairestaurant.com/,49.24706268310547,-123.10103607177734,0.9988338655233383,Restaurant,Issued,2026-10-01
+French Table,"3916 Main Street, Vancouver",Restaurant,6046893237,http://thefrenchtable.ca/,49.24995803833008,-123.10100555419922,0.9655,Restaurant,Issued,2026-10-01
+Aperture Coffee Bar,"4124 Main St, Vancouver",Cafe,+16046208056,http://www.aperturecoffeebar.com,49.24844741821289,-123.10095977783203,0.9988257360458374,Restaurant,Issued,2026-10-01
+Yum Sweet Shop,"4150 Main St, Vancouver",Dessert,+16046207701,http://yumsweetshop.com/,49.24809265136719,-123.1009750366211,0.9996807953119278,Limited Service Food Establishment,Issued,2026-10-01
+Blenz Coffee,"4198 Main St, Vancouver",Cafe,+16044234198,http://www.blenz.com,49.247684478759766,-123.10095977783203,0.9907840490341187,Restaurant,Issued,2026-10-14
+Blenz Coffee,"4198 Main St, Vancouver",Cafe,+16044234198,http://www.blenz.com,49.247684478759766,-123.10095977783203,0.9996433325409889,Restaurant,Issued,2026-10-14
+Rocky Mountain Flatbread,"4186 Main St, Vancouver",Restaurant,+16045669779,http://www.rockymountainflatbread.ca/,49.24781799316406,-123.10091400146484,0.9971652662754059,Restaurant,Issued,2026-10-01
+Helen's Grill,"4102 Main St, Vancouver",Restaurant,+16048744413,http://helensgrill.ca,49.24869155883789,-123.10086822509766,0.99983633223176,Restaurant,Issued,2026-10-01
+Caffé Artigiano,"4010 Main St, Vancouver",Cafe,(604) 569-2233,http://www.caffeartigiano.com,49.24923324584961,-123.10082244873047,0.77,Restaurant,Issued,2026-10-01
+Sushi Main,"3710 Main St, Vancouver",Restaurant,+16047081667,http://www.sushimain.com,49.25187301635742,-123.1008529663086,0.9812505322694779,Restaurant,Issued,2026-10-14
+Portland Craft,"3835 Main Street, Vancouver",Bar / Pub,6045692494,http://www.portlandcraft.com/,49.25069808959961,-123.10098266601562,0.9655,Restaurant,Issued,2026-10-01
+Bob Likes Thai Food,"3755 Main Street, Vancouver",Restaurant,(604) 568-8538,http://www.boblikesthaifood.com,49.251338958740234,-123.10099792480469,0.77,Limited Service Food Establishment,Issued,2026-10-01
+SUYO Modern Peruvian,"3475 Main St, Vancouver",Restaurant,+16043221588,http://www.suyo.ca/,49.2540283203125,-123.10098266601562,0.9976819747686386,Restaurant,Issued,2026-10-01
+Good Thief,"3336 Main St, Vancouver",Bar / Pub,+16044283336,http://goodthief.ca/,49.25527572631836,-123.10098266601562,0.9958808773756027,Restaurant,Issued,2026-10-14
+Good Co. Main Street,"2904 Main St, Vancouver",Bar / Pub,+16045656246,http://colonymainst.com/,49.25901794433594,-123.10098266601562,0.982770562171936,Restaurant,Issued,2026-10-01
+Smitty’s Oyster House On Main,"3124 Main St, Vancouver",Restaurant,(604) 876-5810,http://www.smittysonmain.com,49.257076263427734,-123.10092163085938,0.77,Restaurant,Issued,2026-10-01
+Ramen Kounotori,"3950 Main Street, Vancouver",Restaurant,(604) 844-8620,,49.24986267089844,-123.10077667236328,0.77,Restaurant,Issued,2026-10-01
+Boiling Point,"4148 Main Street, Vancouver",Restaurant,(604) 620-2198,http://www.bpgroupusa.com,49.24817657470703,-123.10081481933594,0.77,Restaurant,Issued,2026-10-01
+Sun Sui Wah Seafood Restaurant,"3888 Main St, Vancouver",Restaurant,+16048728822,http://www.sunsuiwah.ca/,49.25056076049805,-123.1004867553711,0.9998136896491051,Restaurant,Issued,2026-10-01
+Mei Wei Fang,"642 SE Marine Dr, Vancouver",Restaurant,+16046368303,,49.210636138916016,-123.09239196777344,0.2090865671634674,Limited Service Food Establishment,Issued,2026-10-01
+Wasawa’s Indian Restaurant,"689 E 65th Ave, Vancouver",Restaurant,+16043251301,https://wasawas.ca/,49.211952209472656,-123.0915756225586,0.6824782490730286,Restaurant,Issued,2026-10-14
+Quesada Burritos & Tacos,"703 SE Marine Dr, Vancouver",Restaurant,+12364555654,https://quesada.ca/,49.21122741699219,-123.0908432006836,0.9993640089035034,Limited Service Food Establishment,Issued,2026-10-01
+Lucky House BBQ and Market,"6457 Fraser St, Vancouver",Restaurant,+16048009985,https://luckybbq.vancouverpos.com,49.225955963134766,-123.09112548828125,0.6044206619262695,Limited Service Food Establishment,Issued,2026-10-01
+New Novelty Sweet and Restaurant,"6669 Fraser St, Vancouver",Restaurant,+16043261111,http://www.newnoveltyrestaurant.com/,49.22390365600586,-123.09098052978516,0.9987624474465847,Restaurant,Issued,2026-10-01
+West Coast Liquor Company,"6295 Fraser St, Vancouver",Bar / Pub,+16043271113,http://www.westcoastliquor.com/,49.22749328613281,-123.0908203125,0.9956562131643295,Liquor Retail Store,Issued,2026-10-01
+JJ Bean Coffee Roasters,"4287 Fraser St, Vancouver",Cafe,+16044283327,http://jjbeancoffee.com,49.246700286865234,-123.0903091430664,0.9972836029529571,Restaurant,Issued,2026-10-01
+Egg and Co,"4245 Fraser St, Vancouver",Restaurant,+16043369301,http://eggandco.ca,49.247135162353516,-123.0903091430664,0.998786473274231,Restaurant,Issued,2026-10-01
+Pampanga's Best Cafeteria,"4279 Fraser St, Vancouver",Restaurant,+16048740010,,49.24687576293945,-123.09032440185547,0.9612355828285217,Limited Service Food Establishment,Issued,2026-10-01
+Mountainview Liquor Store,"4333 Fraser St, Vancouver",Bar / Pub,+16048768042,http://mountainviewliquorstore1.placeweb.site/,49.24618148803711,-123.0904541015625,0.9401564347743988,Liquor Retail Store,Issued,2026-10-01
+Bulalohan Sa Ilocos,"4273 Fraser St, Vancouver",Fast Food,+16048792400,,49.24688720703125,-123.090576171875,0.8734306693077087,Limited Service Food Establishment,Issued,2026-10-01
+Pizza Carano,"4241 Fraser St, Vancouver",Restaurant,+16048771270,http://www.pizzacarano.com/,49.24724578857422,-123.09059143066406,0.9989086484909058,Restaurant,Issued,2026-10-01
+Matchstick Coffee Roasters,"639 E 15th Ave, Vancouver",Cafe,(604) 558-0639,http://www.matchstickcoffee.com,49.25706100463867,-123.09038543701172,0.77,Restaurant,Issued,2026-10-01
+Zab Bite,"4197 Fraser St, Vancouver",Restaurant,+17786815752,,49.24777603149414,-123.0904769897461,0.954098641872406,Restaurant,Issued,2026-10-01
+Olivier's La Boulangerie,"3885 Fraser St, Vancouver",Bakery,+16045598081,,49.250244140625,-123.0903549194336,0.9839410185813904,Restaurant,Issued,2026-10-01
+Mishmish,"3485 Fraser St, Vancouver",Bakery,+16045639198,http://www.mishmish.ca/,49.253868103027344,-123.09019470214844,0.9890604650974274,Restaurant,Issued,2026-10-01
+Little Flower Company Cake Design Atelier,"3586 Fraser St, Vancouver",Bakery,,http://www.Littleflowercompanycake.com/,49.253055572509766,-123.08987426757812,0.5057508945465088,Limited Service Food Establishment,Issued,2026-10-01
+Good Sushi,"3916 Fraser St, Vancouver",Restaurant,+16048733638,http://www.goodsushi.ca,49.2498893737793,-123.0899887084961,0.9982191920280457,Restaurant,Issued,2026-10-14
+Earnest Ice Cream,"3992 Fraser St, Vancouver",Dessert,+16044280697,http://earnesticecream.com,49.24932098388672,-123.08999633789062,0.9984584015607834,Limited Service Food Establishment,Issued,2026-10-14
+Bonjour Vietnam Bistro,"3944 Fraser St, Vancouver",Restaurant,+16048793633,http://bonjourvietnambistro.com/,49.24966049194336,-123.09001159667969,0.9989065235853195,Restaurant,Issued,2026-10-01
+Prado Cafe,"4208 Fraser St, Vancouver",Cafe,+16046207977,https://www.pradocafe.com,49.2474479675293,-123.09002685546875,0.9986564016342163,Limited Service Food Establishment,Issued,2026-10-01
+Slo Coffee,"4160 Fraser St, Vancouver",Cafe,+16042606329,http://www.slocoffee.ca/,49.24802780151367,-123.08999633789062,0.9548763275146485,Limited Service Food Establishment,Issued,2026-10-01
+Nammos Estiatorio,"3980 Fraser St, Vancouver",Restaurant,+16044286850,http://www.nammos.ca,49.24944305419922,-123.08995819091797,0.9998033708333969,Restaurant,Issued,2026-10-01
+Bâtard Bakery,"3958 Fraser St, Vancouver",Bakery,+16045063958,http://www.batardbakery.com,49.24955368041992,-123.08997344970703,0.9990002250671387,Limited Service Food Establishment,Issued,2026-10-01
+Masayoshi,"4376 Fraser St, Vancouver",Restaurant,+16044286272,http://www.masayoshi.ca/,49.24583435058594,-123.09008026123047,0.99873330950737,Restaurant,Issued,2026-10-14
+Sparky Chicken,"4292 Fraser St, Vancouver",Restaurant,+16047079882,https://www.sparkychicken.com/,49.24677658081055,-123.08999633789062,0.5938602685928345,Limited Service Food Establishment,Issued,2026-10-01
+Chez Céline,"4298 Fraser St, Vancouver",Restaurant,+17787608003,,49.24673843383789,-123.0899887084961,0.9066799283027649,Restaurant,Issued,2026-10-01
+European Breads Bakery,"4320 Fraser St, Vancouver",Bakery,+16048795177,http://www.europeanbreads.com,49.246360778808594,-123.0900650024414,0.9906949996948242,Limited Service Food Establishment,Issued,2026-10-14
+JJ Dosa,"4354 Fraser St, Vancouver",Restaurant,+16048739263,,49.246028900146484,-123.0900650024414,0.8828646540641785,Restaurant,Issued,2026-10-01
+Polonia Sausage House,"4286 Fraser St, Vancouver",Restaurant,+16048721521,http://www.poloniasausagehouse.ca/,49.24687576293945,-123.090087890625,0.9970096272230148,Limited Service Food Establishment,Issued,2026-10-01
+Aling Ening Restaurant,"4253 Fraser St, Vancouver",Restaurant,+16048731956,,49.2470817565918,-123.09028625488281,0.9805896282196045,Restaurant,Issued,2026-10-01
+Chick A Boom,"5812 Fraser St, Vancouver",Dessert,+16043273007,https://chickaboom.ca/,49.231773376464844,-123.09021759033203,0.7818547487258911,Limited Service Food Establishment,Issued,2026-10-01
+Koon Bo Seafood Restaurant,"5682 Fraser St, Vancouver",Restaurant,+16043231218,http://missvancouverpiggy.blogspot.ca/2014/01/koon-bo-restaurant.html,49.233306884765625,-123.09010314941406,0.9987188053131103,Restaurant,Issued,2026-10-01
+Camy's Pizza,"5688 Fraser St, Vancouver",Restaurant,+16043242200,https://camyspizza.ca/,49.23311996459961,-123.09025573730469,0.8947711658477784,Limited Service Food Establishment,Issued,2026-10-14
+Celsius Bubble Tea,"6350 Fraser St, Vancouver",Cafe,+12364800491,http://www.icelsius.ca,49.22686767578125,-123.09051513671875,0.9927951693534851,Limited Service Food Establishment,Issued,2026-10-01
+Lee Loy BBQ,"6340 Fraser St, Vancouver",Bar / Pub,+16046856025,,49.226966857910156,-123.09056091308594,0.912184476852417,Limited Service Food Establishment,Issued,2026-10-01
+Fraser Commons Liquor Co.,"733 SE Marine Dr, Vancouver",Bar / Pub,+16045664021,https://fcliquor.com/,49.21123123168945,-123.09010314941406,0.9748705625534058,Liquor Retail Store,Issued,2026-10-01
+Subway,"4108 Fraser Street, Vancouver",Fast Food,6048749885,https://restaurants.subway.com/canada/bc/vancouver/4108-fraser-street?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=44150&utm_campaign=evergreen-2020&y_source=1_MTQ5MTk5ODktNDgzLWxvY2F0aW9uLndlYnNpdGU%3D,49.248477935791016,-123.08985900878906,0.9931,Limited Service Food Establishment,Issued,2026-10-01
+Bells and Whistles,"3296 Fraser St, Vancouver",Restaurant,+16046207990,http://www.bellsandwhistlesyvr.ca/,49.25571060180664,-123.08967590332031,0.9988775289058686,Liquor Establishment,Issued,2026-10-01
+Kilimanjaro Snack House and Catering,"789 Kingsway, Vancouver",Restaurant,+16045597050,https://www.kilisnackhouse.com/,49.25575637817383,-123.08759307861328,0.9314045518636703,Restaurant,Issued,2026-10-01
+Papa Johns Pizza,"808 KINGSWAY, Vancouver",Restaurant,,https://locations.papajohns.com/canada/bc/v5v-3c3/vancouver/808-kingsway?utm_source=bing-maps&utm_medium=organic&y_source=1_MTA5MDgyMzQ2Ny00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,49.25517272949219,-123.08637237548828,0.9750981837511062,Limited Service Food Establishment,Issued,2026-10-14
+Van 168 Coffee,"888 Kingsway, Vancouver",Restaurant,+16044286968,https://van168coffee.zomi.menu/,49.25474166870117,-123.08596801757812,0.9878699558973313,Restaurant,Issued,2026-10-01
+BT Cafe,"920 Kingsway, Vancouver",Restaurant,+16048723368,,49.25437545776367,-123.08502197265625,0.9935888051986694,Restaurant,Issued,2026-10-01
+Shilla Korean Restaurant,"1031 Kingsway, Vancouver",Restaurant,+16048791515,http://shilla.ca,49.25374984741211,-123.08301544189453,0.9997302384376526,Restaurant,Issued,2026-10-01
+NeNe Chicken,"1070 Kingsway, Vancouver",Restaurant,+16048750083,https://www.nenechicken.ca,49.25300216674805,-123.08265686035156,0.9798640245199204,Limited Service Food Establishment,Issued,2026-10-01
+Kingsway Deli,"1188 Kingsway, Vancouver",Restaurant,+16048736666,,49.25202560424805,-123.08026885986328,0.7544793486595154,Limited Service Food Establishment,Issued,2026-10-01
+Hai Phong Vietnamese Restaurant,"1242 Kingsway, Vancouver",Restaurant,+16048723828,http://haiphongrestaurant.com/,49.25128173828125,-123.07891082763672,0.9987562996149063,Restaurant,Issued,2026-10-01
+Domino's Pizza,"1254 Kingsway, Vancouver",Restaurant,+16048723030,https://pizza.dominos.ca/vancouver-british-columbia-10056,49.25120544433594,-123.07866668701172,0.9999673182666302,Limited Service Food Establishment,Issued,2026-10-14
+Grace of India,"1284 Kingsway, Vancouver",Restaurant,+16044288742,https://www.graceofindiayvr.com/,49.25123596191406,-123.07840728759766,0.9984596490859985,Restaurant,Issued,2026-10-01
+Duffin's Donuts,"1391 E 41st Ave, Vancouver",Bakery,+16043255544,http://www.duffins.ca,49.232852935791016,-123.07759857177734,0.9985189819335938,Restaurant,Issued,2026-10-01
+Dosa Factory,"1345 Kingsway, Vancouver",Restaurant,+17783797791,http://www.dosafactoryvancouver.com,49.250892639160156,-123.07721710205078,0.9987861168384552,Restaurant,Issued,2026-10-14
+Sun Bo Kong Vegetarian Restaurant,"1363 Kingsway, Vancouver",Restaurant,+16042558927,http://www.sunbokong.com,49.2507209777832,-123.07695007324219,0.9966316270828247,Restaurant,Issued,2026-10-01
+Vegas Donuts,"4003 Knight St, Vancouver",Bakery,,http://vegasdonuts.ca/,49.24886703491211,-123.07660675048828,0.9038556218147278,Restaurant,Issued,2026-10-01
+J.R Taste Of Ceylon,"3929 Knight St, Vancouver",Restaurant,+16047083008,,49.2493896484375,-123.0765609741211,0.19754615426063538,Restaurant,Issued,2026-10-01
+Knight Street Cafe,"3911 Knight St, Vancouver",Cafe,+16045632877,http://www.knightstreetcafe.com,49.249664306640625,-123.07635498046875,0.9987045890092849,Restaurant,Issued,2026-10-14
+Do Chay,"1392 Kingsway, Vancouver",Restaurant,+16042258349,http://www.dochay.ca,49.2501220703125,-123.07642364501953,0.9987871998548508,Restaurant,Issued,2026-10-01
+Knight Street Liquor Store,"1408 E 57th Ave, Vancouver",Bar / Pub,+16044233422,,49.217994689941406,-123.0766830444336,0.21222874522209167,Liquor Retail Store,Issued,2026-10-01
+Pink Peppercorn Seafood House,"1485 Kingsway, Vancouver",Restaurant,+16045693626,http://eddyspinkpeppercorn.com/,49.249298095703125,-123.07371520996094,0.9998196592628956,Restaurant,Issued,2026-10-01
+Bean Around the World Coffees,"4456 W 10th Ave, Vancouver",Cafe,+16042221400,https://batwcoffee.myshopify.com/pages/bean-around-the-world-west-10th,49.26373291015625,-123.20796203613281,0.9987943559885025,Restaurant,Issued,2026-10-14
+Kumi Sushi Bar,"4422 W 10th Ave, Vancouver",Restaurant,+16047300330,http://www.takumisushi.com,49.26369857788086,-123.20672607421875,0.9836688393354416,Restaurant,Issued,2026-10-01
+Chickasta,"4443 W 10th Ave, Vancouver",Restaurant,+16043360718,https://www.ubereats.com/store/chickasta-grill-a-house-of-healthy-fusion-food/bdlo6LkDR_iNS3S8tKDqzg?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjEwMjIlMjBLaW5nc3dheSUyMCUyMzQlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJFaTh4TURJeUlFdHBibWR6ZDJGNUlDTTBMQ0JXWVc1amIzVjJaWElzSUVKRElGWTFWaUF4VGprc0lFTmhibUZrWVNJNEdqWUtNUkl2Q2hRS0VnbUw5bC13VlhHR1ZCRlBVYy1GeU9DOUhCRC1CeW9VQ2hJSm1YUHN6TzEyaGxRUkdOWFVHR3NvZTJvU0FUUSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0OS4yNTM0MzQ4JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTEyMy4wODMzOTE0OTk5OTk5OSU3RA%3D%3D&utm_source=menu-maker,49.26392364501953,-123.20735931396484,0.9310187101364136,Limited Service Food Establishment,Issued,2026-10-14
+Bombay Masala Indian Restaurant,"4473 W 10th Ave, Vancouver",Restaurant,+16042241111,https://bombaymasala.ca,49.26399230957031,-123.20835876464844,0.998394325375557,Restaurant,Issued,2026-10-01
+Liberty Wine Merchants,"4583 W 10th Ave, Vancouver",Bar / Pub,+16042248050,http://www.libertywinemerchants.com/,49.26399612426758,-123.21156311035156,0.9987389987707138,Liquor Retail Store,Issued,2026-10-01
+Koi Sushi,"4532 W 10th Ave, Vancouver",Restaurant,+16046201031,https://www.koisushibc.com/,49.26372528076172,-123.21019744873047,0.9456080198287964,Restaurant,Issued,2026-10-01
+Rice Burger,"2630 Sasamat Street, Vancouver",Restaurant,(604) 716-9686,http://riceburger604.com,49.26350402832031,-123.20890045166016,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Paradiso Caffè e Gelato,"1520 Yew St, Vancouver",Dessert,+17783797272,http://www.paradisocaffeegelato.com/,49.27219009399414,-123.15489196777344,0.6829046607017517,Limited Service Food Establishment,Issued,2026-10-14
+Nook,"1525 Yew St, Vancouver",Restaurant,+16047340099,http://nookrestaurant.ca,49.27223205566406,-123.15508270263672,0.9986499035358429,Restaurant,Issued,2026-10-01
+Davie Village Bakery,"1216 Davie St, Vancouver",Bakery,+16046832911,https://linktr.ee/dvbakery,49.28196334838867,-123.1337890625,0.9941816926002502,Limited Service Food Establishment,Issued,2026-10-01
+La Belle Patate,"1215 Davie St, Vancouver",Fast Food,+16045691215,http://www.poutinevancouver.com/,49.28200149536133,-123.1335678100586,0.9986954039335251,Restaurant,Issued,2026-10-14
+Fresco Foods,"1156 Bute St, Vancouver",Cafe,+16044233445,https://frescofoods.ca/,49.28200912475586,-123.13284301757812,0.9696307182312012,Limited Service Food Establishment,Issued,2026-10-01
+Thida Thai,"1193 Davie St, Vancouver",Restaurant,(604) 669-3588,,49.281742095947266,-123.13302612304688,0.77,Restaurant,Issued,2026-10-01
+City Square Pizza,"1112 DAVIE St, Vancouver",Restaurant,(604) 620-2400,https://www.citysquarepizza.com,49.281490325927734,-123.1326904296875,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Melriches Coffeehouse,"1244 Davie St, Vancouver",Cafe,+16046895282,http://www.melriches.com/,49.2822380065918,-123.13443756103516,0.9906064641475677,Restaurant,Issued,2026-10-01
+Matchstick,"1305 DAVIE St, Vancouver",Cafe,(604) 336-9722,http://matchstickcoffee.com,49.28274154663086,-123.13458251953125,0.77,Restaurant,Issued,2026-10-01
+Subway,"820 Thurlow St, Vancouver",Fast Food,6046856882,https://restaurants.subway.com/canada/bc/vancouver/820-thurlow-st?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=13242&utm_campaign=evergreen-2020&y_source=1_MTQ5MjAwMDctNDgzLWxvY2F0aW9uLndlYnNpdGU%3D,49.28432083129883,-123.12525177001953,0.9931,Limited Service Food Establishment,Issued,2026-10-01
+Red Robin Gourmet Burgers,"803 Thurlow St, Vancouver",Restaurant,+16046628288,https://www.redrobin.com/locations/bc/vancouver/robson-273,49.284446716308594,-123.12523651123047,0.9998276297152042,Restaurant,Issued,2026-10-01
+Faubourg,"769 Hornby St, Vancouver",Bakery,+16042670769,http://www.faubourg.com,49.2830696105957,-123.12136840820312,0.9986776781082153,Restaurant,Issued,2026-10-01
+Hula Poke,"701 W Georgia St, Vancouver",Restaurant,(604) 620-9410,http://hulapoke.ca,49.28233337402344,-123.1187515258789,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Crossroads Cafe,"777 Hornby St, Vancouver",Cafe,+16046623677,,49.28289794921875,-123.12157440185547,0.5751252770423889,Limited Service Food Establishment,Issued,2026-10-01
+Sala Thai,"888 BURRARD St, Vancouver",Restaurant,(604) 683-7999,http://salathai.ca,49.28241729736328,-123.12413024902344,0.77,Restaurant,Issued,2026-10-01
+SUMU Restaurant,"888 Burrard St, Vancouver",Restaurant,,,49.28218078613281,-123.1239242553711,0.3010464906692505,Restaurant,Issued,2026-10-14
+Taylight Local Craft Beer & Kitchen,"990 Smithe St, Vancouver",Bar / Pub,+16045641990,https://taylightkitchen.com/,49.281883239746094,-123.1241683959961,0.9521304368972778,Restaurant,Issued,2026-10-14
+Chipotle Mexican Grill,"818 Howe St, Vancouver",Restaurant,+16046836394,https://locations.chipotle.ca/bc/vancouver/818-howe-st?utm_source=extendednetwork&utm_medium=yext&utm_campaign=yext_listings&restaurant=1875,49.28156280517578,-123.12115478515625,0.9999755358934402,Restaurant,Issued,2026-10-01
+Fatburger Granville,"734 Granville St, Vancouver",Restaurant,6043366702,https://www.fatburgercanada.com/locations/fatburger-granville/,49.28193283081055,-123.11857604980469,0.9931,Restaurant,Issued,2026-10-14
+Freshslice Pizza,"768 Robson St, Vancouver",Restaurant,+16044164343,https://www.freshslice.com/,49.28162384033203,-123.1205062866211,0.9988988848924637,Limited Service Food Establishment,Issued,2026-10-14
+Burger King,"821 Granville Street, Vancouver",Restaurant,+16046818895,http://www.burgerking.ca/,49.28111267089844,-123.1202392578125,0.9999613371372222,Restaurant,Issued,2026-10-01
+Jollibee,"833 Granville Street, Vancouver",Fast Food,+16042657353,https://locations.jollibeefoods.com/ca/bc/vancouver/833-granville-street,49.28107833862305,-123.12053680419922,0.999052246183157,Restaurant,Issued,2026-10-14
+The Halal Guys,"570 Robson St., Vancouver",Restaurant,6044233944,https://thehalalguys.com/locations/570-robinson-st-vancouver/,49.280521392822266,-123.1187515258789,0.85,Restaurant,Issued,2026-10-01
+Pizza Garden,"675 Smithe St, Vancouver",Restaurant,+16046696656,http://pizzagarden.ca,49.28013610839844,-123.12095642089844,0.9961863291263581,Limited Service Food Establishment,Issued,2026-10-01
+Cinema Public House,"901 Granville St., Vancouver",Bar / Pub,(604) 694-0202,http://www.donnellygroup.ca,49.28032684326172,-123.12154388427734,0.77,Liquor Establishment,Issued,2026-10-01
+McDonald's,"891 Granville St., Vancouver",Fast Food,+16047181062,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MjAwNTYtNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.28050231933594,-123.12133026123047,0.9999191031992436,Restaurant,Issued,2026-10-01
+Subway,"722 Smithe St, Vancouver",Fast Food,+16046627821,https://restaurants.subway.com/canada/bc/vancouver/722-smithe-st?y_source=1_MTQ5MjEyNjMtODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.28052520751953,-123.12199401855469,0.9995565607190132,Restaurant,Issued,2026-10-01
+Subway,"1095 Hornby St, Vancouver",Fast Food,+16046767827,https://restaurants.subway.com/canada/bc/vancouver/1095-hornby-st?y_source=1_MTQ5MTk4ODUtODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.27988815307617,-123.12644958496094,0.9995959062933922,Limited Service Food Establishment,Issued,2026-10-01
+Pokerrito,"991 Hornby St, Vancouver",Restaurant,+12364714514,http://www.pokerrito.ca,49.28071212768555,-123.1249008178711,0.9952897971868515,Limited Service Food Establishment,Issued,2026-10-01
+Pokey Okey,"995 Hornby St, Vancouver",Restaurant,+16044162820,https://www.pokeyokey.com,49.28069305419922,-123.12508392333984,0.9985312515497208,Limited Service Food Establishment,Issued,2026-10-14
+One Saigon,"979 Hornby St, Vancouver",Restaurant,+16046696764,http://www.onesaigon.com,49.28082275390625,-123.12478637695312,0.9960712003707886,Limited Service Food Establishment,Issued,2026-10-01
+Tim Hortons,"947 Hornby St, Vancouver",Cafe,6046424272,https://locations.timhortons.ca/en/bc/vancouver/947-hornby-st/,49.281192779541016,-123.12442779541016,0.9655,Restaurant,Issued,2026-10-01
+Transylvanian Traditions Bakery,"1111 Davie St, Vancouver",Bakery,+16046820096,http://transylvaniantraditions.com/,49.280731201171875,-123.13130950927734,0.9977125322818756,Limited Service Food Establishment,Issued,2026-10-01
+Latin Square,"1105 Davie St, Vancouver",Cafe,+16043367466,http://www.latinsquare.ca/,49.280723571777344,-123.13116455078125,0.8869829177856445,Restaurant,Issued,2026-10-01
+Cazba Restaurant,"1103 Davie St, Vancouver",Restaurant,+16044284747,http://cazbarestaurant.com,49.280643463134766,-123.1310043334961,0.997664303779602,Restaurant,Issued,2026-10-01
+Stepho's Souvlaki Greek Taverna,"1124 Davie St, Vancouver",Restaurant,+16046832555,http://www.shermansfoodadventures.com/2009/01/stephos-greek-restaurant.html,49.280792236328125,-123.13201141357422,0.9981409269571304,Restaurant,Issued,2026-10-01
+Davie's The Best Turkish Cuisine,"1157 Davie St, Vancouver",Bar / Pub,+12364717182,http://daviesthebest.com/,49.2813835144043,-123.13252258300781,0.3574042320251465,Liquor Establishment,Issued,2026-10-14
+Yummy Slice Pizza,"1168 Davie St, Vancouver",Restaurant,+16045662717,http://www.yummypizzeria.com/,49.2813835144043,-123.13289642333984,0.9932679289579391,Limited Service Food Establishment,Issued,2026-10-01
+COBS Bread,"1160 Davie St, Vancouver",Bakery,+16046810689,https://www.cobsbread.com/pages/bakeries/davie-street-bakery?utm_source=facebook&utm_medium=organic&utm_campaign=organic-bakery-links,49.281288146972656,-123.13279724121094,0.9996425963640213,Limited Service Food Establishment,Issued,2026-10-14
+Poke Bar,"1072 Davie St, Vancouver",Restaurant,+16044233073,http://ilovepokebar.ca/,49.28003692626953,-123.13091278076172,0.9905995726585388,Limited Service Food Establishment,Issued,2026-10-14
+Banana Leaf on Davie,"1043 Davie St, Vancouver",Restaurant,+16046693389,http://www.bananaleaf-vancouver.com,49.279876708984375,-123.13026428222656,0.9987887215614318,Restaurant,Issued,2026-10-01
+Kadoya Japanese Restaurant,"1063 Davie St, Vancouver",Restaurant,+16046081115,http://www.kadoya.ca/,49.280174255371094,-123.13069915771484,0.9911391299962997,Restaurant,Issued,2026-10-14
+Fatburger,"1067 Davie St, Vancouver",Restaurant,+16045581246,https://www.fatburgercanada.com/locations/fatburger-davie,49.280208587646484,-123.13078308105469,0.9999766784071922,Restaurant,Issued,2026-10-01
+AMOKA Coffee and Bites,"1069 Davie St, Vancouver",Cafe,+16046857427,,49.280208587646484,-123.13078308105469,0.7630861401557922,Limited Service Food Establishment,Issued,2026-10-01
+Denny's Restaurant,"1098 Davie St, Vancouver",Restaurant,+16046890509,https://www.dennys.ca/locations/vancouver-davie-street/,49.28022766113281,-123.13108825683594,0.9994461440443992,Restaurant,Issued,2026-10-14
+Thai Basil Restaurant,"1215 Thurlow St, Vancouver",Restaurant,+16046856754,http://www.thaibasilvancouver.ca/,49.280250549316406,-123.13153839111328,0.9988824915885925,Limited Service Food Establishment,Issued,2026-10-01
+Best Bite Donair,"1091 Davie St, Vancouver",Fast Food,+16044288385,,49.28026580810547,-123.13091278076172,0.9859713912010193,Restaurant,Issued,2026-10-01
+Samurai Japanese Restaurant,"1108 Davie St, Vancouver",Restaurant,+16046090078,http://www.yelp.com/biz/samurai-japanese-restaurant-vancouver-2,49.28056335449219,-123.13167572021484,0.9988387322425842,Restaurant,Issued,2026-10-01
+Takis' Taverna,"1106 Davie St, Vancouver",Restaurant,+16046821336,http://www.takistaverna.com/,49.28055953979492,-123.13160705566406,0.9985338425636292,Restaurant,Issued,2026-10-01
+Tim Hortons,"1205 Burrard Street, Vancouver",Cafe,+16043318769,http://locations.timhortons.ca/bc/vancouver/1205-burrard-st,49.27914810180664,-123.13009643554688,0.9999600708305836,Limited Service Food Establishment,Issued,2026-10-01
+Vera's Burger Shack,"1030 Davie St, Vancouver",Restaurant,+16048938372,http://www.verasburgershack.com/,49.279537200927734,-123.1300277709961,0.9983248478174209,Restaurant,Issued,2026-10-01
+Marquis Wine Cellars,"1034 Davie St, Vancouver",Bar / Pub,+16046840445,https://www.marquis-wines.com/,49.279624938964844,-123.13014221191406,0.9998130665719509,Liquor Retail Store,Issued,2026-10-01
+Chipotle Mexican Grill,"1037 Davie St, Vancouver",Fast Food,,https://locations.chipotle.ca/bc/vancouver/1037-davie-st,49.27983474731445,-123.13013458251953,0.8,Restaurant,Issued,2026-10-14
+Subway,"1046 Davie St, Vancouver",Fast Food,+16046628804,https://restaurants.subway.com/canada/bc/vancouver/1046-davie-st?y_source=1_MTQ5MTg1NTEtODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.2797966003418,-123.13046264648438,0.9996403199732303,Restaurant,Issued,2026-10-01
+Twins Chinese Kitchen,"917 Davie St, Vancouver",Restaurant,+16046886868,http://twinschinesekitchen.com/,49.27882385253906,-123.12834167480469,0.9312275052070618,Limited Service Food Establishment,Issued,2026-10-01
+Sushi Mugen,"903 Davie St, Vancouver",Restaurant,+16044233315,http://www.sushimugen903.com/,49.27865982055664,-123.12837219238281,0.9987734222412109,Restaurant,Issued,2026-10-01
+Breka Bakery & Cafe,"855 Davie St, Vancouver",Bakery,+16044288080,http://www.breka.ca/,49.278404235839844,-123.12793731689453,0.9990375000238418,Restaurant,Issued,2026-10-01
+The Heaven,"1026 Granville St, Vancouver",Bar / Pub,+16045182090,,49.27888107299805,-123.12345886230469,0.8716323375701904,Restaurant,Issued,2026-10-14
+A&W,"1028 Granville St, Vancouver",Restaurant,+16046205014,http://www.aw.ca/,49.278892517089844,-123.12356567382812,0.9995064365267754,Restaurant,Issued,2026-10-01
+Sushi Jin,"750 Nelson St, Vancouver",Restaurant,+16045598834,http://sushistar-vancouver.ca/menu,49.279701232910156,-123.12389373779297,0.9793456792831421,Restaurant,Issued,2026-10-01
+Mean Poutine,"718 Nelson St, Vancouver",Fast Food,+16045684351,http://meanpoutine.ca/,49.27943420410156,-123.1233901977539,0.9985175287723541,Limited Service Food Establishment,Issued,2026-10-01
+The Dime Roadhouse,"1017 Granville St, Vancouver",Bar / Pub,+16046699463,http://www.warehousegroup.ca/,49.279090881347656,-123.12335968017578,0.9287111759185791,Restaurant,Issued,2026-10-01
+Date Café & Bar,"927 Seymour St, Vancouver",Cafe,+16046185880,https://www.datecafe.ca/menu/,49.27924728393555,-123.12163543701172,0.22725029289722443,Restaurant,Issued,2026-10-14
+Viti Wine and Lager,"900 Seymour St, Vancouver",Bar / Pub,+16046833806,http://www.vitiwinelagers.com,49.2794303894043,-123.12071990966797,0.9984348082542419,Liquor Retail Store,Issued,2026-10-01
+Starbucks,"960 Seymour Street, Vancouver",Cafe,6046088743,https://www.starbucks.ca/,49.27894973754883,-123.12117004394531,0.9985834219574928,Limited Service Food Establishment,Issued,2026-10-01
+Uncle Fatih's Pizza,"625 Nelson St, Vancouver",Restaurant,+16045634040,http://unclefatih.com,49.278892517089844,-123.12223052978516,0.9964862561225891,Limited Service Food Establishment,Issued,2026-10-01
+Mangos Kitchen Bar,"1180 Howe St, Vancouver",Restaurant,+16045595533,https://www.mangosvancouver.com/menu/happy-hour-and-daily-specials,49.27824020385742,-123.12606811523438,0.9997080729305744,Liquor Establishment,Issued,2026-10-01
+Donair Dude,"1145 Granville St, Vancouver",Restaurant,+16045645554,http://www.donairdude.com/,49.277809143066406,-123.12541961669922,0.9984600466489791,Limited Service Food Establishment,Issued,2026-10-01
+Freshslice Pizza,"771 Davie Street, Vancouver",Restaurant,6045687771,https://www.freshslice.com/pizza-in-vancouver/,49.27764129638672,-123.1266860961914,0.9655,Limited Service Food Establishment,Issued,2026-10-01
+Sushi Howe,"738 Davie Street, Vancouver",Restaurant,6045598082,https://www.sushihowe.com/,49.27764129638672,-123.12694549560547,0.992371804177761,Restaurant,Issued,2026-10-14
+Tim Hortons,"756 Davie Street, Vancouver",Cafe,+16045693301,http://locations.timhortons.ca/bc/vancouver/756-davie-st,49.277565002441406,-123.12718200683594,0.9999671175658703,Restaurant,Issued,2026-10-14
+Domino's Pizza,"1138 Granville St, Vancouver",Restaurant,+16046835800,http://www.dominos.ca/,49.2776985168457,-123.12500762939453,0.9999789142876864,Limited Service Food Establishment,Issued,2026-10-01
+Mr Greek Donair Town,"1173 Granville St, Vancouver",Restaurant,+16049099494,http://donairtown.com/,49.27750015258789,-123.12590026855469,0.991104006767273,Limited Service Food Establishment,Issued,2026-10-01
+Fritz European Fry House,"718 Davie St, Vancouver",Restaurant,+16046840811,http://www.fritzeuropeanfryhouse.com/,49.27734375,-123.12662506103516,0.9989746302366257,Limited Service Food Establishment,Issued,2026-10-01
+Kinkura Sushi,"656 Davie St, Vancouver",Restaurant,+16045667779,http://kinkurasushi.com/,49.276859283447266,-123.12589263916016,0.9873409867286682,Restaurant,Issued,2026-10-14
+Moltaqa Moroccan Restaurant,"1002 Mainland St, Vancouver",Restaurant,+16048411182,https://www.exploretock.com/moltaqa-moroccan---yaletown-vancouver?tock_source=tock&tock_medium=search_nav,49.27645492553711,-123.11910247802734,0.9923791885375977,Restaurant,Issued,2026-10-01
+Tacofino Yaletown,"1025 Mainland St, Vancouver",Restaurant,+17783798226,http://www.tacofino.com/,49.27639389038086,-123.1194839477539,0.9990000468492508,Restaurant,Issued,2026-10-01
+Yopo Sweet Mandarin,"1122 Homer St, Vancouver",Restaurant,+16046099676,http://www.yopocafe.com/,49.2761116027832,-123.12176513671875,0.9402486008405686,Limited Service Food Establishment,Issued,2026-10-01
+Okeya Kyujiro,"1038 Mainland St, Vancouver",Restaurant,(778) 999-1038,http://okeya.ca,49.2758674621582,-123.11963653564453,0.77,Restaurant,Issued,2026-10-01
+Sombreros Mexican Products and Taqueria,"1151 Homer St, Vancouver",Restaurant,+16048793089,http://www.sombreros.ca/,49.27574920654297,-123.12294006347656,0.9870756268501282,Limited Service Food Establishment,Issued,2026-10-14
+Yaletown Liquor Store,"1116 Hamilton St, Vancouver",Bar / Pub,+16046880064,http://markjamesgroup.com/yaletown.html,49.27566146850586,-123.12135314941406,0.9361463677883148,Liquor Retail Store,Issued,2026-10-01
+Coo Coo Coffee,"477 Davie St, Vancouver",Cafe,(604) 558-3332,http://www.coocoocoffee.com,49.27570724487305,-123.1239242553711,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Yamato Sushi,"616 Davie St, Vancouver",Restaurant,+16046825494,http://yamatosushivancouver.business.site/,49.276668548583984,-123.12559509277344,0.9848620891571045,Limited Service Food Establishment,Issued,2026-10-01
+Sashimiya,"1348 Hornby St, Vancouver",Restaurant,+16046890088,http://sashimiya.ca/,49.27675247192383,-123.13044738769531,0.9829702377319336,Limited Service Food Establishment,Issued,2026-10-01
+The Yale Saloon,"1300 Granville St, Vancouver",Bar / Pub,+16048006321,http://yalesaloon.com/,49.2758903503418,-123.12774658203125,0.9998075719773769,Liquor Establishment,Issued,2026-10-01
+Desi Indian Lounge,"1355 Hornby St, Vancouver",Restaurant,+16046812131,http://www.Desilounge.ca/,49.276859283447266,-123.13085174560547,0.9602121299505234,Restaurant,Issued,2026-10-01
+Quesada Burritos & Tacos,"1291 Howe St, Vancouver",Fast Food,6046207232,http://www.quesada.ca/,49.277069091796875,-123.12870788574219,0.9747966391295194,Limited Service Food Establishment,Issued,2026-10-14
+Daikichi Sushi,"1346 Burrard St, Vancouver",Restaurant,+16046882033,http://Daikichisushi.com/,49.27748489379883,-123.1313705444336,0.9912477880716324,Limited Service Food Establishment,Issued,2026-10-14
+Yet's Cafe,"1312 Burrard St, Vancouver",Cafe,+16044428099,http://www.yetscafe.com,49.277713775634766,-123.13113403320312,0.9387159132957459,Limited Service Food Establishment,Issued,2026-10-01
+Osaka Sushi,"1361 Burrard St, Vancouver",Restaurant,+16046772677,http://burrardosakasushi.com/,49.27769088745117,-123.1317367553711,0.9972675907611847,Restaurant,Issued,2026-10-01
+Sushi Coen,"1306 Burrard St, Vancouver",Restaurant,+17783791523,https://sushicoen.com/,49.2778205871582,-123.13093566894531,0.9697131997346878,Limited Service Food Establishment,Issued,2026-10-01
+Firecrust Neapolitan Pizzeria,"808 Davie St, Vancouver",Restaurant,+17783799646,http://www.firecrustpizzeria.com/,49.27783203125,-123.12759399414062,0.9973588931560516,Restaurant,Issued,2026-10-01
+ThaiLicious,"1943 Cornwall Ave, Vancouver",Restaurant,+16046224444,http://thailicious.food/,49.27262496948242,-123.14878845214844,0.3008238673210144,Restaurant,Issued,2026-10-01
+Cockney Kings Fish & Chips,"1935 Cornwall Ave, Vancouver",Restaurant,+16045663474,http://www.cockneykings.ca/,49.27261734008789,-123.14850616455078,0.9808626174926758,Limited Service Food Establishment,Issued,2026-10-01
+Albasha Express Shawarma & Falafel,"1937 Cornwall Ave, Vancouver",Restaurant,+16043362110,http://Albashafalafel.com/,49.272579193115234,-123.1485595703125,0.9980388862490654,Limited Service Food Establishment,Issued,2026-10-14
+Corduroy Restaurant,"1943 Cornwall Ave, Vancouver",Bar / Pub,+16047330162,http://www.corduroyrestaurant.com/,49.27256393432617,-123.1487808227539,0.9945589119195938,Restaurant,Issued,2026-10-01
+Pizza Pizza,"1893 Cornwall Avenue, Vancouver",Restaurant,+16042771111,https://www.pizzapizza.ca/,49.27285385131836,-123.14747619628906,1.0,Limited Service Food Establishment,Issued,2026-10-14
+Stuart's Bakery,"1689 Johnston St, Vancouver",Bakery,+16046858816,http://www.maxsdeli.ca,49.27223205566406,-123.13516235351562,0.9976766830682755,Limited Service Food Establishment,Issued,2026-10-01
+Chau Veggie Express,"1689 Johnston St, Vancouver",Restaurant,+17783799508,http://www.chowatchau.ca,49.272701263427734,-123.13545227050781,0.9915749961137772,Limited Service Food Establishment,Issued,2026-10-01
+Gourmet Wok,"1689 Johnston Street, Vancouver",Restaurant,(604) 568-1185,http://granvilleisland.com/en/gourmet_wok,49.27287673950195,-123.13520812988281,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Chang An,"1661 Granville St, Vancouver",Restaurant,+16046811313,http://www.tastechangan.com,49.273399353027344,-123.13264465332031,0.9989055228233338,Restaurant,Issued,2026-10-01
+Muffin Granny,"1689 Johnston Street, Vancouver",Bakery,(604) 684-3821,https://granvilleisland.com/directory/muffin-granny,49.27290344238281,-123.1351547241211,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Tartine Bread and Pies,"770 Beach Ave, Vancouver",Bakery,+16046857437,http://www.tartine.ca,49.2745246887207,-123.13167572021484,0.9964857351779938,Limited Service Food Establishment,Issued,2026-10-01
+Matchstick Yaletown,"1328 Richards St, Vancouver",Cafe,(604) 423-3294,http://www.matchstickyvr.com,49.274391174316406,-123.12626647949219,0.77,Restaurant,Issued,2026-10-01
+Kurotaki Bubble Tea House Ltd,"496 Drake St, Vancouver",Restaurant,(778) 488-0621,https://kurotakihouse.com,49.27463912963867,-123.12584686279297,0.77,Restaurant,Issued,2026-10-01
+Zab Zaab Thai Cuisine,"1211 Hamilton St, Vancouver",Restaurant,+16044136999,http://www.zabzaabthai.com/,49.27479553222656,-123.1230239868164,0.9985787957906723,Restaurant,Issued,2026-10-01
+MeeT in Yaletown,"1165 MAINLAND St, Vancouver",Restaurant,(604) 696-1165,http://eatmeet.ca,49.27500915527344,-123.12174224853516,0.77,Restaurant,Issued,2026-10-01
+Panago Pizza,"1267 Pacific Blvd, Vancouver",Restaurant,+18663100001,http://www.panago.com/,49.27363586425781,-123.12346649169922,0.9944862949848176,Limited Service Food Establishment,Issued,2026-10-14
+Artisan Sakemaker at Granville Island,"1339 Railspur Alley, Vancouver",Bar / Pub,(604) 685-7253,http://artisansakemaker.com,49.270294189453125,-123.13400268554688,0.77,Liquor Retail Store,Issued,2026-10-01
+Pedro's Organic Coffee House,"1550 Anderson St, Vancouver",Cafe,+16048990741,http://www.cafeclassics.net,49.270320892333984,-123.13611602783203,0.8581242901086807,Restaurant,Issued,2026-10-01
+Blondy's Coffee,"1705 W 4th Ave, Vancouver",Cafe,+16047324561,http://www.blondyson4th.com,49.2680778503418,-123.14356231689453,0.9947527718544006,Limited Service Food Establishment,Issued,2026-10-01
+Bimini's Liquor Store,"2018 W 4th Ave, Vancouver",Bar / Pub,+16047382714,http://biminisliquorstore.com/,49.267860412597656,-123.15109252929688,0.9934585535526276,Liquor Retail Store,Issued,2026-10-01
+Oohlala Donuts,"1818 W 4th Ave, Vancouver",Bakery,+12365095828,http://www.oohlaladonuts.ca/,49.26789855957031,-123.1460952758789,0.9847779577970505,Limited Service Food Establishment,Issued,2026-10-01
+Romer's Burger Bar,"1873 W 4th Ave, Vancouver",Restaurant,(604) 732-9545,http://www.romersburgerbar.com,49.26818084716797,-123.14730072021484,0.77,Restaurant,Issued,2026-10-01
+Tractor Everyday Healthy Foods,"1903 W 4th Ave, Vancouver",Restaurant,+16043431164,http://tractorfoods.com/,49.26814270019531,-123.14818572998047,0.9978810578584671,Restaurant,Issued,2026-10-14
+Tacofino Kitsilano,"1909 W 4th Ave, Vancouver",Restaurant,+16046208729,https://www.tacofino.com/locations#kitsilano,49.2681770324707,-123.14847564697266,0.9992908024787903,Restaurant,Issued,2026-10-01
+Maenam,"1938 W 4th Ave, Vancouver",Restaurant,+16047305579,http://www.maenam.ca/,49.26801681518555,-123.14891815185547,0.9988442981243133,Restaurant,Issued,2026-10-01
+Fable Kitchen,"1944 W 4th Ave, Vancouver",Restaurant,+17786526146,http://www.fablekitchen.ca/,49.268001556396484,-123.14900970458984,0.9984914404153824,Restaurant,Issued,2026-10-01
+Döner Kebab,"1956 W 4th Ave, Vancouver",Restaurant,+16045581050,http://www.donerkebab.ca/,49.26802062988281,-123.14923095703125,0.9935351872444153,Limited Service Food Establishment,Issued,2026-10-01
+Jitters Caffe,"1966 W 4th Ave, Vancouver",Cafe,(604) 731-0222,,49.267940521240234,-123.1495361328125,0.77,Restaurant,Issued,2026-10-01
+Lavidas,"1961 W 4th Ave, Vancouver",Restaurant,+16047320004,https://lavidasrestaurant.ca/,49.2681770324707,-123.1494369506836,0.989643566608429,Restaurant,Issued,2026-10-01
+Chi,"1935 W 4th Ave, Vancouver",Restaurant,+16043363010,http://www.chirestaurantbar.com,49.268192291259766,-123.14897918701172,0.999712531119585,Restaurant,Issued,2026-10-01
+RedBeef Noodle Kitchen,"1947 W 4th Ave, Vancouver",Restaurant,+16045581237,http://www.redbeef.ca,49.26822280883789,-123.14910888671875,0.9983444929122924,Restaurant,Issued,2026-10-14
+KAHVE,"1822 W 1st Ave, Vancouver",Cafe,(604) 222-9002,http://www.kahvevancouver.com,49.270545959472656,-123.14593505859375,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Cofu Pressed Sushi,"1833 Anderson St, Vancouver",Restaurant,(604) 730-7999,https://cofu.ca,49.269264221191406,-123.1390151977539,0.77,Limited Service Food Establishment,Issued,2026-10-14
+Okanagan Estate Wine Cellars,"1811 W 1st Ave, Vancouver",Bar / Pub,+16045659463,http://www.estatewineshop.com,49.2707633972168,-123.1468734741211,0.996849998831749,Liquor Retail Store,Issued,2026-10-14
+The Ellis,"2204 York Ave, Vancouver",Bar / Pub,(604) 428-2456,http://theellis.ca,49.2715950012207,-123.15552520751953,0.77,Liquor Establishment,Issued,2026-10-01
+Cafe Zen On Yew,"1631 Yew St, Vancouver",Restaurant,+16047314018,http://cafezenonyew.com,49.27117156982422,-123.1551284790039,0.9985158151388168,Restaurant,Issued,2026-10-01
+Chewies Smoke and Oyster Bar,"2201 W 1st Ave, Vancouver",Restaurant,+16045584448,http://www.chewies.ca/,49.27090072631836,-123.15519714355469,0.9949075883626938,Restaurant,Issued,2026-10-01
+Hitoe Sushi Japanese Restaurant,"3347 W 4th Ave, Vancouver",Restaurant,+17783714619,http://hitoesushi.blog57.fc2.com/,49.26860046386719,-123.1786880493164,0.9985459476709366,Limited Service Food Establishment,Issued,2026-10-14
+Corner Cup Coffee House,"3301 West 4th Ave, Vancouver",Cafe,(604) 734-4524,http://www.cornercup.ca,49.2686653137207,-123.17788696289062,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Charm by Zab Bite,"3293 W 4th Ave, Vancouver",Restaurant,+17788941114,http://www.charmrestaurant.ca/,49.26870346069336,-123.17743682861328,0.8194299340248108,Restaurant,Issued,2026-10-14
+Double DD Pizza,"3510 W 4th Ave, Vancouver",Restaurant,+16047367001,http://ddpizza.ca/DDPizza/Index.html,49.26850128173828,-123.1822280883789,0.9964948517084121,Restaurant,Issued,2026-10-01
+Aphrodite's Organic Pie Shop,"3598 W 4th Ave, Vancouver",Cafe,(604) 738-5879,https://www.organiccafe.ca,49.2685546875,-123.18359375,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Aphrodite's Organic Cafe,"3605 W 4th Ave, Vancouver",Restaurant,6047338308,https://www.organiccafe.ca/,49.268611907958984,-123.18403625488281,0.85,Restaurant,Issued,2026-10-01
+Irori Sushi,"3692 W 4th Ave, Vancouver",Restaurant,+16045580885,,49.26854705810547,-123.18543243408203,0.9930472129583359,Restaurant,Issued,2026-10-14
+Zapoteca Cantina de Barrio,"3681 W 4th Ave, Vancouver",Restaurant,+12364278913,http://www.zapoteca.com/kitsilano,49.26881408691406,-123.18524169921875,0.9943531250953674,Liquor Establishment,Issued,2026-10-01
+Killer Ice Cream,"3659 W 4th Ave, Vancouver",Dessert,+17782009111,http://killericecream.ca/,49.26873779296875,-123.1848373413086,0.9870622307062149,Limited Service Food Establishment,Issued,2026-10-14
+Iron Wok,"2083 Alma St, Vancouver",Restaurant,+16042280777,http://www.ironwok.ca,49.26799774169922,-123.18637084960938,0.9713955491781234,Limited Service Food Establishment,Issued,2026-10-01
+Chewie’s Biscuit Co,"2822 W 4th Ave, Vancouver",Restaurant,(604) 336-9996,http://www.chewiesbiscuitco.com,49.268123626708984,-123.16876983642578,0.77,Restaurant,Issued,2026-10-01
+Little Bird Dim Sum,"2958 W 4th Ave, Vancouver",Restaurant,+16043258132,http://www.littlebirddimsum.com,49.26835250854492,-123.17156982421875,0.9986277085542679,Restaurant,Issued,2026-10-01
+C41 Coffee,"2948 W 4th Ave, Vancouver",Cafe,+16047811677,http://C41coffee.com/,49.26824188232422,-123.1708755493164,0.9784480333328247,Restaurant,Issued,2026-10-14
+Jolly's Indian Bistro,"2928 W 4th Ave, Vancouver",Restaurant,+16047349110,http://www.jollysindianbistro.com/,49.26833724975586,-123.17073059082031,0.9978057813644409,Restaurant,Issued,2026-10-14
+Artistry Coffee,"2959 W 4th Ave, Vancouver",Cafe,+12365200800,http://blaqsheepcoffee.com/,49.26851272583008,-123.1709213256836,0.9958826929330826,Restaurant,Issued,2026-10-01
+Puerto Mexico,"2710 W 4th Ave, Vancouver",Restaurant,+16042694203,http://puertomexicovan.com/,49.268280029296875,-123.16670989990234,0.9569211602210999,Limited Service Food Establishment,Issued,2026-10-01
+McDonald's,"2391 West 4th Avenue, Vancouver",Fast Food,+16047181185,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MjAxMjYtNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.268348693847656,-123.15946197509766,0.9999590854227542,Restaurant,Issued,2026-10-01
+O5 Tea,"2208 W 4th Ave, Vancouver",Restaurant,+16045580500,http://www.o5tea.com/,49.26808547973633,-123.15563201904297,0.999619875639677,Limited Service Food Establishment,Issued,2026-10-01
+Simit Bakery Cafe,"2268 W 4th Ave, Vancouver",Bakery,+12364274189,https://www.simitkitsilano.com/,49.26810073852539,-123.15672302246094,0.9947445392608643,Limited Service Food Establishment,Issued,2026-10-01
+Simpatico Ristorante,"2222 W 4th Ave, Vancouver",Restaurant,+16047336824,http://simpaticorestaurant.ca/,49.268123626708984,-123.15582275390625,0.9987016689777374,Restaurant,Issued,2026-10-01
+Kitsilano Wine Cellar,"2239 West 4th Avenue, Vancouver",Bar / Pub,6047367660,https://www.angryotterliquor.crs/,49.26819610595703,-123.15648651123047,0.9655,Liquor Retail Store,Issued,2026-10-01
+COBS Bread,"2320 W 4th Ave, Vancouver",Bakery,+16047144070,https://www.cobsbread.com/pages/bakeries/west-4th-bakery?utm_source=facebook&utm_medium=organic&utm_campaign=organic-bakery-links,49.26814270019531,-123.15800476074219,0.9977832436561584,Limited Service Food Establishment,Issued,2026-10-01
+Super Smash Burgers,"1082 Granville Street, Vancouver",Bar / Pub,6044282847,https://supersmashburgers.ca/,49.26420974731445,-123.15701293945312,0.85,Restaurant,Issued,2026-10-01
+Kitsilano Liquor Store,"2289 W Broadway, Vancouver",Bar / Pub,+16047337155,http://kitsilanoliquorstore.com,49.26402282714844,-123.15706634521484,0.9908137315511704,Liquor Retail Store,Issued,2026-10-01
+Edible Flours,"2280 W Broadway, Vancouver",Restaurant,(604) 734-8351,http://www.edibleflours.ca,49.263710021972656,-123.15678405761719,0.77,Limited Service Food Establishment,Issued,2026-10-14
+Sip Of Life,"2213 W Broadway, Vancouver",Cafe,+16047305494,https://sipoflife.ca/,49.26395034790039,-123.15572357177734,0.995079854130745,Limited Service Food Establishment,Issued,2026-10-01
+Thomas Haas Fine Chocolates & Patisserie,"2539 W Broadway, Vancouver",Bakery,+16047361848,https://www.thomashaas.com,49.26409149169922,-123.16333770751953,0.9958768880367279,Limited Service Food Establishment,Issued,2026-10-14
+Sunshine Diner,"2649 W Broadway, Vancouver",Restaurant,+16047337717,http://www.thesunshinediner.com/,49.26414108276367,-123.1654281616211,0.9985795760154724,Restaurant,Issued,2026-10-01
+Mr. Red Cafe,"2680 W. Broadway, Vancouver",Restaurant,(604) 559-6878,http://www.mrredcafe.com,49.263912200927734,-123.16588592529297,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Broadway International Wine Shop,"2752 W Broadway, Vancouver",Bar / Pub,+16047348543,http://broadwaybeerwine.ca/,49.26396179199219,-123.1673583984375,0.9977168095111847,Liquor Retail Store,Issued,2026-10-01
+JJ Bean Coffee Roasters,"2904 W Broadway, Vancouver",Cafe,+16044234113,http://jjbeancoffee.com,49.26389694213867,-123.1703109741211,0.9973931384086608,Limited Service Food Establishment,Issued,2026-10-14
+Tandoori Fusion Indian Cuisine,"2872 W Broadway, Vancouver",Restaurant,+16047382824,http://tandoorifusionvancouver.ca,49.264007568359375,-123.16951751708984,0.9982167518138886,Restaurant,Issued,2026-10-01
+Quesada Burritos & Tacos,"2817 W Broadway, Vancouver",Restaurant,+16047310526,http://www.Quesada.ca/,49.264244079589844,-123.16896057128906,0.9999234281361103,Limited Service Food Establishment,Issued,2026-10-14
+COBS Bread,"2837 W Broadway, Vancouver",Bakery,+16047140917,https://www.cobsbread.com/pages/bakeries/west-broadway-bakery?utm_source=facebook&utm_medium=organic&utm_campaign=organic-bakery-links,49.26420593261719,-123.16925811767578,0.9999490886330604,Limited Service Food Establishment,Issued,2026-10-01
+Purebread,"2887 W Broadway, Vancouver",Bakery,+16043369670,http://purebread.ca,49.264217376708984,-123.17012023925781,0.9956239694356919,Limited Service Food Establishment,Issued,2026-10-01
+Great Wall Mongolian B.B.Q,"2897 W Broadway, Vancouver",Restaurant,+16047394888,http://fr.yelp.ca/biz/great-wall-mongolian-bbq-vancouver-3,49.264259338378906,-123.17036437988281,0.994196891784668,Restaurant,Issued,2026-10-14
+Tera V Burger,"2961 W Broadway, Vancouver",Restaurant,+16043363575,http://www.teravburger.com,49.264225006103516,-123.17172241210938,0.9954973936080933,Limited Service Food Establishment,Issued,2026-10-14
+Banana Leaf in Kitsilano,"3005 W Broadway, Vancouver",Restaurant,+16047343005,http://www.bananaleaf-vancouver.com,49.2642707824707,-123.17231750488281,0.9987028342485428,Restaurant,Issued,2026-10-01
+Hanoi Old Quarter,"3105 W Broadway, Vancouver",Restaurant,+16043276789,https://www.hanoioldquarter.ca/,49.26438903808594,-123.17418670654297,0.9218001365661621,Restaurant,Issued,2026-10-14
+Donair Dude,"3209 West Broadway, Vancouver",Restaurant,(604) 564-1294,https://www.donairdude.com,49.26438522338867,-123.17647552490234,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Simply Sushi Bar,"3309 W Broadway, Vancouver",Restaurant,+16047397181,http://www.junsushi.ca,49.264373779296875,-123.17831420898438,0.9876890373229981,Limited Service Food Establishment,Issued,2026-10-01
+Storm City Coffee,"3403 W Broadway, Vancouver",Cafe,+12364843444,http://stormcitycoffee.com/,49.26442337036133,-123.18004608154297,0.9985879111289978,Restaurant,Issued,2026-10-01
+Ton Ton Sushi,"3667 W Broadway, Vancouver",Restaurant,+16047324568,https://sushitonton.com/home-west-broadway,49.264617919921875,-123.18524169921875,0.9859219658374786,Restaurant,Issued,2026-10-01
+Mr. Falafel,"3685 W 10th Ave, Vancouver",Restaurant,+16047394403,http://www.mrfalafel.ca/,49.2637825012207,-123.18565368652344,0.9975911247730255,Limited Service Food Establishment,Issued,2026-10-01
+Caffe W,"3646 W Broadway, Vancouver",Cafe,+16047309298,,49.264259338378906,-123.18472290039062,0.9878943562507629,Limited Service Food Establishment,Issued,2026-10-01
+Handi Grill,"3618 W Broadway, Vancouver",Restaurant,+16047383186,https://handigrill-online-ordering.securebrygid.com/zgrid/themes/10429/intro/,49.26426315307617,-123.18414306640625,0.9974698132276535,Restaurant,Issued,2026-10-01
+Itosugi Kappo Cuisine,"3648 W Broadway, Vancouver",Restaurant,+16047798528,https://itosugikappocuisine.ca,49.2642707824707,-123.18486022949219,0.9967948746681213,Limited Service Food Establishment,Issued,2026-10-01
+The Kitchen Dada,"2535 Alma St, Vancouver",Restaurant,+17787241133,http://thekitchendada.com,49.264034271240234,-123.18601989746094,0.9981339901685715,Restaurant,Issued,2026-10-01
+Elwoods,"3357 W Broadway, Vancouver",Bar / Pub,+16047364301,http://www.elwoods.ca,49.26434326171875,-123.17913055419922,0.9982309818267823,Restaurant,Issued,2026-10-01
+McDonald's,"3308 W. Broadway, Vancouver",Fast Food,+16047181017,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MTk1NzQtNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.264137268066406,-123.17804718017578,0.9999700964093209,Restaurant,Issued,2026-10-01
+Freshslice Pizza,"3262 W Broadway, Vancouver",Restaurant,6044289662,http://freshslice.com/,49.263999938964844,-123.177001953125,0.9023489370942116,Limited Service Food Establishment,Issued,2026-10-14
+HaiDiLao Hotpot,"3204 W Broadway, Vancouver",Restaurant,+16043362588,https://www.haidilao.com,49.263912200927734,-123.17619323730469,0.9777831435203552,Restaurant,Issued,2026-10-01
+Yummy Slice Pizza,"3210 W Broadway, Vancouver",Restaurant,+16045659501,https://yummyslice.ca,49.26405715942383,-123.17637634277344,0.9567452073097229,Limited Service Food Establishment,Issued,2026-10-01
+Pure Delight Café,"3236 W Broadway, Vancouver",Restaurant,+16045688812,http://www.puredelightcafe.com,49.264129638671875,-123.17667388916016,0.9984569895267487,Restaurant,Issued,2026-10-01
+Good Co. Kits,"3255 W Broadway, Vancouver",Bar / Pub,+16045596070,http://www.colonykits.com/,49.26435470581055,-123.17695617675781,0.9831148386001587,Liquor Establishment,Issued,2026-10-01
+Sahel Market and Restaurant,"3207 W Broadway, Vancouver",Restaurant,+16044234117,https://sahelpersianrestaurant.com/,49.26429748535156,-123.17626953125,0.9991554349660874,Limited Service Food Establishment,Issued,2026-10-01
+Mamalee,"3144 W Broadway, Vancouver",Restaurant,+16047338882,http://mamalee.ca/,49.26411056518555,-123.17516326904297,0.9969742441177368,Limited Service Food Establishment,Issued,2026-10-01
+Nostos Taverna,"3162 W Broadway, Vancouver",Restaurant,+16047309303,https://nostostaverna.com/,49.26408004760742,-123.17533111572266,0.9824490547180176,Restaurant,Issued,2026-10-01
+The Fringe Cafe,"3124 W Broadway, Vancouver",Bar / Pub,+16047386977,http://www.thefringecafe.com/,49.264102935791016,-123.17472839355469,0.9988948434591294,Liquor Establishment,Issued,2026-10-01
+Starbucks,"3095 W. Broadway, Vancouver",Cafe,+16047367876,https://www.starbucks.com/store-locator/store/1024398/w-broadway-balaclava-3095-w-broadway-vancouver-bc-v-6-k-2-g-9-ca,49.26432800292969,-123.17383575439453,0.9999636493086815,Restaurant,Issued,2026-10-01
+Just Another,"3040 W Broadway, Vancouver",Cafe,+16042259252,instagram.com/wearejustanother?,49.26409149169922,-123.17292785644531,0.9371604919433594,Restaurant,Issued,2026-10-01
+Neverland Tea Salon,"3066 W Broadway, Vancouver",Restaurant,+16044283066,http://www.neverlandtea.com/,49.26408386230469,-123.17335510253906,0.9989271146059037,Restaurant,Issued,2026-10-01
+Granville Liquor Store,"2658 Granville St, Vancouver",Bar / Pub,+16047312669,http://granvilleliquorstore.com/,49.26207733154297,-123.13841247558594,0.9195131415128708,Liquor Retail Store,Issued,2026-10-01
+Sweet Barrel Creamery and Coffee Roasters,"2729 Arbutus St, Vancouver",Cafe,+17789864866,http://www.sweetbarrelcreamery.com,49.261566162109375,-123.15315246582031,0.9778704643249512,Limited Service Food Establishment,Issued,2026-10-14
+Plaisir Sucre,"2668 Arbutus St, Vancouver",Bakery,+16047360515,http://plaisir-sucre.com,49.262245178222656,-123.15287017822266,0.9979473412036896,Limited Service Food Establishment,Issued,2026-10-01
+Coquette Brasserie,"2685 Arbutus St, Vancouver",Restaurant,+16042591248,http://www.brasseriecoquette.ca,49.26215362548828,-123.15315246582031,0.9986636674404145,Restaurant,Issued,2026-10-01
+Freshslice Pizza,"2719 Arbutus St, Vancouver",Restaurant,7783796970,https://www.freshslice.com/our-pizza/,49.262046813964844,-123.15326690673828,0.9050270289182663,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"2640 Arbutus St, Vancouver",Fast Food,6047377421,https://restaurants.subway.com/canada/bc/vancouver/2640-arbutus-st?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=28742&utm_campaign=evergreen-2020&y_source=1_MTQ5MjAxNzAtNDgzLWxvY2F0aW9uLndlYnNpdGU%3D,49.262550354003906,-123.15266418457031,0.9931,Limited Service Food Establishment,Issued,2026-10-01
+Napoletana Pizza Cafe & Gelato,"2576 Arbutus St, Vancouver",Dessert,6047369800,http://www.enjoyfresh.net/,49.26299285888672,-123.15298461914062,0.9655,Limited Service Food Establishment,Issued,2026-10-01
+Pallet Coffee Roasters - West Broadway,"2002 W Broadway, Vancouver",Cafe,+16047362687,https://www.palletcoffeeroasters.com,49.26358413696289,-123.15068817138672,0.9965904998779297,Restaurant,Issued,2026-10-14
+Kits Indian Restaurant,"2445 Burrard St, Vancouver",Restaurant,(604) 227-2699,http://dskitchen.ca,49.264137268066406,-123.14604949951172,0.77,Restaurant,Issued,2026-10-01
+Akbar's Own Dining Lounge,"1905 W Broadway, Vancouver",Restaurant,+16047368180,http://www.akbarsown.com/,49.264034271240234,-123.14827728271484,0.9986771023273469,Restaurant,Issued,2026-10-14
+Mazuya Sushi,"2355 Burrard St., Vancouver",Restaurant,(604) 733-3838,https://mazuyasushi.ca,49.265037536621094,-123.14588165283203,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Delhi 6 Indian Bistro,"1766 W 7th Ave, Vancouver",Restaurant,+16047423311,http://www.delhi6.ca,49.26533889770508,-123.14493560791016,0.9985465919971466,Restaurant,Issued,2026-10-01
+Macao Imperial Tea Vancouver & Langley,"2231 Granville St, Vancouver",Cafe,+16044282231,http://macaoimperialteacanada.com/,49.26565170288086,-123.1386947631836,0.6021122932434082,Limited Service Food Establishment,Issued,2026-10-14
+True NOSH,"1450 W 7th Ave, Vancouver",Restaurant,(604) 730-8177,https://www.truenosh.com,49.26513671875,-123.13687896728516,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Suika,"1626 W Broadway, Vancouver",Restaurant,(604) 730-1678,http://www.suika-snackbar.com,49.26350784301758,-123.14164733886719,0.77,Restaurant,Issued,2026-10-01
+Panago Pizza,"1278 W Broadway, Vancouver",Restaurant,+18663100001,http://www.panago.com/,49.26337432861328,-123.1328125,0.9877440929412842,Limited Service Food Establishment,Issued,2026-10-01
+Broadway Liquor Store,"1169 W Broadway, Vancouver",Bar / Pub,+16045687168,http://broadwayliquorstore.ca/,49.26356506347656,-123.13016510009766,0.9970941162109375,Liquor Retail Store,Issued,2026-10-01
+Shoku,"1177 W Broadway, Vancouver",Restaurant,(604) 442-8543,https://www.shokuvancouver.ca,49.26365280151367,-123.1307144165039,0.77,Restaurant,Issued,2026-10-01
+Saucin Staples,"1073 W Broadway, Vancouver",Restaurant,+16047300225,http://www.saucinstaples.ca/,49.26359176635742,-123.12825012207031,0.9803886431455612,Restaurant,Issued,2026-10-01
+Ele Cafe,"895 W Broadway, Vancouver",Cafe,+16045669998,http://Elecafe.ca/,49.26352310180664,-123.12400817871094,0.9917449563741684,Limited Service Food Establishment,Issued,2026-10-01
+Popeyes Louisiana Kitchen,"865 W Broadway, Vancouver",Restaurant,6043364885,https://www.popeyes.com/store-locator/store/restaurant_885475,49.263343811035156,-123.12339782714844,0.9949332184255123,Restaurant,Issued,2026-10-14
+New India Buffet + Bar & Restaurant,"901 West Broadway, Vancouver",Restaurant,6048745800,https://newindiabuffet.com/,49.26341247558594,-123.12484741210938,0.9655,Restaurant,Issued,2026-10-01
+Minato Sushi,"1001 W Broadway, Vancouver",Restaurant,+16047326554,http://www.minatosushi.ca/,49.26353454589844,-123.12720489501953,0.9882523018121719,Restaurant,Issued,2026-10-01
+Big Star Sandwich Co.,"802 W Broadway, Vancouver",Fast Food,+12367575477,,49.2631721496582,-123.12213897705078,0.34567850828170776,Limited Service Food Establishment,Issued,2026-10-01
+Donair Spot,"806 West Broadway, Vancouver",Restaurant,(604) 874-2121,https://www.donairspot.com,49.26318359375,-123.12212371826172,0.77,Restaurant,Issued,2026-10-01
+Kim Son Vietnamese Food,"555 W 12th Ave, Vancouver",Restaurant,+16048798986,,49.260643005371094,-123.1164779663086,0.41166168451309204,Limited Service Food Establishment,Issued,2026-10-01
+Five Star Fried Chicken,"555 W 12th Ave, Vancouver",Restaurant,+17785355780,https://pay.yoello.com/v/fivestarfrie,49.26072311401367,-123.11617279052734,0.9801318037509918,Limited Service Food Establishment,Issued,2026-10-01
+Tractor Everyday Healthy Foods,"601 W Broadway, Vancouver",Restaurant,+16042620935,https://order.tractorfoods.com/menu/tractor-foods-ash,49.26351547241211,-123.11764526367188,0.9979421454668045,Restaurant,Issued,2026-10-01
+Elysian Coffee Broadway,"590 W Broadway, Vancouver",Cafe,+16042613381,http://www.elysiancoffee.com,49.26313400268555,-123.1172866821289,0.9972335785627365,Restaurant,Issued,2026-10-01
+Rogue Kitchen & Wetbar,"602 W Broadway, Vancouver",Bar / Pub,(604) 568-9400,http://roguewetbar.com,49.263092041015625,-123.11772918701172,0.77,Restaurant,Issued,2026-10-01
+Saku Broadway,"548 W Broadway, Vancouver",Restaurant,+16044234600,http://www.sakuvancouver.com,49.26313018798828,-123.11665344238281,0.9983999049663543,Restaurant,Issued,2026-10-01
+Catalyst Cafe and Wine bar,"425 W 6th Ave, Vancouver",Cafe,+17783571661,,49.265846252441406,-123.11363983154297,0.8929944634437561,Restaurant,Issued,2026-10-14
+West B Pizza,"407 W Broadway, Vancouver",Restaurant,+16047140037,http://www.wbpizza.ca/,49.26308822631836,-123.11317443847656,0.6910115480422974,Limited Service Food Establishment,Issued,2026-10-01
+COMEDOR By La Taqueria Pinche Taco Shop,"2450 Yukon St, Vancouver",Restaurant,+16045582549,http://www.lataqueria.com/,49.2635612487793,-123.11280059814453,0.9985495120286941,Restaurant,Issued,2026-10-01
+Forêt Noire Pâtisserie,"236 W Broadway, Vancouver",Bakery,(236) 521-3640,http://www.foretnoirepatisserie.com,49.26285171508789,-123.11033630371094,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Fatburger West Broadway,"255 W Broadway, Vancouver",Restaurant,+16045687077,https://www.fatburgercanada.com/locations/fatburger-broadway/,49.263301849365234,-123.11066436767578,0.9997946687281132,Restaurant,Issued,2026-10-14
+Goldilocks,"2833 Main Street, Vancouver",Restaurant,(604) 876-2464,http://www.goldilocks-can.com,49.2598876953125,-123.10131072998047,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Afuri Ramen + Dumpling 阿夫利らーめん,"2801 Main Street, Vancouver",Restaurant,(778) 998-8288,https://www.afuriramen.com,49.260005950927734,-123.10133361816406,0.77,Restaurant,Issued,2026-10-01
+Lucy's Eastside Diner,"2708 Main St, Vancouver",Restaurant,(604) 568-1550,http://www.lucyseastsidediner.com,49.260860443115234,-123.10078430175781,0.77,Restaurant,Issued,2026-10-01
+Mali Thai Restaurant,"2710 Main St, Vancouver",Restaurant,+16048793929,http://www.malithairestaurant.com/,49.26082992553711,-123.10087585449219,0.9876045483350754,Limited Service Food Establishment,Issued,2026-10-01
+Pamilya's Delights,"2656 Main St, Vancouver",Bakery,+16048384488,,49.26124572753906,-123.10079956054688,0.5394677519798279,Limited Service Food Establishment,Issued,2026-10-01
+Quesada Burritos and Tacos,"81 Kingsway, Vancouver",Restaurant,+12364296367,https://quesada.ca/,49.263187408447266,-123.099609375,0.9999718340337277,Limited Service Food Establishment,Issued,2026-10-01
+Cartems Donuterie,"2190 Main St, Vancouver",Bakery,7787071114,http://www.cartems.com/,49.265625,-123.10089111328125,0.9655,Limited Service Food Establishment,Issued,2026-10-01
+Fable Diner,"151 E Broadway, Vancouver",Restaurant,+17786522123,http://www.fablediner.com/,49.263038635253906,-123.10163116455078,0.9995848805010319,Restaurant,Issued,2026-10-01
+Tatta Chulha,"147 E Broadway, Vancouver",Restaurant,6044771651,https://www.tattachulha.ca/,49.26306915283203,-123.10188293457031,0.9655,Restaurant,Issued,2026-10-01
+33 Acres Brewing Company,"15 W 8th Ave, Vancouver",Bar / Pub,+16046204589,http://www.33acresbrewing.com/,49.26393508911133,-123.10533142089844,0.9987446194887162,Liquor Retail Store,Issued,2026-10-01
+Tacofino Ocho (Mount Pleasant),"8 E 5th Ave, Vancouver",Restaurant,+16047090015,http://www.tacofino.com/,49.2663688659668,-123.10453033447266,0.9991464459896088,Restaurant,Issued,2026-10-14
+Oddity Kombucha,"1863 Ontario St, Vancouver",Bar / Pub,+17787166794,http://www.odditykombucha.com,49.26853942871094,-123.10479736328125,0.9596162104606628,Limited Service Food Establishment,Issued,2026-10-14
+Dear Gus Snack Bar,"2040 Quebec St, Vancouver",Bar / Pub,,http://Www.deargus.com/,49.267051696777344,-123.1026382446289,0.9680607914924622,Restaurant,Issued,2026-10-14
+Zarak by Afghan Kitchen,"2102 Main St, Vancouver",Restaurant,+16043183456,http://www.zarakvancouver.com/,49.26628875732422,-123.10067749023438,0.9989876127243043,Restaurant,Issued,2026-10-01
+Red Truck Beer Company,"295 E 1st Ave, Vancouver",Bar / Pub,+16046824733,http://redtruckbeer.com/,49.268795013427734,-123.09661102294922,0.9977927577495574,Restaurant,Issued,2026-10-01
+Legacy Liquor Store,"1633 Manitoba St, Vancouver",Bar / Pub,+16043317900,http://www.legacyliquorstore.com/,49.2711181640625,-123.10694122314453,0.9972622168064117,Liquor Retail Store,Issued,2026-10-01
+JJ Bean Coffee Roasters,"188 W 1st Ave, Vancouver",Cafe,+16045598965,http://www.jjbeancoffee.com/our-locations/false-creek,49.27018356323242,-123.10924530029297,0.9987811267375946,Restaurant,Issued,2026-10-01
+Bao Down,"115 W 2ND Ave, Vancouver",Restaurant,(604) 620-5226,http://baodown.net,49.26949691772461,-123.10741424560547,0.77,Restaurant,Issued,2026-10-01
+nana’s Green Tea Canada,"159 W 4th Ave, Vancouver",Dessert,+16045599141,http://www.nanasgreentea.com/,49.267696380615234,-123.1085433959961,0.982589840888977,Restaurant,Issued,2026-10-01
+Starbucks,"2035 Yukon St, Vancouver",Cafe,(604) 708-1507,https://www.starbucks.ca/store-locator/store/359,49.267181396484375,-123.11312866210938,0.77,Restaurant,Issued,2026-10-01
+Rocanini Coffee Roasters,"863 Beatty St, Vancouver",Cafe,+17783791863,http://www.rocanini.com/pages/yaletown-coffee-shop,49.2769889831543,-123.11510467529297,0.9974605321884156,Limited Service Food Establishment,Issued,2026-10-01
+Footo Croissant,"858 Hamilton St, Vancouver",Bakery,+16045686500,http://www.footocroissant.com/,49.2782096862793,-123.11659240722656,0.9962281554937362,Limited Service Food Establishment,Issued,2026-10-01
+Lupo Restaurant and Vinoteca,"869 Hamilton St, Vancouver",Restaurant,+16045692535,http://www.luporestaurant.ca,49.27814483642578,-123.1172103881836,0.9986803102493286,Restaurant,Issued,2026-10-01
+Pelicana Chicken Robson,"382 Robson St, Vancouver",Restaurant,+16046810420,https://www.pelicana.ca,49.279239654541016,-123.11666870117188,0.9822595059871674,Limited Service Food Establishment,Issued,2026-10-14
+Robson Wine Beer and Spirit,"425 Robson St, Vancouver",Bar / Pub,+16046892827,http://robsonwinebeerandspirits.com,49.27964401245117,-123.116943359375,0.9915165954828262,Liquor Retail Store,Issued,2026-10-01
+Pizza Pizza,"345 Robson St, Vancouver",Restaurant,+16042771111,https://www.pizzapizza.ca/,49.2791862487793,-123.11581420898438,1.0,Limited Service Food Establishment,Issued,2026-10-01
+Super Chef Grill,"280 Robson St, Vancouver",Restaurant,+16046817189,https://super-chef-grill.business.site,49.27848434448242,-123.11613464355469,0.986270010471344,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"260 Robson Street, Vancouver",Fast Food,6046857759,https://restaurants.subway.com/canada/bc/vancouver/260-robson-street?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=14739&utm_campaign=evergreen-2020&y_source=1_MTQ5MjExMDktNDgzLWxvY2F0aW9uLndlYnNpdGU%3D,49.278499603271484,-123.1157455444336,0.97,Restaurant,Issued,2026-10-01
+Ju,"782 Cambie St, Vancouver",Restaurant,+16045298999,http://www.jurestaurant.com/,49.27845001220703,-123.1144027709961,0.9830889105796814,Restaurant,Issued,2026-10-01
+Browns Socialhouse Queen Elizabeth Theatre,"675 Cambie St, Vancouver",Bar / Pub,+16046205545,http://brownssocialhouse.com/,49.27973175048828,-123.11331176757812,0.9990559113025665,Restaurant,Issued,2026-10-01
+Popeyes Louisiana Kitchen,"700 - Hamilton St, Vancouver",Restaurant,6044234290,https://www.popeyeschicken.ca/,49.27981185913086,-123.11445617675781,0.9758415487706661,Restaurant,Issued,2026-10-01
+JJ Bean,"740 Hamilton St., Vancouver",Cafe,(604) 687-1056,http://www.jjbeancoffee.com/,49.27938461303711,-123.11517333984375,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Blenz Coffee,"345 Robson St, Vancouver",Cafe,+16046470878,http://www.blenz.com/,49.279876708984375,-123.11540985107422,0.9997350647151471,Limited Service Food Establishment,Issued,2026-10-01
+Tim Hortons,"463 Robson Street, Vancouver",Cafe,+16046055490,https://locations.timhortons.ca/en/bc/vancouver/463-robson-st/,49.279903411865234,-123.11736297607422,0.9999662320971489,Restaurant,Issued,2026-10-01
+Viet Sub Vietnamese Cuisine,"520 Robson St, Vancouver",Restaurant,+16045693340,http://www.viet-sub.com/,49.28022766113281,-123.1181869506836,0.9959071987867355,Limited Service Food Establishment,Issued,2026-10-01
+Rollzzy,"542 Robson St, Vancouver",Restaurant,+17785326511,http://www.rollzzy.ca/,49.2802734375,-123.118408203125,0.9930826276540756,Limited Service Food Establishment,Issued,2026-10-01
+Japadog,"530 Robson St, Vancouver",Restaurant,+16045691158,http://www.japadog.com/,49.28030014038086,-123.1183853149414,0.9986649149656296,Limited Service Food Establishment,Issued,2026-10-01
+St. Regis Fine Wines & Spirits,"678 Dunsmuir St, Vancouver",Bar / Pub,+16046623177,http://www.pagesjaunes.ca/goframe/3479747?http%3A%2F%2Fwww.stregisfinewines.com%2F,49.28265380859375,-123.11768341064453,0.9964250451326371,Liquor Retail Store,Issued,2026-10-01
+Flaming Wok,"701 W Georgia St, Vancouver",Restaurant,(604) 688-6533,http://www.theflamingwok.com,49.28295135498047,-123.1180419921875,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Take Five Café,"609 Granville St, Vancouver",Cafe,(778) 379-8030,http://www.takefivecafe.ca,49.283260345458984,-123.11725616455078,0.77,Restaurant,Issued,2026-10-01
+Presotea,"777 Dunsmuir St, Vancouver",Cafe,(604) 620-3192,http://presoteabc.ca,49.284156799316406,-123.11708068847656,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"541 Granville St, Vancouver",Fast Food,+16046094450,http://www.subway.com/,49.28425216674805,-123.11570739746094,0.9999232883036137,Restaurant,Issued,2026-10-01
+Wendy's,"574 Granville Street, Vancouver",Fast Food,,https://locations.wendys.com/canada/bc/vancouver/574-granville-street,49.28379821777344,-123.11589050292969,0.910713028907776,Limited Service Food Establishment,Issued,2026-10-01
+Tim Hortons,"607 Dunsmuir St, Vancouver",Cafe,+16046940865,http://www.timhortons.com/,49.283206939697266,-123.11583709716797,0.9999556652843952,Restaurant,Issued,2026-10-01
+Brazilliant Cafe & Catering,"552 Seymour St, Vancouver",Restaurant,+16047215713,http://Brazilliant.ca/,49.283390045166016,-123.11454010009766,0.999009220957756,Limited Service Food Establishment,Issued,2026-10-01
+Baghdad Cafe,"548 Seymour St., Vancouver",Restaurant,(604) 428-2525,http://www.baghdadcafevancouver.com,49.28343963623047,-123.11444091796875,0.77,Restaurant,Issued,2026-10-01
+Burger King,"612 West Pender Street, Vancouver",Restaurant,+16046815958,https://www.burgerking.ca/,49.28415298461914,-123.11422729492188,0.9999691093564034,Restaurant,Issued,2026-10-01
+HellCrust Pizza,"433 Seymour St, Vancouver",Restaurant,+16043363539,https://hellcrustpizza.com/,49.284481048583984,-123.11333465576172,0.997372698187828,Restaurant,Issued,2026-10-01
+Spin Roll Sushi,"535 W Pender St., Vancouver",Restaurant,(604) 801-6363,http://spin.foodpages.ca,49.28371810913086,-123.11307525634766,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Freshslice Pizza,"549 W Pender St., Vancouver",Fast Food,6049097878,http://www.freshslice.com/,49.2837028503418,-123.11335754394531,0.9655,Limited Service Food Establishment,Issued,2026-10-01
+Pokerrito,"558 Dunsmuir St, Vancouver",Restaurant,(778) 379-1115,http://www.pokerrito.ca,49.2827033996582,-123.11527252197266,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Estratto coffee,"336 W Pender St, Vancouver",Cafe,+17786683863,,49.282447814941406,-123.11173248291016,0.6660456657409668,Limited Service Food Establishment,Issued,2026-10-01
+Vegan Pudding and Co.,"422 Richards St, Vancouver",Dessert,+17783790545,http://www.veganpuddingco.com,49.28372573852539,-123.11225891113281,0.9976286327838898,Limited Service Food Establishment,Issued,2026-10-01
+Khyber Chai House,"436 Richards St, Vancouver",Cafe,+12365862424,http://www.khyberchai.com/,49.283477783203125,-123.11253356933594,0.7232126593589783,Limited Service Food Establishment,Issued,2026-10-01
+La Taqueria,"322 W Hastings St, Vancouver",Restaurant,(604) 568-4406,http://www.lataqueria.ca,49.283023834228516,-123.11042785644531,0.77,Restaurant,Issued,2026-10-01
+Bean Around the World Coffees,"175 W Hastings St, Vancouver",Cafe,+16046810035,http://www.batw.ca/,49.28248596191406,-123.10931396484375,0.9982295560836792,Restaurant,Issued,2026-10-01
+Donair Dude,"164 W Hastings St, Vancouver",Restaurant,+16045581875,http://www.donairdude.com,49.28227615356445,-123.10917663574219,0.99601713180542,Limited Service Food Establishment,Issued,2026-10-01
+Purebread,"159 W Hastings St, Vancouver",Bakery,+16045638060,http://www.purebread.ca,49.28245544433594,-123.10912322998047,0.9950111603736878,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"139 West Hastings Street, Vancouver",Fast Food,+16043366905,https://restaurants.subway.com/canada/bc/vancouver/139-west-hastings-street?y_source=1_MTQ5MjA3NTQtODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.282318115234375,-123.1085205078125,0.9995229528009891,Limited Service Food Establishment,Issued,2026-10-01
+Hoxton,"120 W Hastings St, Vancouver",Bar / Pub,+16043369010,,49.28203582763672,-123.10795593261719,0.9326902031898499,Restaurant,Issued,2026-10-01
+Boba Run,"102 W Hastings St, Vancouver",Cafe,+16044235890,https://www.bobarun.co,49.28183364868164,-123.10743713378906,0.9998267989456654,Limited Service Food Establishment,Issued,2026-10-01
+SANTO TACO,"108 W Hastings St, Vancouver",Restaurant,+12364803129,,49.28199005126953,-123.10762786865234,0.9748290777206421,Restaurant,Issued,2026-10-14
+Prado Cafe,"100 W Hastings St, Vancouver",Cafe,+17783794315,http://www.pradocafevancouver.com,49.28195571899414,-123.107421875,0.9977651888132095,Limited Service Food Establishment,Issued,2026-10-14
+Brathaus Hotdog shop,"435 Abbott St, Vancouver",Restaurant,+16043362680,http://www.brathaus.ca/,49.28163146972656,-123.10752868652344,0.9933276730775833,Limited Service Food Establishment,Issued,2026-10-01
+Taishoken Ramen,"515 Abbott St, Vancouver",Restaurant,+17787373805,http://dennisthefoodie.com/2014/07/20/rah-rah-rah-tsukemen-at-taishoken-ramen,49.28078842163086,-123.10780334472656,0.9987874191999435,Limited Service Food Establishment,Issued,2026-10-14
+Keto Caveman Cafe,"508 Abbott St, Vancouver",Restaurant,+16047002504,http://www.cavemancafe.ca/,49.28076934814453,-123.10747528076172,0.9962811684608459,Restaurant,Issued,2026-10-01
+Tsuki Sushi Bar Vancouver,"509 Abbott St, Vancouver",Restaurant,+16045583805,http://tsukisushibar.ca,49.28089141845703,-123.10774230957031,0.998438811302185,Restaurant,Issued,2026-10-01
+Einstein Wrap House,"516 Abbott St, Vancouver",Restaurant,+16045582733,http://www.yelp.ca/biz/einstein-wrap-house-vancouver,49.2806396484375,-123.1073226928711,0.9944612348079681,Limited Service Food Establishment,Issued,2026-10-01
+Tokyo In April,"526 Abbott St, Vancouver",Restaurant,+16044232779,http://tokyoinapril.ca,49.28034591674805,-123.107421875,0.941320538520813,Restaurant,Issued,2026-10-01
+Starbucks,"99 Keefer Pl, Vancouver",Cafe,(604) 687-6116,https://www.starbucks.ca/store-locator/store/1280,49.279972076416016,-123.10723876953125,0.77,Restaurant,Issued,2026-10-01
+PappaRoti,"193 Keefer Pl, Vancouver",Bakery,+16046202867,http://www.papparoti.ca/,49.28002166748047,-123.10860443115234,0.9963474243879318,Limited Service Food Establishment,Issued,2026-10-01
+Charisma Social Club House,"197 Keefer Pl, Vancouver",Cafe,+16046204688,http://www.charismabc.com/,49.27992248535156,-123.1086654663086,0.9983688950538635,Restaurant,Issued,2026-10-01
+Devil's Elbow Ale & Smoke House,"562 Beatty St, Vancouver",Bar / Pub,+16045590611,http://www.devilselbowalehouse.com,49.280242919921875,-123.10982513427734,0.9774816626310349,Restaurant,Issued,2026-10-01
+Marugame Udon,"589 Beatty Street, Vancouver",Restaurant,+16045685500,https://ca.marugame.com/,49.280189514160156,-123.11028289794922,0.9924678266048431,Restaurant,Issued,2026-10-14
+Sushi Den,"609 Abbott St, Vancouver",Restaurant,+16046874422,http://sushiden.tossed.org,49.27943420410156,-123.10775756835938,0.9901617830991745,Restaurant,Issued,2026-10-14
+Qieu Cafe,"628 Abbott St, Vancouver",Restaurant,+16046203785,http://qieucafe.ca,49.27933883666992,-123.1075210571289,0.9973507499694825,Limited Service Food Establishment,Issued,2026-10-01
+The Hestia Hearth Cafe,"628 Abbott St, Vancouver",Cafe,+17787882979,,49.27934646606445,-123.10743713378906,0.28655144572257996,Limited Service Food Establishment,Issued,2026-10-14
+Uncle Fatih's Pizza,"638 Abbott St, Vancouver",Restaurant,+16045669696,http://www.unclefatih.com,49.27924346923828,-123.1075439453125,0.9956049686670303,Limited Service Food Establishment,Issued,2026-10-01
+Freshslice Pizza,"663 Abbott St., Vancouver",Restaurant,6045684262,http://www.freshslice.com/,49.27922821044922,-123.10762786865234,0.9932855930924416,Limited Service Food Establishment,Issued,2026-10-01
+Subway,"683 Abbott Street, Vancouver",Fast Food,+16043363815,https://restaurants.subway.com/canada/bc/vancouver/683-abbott-street?y_source=1_MTQ5MjA5MjYtODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.27903747558594,-123.10772705078125,0.9999443532466888,Limited Service Food Establishment,Issued,2026-10-01
+TAKO,"601 Expo Blvd, Vancouver",Restaurant,+17783797010,http://www.takovancouver.com/,49.27882766723633,-123.10820770263672,0.998143846988678,Restaurant,Issued,2026-10-01
+Calabash Bistro,"428 Carrall St, Vancouver",Restaurant,(604) 568-5882,http://www.calabashbistro.com,49.28105545043945,-123.10442352294922,0.77,Restaurant,Issued,2026-10-01
+Aiyaohno Cafe,"425 Carrall St, Vancouver",Cafe,+16046527555,http://www.aiyaohno.com/,49.28117370605469,-123.10450744628906,0.9984102278947831,Limited Service Food Establishment,Issued,2026-10-14
+TINA Vietnamese (Vancouver),"88 W Pender St, Vancouver",Restaurant,+16045683883,http://www.internationalvillagemall.ca/directory/directory-unit-2019.php,49.28022384643555,-123.10700988769531,0.9798098188638688,Limited Service Food Establishment,Issued,2026-10-14
+Carnitas Don Jose,"88 W Pender St, Vancouver",Restaurant,+16726999872,http://www.thebestcarnitas.com/,49.28036880493164,-123.10697937011719,0.9328401684761047,Limited Service Food Establishment,Issued,2026-10-01
+Sabina Mexican Food,"51 W Hastings St, Vancouver",Restaurant,+12365139185,,49.2819938659668,-123.10640716552734,0.789993166923523,Restaurant,Issued,2026-10-01
+World Wrap Place,"68 Water St, Vancouver",Restaurant,+16048624983,https://worldwrapplace.ca/,49.28369903564453,-123.10585021972656,0.9753598570823669,Limited Service Food Establishment,Issued,2026-10-14
+Petrichor Social,"216 Abbott St, Vancouver",Restaurant,+16046690033,https://petrichorsocial.com/,49.28343963623047,-123.10640716552734,0.9938174295425415,Restaurant,Issued,2026-10-01
+Meet in Gastown,"12 Water St, Vancouver",Restaurant,(604) 688-3399,http://eatmeet.ca,49.28337097167969,-123.10502624511719,0.77,Restaurant,Issued,2026-10-01
+Hot Pie Pizza,"4 Powell St, Vancouver",Restaurant,+16045669944,https://hotpiepizza.ca/,49.28323745727539,-123.10400390625,0.980047259926796,Limited Service Food Establishment,Issued,2026-10-01
+Milano Coffee,"36 Powell St, Vancouver",Cafe,(604) 558-0999,http://www.milanocoffee.ca,49.28325653076172,-123.10332489013672,0.77,Restaurant,Issued,2026-10-01
+LOCAL Public Eatery Gastown,"3 Alexander St, Vancouver",Bar / Pub,+17787374277,https://localpubliceatery.com/neighbourhoods/gastown,49.28353500366211,-123.1040267944336,0.9997657826244831,Restaurant,Issued,2026-10-01
+PiDGiN,"350 Carrall St, Vancouver",Restaurant,+16046209400,http://www.pidginvancouver.com,49.28190231323242,-123.10417175292969,0.9988728815317154,Restaurant,Issued,2026-10-01
+Cadeaux Bakery,"172 Powell St, Vancouver",Bakery,+16046088889,http://www.cadeauxbakery.com/,49.283145904541016,-123.10054016113281,0.9977946084737778,Limited Service Food Establishment,Issued,2026-10-01
+H.A.V.E Cafe,"374 Powell St, Vancouver",Cafe,+16046969026,http://www.have-cafe.ca/,49.282936096191406,-123.09630584716797,0.9943324655294419,Restaurant,Issued,2026-10-01
+Kevin and Kevin Juice Bar and Cocktail Lounge,"488 Gore Ave, Vancouver",Bar / Pub,+16045584305,http://www.kevinandkevinjuice.com/,49.280452728271484,-123.09725952148438,0.9580428755283356,Restaurant,Issued,2026-10-01
+Say Hey Cafe & Deli,"156 E Pender St, Vancouver",Fast Food,+16045644604,http://sayheycafe.square.site/,49.280364990234375,-123.10105895996094,0.9986193871498108,Limited Service Food Establishment,Issued,2026-10-01
+Golden Smell Mee,"142 E Pender St, Vancouver",Restaurant,+16045667733,https://goldensmellmee.com/,49.280208587646484,-123.10128784179688,0.6010967493057251,Restaurant,Issued,2026-10-01
+Via Pasta,"208 Keefer St, Vancouver",Restaurant,+16046052594,http://www.viapasta.net/,49.27939987182617,-123.09920501708984,0.969828724861145,Limited Service Food Establishment,Issued,2026-10-01
+Juke Fried Chicken,"182 Keefer St, Vancouver",Restaurant,+16043365853,http://www.jukefriedchicken.com/,49.27939224243164,-123.10025787353516,0.9990182799100876,Restaurant,Issued,2026-10-01
+Treasure Green Tea Company,"227 E Georgia St, Vancouver",Restaurant,+16046874181,https://treasuregreen.com/,49.27866744995117,-123.09860229492188,0.99802226126194,Limited Service Food Establishment,Issued,2026-10-14
+Fiorino Italian Street Food,"212 E Georgia St, Vancouver",Restaurant,+16045680905,http://fiorinovancouver.com,49.27851486206055,-123.09918212890625,0.9984088295698166,Restaurant,Issued,2026-10-01
+Machete Mexican Ancestral Food,"1007 Main St, Vancouver",Restaurant,+17783024795,,49.27571487426758,-123.10009765625,0.9374097585678101,Limited Service Food Establishment,Issued,2026-10-01
+Pizzeria Farina,"915 Main Street, Vancouver",Bar / Pub,6046819334,http://www.pizzeriafarina.com/,49.27659225463867,-123.0999755859375,0.9800309344828129,Restaurant,Issued,2026-10-01
+Coastal Eden Cafe,"643 E Hastings St, Vancouver",Cafe,+16045683336,https://coastaledencafe.com/,49.281253814697266,-123.09056854248047,0.9989943575859069,Limited Service Food Establishment,Issued,2026-10-14
+Astoria Pub,"769 E Hastings St, Vancouver",Bar / Pub,+16047103133,https://linktr.ee/astoriaevents,49.281471252441406,-123.08792877197266,0.9584294849634171,Limited Service Food Establishment,Issued,2026-10-01
+Pizzone Pizza,"848 Powell St, Vancouver",Restaurant,+12364764707,http://www.pizzonepizza.com/,49.28273010253906,-123.08582305908203,0.9889270347356797,Limited Service Food Establishment,Issued,2026-10-01
+Strathcona Beer Company,"895 E Hastings St, Vancouver",Bar / Pub,+17783799050,http://www.strathconabeer.com/,49.281253814697266,-123.0850601196289,0.9979677677154541,Liquor Retail Store,Issued,2026-10-01
+Wilder Snail Neighborhood Grocery and Coffee,"799 Keefer St, Vancouver",Cafe,+16042160640,http://www.thewildersnail.com,49.27938461303711,-123.08748626708984,0.9967410391569138,Limited Service Food Establishment,Issued,2026-10-14
+Rumor Cafe,"957 E Hastings St, Vancouver",Cafe,+16049913592,https://www.rumorcafe.ca/,49.28118896484375,-123.08319854736328,0.9965154016017914,Restaurant,Issued,2026-10-14
+Axum Restaurant,"1279 E Hastings St, Vancouver",Restaurant,+16042532986,http://www.axumrestaurant.ca/,49.28144454956055,-123.0777587890625,0.998968625664711,Restaurant,Issued,2026-10-01
+The Bottle Shop Liquor Store,"1489 E Hastings St, Vancouver",Bar / Pub,+16048347210,http://www.bottleshopliquorstore.com/,49.28152847290039,-123.07428741455078,0.9475228190422058,Liquor Retail Store,Issued,2026-10-01
+Superflux Beer Company,"505 Clark Dr, Vancouver",Bar / Pub,+12364714620,http://www.superfluxbeer.com/,49.280174255371094,-123.077392578125,0.9786410927772522,Liquor Retail Store,Issued,2026-10-01
+Bomber Brewing,"1488 Adanac St, Vancouver",Bar / Pub,+16044287457,https://order.online/store/bomber-brewing-(adanac-st)-vancouver-24872322/?hideModal=true&pickup=true,49.27744674682617,-123.07456970214844,0.998491837978363,Liquor Retail Store,Issued,2026-10-14
+Bonchaz Bakery,"1461 Venables St, Vancouver",Bakery,+16046299053,http://bonchaz.ca/,49.276832580566406,-123.07514190673828,0.8596883371472359,Limited Service Food Establishment,Issued,2026-10-01
+Fujiya Japanese Foods,"912 Clark Dr, Vancouver",Restaurant,+16042513711,http://www.fujiya.ca/,49.276611328125,-123.0771713256836,0.9986236643791199,Limited Service Food Establishment,Issued,2026-10-01
+Off The Rail Brewing,"1351 Adanac St, Vancouver",Bar / Pub,+16045635767,http://www.offtherailbrewing.com/,49.277732849121094,-123.0760269165039,0.998724439740181,Liquor Retail Store,Issued,2026-10-01
+Strange Fellows Brewing,"1345 Clark Dr, Vancouver",Bar / Pub,+16042150092,http://www.strangefellowsbrewing.com/,49.27254104614258,-123.07759094238281,0.9981908416748047,Liquor Retail Store,Issued,2026-10-01
+Terminal City Brewing,"1616 Clark Dr, Vancouver",Bar / Pub,+16048750600,http://www.westcoastubrew.com,49.270225524902344,-123.07706451416016,0.9996901353001595,Liquor Retail Store,Issued,2026-10-01
+Kafka's Coffee Roasting and Bakery,"577 Great Northern Way, Vancouver",Cafe,+16044495340,http://kafkascoffee.ca,49.267120361328125,-123.0904312133789,0.9887554049491882,Restaurant,Issued,2026-10-01
+Freshii,"893 Great Northern Way, Vancouver",Restaurant,(604) 343-4027,https://www.freshii.com,49.26601028442383,-123.08433532714844,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Dallas Pizza Ltd.,"613 E Broadway, Vancouver",Restaurant,+16048771311,https://www.dallaspizza.ca/,49.26264190673828,-123.09056854248047,0.9639793956279754,Limited Service Food Establishment,Issued,2026-10-01
+Klasik Inasal and Noodle Express,"650 E Broadway, Vancouver",Restaurant,+16048733939,http://www.klasikinasal.ca/,49.26237869262695,-123.08988952636719,0.9984753048419952,Limited Service Food Establishment,Issued,2026-10-01
+Pizzeria Barbarella,"654 E Broadway, Vancouver",Restaurant,(604) 210-6111,http://www.pizzeriabarbarella.com,49.262474060058594,-123.0896987915039,0.77,Restaurant,Issued,2026-10-01
+The Teahouse Restaurant,"7501 Stanley Park Dr, Vancouver",Restaurant,(604) 669-3281,http://www.vancouverdine.com/teahouse,49.30116271972656,-123.15725708007812,0.77,Restaurant,Issued,2026-10-01
+Hook Restaurant,"1210 Denman St, Vancouver",Restaurant,+16046204668,http://www.hookseabar.com,49.28695297241211,-123.14202880859375,0.9988690841197968,Restaurant,Issued,2026-10-01
+Chicken World,"1181 Denman St, Vancouver",Fast Food,+16046810007,https://www.chickenworldcanada.com,49.287803649902344,-123.14115905761719,0.9946638345718384,Restaurant,Issued,2026-10-01
+Freshslice Pizza,"1764 Davie Street, Vancouver",Restaurant,6045681760,https://freshslice.com/,49.28687286376953,-123.14122772216797,0.980901190251112,Limited Service Food Establishment,Issued,2026-10-14
+Pho In Love Authentic Vietnamese Restaurant & Bar,"1725 Davie St, Vancouver",Restaurant,+16046097010,http://www.phoinlove.ca/,49.286659240722656,-123.14055633544922,0.8417286276817322,Restaurant,Issued,2026-10-01
+Yummy To Go,"1711 Davie St, Vancouver",Restaurant,+16046881870,https://yummi-to-go-canada.food96.com,49.28639602661133,-123.1404037475586,0.8559430241584778,Limited Service Food Establishment,Issued,2026-10-01
+Lucifer's House of Heat,"1682 Davie St, Vancouver",Cafe,+12364298641,https://lucifershouseofheat.com/,49.285926818847656,-123.1399917602539,0.9908885955810547,Restaurant,Issued,2026-10-01
+D'oro Gelato e Caffè,"1094 Denman St, Vancouver",Dessert,+16046476638,https://www.dorogc.com/locations/denman-street,49.28832244873047,-123.1400146484375,0.9978051781654358,Restaurant,Issued,2026-10-01
+Nat's New York Pizzeria,"1080 Denman St, Vancouver",Restaurant,+16046420777,http://www.natspizza.com,49.28842544555664,-123.13993835449219,0.9962402331829071,Limited Service Food Establishment,Issued,2026-10-14
+Fresh Solo Pasta,"1088 Denman St, Vancouver",Restaurant,+16046882444,https://www.instagram.com/?hl=en&deoia=1,49.28837203979492,-123.13993072509766,0.5090977549552917,Limited Service Food Establishment,Issued,2026-10-01
+Persian BBQ & Bar,"1072 Denman St, Vancouver",Restaurant,+16045646699,,49.288475036621094,-123.13969421386719,0.7444038987159729,Restaurant,Issued,2026-10-14
+Denman Beer Wine & Spirits,"1060 Denman St, Vancouver",Bar / Pub,(604) 633-1863,http://www.denmanbeerwinespirits.com,49.28862380981445,-123.1393051147461,0.77,Liquor Retail Store,Issued,2026-10-01
+McDonald's,"1610 Davie Street, Vancouver",Fast Food,+16047181175,https://www.mcdonalds.com/ca/en-ca/location/29003.html,49.28528594970703,-123.13897705078125,0.9999680301785469,Restaurant,Issued,2026-10-14
+Peaked Pies Vancouver,"975 Denman St, Vancouver",Bakery,+17783795612,http://www.peakedpies.com/,49.28966522216797,-123.13838195800781,0.9949112623929978,Restaurant,Issued,2026-10-14
+Prospect Point Café,"5601 Stanley Park Dr, Vancouver",Cafe,+16046692737,http://www.prospectpoint.com/,49.312591552734375,-123.14286041259766,0.9956060516834259,Restaurant,Issued,2026-10-14
+Starbucks,"785 Denman St, Vancouver",Cafe,+16046847225,http://www.starbucks.ca/,49.291622161865234,-123.13544464111328,0.991226634979248,Restaurant,Issued,2026-10-14
+The Cozy Wok,"854 Denman St, Vancouver",Restaurant,+16044286868,https://www.thecozywok.com/,49.290809631347656,-123.13612365722656,0.7904775142669678,Restaurant,Issued,2026-10-14
+Zakkushi on Denman,"823 Denman St, Vancouver",Restaurant,+16046851136,https://zakkushi.com/zakkushi/denman/,49.291133880615234,-123.13614654541016,0.998993301987648,Restaurant,Issued,2026-10-01
+Madangcoul Korean Restaurant,"847 Denman St, Vancouver",Restaurant,(604) 688-3585,http://mainmenus.com,49.29067611694336,-123.13687133789062,0.77,Restaurant,Issued,2026-10-01
+Cardero Bottega,"1016 Cardero St, Vancouver",Cafe,+16046890450,http://www.carderobottega.com,49.28703308105469,-123.13580322265625,0.9952512472867966,Limited Service Food Establishment,Issued,2026-10-14
+Chung Chun Rice Hot Dog,"1795 Robson St, Vancouver",Fast Food,+16044235529,http://chungchunricedog.ca/,49.2914924621582,-123.13524627685547,0.9798123836517334,Limited Service Food Establishment,Issued,2026-10-01
+Banana Leaf on Robson,"1779 Robson St, Vancouver",Restaurant,+16045693363,https://www.bananaleaf-vancouver.com/robson,49.291343688964844,-123.13499450683594,0.9987859797477722,Restaurant,Issued,2026-10-01
+Jingle Bao & Yum Yum Wok,"774 Denman St, Vancouver",Restaurant,+16044287722,http://jinglebao.com,49.291648864746094,-123.13499450683594,0.9989882981777192,Restaurant,Issued,2026-10-01
+Kin's Food and Bistro,"792 Denman St, Vancouver",Restaurant,+12364770277,https://instagram.com/kinsfoodandbistro?igshid=YmMyMTA2M2Y%3D,49.2915153503418,-123.13504028320312,0.96314936876297,Restaurant,Issued,2026-10-01
+Domino's Pizza,"777 Denman St, Vancouver",Restaurant,+16046623030,https://pizza.dominos.ca/vancouver-british-columbia-10066/,49.291805267333984,-123.135009765625,0.9999601623386145,Limited Service Food Establishment,Issued,2026-10-01
+VanLove Sushi and More,"1755 Robson St, Vancouver",Restaurant,+16045667575,https://vanlove.ca/,49.29121017456055,-123.13469696044922,0.9911696463823318,Limited Service Food Establishment,Issued,2026-10-01
+Momo Sushi,"833 Bidwell St, Vancouver",Restaurant,+16045692001,http://www.momosushivancouver.com,49.290340423583984,-123.13431549072266,0.9986050063371659,Limited Service Food Establishment,Issued,2026-10-01
+NoodleArts Vancouver,"1739 Robson St, Vancouver",Restaurant,+16046735688,http://www.noodlearts.com/,49.291107177734375,-123.13431549072266,0.996987624168396,Restaurant,Issued,2026-10-01
+J&G Fried Chicken,"1706 Robson St, Vancouver",Restaurant,(604) 423-2870,http://www.jgfcwest.ca,49.29042053222656,-123.1342544555664,0.77,Limited Service Food Establishment,Issued,2026-10-01
+COBS Bread,"1702 Robson St, Vancouver",Bakery,+16044284247,https://www.cobsbread.com/pages/bakeries/robson-bakery?utm_source=facebook&utm_medium=organic&utm_campaign=organic-bakery-links,49.29047393798828,-123.13410186767578,0.9999438889205455,Limited Service Food Establishment,Issued,2026-10-01
+Pho 37,"1578 Robson St, Vancouver",Restaurant,+16043542030,http://www.pho37.ca,49.28919982910156,-123.13208770751953,0.9817782491445541,Restaurant,Issued,2026-10-01
+Liuyishou Hotpot,"1542 Robson St, Vancouver",Restaurant,+17783793977,http://liuyishouna.com/,49.28908920288086,-123.13196563720703,0.9932765960693359,Restaurant,Issued,2026-10-14
+Sura Korean Royal Cuisine,"1518 Robson St, Vancouver",Restaurant,+16046877872,https://www.surakoreancuisine.com/,49.288917541503906,-123.13160705566406,0.9989705038070679,Restaurant,Issued,2026-10-14
+Yasma,"550 Denman St, Vancouver",Restaurant,+16045660493,http://www.yasma.ca/,49.29341125488281,-123.1323013305664,0.9960441935062408,Restaurant,Issued,2026-10-01
+The Sequel - Kitchen & Bar,"1575 W Georgia St, Vancouver",Bar / Pub,+16043363036,http://thesequel.ca/,49.29053497314453,-123.1299819946289,0.9071032404899597,Restaurant,Issued,2026-10-01
+Breakingbeankafe.com,"551 Cardero St, Vancouver",Cafe,+16046472202,http://www.bluetreecafe.ca/,49.29134750366211,-123.12969970703125,0.9566876381635666,Restaurant,Issued,2026-10-01
+Miko Sushi Japanese Restaurant,"1335 Robson St, Vancouver",Restaurant,+16046810339,http://www.restaurantmenus.ca/restaurant-menu/miko-sushi-vancouver,49.287471771240234,-123.12911224365234,0.9978117722272873,Restaurant,Issued,2026-10-01
+Cora Breakfast and Lunch,"1368 Robson St, Vancouver",Restaurant,+16046882672,https://www.chezcora.com/,49.28748321533203,-123.12972259521484,1.0,Restaurant,Issued,2026-10-01
+Chosun Korean BBQ Downtown,"793 Jervis St, Vancouver",Restaurant,+16046691222,http://yakinikuyajapanesebbq.com/,49.2873420715332,-123.12837982177734,0.9979306435585023,Restaurant,Issued,2026-10-14
+Meet Fresh 鲜芋仙,"1232 Robson Street, Vancouver",Dessert,(604) 559-7717,http://www.meetfresh.ca,49.28630828857422,-123.12774658203125,0.77,Restaurant,Issued,2026-10-01
+Amberdo Cafe & Bakery,"1328 W Georgia St, Vancouver",Cafe,+17789512814,https://amberdogeorgia.com/,49.28823471069336,-123.12750244140625,0.2939769923686981,Limited Service Food Establishment,Issued,2026-10-14
+YiFang fruit tea,"1175 Robson St, Vancouver",Cafe,+16043039998,,49.285743713378906,-123.12626647949219,0.8740139007568359,Limited Service Food Establishment,Issued,2026-10-01
+Uncle Tetsu's Japanese Cheesecake,"1151 Robson St, Vancouver",Restaurant,+16042654087,http://uncletetsu-ca.com,49.28543472290039,-123.12596130371094,0.9962874883413315,Limited Service Food Establishment,Issued,2026-10-14
+Kosoo Korean Restaurant Chicken and BBQ,"1128 Robson St, Vancouver",Restaurant,+16044288414,http://kcb.kosoorestaurant.com/wp-content/uploads/2019/10/kosoo-checken-bbq-menu.pdf,49.284915924072266,-123.1259994506836,0.9992753833532333,Restaurant,Issued,2026-10-14
+JJ Bean Coffee Roasters,"1188 Alberni St, Vancouver",Cafe,+16042543724,http://www.jjbeancoffee.com,49.286495208740234,-123.12579345703125,0.9563108855485916,Restaurant,Issued,2026-10-01
+Forêt Noire Café,"1126 Robson St, Vancouver",Restaurant,(604) 428-3789,https://www.foretnoirepatisserie.com,49.28526306152344,-123.12554931640625,0.77,Restaurant,Issued,2026-10-01
+Spicy 6 Fine Indian Cuisine,"1116 Robson St, Vancouver",Restaurant,+16043367999,http://www.spicy6.com/,49.284969329833984,-123.12554168701172,0.9998333258330822,Restaurant,Issued,2026-10-14
+Bonus Bakery & Coffee,"1185 W Georgia St, Vancouver",Cafe,(778) 997-2245,https://bonusbakery.com,49.287105560302734,-123.1247329711914,0.77,Restaurant,Issued,2026-10-01
+Coal Harbour Liquor Store,"1218 W Pender St, Vancouver",Bar / Pub,+16046851212,http://www.coalharbourliquorstore.com/,49.288536071777344,-123.12432098388672,0.9973297476768493,Liquor Retail Store,Issued,2026-10-01
+Joe Fortes Seafood & Chop House,"777 Thurlow St, Vancouver",Restaurant,+16046691940,http://www.joefortes.ca/,49.28490447998047,-123.12451934814453,0.9997296030223369,Restaurant,Issued,2026-10-01
+Kawasho Japanese Restaurant,"770 Thurlow St, Vancouver",Restaurant,+16045593988,,49.28466796875,-123.12431335449219,0.8849207067489624,Restaurant,Issued,2026-10-14
+Kobe Japanese Steakhouse,"1042 Alberni St, Vancouver",Restaurant,+16046842451,https://www.koberestaurant.com/,49.28461837768555,-123.12299346923828,0.9997407546639443,Restaurant,Issued,2026-10-01
+Rice 'N Spice,"1055 W Georgia St, Vancouver",Restaurant,+16046833143,http://www.ricenspice.ca/,49.28520584106445,-123.12174987792969,0.9751095139980316,Limited Service Food Establishment,Issued,2026-10-01
+Mango Junction Pizza,"1055 W Georgia St, Vancouver",Restaurant,+16046811233,http://www.flyingwedge.com,49.28518295288086,-123.12183380126953,0.5794431567192078,Limited Service Food Establishment,Issued,2026-10-01
+cafeclub.,"1018 W Georgia St, Vancouver",Cafe,+12364792222,http://www.cafeclub.ca/,49.28471755981445,-123.12176513671875,0.9258891940116882,Limited Service Food Establishment,Issued,2026-10-01
+Kamei Royale Japanese Restaurant,"1066 W Hastings St, Vancouver",Restaurant,+16046878588,http://kameiroyale.com/,49.28748321533203,-123.1185302734375,0.9997251859605313,Restaurant,Issued,2026-10-14
+Kuroi Sushi,"555 Burrard St, Vancouver",Restaurant,+16046699599,http://www.KuroiSushi.com/,49.28618240356445,-123.118896484375,0.9853171491622925,Restaurant,Issued,2026-10-01
+Broyé Cafe & Bakery,"530 Hornby St, Vancouver",Cafe,6043653217,https://www.broyecafe.ca/,49.285308837890625,-123.1172103881836,0.85,Limited Service Food Establishment,Issued,2026-10-01
+Bibiko,"530 Hornby St, Vancouver",Restaurant,+17788795130,,49.28539276123047,-123.11719512939453,0.8739832043647766,Limited Service Food Establishment,Issued,2026-10-14
+Pho Express,"530 Hornby St, Vancouver",Restaurant,+16046699996,,49.285438537597656,-123.11734771728516,0.9417133331298828,Limited Service Food Establishment,Issued,2026-10-01
+India Abroad,"530 Hornby St, Vancouver",Restaurant,(604) 684-6047,http://indiaabroad-digital.com,49.28538513183594,-123.11735534667969,0.77,Limited Service Food Establishment,Issued,2026-10-14
+JJ Bean Coffee Roasters,"353 Burrard St, Vancouver",Cafe,+16045582469,https://jjbeancoffee.com,49.28740310668945,-123.11685180664062,0.9984407305717469,Restaurant,Issued,2026-10-01
+Van Cha 温茶里,"433 Hornby St, Vancouver",Restaurant,(604) 564-6999,http://vancha.ca,49.2862548828125,-123.11663055419922,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Famous Wok,"200 Burrard St, Vancouver",Restaurant,+16042181693,https://www.famouswok-bc.com/,49.2876091003418,-123.11539459228516,0.9413834649324417,Limited Service Food Establishment,Issued,2026-10-01
+Quesada Burritos and Tacos,"1055 Canada Pl, Vancouver",Restaurant,+16046477521,https://quesada.ca/,49.28852081298828,-123.1150894165039,0.9998665153980255,Limited Service Food Establishment,Issued,2026-10-01
+Fatburger,"200 Burrard Street, Vancouver",Restaurant,+16046200422,https://www.fatburgercanada.com/locations/fatburger-waterfront/,49.2876091003418,-123.11508178710938,0.999973601680994,Restaurant,Issued,2026-10-01
+Hula Poke Waterfront Centre,"200 Burrard St, Vancouver",Restaurant,+16045667007,http://www.hulapoke.ca,49.287322998046875,-123.11499786376953,0.9495973765850068,Limited Service Food Establishment,Issued,2026-10-14
+Cuvée at the Terminal City Club,"837 W Hastings St, Vancouver",Bar / Pub,,,49.28675842285156,-123.11463165283203,0.5176243782043457,Restaurant,Issued,2026-10-01
+Guffo Café,"331 Howe St, Vancouver",Cafe,+16046203660,,49.28639602661133,-123.11444091796875,0.9402595162391663,Limited Service Food Establishment,Issued,2026-10-01
+Blenz Coffee,"232 Howe St, Vancouver",Cafe,+16046832378,http://blenz.com,49.28688430786133,-123.11343383789062,0.9948830354213715,Limited Service Food Establishment,Issued,2026-10-01
+Coal Harbour Café,"999 Canada Pl, Vancouver",Cafe,+16046628111,https://www.panpacific.com/en/hotels-resorts/canada/vancouver/stay/dining/coal-harbour-bar.html,49.288326263427734,-123.113037109375,0.9711123108863831,Liquor Establishment,Issued,2026-10-01
+Kita No Donburi,"423 Seymour St, Vancouver",Restaurant,+16046693388,https://kita-no-donburi.com,49.28457260131836,-123.11322021484375,0.9974716639518738,Restaurant,Issued,2026-10-01
+Chronic Tacos,"601 W Cordova St, Vancouver",Restaurant,+16044282221,https://www.chronictacos.com/,49.28596115112305,-123.11249542236328,0.999830753326416,Restaurant,Issued,2026-10-01
+Top of Vancouver Revolving Restaurant,"555 W Hastings St, Vancouver",Restaurant,+16046692220,https://topofvancouver.com/,49.28452682495117,-123.11231231689453,0.9988500559329987,Restaurant,Issued,2026-10-14
+Little Japan Restaurant,"555 W Hastings St, Vancouver",Restaurant,+16046875722,http://hirojapan.ca,49.28481674194336,-123.11222076416016,0.7308163642883301,Limited Service Food Establishment,Issued,2026-10-01
+Fatburger,"555 W Hastings St, Vancouver",Restaurant,+16043363966,https://www.fatburgercanada.com/locations/fatburger-harbourcentre/,49.284759521484375,-123.1120834350586,0.9999745360910892,Limited Service Food Establishment,Issued,2026-10-01
+Teppan Kitchen,"555 West Hastings St, Vancouver",Restaurant,(778) 379-1988,http://www.teppankitchen.com,49.28483581542969,-123.1119155883789,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Rice 'n Spice,"555 West Hastings Street, Vancouver",Restaurant,(604) 563-3143,http://ricenspicethai.com,49.284854888916016,-123.11188507080078,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Quesada Burritos & Tacos,"1055 Canada Place, Vancouver",Restaurant,(604) 647-7521,http://www.quesada.ca,49.28868103027344,-123.1112060546875,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Mary Brown's Chicken,"1653 E Broadway, Vancouver",Fast Food,+17785326695,https://marybrowns.com/locations/,49.26255416870117,-123.07121276855469,0.9998894949018955,Limited Service Food Establishment,Issued,2026-10-01
+East Van Brewing Company,"1675 Venables St, Vancouver",Bar / Pub,+16045583822,http://www.eastvanbrewing.com,49.27675247192383,-123.07113647460938,0.9997667429447175,Liquor Retail Store,Issued,2026-10-01
+Just Pizza,"1629 Kingsway, Vancouver",Restaurant,+16045668888,http://justpizzaplease.ca/,49.248077392578125,-123.07111358642578,0.9624594449996948,Limited Service Food Establishment,Issued,2026-10-01
+Hyderabad Haveli,"1625 Kingsway, Vancouver",Restaurant,+17783798802,http://Hyderabadhaveli.ca/,49.24816131591797,-123.07115173339844,0.9305276101827622,Restaurant,Issued,2026-10-01
+Pepino's Spaghetti House,"631 Commercial Dr, Vancouver",Restaurant,+16042545633,https://pepinos.ca,49.27888488769531,-123.07066345214844,0.998443815112114,Restaurant,Issued,2026-10-14
+Baby Dhal Roti Shop,"2707 Commercial Dr, Vancouver",Restaurant,+16045667684,https://www.babydhalroti.com,49.26023483276367,-123.07003021240234,0.9004544657468796,Limited Service Food Establishment,Issued,2026-10-01
+Merci Boulangerie,"2879 Commercial Dr, Vancouver",Bakery,+17788751424,http://merciboulangerie.com/,49.258975982666016,-123.07008361816406,0.9523535370826721,Limited Service Food Establishment,Issued,2026-10-01
+Storm Brewing LTD.,"310 Commercial Dr, Vancouver",Bar / Pub,+16042559119,http://www.stormbrewing.org,49.28202438354492,-123.07017517089844,0.9987770003080368,Liquor Retail Store,Issued,2026-10-01
+The Bench Bakehouse,"1641 Commercial Dr, Vancouver",Bakery,+16042510677,http://www.thebenchbakehouse.com/,49.269798278808594,-123.07025146484375,0.991261922121048,Limited Service Food Establishment,Issued,2026-10-01
+Kyle's Cafe,"2627 Commercial Dr, Vancouver",Restaurant,+16048725885,,49.26097106933594,-123.06997680664062,0.9983189803361893,Restaurant,Issued,2026-10-01
+Lombardo’s Pizzeria & Ristorante,"1641 Commercial Dr, Vancouver",Restaurant,(604) 251-2240,http://www.lombardos.ca,49.27008819580078,-123.06989288330078,0.77,Restaurant,Issued,2026-10-01
+Commercial Sushi,"2575 Commercial Dr, Vancouver",Restaurant,+16045598866,http://www.commercialsushi.com,49.261619567871094,-123.0699462890625,0.9985000085830689,Restaurant,Issued,2026-10-01
+Naruto Sushi,"2763 Commercial Dr, Vancouver",Restaurant,+16045583858,http://www.narutosushivancouver.com/,49.25996017456055,-123.06993103027344,0.993842585682869,Limited Service Food Establishment,Issued,2026-10-14
+Subway,"2569 Commercial Drive, Vancouver",Fast Food,+16048759970,https://restaurants.subway.com/canada/bc/vancouver/2569-commercial-drive?y_source=1_MTQ5MjA1MDctODMxLWxvY2F0aW9uLndlYnNpdGU%3D,49.26163864135742,-123.06989288330078,0.9995846411406993,Restaurant,Issued,2026-10-01
+Mr. Greek Donair Store,"2285 Commercial Dr, Vancouver",Restaurant,+16046206682,,49.26406478881836,-123.06986999511719,0.9052524566650391,Limited Service Food Establishment,Issued,2026-10-14
+Ay Chihuahua Mexican Food,"2767 Commercial Drive, Vancouver",Restaurant,7782911964,http://aychihuahuamexicanfood.ca/,49.25990676879883,-123.0698013305664,0.991678601026535,Limited Service Food Establishment,Issued,2026-10-01
+TWK - The Lebanese Sandwich Spot,"1605 Commercial Dr, Vancouver",Restaurant,+12364275298,http://www.twkrestaurant.com/,49.270328521728516,-123.06981658935547,0.9511699575185776,Limited Service Food Establishment,Issued,2026-10-01
+Shiok Singaporean Cuisine,"1716 Kingsway, Vancouver",Restaurant,+16044233838,http://shiok.ca,49.24701690673828,-123.0694808959961,0.9985767793655396,Restaurant,Issued,2026-10-01
+Space Chicken,"1707 Kingsway, Vancouver",Fast Food,+16047869900,https://www.spacechicken.ca/,49.247276306152344,-123.06951141357422,0.8279762268066406,Restaurant,Issued,2026-10-01
+Liberty Wine Merchants,"1622 Commercial Dr, Vancouver",Bar / Pub,+16046331922,http://www.libertywinemerchants.com,49.27008056640625,-123.06953430175781,0.9986459416151047,Liquor Retail Store,Issued,2026-10-01
+Kishimoto Japanese Restaurant,"2054 Commercial Dr, Vancouver",Restaurant,+16042555550,http://www.kishimotorestaurant.com/,49.26673126220703,-123.06954193115234,0.9983778333663941,Restaurant,Issued,2026-10-14
+Quesada Burritos & Tacos,"2430 Commercial Dr, Vancouver",Restaurant,(236) 471-5420,https://quesada.ca,49.26286697387695,-123.06953430175781,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Memphis Blues Barbeque House,"1342 Commercial Dr, Vancouver",Bar / Pub,+16042152599,http://www.memphisbluesbbq.com,49.272464752197266,-123.06946563720703,0.9978354752063752,Restaurant,Issued,2026-10-01
+Sopra Sotto,"1510 Commercial Dr, Vancouver",Restaurant,+16042517586,https://www.soprasotto.ca,49.271175384521484,-123.0694580078125,0.9984149026870728,Restaurant,Issued,2026-10-01
+Dolce Amore,"1588 Commercial Dr, Vancouver",Dessert,+16042580006,http://www.gelateriadolceamore.com,49.2706413269043,-123.06945037841797,0.710847795009613,Limited Service Food Establishment,Issued,2026-10-01
+Oca Pastificio,"1260 Commercial Dr, Vancouver",Restaurant,+16729993309,http://Ocapastificio.ca/,49.27336883544922,-123.06944274902344,0.8999735713005066,Restaurant,Issued,2026-10-01
+Absinthe Bistro,"952 Commercial Dr, Vancouver",Restaurant,+16045669053,http://www.bistroabsinthe.com,49.275978088378906,-123.0694351196289,0.9986931556463241,Restaurant,Issued,2026-10-01
+Sushi Ville,"2068 Commercial Dr, Vancouver",Restaurant,+16045594611,,49.266361236572266,-123.06959533691406,0.9632726907730103,Restaurant,Issued,2026-10-01
+Quiznos,"2580 Commercial Dr, Vancouver",Fast Food,+16048728097,http://order.quiznos.com/menu/commercial-drive?olonwp=Lij7MEMhykWQYWp4Jz8H6g,49.261661529541016,-123.06963348388672,0.9997900188863278,Restaurant,Issued,2026-10-14
+Yummy Slice Pizza,"2582 Commercial Dr, Vancouver",Restaurant,+16045596679,,49.26156997680664,-123.06964874267578,0.9196833968162537,Limited Service Food Establishment,Issued,2026-10-01
+Eternal Abundance,"1025 Commercial Dr, Vancouver",Restaurant,+16047070088,http://www.EternalAbundance.ca/,49.275390625,-123.06968688964844,0.9989609622955322,Limited Service Food Establishment,Issued,2026-10-01
+Paris Bakery,"1403 Commercial Dr, Vancouver",Bakery,+16042516366,http://parisbakery4.placeweb.site/,49.27202224731445,-123.06967163085938,0.9950537955760956,Limited Service Food Establishment,Issued,2026-10-01
+ChongQing On Commercial,"2808 Commercial Dr, Vancouver",Restaurant,+16042547434,http://www.cqrestaurant.com,49.25943374633789,-123.06968688964844,0.9977984058856965,Restaurant,Issued,2026-10-01
+Five Elements Cafe,"1046 Commercial Dr, Vancouver",Cafe,+16045595938,http://www.fiveelementscafe.com/,49.27497482299805,-123.06925201416016,0.9422812992334366,Restaurant,Issued,2026-10-14
+Pizza Garden,"1042 Commercial Dr, Vancouver",Restaurant,+16045690448,http://pizzagarden.ca/,49.27507781982422,-123.06936645507812,0.9945966255664825,Limited Service Food Establishment,Issued,2026-10-01
+Nomo Nomo,"1268 Commercial Dr, Vancouver",Restaurant,+12364800850,https://nomonomo.ca/,49.273345947265625,-123.06929779052734,0.6409921646118164,Restaurant,Issued,2026-10-14
+Hariyali Express Indian Cuisine & Bar,"2066 Commercial Dr, Vancouver",Restaurant,+16042157556,https://hariyaliexpress.com/,49.26652908325195,-123.06929016113281,0.9987901610136032,Restaurant,Issued,2026-10-01
+Kokomo,"3435 Commercial St, Vancouver",Restaurant,+16044286599,https://heykokomo.ca/pages/east-van,49.25386428833008,-123.06818389892578,0.9896740007400513,Limited Service Food Establishment,Issued,2026-10-01
+Commercial Street Cafe,"3599 Commercial St, Vancouver",Cafe,+16048778669,http://www.commercialstreetcafe.com/,49.25261688232422,-123.0680923461914,0.9989499813318252,Limited Service Food Establishment,Issued,2026-10-14
+Chance Cafe,"3424 Commercial St, Vancouver",Cafe,+16045001235,http://ChanceCafeVancouver.ca/,49.25394058227539,-123.06785583496094,0.9945337772369385,Limited Service Food Establishment,Issued,2026-10-01
+Collective Goods,"3532 Commercial St, Vancouver",Restaurant,+16047570306,http://www.collectivegoods.ca/,49.2531623840332,-123.06783294677734,0.9933983981609344,Restaurant,Issued,2026-10-01
+New King Sweets & Restaurant,"6443 Victoria Dr, Vancouver",Restaurant,+16043210811,http://newkingsweets.ca/,49.22581100463867,-123.066162109375,0.23964691162109375,Restaurant,Issued,2026-10-14
+Green Lettuce Restaurant,"1949 Kingsway, Vancouver",Restaurant,(604) 876-9883,http://www.greenlettucerestaurant.ca,49.245784759521484,-123.0660629272461,0.77,Restaurant,Issued,2026-10-01
+GoMigs Kitchen,"6929 Victoria Dr, Vancouver",Restaurant,+16726737988,https://order.online/business/gomigs-kitchen-17942651,49.22111892700195,-123.0660400390625,0.7318758964538574,Limited Service Food Establishment,Issued,2026-10-14
+Thai Son Restaurant,"6471 Victoria Dr, Vancouver",Restaurant,+16043256436,http://www.thaison.ca,49.22575759887695,-123.06599426269531,0.9909056425094604,Restaurant,Issued,2026-10-01
+Lady 3 Kitchen,"6543 Victoria Dr, Vancouver",Restaurant,+16045691589,,49.2247314453125,-123.06595611572266,0.8887266516685486,Restaurant,Issued,2026-10-01
+YY Sushi,"1947 Kingsway, Vancouver",Restaurant,+16043367727,http://yysushivancouver.com/,49.24580383300781,-123.06600952148438,0.9229608178138733,Limited Service Food Establishment,Issued,2026-10-01
+Kent's Kitchen,"5659 Victoria Dr, Vancouver",Restaurant,+16043218666,http://kentskitchenvancouver.gastrobars.com,49.233177185058594,-123.06586456298828,0.99835200548172,Limited Service Food Establishment,Issued,2026-10-01
+McDonald's,"5661 Victoria Drive, Vancouver",Fast Food,+16047181160,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MTk1ODctNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.23316192626953,-123.06580352783203,0.9999709152519702,Restaurant,Issued,2026-10-01
+Banh Mi Saigon,"5397 Victoria Dr, Vancouver",Restaurant,+17783799992,,49.23533248901367,-123.06578063964844,0.9984316414594651,Limited Service Food Establishment,Issued,2026-10-14
+Jin Sui Xiang Bakery,"5823 Victoria Dr, Vancouver",Bakery,+17783790898,http://jinsuixiangbakery.placeweb.site,49.231441497802734,-123.06571197509766,0.9664379358291626,Limited Service Food Establishment,Issued,2026-10-01
+Kokoro Ramen,"5695 Victoria Dr, Vancouver",Restaurant,+17783797688,http://www.kokororamen.ca,49.232845306396484,-123.06571960449219,0.9989811009168625,Restaurant,Issued,2026-10-01
+Roast King Fast Food,"5755 Victoria Dr, Vancouver",Restaurant,+16042258687,http://www.roast-king.ca/,49.232234954833984,-123.06571960449219,0.8274136185646057,Limited Service Food Establishment,Issued,2026-10-01
+Tuan and Thuy Kitchen,"1962 Kingsway, Vancouver",Restaurant,+17788394820,https://www.order.store/store/tuan-%26-thuy-kitchen/n2X7R5K3Uw6tijrf8mSYYQ,49.245235443115234,-123.0656967163086,0.9668868780136108,Restaurant,Issued,2026-10-01
+Krsma Indian Restaurant,"5207 Victoria Dr, Vancouver",Restaurant,+17788095142,https://krsmaindianrestaurant.com/,49.237369537353516,-123.06561279296875,0.9824751019477844,Restaurant,Issued,2026-10-14
+Kalvin's Restaurant,"5225 Victoria Dr, Vancouver",Restaurant,+16043212888,https://kalvinrestaurant.ca,49.23725891113281,-123.06558227539062,0.9983128100633621,Restaurant,Issued,2026-10-01
+LienHiep Restaurant,"5083 Victoria Dr, Vancouver",Restaurant,+12364700158,,49.23858642578125,-123.06558227539062,0.7140560746192932,Restaurant,Issued,2026-10-14
+Western Lake Chinese Seafood Restaurant,"4989 Victoria Dr, Vancouver",Restaurant,+16043216862,http://www.chinesebites.com/vancouver-chinese-restaurants/western-lake-chinese-seafood-restaurant/,49.23938751220703,-123.06558990478516,0.967260153889656,Restaurant,Issued,2026-10-01
+Mei Yee Bakery,"5692 Victoria Dr, Vancouver",Bakery,+16043253323,,49.233131408691406,-123.06544494628906,0.9429287314414978,Limited Service Food Establishment,Issued,2026-10-01
+Sumi Korean Restaurant,"5628 Victoria Dr, Vancouver",Restaurant,+16046209235,,49.233604431152344,-123.06541442871094,0.9972110682725907,Restaurant,Issued,2026-10-01
+Hapag Ihaw-Ihaw Restaurant,"5432 Victoria Dr, Vancouver",Restaurant,+16044280097,http://Hapagrestaurant.com/,49.235565185546875,-123.06535339355469,0.9990244764089584,Restaurant,Issued,2026-10-01
+Cha Ca Hoang Yen Deli,"5338 Victoria Dr, Vancouver",Restaurant,+16045689658,https://www.bunchacahoangyen.com,49.236446380615234,-123.0653076171875,0.9838668394088745,Limited Service Food Establishment,Issued,2026-10-01
+Tim Hortons,"5698 Victoria Drive, Vancouver",Cafe,+16043647653,http://www.timhortons.com/,49.23295974731445,-123.0653076171875,0.9999568382322789,Limited Service Food Establishment,Issued,2026-10-01
+Super Stars Restaurant,"5822 Victoria Dr, Vancouver",Restaurant,+16043250783,,49.2309684753418,-123.06525421142578,0.9025675654411316,Restaurant,Issued,2026-10-01
+Golden Swan Restaurant,"5380 Victoria Dr, Vancouver",Restaurant,+16043216621,http://www.goldenswanrestaurant.com,49.23612594604492,-123.06523895263672,0.9988256812095642,Restaurant,Issued,2026-10-01
+Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",Restaurant,+17789889257,http://vietmamacafevancouver.ca/,49.237945556640625,-123.06526184082031,0.9978327333927155,Limited Service Food Establishment,Issued,2026-10-01
+Hoi An Cafe,"5002 Victoria Dr, Vancouver",Restaurant,+16045669283,http://www.urbanspoon.com/r/14/1592207/restaurant/Kensington/Hoi-An-Cafe-Vancouver,49.238826751708984,-123.06526184082031,0.9983561593294143,Limited Service Food Establishment,Issued,2026-10-01
+Hoa Phuong Do Restaurant,"5088 Victoria Dr, Vancouver",Restaurant,+17785851616,,49.23827362060547,-123.0652847290039,0.9710826277732849,Limited Service Food Establishment,Issued,2026-10-01
+Hẻm 377,"5026 Victoria Dr, Vancouver",Cafe,(604) 423-5026,http://hem377.ca,49.238616943359375,-123.06513214111328,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Dosa N Chutney,"4890 Victoria Dr, Vancouver",Restaurant,+16043364453,https://www.dosanchutney.ca/,49.24013137817383,-123.06483459472656,0.8195142149925232,Restaurant,Issued,2026-10-01
+Mui Ngo Gai,"2052 Kingsway, Vancouver",Restaurant,+16048768885,https://muingogai.com/,49.24456024169922,-123.06461334228516,0.9988023895025253,Restaurant,Issued,2026-10-01
+Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",Bar / Pub,+16045582739,http://parallel49brewing.com/,49.283782958984375,-123.06441497802734,0.9985516506433487,Restaurant,Issued,2026-10-01
+McDonald's,"2021 Kingsway, Vancouver",Fast Food,+16047181060,https://www.mcdonalds.com/ca/en-ca/restaurant-locator.html?y_source=1_MTQ1MjA2NTMtNTU5LWxvY2F0aW9uLndlYnNpdGU%3D,49.245094299316406,-123.0643539428711,0.9999244234144687,Restaurant,Issued,2026-10-01
+The Tipper Restaurant,"2066 Kingsway, Vancouver",Restaurant,+16048731010,http://www.thetipperrestaurant.com/,49.244625091552734,-123.0643310546875,0.9988665479421616,Restaurant,Issued,2026-10-01
+Powell Donair and Kebab,"1985 Powell St, Vancouver",Restaurant,+16042512929,,49.28499984741211,-123.06385040283203,0.6389385461807251,Limited Service Food Establishment,Issued,2026-10-14
+Vegan Pizza House,"2119 Kingsway, Vancouver",Restaurant,6042485336,http://www.veganpizzahouse.ca/,49.24432373046875,-123.0632553100586,0.9655,Limited Service Food Establishment,Issued,2026-10-01
+Zamzam Grill,"2128 Kingsway, Vancouver",Restaurant,+17784520241,https://www.zamzamgrill.ca,49.24418258666992,-123.06331634521484,0.9986276537179947,Limited Service Food Establishment,Issued,2026-10-01
+On Lok Restaurant and Wonton House,"2010 E Hastings St, Vancouver",Restaurant,+16042533656,http://www.onlokrestaurant.com/,49.28102493286133,-123.06339263916016,0.9939067959785461,Restaurant,Issued,2026-10-01
+Crab Hot Lau,"2141 Kingsway, Vancouver",Restaurant,+16044233633,https://www.vanmag.com/restaurant-awards/2024/restaurant-awards-2024-the-best-vietnamese-restaurants-in-vancouver/,49.244171142578125,-123.0628433227539,0.9558575749397278,Restaurant,Issued,2026-10-01
+Hai Chi Em,"2172 Kingsway, Vancouver",Restaurant,+16042130999,http://haichiem.ca/,49.24367904663086,-123.06245422363281,0.9840182662010193,Restaurant,Issued,2026-10-01
+Pho Anh Vu East Vancouver,"2155 Kingsway, Vancouver",Restaurant,+16045641212,https://www.tiktok.com/@pho.anh.vu.east.v,49.24409866333008,-123.06249237060547,0.33667194843292236,Restaurant,Issued,2026-10-14
+Freshslice Pizza,"2165 Kingsway, Vancouver",Restaurant,,https://www.freshslice.com/,49.24403381347656,-123.06232452392578,0.9221278861165046,Restaurant,Issued,2026-10-01
+Happy Family Restaurant,"2178 Kingsway, Vancouver",Restaurant,+16046778286,http://www.happyfamilyeats.com,49.243690490722656,-123.06228637695312,0.9988457924127578,Restaurant,Issued,2026-10-01
+New Mandarin Seafood Restaurant,"4650 Gladstone St, Vancouver",Restaurant,+16043369388,http://NewMandarin.ca/,49.242958068847656,-123.06209564208984,0.9975970059633255,Restaurant,Issued,2026-10-01
+Domino's Pizza,"2083 Dundas St, Vancouver",Restaurant,+16042159800,https://pizza.dominos.ca/Vancouver-British-Columbia-10008/,49.28510665893555,-123.06200408935547,0.9999719950467348,Limited Service Food Establishment,Issued,2026-10-14
+Peya,"2101 E Hastings St, Vancouver",Restaurant,+16048185704,http://www.peya.com/,49.28132247924805,-123.06153106689453,0.904219388961792,Restaurant,Issued,2026-10-01
+Pho Win Vietnamese Restaurant,"2138 E Hastings St, Vancouver",Restaurant,+17783799078,http://www.phowinvancouver.com/?,49.28111267089844,-123.06088256835938,0.9860381364822388,Limited Service Food Establishment,Issued,2026-10-01
+Yummyslice Pizza,"2140 E Hastings St, Vancouver",Restaurant,+16043366668,,49.28098678588867,-123.06062316894531,0.2746707797050476,Limited Service Food Establishment,Issued,2026-10-14
+Veggiebowl,"2222 Kingsway, Vancouver",Restaurant,+16046207672,http://www.instagram.com/veggiebowlcafe,49.24284362792969,-123.06053161621094,0.9933310151100159,Limited Service Food Establishment,Issued,2026-10-01
+Cafe Xu Hue,"2226 Kingsway, Vancouver",Restaurant,+16044549940,http://www.urbanspoon.com/r/14/777387/restaurant/Kensington/Cafe-Xu-Hue-Vancouver&dq=&cid=1882082862266289336&ved=0CJABEOYI&sa=X&ei=CUXfTJeBEIGujQOMgPXNCA&s=ANYYN7nJ-Vli_w3b4Hq1h-ORWaRPtj7vvQ,49.2427864074707,-123.06040954589844,0.9947585463523865,Limited Service Food Establishment,Issued,2026-10-14
+Obanhmi,"2250 Kingsway, Vancouver",Restaurant,+16044515812,http://www.obanhmishop.com,49.24248504638672,-123.05972290039062,0.9941968005895615,Limited Service Food Establishment,Issued,2026-10-01
+Sushi By Yuji,"2252 Kingsway, Vancouver",Restaurant,+16044340003,https://www.facebook.com/sushibyyuji?pnref=lhc,49.24250030517578,-123.05982971191406,0.9986255151033402,Restaurant,Issued,2026-10-01
+The Rose Cafe,"2251 Kingsway, Vancouver",Cafe,+16045583018,http://theroseteaflowers.com,49.24272918701172,-123.05956268310547,0.35176825523376465,Limited Service Food Establishment,Issued,2026-10-14
+Thanh Xuan Cafe,"2261 Kingsway, Vancouver",Restaurant,+16044399696,https://thanh-xuan-restaurant-canada.food96.com,49.242591857910156,-123.05905151367188,0.9600453972816467,Limited Service Food Establishment,Issued,2026-10-01
+K One Chicken Kingsway,"2271 Kingsway, Vancouver",Restaurant,+12364772154,http://chickochicken.ca/,49.242454528808594,-123.05879974365234,0.9856313467025757,Limited Service Food Establishment,Issued,2026-10-01
+Eldorado Liquor Store,"2310 Kingsway, Vancouver",Bar / Pub,+16044348327,,49.24165725708008,-123.05801391601562,0.971949011683464,Liquor Retail Store,Issued,2026-10-14
+Boteco Brasil,"2545 Nanaimo St, Vancouver",Restaurant,+17783797995,https://linktr.ee/botecobrasil,49.2615966796875,-123.05685424804688,0.9987942051887512,Restaurant,Issued,2026-10-01
+Cake It Easy,"1211 Nanaimo St, Vancouver",Dessert,+17785040299,http://cakeiteasy.ca/,49.27378845214844,-123.0569076538086,0.9453113675117493,Limited Service Food Establishment,Issued,2026-10-01
+Trocadero Pizza & Steak House,"2411 Nanaimo St, Vancouver",Restaurant,6042538714,http://www.trocaderorestaurant.ca/,49.263004302978516,-123.05665588378906,0.9655,Restaurant,Issued,2026-10-14
+In & Win Donair,"2406 Nanaimo St, Vancouver",Fast Food,+16042550034,http://www.inandoutdonair.com/,49.26287078857422,-123.056396484375,0.9873212367296219,Restaurant,Issued,2026-10-01
+Roundel Cafe,"2465 E Hastings St, Vancouver",Restaurant,+16042532522,http://www.roundelcafe.com/,49.28123474121094,-123.05535125732422,0.9981931447982788,Restaurant,Issued,2026-10-01
+Le Pho Vietnamese Restaurant,"2503 E Hastings St, Vancouver",Restaurant,+16042559897,,49.28122329711914,-123.05433654785156,0.9903954863548279,Restaurant,Issued,2026-10-01
+Sangkalan Eatery,"2607 E 49th Ave, Vancouver",Restaurant,+16044239999,,49.225242614746094,-123.05431365966797,0.9925580024719238,Restaurant,Issued,2026-10-01
+Kwan Luck Restaurant,"2516 Kingsway, Vancouver",Restaurant,+16044313890,https://kwanluckrestaurant.com,49.23957061767578,-123.05413818359375,0.9909845590591431,Restaurant,Issued,2026-10-01
+Starbucks,"2685 E 49th Ave, Vancouver",Cafe,+16044519051,http://www.starbucks.ca/,49.22513198852539,-123.0536117553711,0.9998535131216049,Limited Service Food Establishment,Issued,2026-10-01
+Come Along Chinese Seafood Restaurant,"2550 Kingsway, Vancouver",Restaurant,+16044391318,http://www.comealongrestaurant.com,49.239410400390625,-123.05309295654297,0.9988005524873733,Restaurant,Issued,2026-10-01
+James on Hastings,"2683 E Hastings St, Vancouver",Restaurant,+16042553188,http://www.jamesonhastings.com/,49.28141784667969,-123.04991149902344,0.9997307689785957,Restaurant,Issued,2026-10-01
+McKim Wonton Mein Saga,"2780 Kingsway, Vancouver",Restaurant,6044346655,,49.23725891113281,-123.04817199707031,0.85,Restaurant,Issued,2026-10-01
+High Point Beer Wine Spirits,"2769 E Hastings St, Vancouver",Bar / Pub,+16046381632,http://www.highpointbws.com,49.28122329711914,-123.0477066040039,0.9980771934986115,Liquor Retail Store,Issued,2026-10-01
+Blowfish Sushi & Japanese Food,"2828 E Hastings St, Vancouver",Restaurant,+16042587500,http://www.blowfish101.com/,49.280914306640625,-123.0457763671875,0.998797042965889,Limited Service Food Establishment,Issued,2026-10-14
+The Alcove,"2889 E Hastings St, Vancouver",Bar / Pub,+17786062040,https://thealcovelounge.com/,49.2813720703125,-123.04547119140625,0.9510490983724594,Restaurant,Issued,2026-10-01
+Domino's Pizza,"5522 Joyce St, Vancouver",Restaurant,+16044363030,https://pizza.dominos.ca/Vancouver-British-Columbia-10059/,49.23360824584961,-123.03599548339844,0.999967208045721,Limited Service Food Establishment,Issued,2026-10-01
+Ba Le,"3779 Rupert St, Vancouver",Restaurant,,http://balebahnmi.com,49.250919342041016,-123.03413391113281,0.77,Limited Service Food Establishment,Issued,2026-10-01
+Poor Italian Trattoria,"3296 E 1st Ave, Vancouver",Restaurant,(604) 251-1122,,49.26913070678711,-123.03402709960938,0.77,Restaurant,Issued,2026-10-01
+iSushi Japanese & Korean Restaurant,"3883 Rupert St, Vancouver",Restaurant,+16043366553,https://isushivancouver.ca/,49.249908447265625,-123.03396606445312,0.9894672954082488,Restaurant,Issued,2026-10-14
+La Saison de Patisserie,"3868 Rupert St, Vancouver",Bakery,+16044281350,https://lasaison.ca,49.250152587890625,-123.03355407714844,0.9547702670097351,Restaurant,Issued,2026-10-01
+350°F Chicken,"3307 E Broadway, Vancouver",Restaurant,+16042553335,https://www.350f.ca/,49.26203155517578,-123.03330993652344,0.9898718500137329,Limited Service Food Establishment,Issued,2026-10-01
+Sunflower Bubble Tea,"5125 Joyce St, Vancouver",Restaurant,(604) 909-0669,http://sunflowerbubbletea.ca,49.23802185058594,-123.03230285644531,0.77,Restaurant,Issued,2026-10-01
+Panago Pizza,"5738 Tyne St, Vancouver",Restaurant,+18663100001,http://www.panago.com/,49.23139190673828,-123.03179931640625,0.9888535541296005,Limited Service Food Establishment,Issued,2026-10-01
+Starbucks,"2840 Bentall St, Vancouver",Cafe,(604) 434-7114,https://www.starbucks.ca/store-locator/store/765,49.258602142333984,-123.03062438964844,0.77,Restaurant,Issued,2026-10-01
+Love for Pho,"3524 Kingsway, Vancouver",Restaurant,+16045688884,http://www.phothaihoa.com,49.231754302978516,-123.0281753540039,0.9535439014434814,Restaurant,Issued,2026-10-01
+Indian Burger Joint Kingsway,"3608 Kingsway, Vancouver",Restaurant,+16049003635,,49.2320442199707,-123.02627563476562,0.9511328935623169,Limited Service Food Establishment,Issued,2026-10-01
+Minus Cake Boutique,"3615 Kingsway, Vancouver",Bakery,+16047793615,http://www.minuscake.com/,49.23235321044922,-123.02547454833984,0.9417813158035279,Limited Service Food Establishment,Issued,2026-10-01
+Liberte Cafe and Restaurant,"3670 Vanness Avenue, Vancouver",Cafe,(604) 564-9126,http://libertecafe.com,49.234901428222656,-123.025146484375,0.77,Restaurant,Issued,2026-10-01
+Meet and Eat Halal Turkish Restaurant,"3663 E Hastings St, Vancouver",Restaurant,+16048445040,,49.28128433227539,-123.02464294433594,0.9356390500068664,Restaurant,Issued,2026-10-14

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Admin{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 24px; max-width: 780px;">
+    <h1 class="section-title" style="margin-top: 0;">Admin</h1>
+    <p style="color: #64748b;">
+        Local-only screens. They answer only to 127.0.0.1 requests, and a real login is still
+        required before this site is hosted anywhere. None of this is shown publicly.
+    </p>
+    <div class="detail-card">
+        <ul style="line-height: 1.9;">
+            <li><a href="/admin/claims">Claims</a> — list, filter by status, change status, export CSV.</li>
+            <li><a href="/admin/revenue">Revenue</a> — add, list and export entries (CAD only).</li>
+            <li><a href="/admin/claims.csv">Claims CSV</a> &bull; <a href="/admin/revenue.csv">Revenue CSV</a></li>
+        </ul>
+    </div>
+    <div class="detail-card" style="margin-top: 16px;">
+        <h2 style="margin-top: 0; font-size: 1.05rem;">Reminder</h2>
+        <p style="color: #475569; margin-bottom: 0;">
+            A claim is a request to be contacted; it never marks a listing as verified, and the
+            claim status is internal only.
+        </p>
+    </div>
+</div>
+{% endblock %}

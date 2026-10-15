@@ -1,0 +1,10 @@
+kept_id,kept_name,kept_address,removed_id,removed_name,removed_address,similarity,distance_m,reason
+osm-563321283,Alibi Room,157 Alexander Street Vancouver,cmv77gjml000at42p9gzsiyr9,The Alibi Room,"157 Alexander St, Vancouver, BC V6A 1B8",1.0,95.4,within 120 m and near-identical name
+osm_690545b051c3463a,49th Parallel & Lucky's Doughnuts Cafe,2198 West 4th Avenue,cmv77gjmt000gt42peavxg30d,49th Parallel Coffee & Lucky's Doughnuts,"2198 W 4th Ave, Vancouver, BC V6K 1N6",1.0,52.9,within 120 m and near-identical name
+cmv77gjmy000kt42pvui0qz1f,Medina Cafe,"780 Richards St, Vancouver, BC V6B 3A4",osm_3c54b90dea544f49,Cafe Medina,780 Richards Street,1.0,33.6,within 120 m and near-identical name
+cmv77gjn3000ot42pu54dkygr,Blue Water Cafe,"1095 Hamilton St, Vancouver, BC V6B 5T4",osm_b7402ddadb0e4a71,Blue Water Cafe + raw bar,Hamilton Street,1.0,35.6,within 120 m and near-identical name
+osm-node-14060329910,Bubble Waffle Cafe,"Fairview, Vancouver, BC (street address not mapped)",osm-node-14060335690,Bubble Waffle Cafe,"Fairview, Vancouver, BC (street address not mapped)",1.0,104.5,within 120 m and near-identical name
+osm-way-1527718449,Time Out Market Vancouver,"650 West 41st Avenue, Vancouver, BC",osm-way-1527718450,Time Out Market Bar,"Oakridge, Vancouver, BC (street address not mapped)",1.0,32.6,within 120 m and near-identical name
+osm-way-1527718449,Time Out Market Vancouver,"650 West 41st Avenue, Vancouver, BC",osm-way-1527724158,Time Out Market Bar,"Oakridge, Vancouver, BC (street address not mapped)",1.0,37.1,within 120 m and near-identical name
+osm-way-1527718449,Time Out Market Vancouver,"650 West 41st Avenue, Vancouver, BC",osm-way-1527718465,Time Out Bar,"Oakridge, Vancouver, BC (street address not mapped)",1.0,10.4,within 120 m and near-identical name
+osm-node-14113588301,Loreto Brunch and Dinner,"219 Union Street, Vancouver, BC",osm-node-5784581798,Loreto Brunch & Diner,"219 Union Street, Vancouver, BC",0.974,5.4,same normalized address

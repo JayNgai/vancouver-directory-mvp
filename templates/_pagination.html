@@ -1,0 +1,24 @@
+{# Shared pagination controls. Expects `pagination` with:
+   page, totalPages, total, from, to, baseQuery. #}
+{% if pagination %}
+<div class="pagination-bar">
+    <div class="pagination-count">
+        Showing {{ pagination.from }}&ndash;{{ pagination.to }} of {{ pagination.total }} results
+    </div>
+    {% if pagination.totalPages > 1 %}
+    <div class="pagination-controls">
+        {% if pagination.page > 1 %}
+        <a class="page-link" href="?{% if pagination.baseQuery %}{{ pagination.baseQuery }}&{% endif %}page={{ pagination.page - 1 }}">&larr; Previous</a>
+        {% else %}
+        <span class="page-link page-link-disabled">&larr; Previous</span>
+        {% endif %}
+        <span class="page-status">Page {{ pagination.page }} of {{ pagination.totalPages }}</span>
+        {% if pagination.page < pagination.totalPages %}
+        <a class="page-link" href="?{% if pagination.baseQuery %}{{ pagination.baseQuery }}&{% endif %}page={{ pagination.page + 1 }}">Next &rarr;</a>
+        {% else %}
+        <span class="page-link page-link-disabled">Next &rarr;</span>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,10 @@
+id_a,name_a,address_a,id_b,name_b,address_b,similarity,distance_m,reason
+cmv77gjmw000it42p9jf3mr7j,Miku Vancouver,"70-200 Granville St, Vancouver, BC V6C 1S4",osm_9659c0de56ce42cf,Miku,200 Granville Street,1.0,19.6,different house numbers (possible chain branches)
+osm-node-5848027492,Sushi King House,"8176 Granville Street, Vancouver, BC",osm-node-5848027493,Sushi Wow,"8273 Granville Street, Vancouver, BC",0.632,35.4,different house numbers (possible chain branches)
+osm-node-5848027492,Sushi King House,"8176 Granville Street, Vancouver, BC",osm-node-5848027495,Sushi Bar Shu,"8099 Granville Street, Vancouver, BC",0.632,85.2,different house numbers (possible chain branches)
+osm-node-5848027493,Sushi Wow,"8273 Granville Street, Vancouver, BC",osm-node-5848027495,Sushi Bar Shu,"8099 Granville Street, Vancouver, BC",0.667,77.5,different house numbers (possible chain branches)
+osm-node-6629496053,Sushi Van,"2566 Granville Street, Vancouver, BC",osm-node-9130946772,Sushi Master,"1509 West Broadway, Vancouver, BC",0.667,99.6,different house numbers (possible chain branches)
+osm-node-5759848947,Pizza Hut,"4540 West 10th Avenue, Vancouver, BC",osm-node-6862208761,Pizza Pizza,"4580 West 10th Avenue, Vancouver, BC",0.6,81.0,different house numbers (possible chain branches)
+osm_bb57db273dc441f3,Bombay Kitchen On Denman,1061 Denman Street,osm_5d12789faf254512,Bombay Kitchen + Bar,"Vancouver, BC",0.724,4.1,similar names but address/distance not decisive
+osm_267193cae86e4eaa,Babylon Cafe,1156 Denman Street,osm_b3ad06decffb4d18,Babylon Restaurant & Bar,1162 Denman Street,1.0,7.5,different house numbers (possible chain branches)
+osm-node-2290994536,Ajisai Sushi Bar,"2081 West 42nd Avenue, Vancouver, BC",osm-node-12207663122,Ajisai 2 Go,"2087 West 42nd Avenue, Vancouver, BC",0.609,26.1,different house numbers (possible chain branches)

@@ -1,0 +1,167 @@
+/* Vancouver Directory MVP - Default Theme (Option 2: Pacific Sunset) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Outfit:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+
+/* Navigation */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(15,23,42,0.06);
+    padding: 1.1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #e05638;
+    text-decoration: none;
+}
+
+.nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+.nav-links a { color: #334155; text-decoration: none; font-weight: 600; }
+.nav-links a:hover { color: #e05638; }
+
+.btn-claim {
+    background: #fff7ed;
+    color: #ea580c !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #ffedd5;
+    font-weight: 600;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #431407 100%);
+    color: #ffffff;
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #fff7ed;
+}
+
+.hero p { font-size: 1.25rem; max-width: 650px; margin: 0 auto 30px; color: #cbd5e1; }
+
+/* Cards & Section */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 40px 0 20px;
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 15px rgba(15,23,42,0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex; flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(224,86,56,0.12);
+    border-color: #ffedd5;
+}
+
+.card-img { width: 100%; height: 190px; object-fit: cover; }
+.card-img-placeholder { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f1f5f9, #e2e8f0); color: #64748b; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.6px; text-transform: uppercase; }
+.card-img-placeholder span { padding: 0 14px; text-align: center; }
+.card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+.card-subtitle { font-size: 0.8rem; color: #e05638; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 10px; }
+.card-desc { color: #475569; font-size: 0.95rem; margin-bottom: 15px; flex: 1; }
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #e05638;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn:hover { background: #c2410c; }
+
+.tag-badge { background: #fff7ed; color: #c2410c; font-size: 0.75rem; padding: 4px 12px; border-radius: 20px; font-weight: 600; }
+.badge-verified { background: #fef3c7; color: #92400e; font-size: 0.75rem; padding: 3px 10px; border-radius: 6px; font-weight: 700; }
+
+.attribution { font-size: 0.85rem; color: #94a3b8; margin-top: 10px; line-height: 1.6; }
+.attribution a { color: #cbd5e1; text-decoration: underline; }
+
+.pagination-bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin: 24px 0; padding: 14px 18px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; }
+.pagination-count { color: #475569; font-size: 0.92rem; font-weight: 600; }
+.pagination-controls { display: flex; align-items: center; gap: 12px; }
+.page-link { display: inline-block; padding: 8px 16px; border-radius: 20px; background: #e05638; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+.page-link:hover { background: #c2410c; }
+.page-link-disabled { background: #e2e8f0; color: #94a3b8; }
+.page-status { color: #475569; font-size: 0.9rem; }
+
+.breadcrumb { font-size: 0.9rem; color: #64748b; margin-bottom: 16px; }
+.breadcrumb a { color: #2b6cb0; text-decoration: none; }
+.breadcrumb span { margin: 0 6px; color: #94a3b8; }
+.breadcrumb-current { color: #0f172a; font-weight: 600; }
+
+.detail-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; }
+.detail-title { font-size: 2rem; margin: 4px 0 10px 0; color: #0f172a; }
+.detail-list { display: grid; grid-template-columns: 170px 1fr; gap: 8px 18px; margin: 18px 0; }
+.detail-list dt { font-weight: 600; color: #475569; }
+.detail-list dd { margin: 0; color: #0f172a; }
+.detail-list dd a { color: #2b6cb0; text-decoration: none; }
+.detail-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0 16px 0; }
+.btn-secondary { background: #ffffff; color: #e05638; border: 2px solid #e05638; }
+.btn-secondary:hover { background: #fff7ed; }
+.detail-note { font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 12px; }
+.badge-licence { display: inline-block; background: #e6fffa; color: #22543d; border: 1px solid #9ae6b4; font-size: 0.8rem; padding: 4px 12px; border-radius: 6px; font-weight: 700; }
+.badge-asof { font-weight: 400; color: #2f855a; }
+
+.form-label { display: block; font-weight: 600; color: #475569; margin: 12px 0 4px 0; font-size: 0.92rem; }
+.form-input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #ffffff; }
+.form-check { display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; font-size: 0.9rem; color: #475569; }
+.form-errors { background: #fff5f5; border: 1px solid #fc8181; color: #742a2a; padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 0.92rem; }
+.form-errors ul { margin: 8px 0 0 18px; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.admin-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid #e2e8f0; color: #475569; }
+.admin-table td { padding: 8px 10px; border-bottom: 1px solid #eef2f7; vertical-align: top; color: #0f172a; }
+
+.footer { background: #0f172a; color: #64748b; padding: 40px 0; margin-top: 60px; font-size: 0.9rem; }
+
+
+/* Opening / serving hours on business detail pages */
+.hours-table { border-collapse: collapse; width: 100%; max-width: 460px; }
+.hours-table th { text-align: left; font-weight: 600; color: #475569; padding: 4px 18px 4px 0; vertical-align: top; white-space: nowrap; width: 1%; }
+.hours-table td { padding: 4px 0; color: #0f172a; }
+.hours-table tr + tr th, .hours-table tr + tr td { border-top: 1px solid #eef2f7; }
+.hours-lead { font-size: 0.85rem; color: #0f766e; font-weight: 600; margin-bottom: 4px; }

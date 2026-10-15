@@ -1,0 +1,148 @@
+new_id,new_name,new_address,existing_id,existing_name,existing_address,similarity,distance_m
+overture-c37e9044-3b2d-4a70-bc1e-8e8040a87915,Shota Sushi,"5688 Yew St, Vancouver",osm-node-1702227659,ASA Sushi,"2178 West 41st Avenue, Vancouver, BC",0.76,60.5
+overture-1068108a-1c34-46d9-ab7c-b5aa910a4795,Fish Cafe,"2053 W 41st Ave, Vancouver",osm-node-12207663118,La Cuisson Cafe,"2050 West 41st Avenue, Vancouver, BC",0.554,56.7
+overture-1068108a-1c34-46d9-ab7c-b5aa910a4795,Fish Cafe,"2053 W 41st Ave, Vancouver",osm-node-12207626865,@26 Viet Cafe,"2044 West 41st Avenue, Vancouver, BC",0.543,38.2
+overture-747e7157-a7a0-4cd6-8c4a-021819cd5a9e,别不同茶餐厅 Ming Tak Hong Kong Style Restaurant,"8363 Granville Street, Vancouver",osm-node-11337008915,Keumsan Korean Restaurant,"8363 Granville Street, Vancouver, BC",0.538,18.3
+overture-747e7157-a7a0-4cd6-8c4a-021819cd5a9e,别不同茶餐厅 Ming Tak Hong Kong Style Restaurant,"8363 Granville Street, Vancouver",osm-node-6656966889,Talay Thai Restaurant,"8369 Granville Street, Vancouver, BC",0.475,19.5
+overture-747e7157-a7a0-4cd6-8c4a-021819cd5a9e,别不同茶餐厅 Ming Tak Hong Kong Style Restaurant,"8363 Granville Street, Vancouver",osm-node-5848027487,Red Star Seafood Restaurant,"8298 Granville Street, Vancouver, BC",0.46,29.4
+overture-a1482478-c11f-48bd-b52c-d86994188ff5,Tai Tung Chinese Seafood Restaurant,"8012 Granville St, Vancouver",osm-node-5848027496,Pearl House Restaurant,"7994 Granville Street, Vancouver, BC",0.533,45.8
+overture-80b3ee04-6d22-4566-aab2-15b1cfddb34e,Dublin Crossing,"466 SW Marine Dr, Vancouver",osm-node-4351939531,Dublin Crossing Irish Pub,"466 Southwest Marine Drive, Vancouver, BC",0.712,29.7
+overture-80b3ee04-6d22-4566-aab2-15b1cfddb34e,Dublin Crossing,"466 SW Marine Dr, Vancouver",osm-node-12298154642,Baskin-Robbins,"490 Southwest Marine Drive, Vancouver, BC",0.524,80.3
+overture-4de67fd0-6987-48ec-9d9d-4643bcd6355f,Fraserview Tandoori House,"7271 Main St, Vancouver",osm-node-6656984234,Original Tandoori Kitchen,"7215 Main Street, Vancouver, BC",0.532,33.1
+overture-3526305d-6982-43af-ae30-742a64031045,Lucky House BBQ and Market,"6457 Fraser St, Vancouver",osm-node-12767083396,Lian Hong Chinese Food & Bakery,"Sunset, Vancouver, BC (street address not mapped)",0.483,76.2
+overture-7ff56ffd-a695-461a-b634-5c2cc855ed75,New Novelty Sweet and Restaurant,"6669 Fraser St, Vancouver",osm-node-6758654385,New Novelty Restaurant,"Sunset, Vancouver, BC (street address not mapped)",0.774,4.5
+overture-7ff56ffd-a695-461a-b634-5c2cc855ed75,New Novelty Sweet and Restaurant,"6669 Fraser St, Vancouver",osm-node-4957714311,Shoom Restaurant,"6555 Fraser Street, Vancouver, BC",0.475,105.0
+overture-7ff56ffd-a695-461a-b634-5c2cc855ed75,New Novelty Sweet and Restaurant,"6669 Fraser St, Vancouver",osm-node-4957714314,Yu Xiang Yuan Restaurant,"6591 Fraser Street, Vancouver, BC",0.475,84.1
+overture-6873a8bf-798e-4bb6-80b5-ba4eb8a1cf11,Koon Bo Seafood Restaurant,"5682 Fraser St, Vancouver",osm-node-4694725890,New Bhaia Sweet Shop and Restaurant,"5740 Fraser Street, Vancouver, BC",0.592,99.8
+overture-d1df7e9f-5311-4ea1-b145-3d1519d1d6f7,Camy's Pizza,"5688 Fraser St, Vancouver",osm-way-190298778,Church's Chicken,"5704 Fraser Street, Vancouver, BC",0.475,61.8
+overture-ed35aa18-2e2a-4a5e-b938-890290fd759a,Lee Loy BBQ,"6340 Fraser St, Vancouver",osm-node-12767098203,Lee Loy B.B.Q Meats Co.,"Sunset, Vancouver, BC (street address not mapped)",0.55,1.5
+overture-5ed95ebb-350f-47c1-9362-0ff5a506abf4,Bean Around the World Coffees,"4456 W 10th Ave, Vancouver",osm-node-8748457713,Bean Around The World,"Point Grey, Vancouver, BC (street address not mapped)",0.769,5.5
+overture-0efe2dcb-97f1-4655-a178-56382bc7488b,Kumi Sushi Bar,"4422 W 10th Ave, Vancouver",osm-node-5759848944,Mix the Bakery,"4430 West 10th Avenue, Vancouver, BC",0.475,21.4
+overture-56d745ca-8758-46be-85b7-15dec739cd72,Koi Sushi,"4532 W 10th Ave, Vancouver",osm-node-4670187993,Everyday Sushi,"4572 West 10th Avenue, Vancouver, BC",0.496,84.1
+overture-56d745ca-8758-46be-85b7-15dec739cd72,Koi Sushi,"4532 W 10th Ave, Vancouver",osm-node-2778673917,Sun Sushi,"4512 West 10th Avenue, Vancouver, BC",0.633,34.8
+overture-56d745ca-8758-46be-85b7-15dec739cd72,Koi Sushi,"4532 W 10th Ave, Vancouver",osm-node-2746820279,Hime Sushi,"4480 West 10th Avenue, Vancouver, BC",0.7,104.7
+overture-356edb99-5d92-4045-a244-b904b4c290de,Davie Village Bakery,"1216 Davie St, Vancouver",osm_3634e3789f554830,Davie's the Best,1157 Davie Street,0.475,115.0
+overture-356edb99-5d92-4045-a244-b904b4c290de,Davie Village Bakery,"1216 Davie St, Vancouver",osm_a08c06095eb649a5,Davie Social,1202 Davie Street,0.475,25.1
+overture-bbdd455f-8518-4a5d-ab7c-37c56d2a1361,Melriches Coffeehouse,"1244 Davie St, Vancouver",osm_d87a13efda394ac6,Blenz Coffee,1203 Davie Street,0.461,82.4
+overture-888958ed-d4cb-4c16-b20c-96eba0453df9,Sala Thai,"888 BURRARD St, Vancouver",osm_778596247fe54de9,Italian Kitchen,860 Burrard Street,0.475,37.5
+overture-e73dd7d0-77d6-46d1-a2c0-351e9caad723,Taylight Local Craft Beer & Kitchen,"990 Smithe St, Vancouver",osm_778596247fe54de9,Italian Kitchen,860 Burrard Street,0.512,77.7
+overture-a516a9db-0428-4bb8-acec-38994b70ef9d,McDonald's,"891 Granville St., Vancouver",osm_5f0c270009bc404f,Taf's Cafe,829 Granville Street,0.475,91.3
+overture-49200cf4-577b-4d63-bc13-f611d900bee5,Mean Poutine,"718 Nelson St, Vancouver",osm_df71f86776e04939,Moulin Rouge,998 Granville Street,0.475,53.1
+overture-49200cf4-577b-4d63-bc13-f611d900bee5,Mean Poutine,"718 Nelson St, Vancouver",osm_4abdeb043e6d493d,Romano's Pizza,995 Granville Street,0.507,30.0
+overture-49200cf4-577b-4d63-bc13-f611d900bee5,Mean Poutine,"718 Nelson St, Vancouver",osm_898d64ea3f314bfc,Granville Kebab & Poutine,1011 Granville Street,0.487,28.9
+overture-265ca253-d836-4ba6-818a-e98e38c21e4b,The Dime Roadhouse,"1017 Granville St, Vancouver",osm_6e0d5cdbfd4e4c22,The Moose,724 Nelson Street,0.5,41.5
+overture-265ca253-d836-4ba6-818a-e98e38c21e4b,The Dime Roadhouse,"1017 Granville St, Vancouver",osm_937f3bd2d4a64fba,Shamrock Storehouse,678 Nelson Street,0.461,26.2
+overture-265ca253-d836-4ba6-818a-e98e38c21e4b,The Dime Roadhouse,"1017 Granville St, Vancouver",osm_f65bf97594dc4549,Rice Noodle,"Vancouver, BC",0.456,79.1
+overture-f5942cc7-6d19-4e20-940b-019ca78c9a43,Uncle Fatih's Pizza,"625 Nelson St, Vancouver",osm_4abdeb043e6d493d,Romano's Pizza,995 Granville Street,0.602,85.6
+overture-06a2cc5a-3f05-43e8-9833-5c55b6e04c93,Freshslice Pizza,"771 Davie Street, Vancouver",osm-node-3947262067,4 Brothers Pizza,"1232 Howe Street, Vancouver, BC",0.543,82.8
+overture-29e1ae1d-87f9-4245-aef6-d0dbd216ab46,Domino's Pizza,"1138 Granville St, Vancouver",osm_306fbcd445b54bb6,Union Latino's,1149 Granville Street,0.528,38.8
+overture-29e1ae1d-87f9-4245-aef6-d0dbd216ab46,Domino's Pizza,"1138 Granville St, Vancouver",osm_7adf4831b589442e,Donnellan's Irish Pub,1082 Granville Street,0.486,88.7
+overture-7847c39b-9714-46e3-abce-ac14f1403269,Yaletown Liquor Store,"1116 Hamilton St, Vancouver",osm_7f3c626c41cc449b,Yaletown Brewing Company,"Vancouver, BC",0.464,34.5
+overture-9bb0059b-9f10-4307-b9e0-87dc4909c37e,Coo Coo Coffee,"477 Davie St, Vancouver",osm_8b3ca4a73d0d4d5a,Nine Bar Coffee,477 Davie Street,0.524,15.2
+overture-93fdd14a-dc20-49e5-b376-ae815d30711f,Yamato Sushi,"616 Davie St, Vancouver",osm_9fb275be28ce40ce,Manoush’eh,620 Davie Street,0.518,6.8
+overture-3ac91197-e36c-4c6a-891b-35495a7940d3,ThaiLicious,"1943 Cornwall Ave, Vancouver",osm_ded0deb680a8425a,Taco Loco,1965 Cornwall Avenue,0.475,35.7
+overture-0caf3562-674a-4a27-a229-2b87d60a3174,Stuart's Bakery,"1689 Johnston St, Vancouver",osm-node-1151299284,Duso's Italia,"1689 Johnston Street, Vancouver, BC",0.475,19.3
+overture-0caf3562-674a-4a27-a229-2b87d60a3174,Stuart's Bakery,"1689 Johnston St, Vancouver",osm-node-1151339085,Zara's,"1689 Johnston Street, Vancouver, BC",0.524,25.2
+overture-0caf3562-674a-4a27-a229-2b87d60a3174,Stuart's Bakery,"1689 Johnston St, Vancouver",osm-node-1151276383,Stuarts Quality Baked Goods,"South Granville, Vancouver, BC (street address not mapped)",0.578,7.3
+overture-25b5bce9-8cd0-4333-af8a-a6eae7aa8684,MeeT in Yaletown,"1165 MAINLAND St, Vancouver",osm_31ad36c82f3b4733,Yaletown Gelato,1210 Homer Street,0.49,118.5
+overture-7b2aa154-3979-4782-81fb-3d3d86f5db70,Panago Pizza,"1267 Pacific Blvd, Vancouver",osm-node-8377010347,Panago,"1267 Pacific Street, Vancouver, BC",0.633,17.0
+overture-fa88c44f-089f-480f-910b-8ac25d731797,Romer's Burger Bar,"1873 W 4th Ave, Vancouver",osm_70148a030aa54a6e,Fred's,1873 West 4th Avenue,0.475,3.0
+overture-a938f091-7836-4cc8-91ff-38bb3aaffe13,Puerto Mexico,"2710 W 4th Ave, Vancouver",osm_966a19ea24dd4a5f,"Puerto Mexico, Tacos and Mexican Products",2710 West 4th Avenue,0.466,8.1
+overture-6a28adcd-808b-48a7-8982-97e2282971ab,McDonald's,"2391 West 4th Avenue, Vancouver",osm_0e0c7529eedf4e5b,Maria's Taverna,2324 West 4th Avenue,0.461,104.5
+overture-46b33869-9979-46fe-a1e8-412f24999c13,JJ Bean Coffee Roasters,"2904 W Broadway, Vancouver",osm-644342008,JJ Bean,2904 Mackenzie Street Vancouver,0.5,8.7
+overture-ce06925e-f8cb-46b7-8b37-80edcab2cffc,The Kitchen Dada,"2535 Alma St, Vancouver",osm-node-3260935062,The Kitchen Dada Sushi Bar & Grill,"2535 Alma Street, Vancouver, BC",0.518,8.4
+overture-ff6c91ed-d5a0-4588-afe2-27418bdace82,Freshslice Pizza,"3262 W Broadway, Vancouver",osm-644341993,Olympia Pizza,3205 West Broadway Vancouver,0.524,78.2
+overture-2065d748-52b8-4443-b041-2bb20a033ef7,Yummy Slice Pizza,"3210 W Broadway, Vancouver",osm-644341993,Olympia Pizza,3205 West Broadway Vancouver,0.57,39.0
+overture-b0f4e4a3-f9f4-4ef7-aabe-4e3bac7e5ad9,Kits Indian Restaurant,"2445 Burrard St, Vancouver",osm_1dd5c19e754640d1,DS Indian Kitchen,2445 Burrard Street,0.536,10.0
+overture-b0f4e4a3-f9f4-4ef7-aabe-4e3bac7e5ad9,Kits Indian Restaurant,"2445 Burrard St, Vancouver",osm_c39846718f1d4a5f,Viet Flavour Restaurant,1822 West Broadway,0.633,70.0
+overture-b0f4e4a3-f9f4-4ef7-aabe-4e3bac7e5ad9,Kits Indian Restaurant,"2445 Burrard St, Vancouver",osm_40ba63395f0745d8,Papaya Hut Restaurant,2435 Burrard Street,0.53,7.0
+overture-b0f4e4a3-f9f4-4ef7-aabe-4e3bac7e5ad9,Kits Indian Restaurant,"2445 Burrard St, Vancouver",osm_adc6fa46da534e35,Unchai Thai Restaurant,2351 Burrard Street,0.605,98.9
+overture-e783d5d2-399d-4019-a0f5-9f6318b646ae,Suika,"1626 W Broadway, Vancouver",osm-node-914679363,Subway,"1595 West Broadway, Vancouver, BC",0.518,84.1
+overture-9a0baa7c-8680-4d6b-95e8-6479f1bd5f67,Panago Pizza,"1278 W Broadway, Vancouver",osm-node-866150578,Panago,"South Granville, Vancouver, BC (street address not mapped)",0.633,5.0
+overture-11d723ad-c9e8-42ee-bf13-35c20933938a,Minato Sushi,"1001 W Broadway, Vancouver",osm-node-987243004,Tozen Sushi Bar,"967 West Broadway, Vancouver, BC",0.563,109.9
+overture-b53f1318-71ca-4d29-98e1-b4bfc5533787,Kim Son Vietnamese Food,"555 W 12th Ave, Vancouver",osm-node-14060329908,Kim Son,"Fairview, Vancouver, BC (street address not mapped)",0.5,9.9
+overture-3db3ce23-03f9-4e9e-9b73-770fe9c6b76b,Elysian Coffee Broadway,"590 W Broadway, Vancouver",osm-node-8591698805,Kamei on Broadway,"601 West Broadway, Vancouver, BC",0.57,115.6
+overture-7a72e9b3-cc3e-4ada-b94b-a2d8824de040,Mali Thai Restaurant,"2710 Main St, Vancouver",osm-node-9374900289,Rongsi Thai Bar & Bistro,"2650 Main Street, Vancouver, BC",0.454,59.4
+overture-fc8300be-1d7c-4fba-a76b-ccd554a9f37d,Quesada Burritos and Tacos,"81 Kingsway, Vancouver",osm-node-582801100,Budgies Burritos,"44 Kingsway, Vancouver, BC",0.543,73.4
+overture-d1804ab3-93c5-41fc-a96b-87b28384e067,33 Acres Brewing Company,"15 W 8th Ave, Vancouver",osm-node-6339114662,33 Brewing Experiment,"Mount Pleasant, Vancouver, BC (street address not mapped)",0.549,14.1
+overture-d1804ab3-93c5-41fc-a96b-87b28384e067,33 Acres Brewing Company,"15 W 8th Ave, Vancouver",osm-node-6339114663,33 Acres Brewing,"Mount Pleasant, Vancouver, BC (street address not mapped)",0.76,3.4
+overture-b3e33497-a758-45f3-ab3a-cc2cff1adebe,Red Truck Beer Company,"295 E 1st Ave, Vancouver",osm-node-7179955510,Vancouver Soup Company,"292 East 1st Avenue, Vancouver, BC",0.503,87.0
+overture-17a57b94-6c76-4d91-b740-863782bcac86,Browns Socialhouse Queen Elizabeth Theatre,"675 Cambie St, Vancouver",osm_0b3f727c46b74a5f,Browns Social House,649 Cambie Street,0.561,17.7
+overture-965d1d4e-8c6d-40d8-8a40-607b1b212e3a,Blenz Coffee,"345 Robson St, Vancouver",osm_698afd78de884d50,Giovane Caffè,418 West Georgia Street,0.456,89.7
+overture-06844f38-f1c9-4a27-bdb2-59bb54d1e329,Estratto coffee,"336 W Pender St, Vancouver",cmv77gjmi0008t42pdfg6pkg0,Nemesis Coffee Gastown,"302 W Hastings St, Vancouver, BC V6B 2N4",0.462,89.7
+overture-298a6079-574e-49d8-8ebf-0ba77ee0b06c,Khyber Chai House,"436 Richards St, Vancouver",osm_0738e8d0bef74779,Kim House,505 West Pender Street,0.585,28.4
+overture-298a6079-574e-49d8-8ebf-0ba77ee0b06c,Khyber Chai House,"436 Richards St, Vancouver",osm_61ae328e6e31499f,Waves Coffee House,492 West Hastings Street,0.489,60.5
+overture-f7fa1da9-c71b-40f1-b566-30525e6a0a29,La Taqueria,"322 W Hastings St, Vancouver",osm_2bb30bb54edd4678,La Playita Seafood,360 Cambie Street,0.459,87.9
+overture-4ac1a142-1863-468e-bc5d-b2779ce8902a,Purebread,"159 W Hastings St, Vancouver",osm_3115c76fd7554ff7,Meat & Bread,370 Cambie Street,0.496,24.6
+overture-60fa5054-9ddb-444d-af9e-e4b8307e38f9,Subway,"139 West Hastings Street, Vancouver",osm_a69718fb74844af5,Nuba,207 West Hastings Street,0.57,95.6
+overture-99a818e3-2b1f-424c-8cc4-3fc749149a5f,Meet in Gastown,"12 Water St, Vancouver",osm_5dd9e7380d41430f,The Greek Gastown,221 Carrall Street,0.679,54.0
+overture-47969bf0-3521-4e56-adee-da526cabae86,Hot Pie Pizza,"4 Powell St, Vancouver",osm_3a9ffd02058a49fd,The Portside Pub,7 Alexander Street,0.456,37.3
+overture-47969bf0-3521-4e56-adee-da526cabae86,Hot Pie Pizza,"4 Powell St, Vancouver",osm_e4d21a0df77f476d,Soft Peaks Ice Cream,25 Alexander Street,0.461,46.9
+overture-0e53eecf-8947-46f2-8a1f-96eb5eb18fa1,Milano Coffee,"36 Powell St, Vancouver",osm_025fbbd927f045c4,Milano Espresso Lounge,36 Powell Street,0.489,12.6
+overture-f745c753-ad46-4e61-8ddf-eddf3fa79c2d,LOCAL Public Eatery Gastown,"3 Alexander St, Vancouver",osm_5dd9e7380d41430f,The Greek Gastown,221 Carrall Street,0.475,62.0
+overture-c5496899-3ce7-4220-8aa0-e5877a68d87a,Strathcona Beer Company,"895 E Hastings St, Vancouver",osm-way-297642367,The Garden Strathcona,"868 East Hastings Street, Vancouver, BC",0.475,63.6
+overture-59623909-3e55-4873-930a-d3dc4ea3a8eb,Superflux Beer Company,"505 Clark Dr, Vancouver",osm-node-7836192639,Superflux Beer Store,"Clark Drive, Vancouver, BC",0.724,5.3
+overture-e7e1d430-1478-4387-9391-f4d3cbb85637,Bomber Brewing,"1488 Adanac St, Vancouver",osm-node-4402102597,Bomber Tasting Room,"Commercial Drive, Vancouver, BC (street address not mapped)",0.576,4.9
+overture-456acb8e-0a03-4444-87b2-c248ed6996bd,Hook Restaurant,"1210 Denman St, Vancouver",osm_0db5825227904aed,Taqueria Jalisco Mexican Restaurant,1184 Denman Street,0.456,77.0
+overture-456acb8e-0a03-4444-87b2-c248ed6996bd,Hook Restaurant,"1210 Denman St, Vancouver",osm_b3ad06decffb4d18,Babylon Restaurant & Bar,1162 Denman Street,0.556,108.4
+overture-21e7ff20-df6b-4a89-b81a-f137338b9068,Pho In Love Authentic Vietnamese Restaurant & Bar,"1725 Davie St, Vancouver",osm_b3ad06decffb4d18,Babylon Restaurant & Bar,1162 Denman Street,0.543,115.6
+overture-75b95d5c-ae61-4cec-bc96-69ceab6e8e74,D'oro Gelato e Caffè,"1094 Denman St, Vancouver",osm_768e90f25bb54166,Delany's Coffee,1105 Denman Street,0.452,42.5
+overture-096b5ff9-6ef0-40b9-9fe1-5b7ba55e2a14,Nat's New York Pizzeria,"1080 Denman St, Vancouver",osm_46a7024758e144fd,Noah's Cafe,1096 Denman Street,0.452,16.9
+overture-7d48d3d1-f6ce-4eaf-94ed-ecc300214e04,Persian BBQ & Bar,"1072 Denman St, Vancouver",osm_5d12789faf254512,Bombay Kitchen + Bar,"Vancouver, BC",0.463,32.2
+overture-7d48d3d1-f6ce-4eaf-94ed-ecc300214e04,Persian BBQ & Bar,"1072 Denman St, Vancouver",osm_0e9324ef32094a0c,Chef Ron Restaurant & Bar,1037 Denman Street,0.537,63.7
+overture-ea5ce850-561c-4e42-a770-d96e2fa58494,The Cozy Wok,"854 Denman St, Vancouver",osm_1ce7f5bda224488b,Nook,791 Denman Street,0.475,119.4
+overture-d0d8e47c-9029-4236-9f72-7690deb75f9f,Madangcoul Korean Restaurant,"847 Denman St, Vancouver",osm_1e437df48d5c4620,Khaghan Restaurant,851 Denman Street,0.62,14.1
+overture-d0d8e47c-9029-4236-9f72-7690deb75f9f,Madangcoul Korean Restaurant,"847 Denman St, Vancouver",osm_94ec332f043543d3,Ukrainian Village Restaurant,815 Denman Street,0.543,112.7
+overture-b8b404d3-fe60-4228-90a5-6e5cda837eb2,VanLove Sushi and More,"1755 Robson St, Vancouver",osm_345a4e1ab38f46bb,Tetsu Sushi Bar,775 Denman Street,0.514,75.7
+overture-1c1f8c5b-9de2-48f8-9305-34885ad394ec,Momo Sushi,"833 Bidwell St, Vancouver",osm_383da7172c1849f5,VanLove Sushi,1755 Robson Street,0.578,99.6
+overture-b23b6268-b4f8-4754-94b9-8d5001872a04,Liuyishou Hotpot,"1542 Robson St, Vancouver",osm_722626e6e9264f58,Big Way Hot Pot,1479 Robson Street,0.552,103.6
+overture-d3c26ef2-bfc5-43fa-a604-6a3122911d3b,Sura Korean Royal Cuisine,"1518 Robson St, Vancouver",osm-node-14068954887,Lagman Uyghur Cuisine,"1610 Robson Street, Vancouver, BC",0.537,98.5
+overture-d3c26ef2-bfc5-43fa-a604-6a3122911d3b,Sura Korean Royal Cuisine,"1518 Robson St, Vancouver",osm_023ca6c04164452d,Tå Bom Korean Cuisine,1536 Robson Street,0.661,23.7
+overture-c1985d51-1afb-4347-a8d8-079b14ab9f5d,Kosoo Korean Restaurant Chicken and BBQ,"1128 Robson St, Vancouver",osm_57d15047f65e4c74,CinCin Ristorante + Bar,1154 Robson Street,0.475,46.4
+overture-e50fbb68-ada3-4f2a-8292-277667871b67,Forêt Noire Café,"1126 Robson St, Vancouver",osm_048eeb5368694d5b,La Bellisse Cafe,1126 Robson Street,0.475,31.2
+overture-0f062632-cfcd-4a2d-8870-d23c04dc99ff,Kawasho Japanese Restaurant,"770 Thurlow St, Vancouver",osm_5c2d14e4a9734329,Il Nido Italian Restaurant,780 Thurlow Street,0.574,11.9
+overture-0f062632-cfcd-4a2d-8870-d23c04dc99ff,Kawasho Japanese Restaurant,"770 Thurlow St, Vancouver",osm_e0a9dbdce1c24084,Coast Restaurant,1054 Alberni Street,0.574,87.0
+overture-0f062632-cfcd-4a2d-8870-d23c04dc99ff,Kawasho Japanese Restaurant,"770 Thurlow St, Vancouver",osm_5caa745c511142e0,Eh! Restaurant,1050 Alberni Street,0.57,77.4
+overture-0f062632-cfcd-4a2d-8870-d23c04dc99ff,Kawasho Japanese Restaurant,"770 Thurlow St, Vancouver",osm_cf6b66c0ec0944f8,Carlino Restaurant,1115 Alberni Street,0.549,108.6
+overture-8b4fdecc-1a9c-4363-8784-c2b4d5031ab1,Kuroi Sushi,"555 Burrard St, Vancouver",osm_51f85a840ae14721,Rue 909 Sushi,909 Dunsmuir Street,0.554,105.3
+overture-f0323d20-d12b-45fe-b324-0114e1a1a4ae,Broyé Cafe & Bakery,"530 Hornby St, Vancouver",osm_fd76d29517864d4c,Joyeaux Café and Restaurant,551 Howe Street,0.594,63.7
+overture-c6770d84-3760-4a81-8a66-36e259e6137a,JJ Bean Coffee Roasters,"353 Burrard St, Vancouver",osm_1bd8bca856994666,JJ Bean,Burrard Street,0.5,6.9
+overture-521aa7ab-0c96-46a5-aec2-e2b7360096bb,Chronic Tacos,"601 W Cordova St, Vancouver",osm_3c5b44bcbc104e66,Pinche Taco Shop,367 Seymour Street,0.524,100.7
+overture-05719d21-1718-496c-be82-32d09399ee08,Rice 'n Spice,"555 West Hastings Street, Vancouver",osm_3c5b44bcbc104e66,Pinche Taco Shop,367 Seymour Street,0.475,55.9
+overture-ed4b75b1-921b-416f-ac65-94fb8b136d71,Lombardo’s Pizzeria & Ristorante,"1641 Commercial Dr, Vancouver",osm-node-6848940835,Loula's Taverna + Bar,"1608 Commercial Drive, Vancouver, BC",0.555,41.2
+overture-ed4b75b1-921b-416f-ac65-94fb8b136d71,Lombardo’s Pizzeria & Ristorante,"1641 Commercial Dr, Vancouver",osm-way-292139148,Arriva Ristorante,"1537 Commercial Drive, Vancouver, BC",0.553,90.4
+overture-d4ea250e-0fbc-4ee3-9a0b-a7585ab1f7ff,Kishimoto Japanese Restaurant,"2054 Commercial Dr, Vancouver",osm-node-4265360390,Ichiya Japanese Ramen,"2068 Commercial Drive, Vancouver, BC",0.608,45.8
+overture-abf4f9df-050f-498b-81c0-c26935baaac5,Paris Bakery,"1403 Commercial Dr, Vancouver",osm-node-2953682906,Memphis Blues,"1342 Commercial Drive, Vancouver, BC",0.456,54.1
+overture-d16737e9-d086-490a-b431-89c8c8e328c6,New King Sweets & Restaurant,"6443 Victoria Dr, Vancouver",osm-721674467,Poplar Korean Restaurant,6501 Victoria Drive Vancouver,0.563,88.0
+overture-d16737e9-d086-490a-b431-89c8c8e328c6,New King Sweets & Restaurant,"6443 Victoria Dr, Vancouver",osm-node-4417386803,Nirvana Restaurant,"6482 Victoria Drive, Vancouver, BC",0.594,63.2
+overture-d16737e9-d086-490a-b431-89c8c8e328c6,New King Sweets & Restaurant,"6443 Victoria Dr, Vancouver",osm-node-4937598267,Pho Thai Son Restaurant,"6471 Victoria Drive, Vancouver, BC",0.574,17.6
+overture-d16737e9-d086-490a-b431-89c8c8e328c6,New King Sweets & Restaurant,"6443 Victoria Dr, Vancouver",osm-node-6241032644,Mnimes Restaurant,"6459 Victoria Drive, Vancouver, BC",0.566,7.8
+overture-db0e1e8c-50c2-4b9c-8fa0-79f07a1a30a5,GoMigs Kitchen,"6929 Victoria Dr, Vancouver",osm-node-4029426063,Fat Boy Kitchen,"6943 Victoria Drive, Vancouver, BC",0.59,15.0
+overture-db0e1e8c-50c2-4b9c-8fa0-79f07a1a30a5,GoMigs Kitchen,"6929 Victoria Dr, Vancouver",osm-node-4029426066,The One BBQ Kitchen,"6978 Victoria Drive, Vancouver, BC",0.59,66.6
+overture-c846f035-28e8-4afa-877a-ae7aad91e802,Thai Son Restaurant,"6471 Victoria Dr, Vancouver",osm-721674467,Poplar Korean Restaurant,6501 Victoria Drive Vancouver,0.663,80.4
+overture-c846f035-28e8-4afa-877a-ae7aad91e802,Thai Son Restaurant,"6471 Victoria Dr, Vancouver",osm-node-4417386803,Nirvana Restaurant,"6482 Victoria Drive, Vancouver, BC",0.668,50.4
+overture-c846f035-28e8-4afa-877a-ae7aad91e802,Thai Son Restaurant,"6471 Victoria Dr, Vancouver",osm-node-6241032644,Mnimes Restaurant,"6459 Victoria Drive, Vancouver, BC",0.686,15.9
+overture-f566537f-de0d-41aa-b80f-67c8ef182241,Jin Sui Xiang Bakery,"5823 Victoria Dr, Vancouver",osm-node-1945298722,Galaxy Bakery,"Victoria-Fraserview, Vancouver, BC (street address not mapped)",0.461,94.8
+overture-18ce01d5-e028-4832-97d1-c6f9f4533f0c,Krsma Indian Restaurant,"5207 Victoria Dr, Vancouver",osm-705752894,Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,0.608,36.5
+overture-776dbde0-6d24-4a45-a5b8-22fc6cd13ee0,Kalvin's Restaurant,"5225 Victoria Dr, Vancouver",osm-705752894,Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,0.608,25.0
+overture-2da960b1-dc8f-4f9a-9579-7dab19c0b8b6,Mei Yee Bakery,"5692 Victoria Dr, Vancouver",osm-node-1945298722,Galaxy Bakery,"Victoria-Fraserview, Vancouver, BC (street address not mapped)",0.563,97.0
+overture-7c66a2a1-d5da-4331-b138-f6dc8a7ebd56,Super Stars Restaurant,"5822 Victoria Dr, Vancouver",osm-node-4937598271,Kim Phung Restaurant,"5764 Victoria Drive, Vancouver, BC",0.543,98.9
+overture-ddd4359c-9d06-4840-bea7-fa9cc40f0bef,Golden Swan Restaurant,"5380 Victoria Dr, Vancouver",osm-705752894,Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,0.543,107.4
+overture-e002a36f-9947-40e6-b7aa-8f8fef711a48,Viet Mama Restaurant,"5118 Victoria Dr, Vancouver",osm-705752894,Sandy La Chinese Restaurant,5257 Victoria Drive Vancouver,0.526,104.9
+overture-a02a12c6-18bd-460c-b4e5-f47660361dcb,Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",osm-node-5835352273,Parallel 49 Tasting Room & Beer Store,"Grandview-Woodland, Vancouver, BC (street address not mapped)",0.576,16.6
+overture-a02a12c6-18bd-460c-b4e5-f47660361dcb,Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",osm-node-5835352274,Parallel 49 Street Kitchen,"Grandview-Woodland, Vancouver, BC (street address not mapped)",0.574,6.8
+overture-5c838b9d-c71b-46fd-afe5-ccc17ed2ec9d,Pho Win Vietnamese Restaurant,"2138 E Hastings St, Vancouver",osm-node-5844910196,The Saigonville Restaurant,"2129 East Hastings Street, Vancouver, BC",0.596,24.8
+overture-5c838b9d-c71b-46fd-afe5-ccc17ed2ec9d,Pho Win Vietnamese Restaurant,"2138 E Hastings St, Vancouver",osm-node-3789302441,Royal Palace Seafood Restaurant,"2163 East Hastings Street, Vancouver, BC",0.475,58.2
+overture-3a0f93e2-40fd-4cf0-9c63-f72647312d21,Roundel Cafe,"2465 E Hastings St, Vancouver",osm-node-8221556753,East Café,"2401 East Hastings Street, Vancouver, BC",0.543,68.3
+overture-3a0f93e2-40fd-4cf0-9c63-f72647312d21,Roundel Cafe,"2465 E Hastings St, Vancouver",osm-way-304298079,Breka Bakery & Café,"2434 East Hastings Street, Vancouver, BC",0.461,49.4
+overture-789a0e2b-0338-40b6-a6a0-33c876b07390,Le Pho Vietnamese Restaurant,"2503 E Hastings St, Vancouver",osm-node-1406591838,Vietnamese Tea House,"2526 East Hastings Street, Vancouver, BC",0.515,52.0
+overture-789a0e2b-0338-40b6-a6a0-33c876b07390,Le Pho Vietnamese Restaurant,"2503 E Hastings St, Vancouver",osm-node-2945450342,Le Pho,"Hastings-Sunrise, Vancouver, BC (street address not mapped)",0.5,8.1
+overture-d4b4a6d4-362e-439f-9881-5cceca9ce8ed,Kwan Luck Restaurant,"2516 Kingsway, Vancouver",osm-node-2637705783,Come Along Seafood Restaurant,"2550 Kingsway, Vancouver, BC",0.543,79.3
+overture-d4b4a6d4-362e-439f-9881-5cceca9ce8ed,Kwan Luck Restaurant,"2516 Kingsway, Vancouver",osm-node-3908762097,Yue Ting Seafood Restaurant,"2532 Kingsway, Vancouver, BC",0.485,39.9
+overture-73604df6-9240-45c1-9678-1b49025d3c3f,Come Along Chinese Seafood Restaurant,"2550 Kingsway, Vancouver",osm-node-3908754744,Kwan Luck Seafood Restaurant,"2516 Kingsway, Vancouver, BC",0.585,77.0
+overture-73604df6-9240-45c1-9678-1b49025d3c3f,Come Along Chinese Seafood Restaurant,"2550 Kingsway, Vancouver",osm-node-3908762097,Yue Ting Seafood Restaurant,"2532 Kingsway, Vancouver, BC",0.683,42.8
+overture-9375010b-41f9-465b-8ae5-486f5175194a,James on Hastings,"2683 E Hastings St, Vancouver",osm-node-3477294752,Di Oliva Tasting Bar,"2632 East Hastings Street, Vancouver, BC",0.462,95.8
+overture-2ae9bad1-6a95-4a45-b311-80bf0cf60e51,Domino's Pizza,"5522 Joyce St, Vancouver",osm-node-2274074047,Papa John's,"300-3320 Kingsway, Vancouver, BC",0.461,95.8
+overture-2ae9bad1-6a95-4a45-b311-80bf0cf60e51,Domino's Pizza,"5522 Joyce St, Vancouver",osm-node-4971484918,The Captain's Boil,"3309 Kingsway, Vancouver, BC",0.528,69.2
+overture-becf72e7-cf4e-4e8e-b092-7b9971bfa971,iSushi Japanese & Korean Restaurant,"3883 Rupert St, Vancouver",osm-node-5759885052,Paramount Chinese Seafood Restaurant,"3823 Rupert Street, Vancouver, BC",0.547,57.3
+overture-becf72e7-cf4e-4e8e-b092-7b9971bfa971,iSushi Japanese & Korean Restaurant,"3883 Rupert St, Vancouver",osm-node-8724475641,Dami Sushi & Korean Restaurant,"3280 East 22nd Avenue, Vancouver, BC",0.771,66.5

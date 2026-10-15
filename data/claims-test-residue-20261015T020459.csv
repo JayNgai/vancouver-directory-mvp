@@ -1,0 +1,7 @@
+id,businessId,name,role,email,phone,message,status,createdAt,consentAt
+"cmv8wb0g9001y4dod035g1mcn","cmv77gjmy000kt42pvui0qz1f","Test Owner","owner","owner@example.com","604 555 0100","Please contact me.","new",1792029853450,1792029853448
+"cmv8wb0gr00214dod4vgm5779","cmv77gjmy000kt42pvui0qz1f","Flood 0","owner","flood0@example.com","","","new",1792029853468,1792029853466
+"cmv8wb0h100244dod6ae6zo7x","cmv77gjmy000kt42pvui0qz1f","Flood 1","owner","flood1@example.com","","","contacted",1792029853478,1792029853476
+"cmv8wbsgm001yop65oas153j8","cmv77gjmy000kt42pvui0qz1f","Test Owner","owner","owner@example.com","604 555 0100","Please contact me.","new",1792029889751,1792029889750
+"cmv8wbsh30021op65j8ufv8wo","cmv77gjmy000kt42pvui0qz1f","Flood 0","owner","flood0@example.com","","","new",1792029889768,1792029889767
+"cmv8wbshd0024op65qlwa0cs2","cmv77gjmy000kt42pvui0qz1f","Flood 1","owner","flood1@example.com","","","contacted",1792029889777,1792029889776

@@ -1,0 +1,9 @@
+id,name,website,description,verdict,matched_words,ratio,checked_url,note
+osm-node-3698942864,A Bread Affair,https://abreadaffair.com,organic bakery,keep,2/2,1.0,https://abreadaffair.com,supported by venue's own page
+cmv77gjn3000ot42pu54dkygr,Blue Water Cafe,https://bluewatercafe.net,"Vancouver's premier seafood restaurant featuring a raw bar, sustainable wild BC seafood, and an extensive wine list.",keep,6/8,0.75,https://bluewatercafe.net,supported by venue's own page
+osm-node-11515501588,Caffe La Tana,https://caffelatana.ca,"Espresso and pastries for breakfast, brunch on weekends. Lunch and dinner, wine bar, fresh pasta. Gourmet food corner store.",keep,8/12,0.67,https://caffelatana.ca,supported by venue's own page
+osm-node-4061931496,Caffè Cittadella,https://www.caffecittadella.com/,Espresso bar and bistro,keep,2/2,1.0,https://www.caffecittadella.com,supported by venue's own page
+osm-node-13325284297,Coffee Central Roasting,https://coffeecentralroasting.com/,Commissary Roaster,keep,2/2,1.0,https://coffeecentralroasting.com,supported by venue's own page
+osm-node-5021105529,Dhamaka Indian Restaurant,https://dhamakarestaurant.com/,Indian restaurant serving Hyderabadi Biryani,keep,2/3,0.67,https://dhamakarestaurant.com,supported by venue's own page
+cmv77gjmy000kt42pvui0qz1f,Medina Cafe,https://medinacafe.com,Vancouver's ultimate brunch destination serving Mediterranean-inspired dishes and Liege waffles.,keep,5/8,0.62,https://medinacafe.com,supported by venue's own page
+cmv77gjml000at42p9gzsiyr9,The Alibi Room,https://alibi.ca,Vancouver's premier craft beer house featuring 50+ rotating taps of local BC craft brews.,keep,6/8,0.75,https://alibi.ca,supported by venue's own page

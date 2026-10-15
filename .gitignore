@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Database + backups (contains real data; do not commit)
+prisma/*.db
+prisma/*.db-journal
+prisma/*.db-wal
+prisma/*.db-shm
+*.sqlite
+*.sqlite3
+
+# Environment / secrets
+.env
+.env.*
+config/site.env
+!config/site.env.example
+google_token.json
+
+# Uploads / user content
+uploads/
+
+# Build + logs
+dist/
+build/
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python caches
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Large generated data dumps
+osm_data.json

@@ -1,0 +1,54 @@
+name_a,address_a,name_b,address_b,similarity,distance_m,same_address
+Nemesis Coffee Gastown,"302 W Hastings St, Vancouver, BC V6B 2N4",Nemesis,302 West Hastings Street,0.459,33.3,False
+Kingyo Izakaya,"871 Denman St, Vancouver, BC V6G 2L9",Kingyo,871 Denman Street,0.57,62.6,False
+Yaletown Brewing Company,"Vancouver, BC",Yaletown Liquor Store,"1116 Hamilton St, Vancouver",0.464,34.5,False
+JJ Bean,Burrard Street,JJ Bean Coffee Roasters,"353 Burrard St, Vancouver",0.5,6.9,False
+JJ Bean,2904 Mackenzie Street Vancouver,JJ Bean Coffee Roasters,"2904 W Broadway, Vancouver",0.5,8.7,False
+Indian Burgers Joint,"3608 Kingsway, Vancouver, BC",Indian Burger Joint Kingsway,"3608 Kingsway, Vancouver",0.752,3.0,True
+La Playita Seafood,360 Cambie Street,La Taqueria,"322 W Hastings St, Vancouver",0.459,87.9,False
+La Ruota,2004 West 4th Avenue,La Routa Pizzeria,2002 West 4th Avenue,0.532,5.4,False
+Sushi Star,750 Nelson Street,Sushi Jin,"750 Nelson St, Vancouver",0.6,19.6,True
+Sushi King House,"8176 Granville Street, Vancouver, BC",Sushi Wow,"8273 Granville Street, Vancouver, BC",0.532,35.4,False
+Sushi King House,"8176 Granville Street, Vancouver, BC",Sushi Bar Shu,"8099 Granville Street, Vancouver, BC",0.59,85.2,False
+Sushi Wow,"8273 Granville Street, Vancouver, BC",Sushi Bar Shu,"8099 Granville Street, Vancouver, BC",0.518,77.5,False
+Sushi Van,"2566 Granville Street, Vancouver, BC",Sushi Master,"1509 West Broadway, Vancouver, BC",0.633,99.6,False
+Bean Around The World,"Point Grey, Vancouver, BC (street address not mapped)",Bean Around the World Coffees,"4456 W 10th Ave, Vancouver",0.769,5.5,False
+Pizza Hut,"4540 West 10th Avenue, Vancouver, BC",Pizza Pizza,"4580 West 10th Avenue, Vancouver, BC",0.57,81.0,False
+Davie's the Best,1157 Davie Street,Davie Social,1202 Davie Street,0.554,91.6,False
+Davie's the Best,1157 Davie Street,Davie Village Bakery,"1216 Davie St, Vancouver",0.534,115.0,False
+Davie Social,1202 Davie Street,Davie Village Bakery,"1216 Davie St, Vancouver",0.475,25.1,False
+Bombay Kitchen On Denman,1061 Denman Street,Bombay Kitchen + Bar,"Vancouver, BC",0.702,4.1,False
+Milano Espresso Lounge,36 Powell Street,Milano Coffee,"36 Powell St, Vancouver",0.489,12.6,True
+Hook Cantina,1210 Denman Street,Hook Restaurant,"1210 Denman St, Vancouver",0.563,3.0,True
+Le Petit Belge,340 Robson Street,Le Parfait,812 Homer Street,0.475,52.8,False
+Le Pho,"Hastings-Sunrise, Vancouver, BC (street address not mapped)",Le Pho Vietnamese Restaurant,"2503 E Hastings St, Vancouver",0.5,8.1,False
+Elysian Coffee Roasters,590 West Broadway Vancouver,Elysian Coffee Broadway,"590 W Broadway, Vancouver",0.743,3.7,True
+Dublin Crossing Irish Pub,"466 Southwest Marine Drive, Vancouver, BC",Dublin Crossing,"466 SW Marine Dr, Vancouver",0.712,29.7,False
+Good Co. Bars,"2904 Main Street, Vancouver, BC",Good Co. Main Street,"2904 Main St, Vancouver",0.695,15.5,True
+Happy Lemon,"3520 Kingsway, Vancouver, BC",Happy Tree House BBQ,"3502 Kingsway, Vancouver, BC",0.49,40.7,False
+Browns Social House,649 Cambie Street,Browns Socialhouse Queen Elizabeth Theatre,"675 Cambie St, Vancouver",0.561,17.7,False
+Paradiso Italian Gelato,1520 Yew Street,Paradiso Caffè e Gelato,"1520 Yew St, Vancouver",0.659,7.4,True
+New Novelty Restaurant,"Sunset, Vancouver, BC (street address not mapped)",New Novelty Sweet and Restaurant,"6669 Fraser St, Vancouver",0.774,4.5,False
+Granville Kebab & Poutine,1011 Granville Street,Granville Room,957 Granville Street,0.51,93.8,False
+Granville Island Brewing Taproom,"South Granville, Vancouver, BC (street address not mapped)",Granville Island Licorice Parlour,"1550 Anderson Street, Vancouver, BC",0.672,58.2,False
+Time Out Market Vancouver,"650 West 41st Avenue, Vancouver, BC",Time Out Express,"Oakridge, Vancouver, BC (street address not mapped)",0.674,31.3,False
+Lee Loy B.B.Q Meats Co.,"Sunset, Vancouver, BC (street address not mapped)",Lee Loy BBQ,"6340 Fraser St, Vancouver",0.55,1.5,False
+Off The Rail Tasting Room,"1351 Adanac Street, Vancouver, BC",Off The Rail Brewing,"1351 Adanac St, Vancouver",0.616,3.3,True
+Bomber Tasting Room,"Commercial Drive, Vancouver, BC (street address not mapped)",Bomber Brewing,"1488 Adanac St, Vancouver",0.576,4.9,False
+Golden Seafood Restaurant,"2425 Nanaimo Street, Vancouver, BC",Golden Spring,"2461 Nanaimo Street, Vancouver, BC",0.5,25.9,False
+Parallel 49 Tasting Room & Beer Store,"Grandview-Woodland, Vancouver, BC (street address not mapped)",Parallel 49 Street Kitchen,"Grandview-Woodland, Vancouver, BC (street address not mapped)",0.585,9.8,False
+Parallel 49 Tasting Room & Beer Store,"Grandview-Woodland, Vancouver, BC (street address not mapped)",Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",0.576,16.6,False
+Parallel 49 Street Kitchen,"Grandview-Woodland, Vancouver, BC (street address not mapped)",Parallel 49 Brewing Company,"1950 Triumph St, Vancouver",0.609,6.8,False
+Panago,"South Granville, Vancouver, BC (street address not mapped)",Panago Pizza,"1278 W Broadway, Vancouver",0.633,5.0,False
+Panago,"1267 Pacific Street, Vancouver, BC",Panago Pizza,"1267 Pacific Blvd, Vancouver",0.633,17.0,False
+In and Out Donair,"2406 Nanaimo Street, Vancouver, BC",In & Win Donair,"2406 Nanaimo St, Vancouver",0.782,2.9,True
+Superflux Beer Store,"Clark Drive, Vancouver, BC",Superflux Beer Company,"505 Clark Dr, Vancouver",0.724,5.3,False
+Beaucoup Bakery Cafe,"Oakridge, Vancouver, BC (street address not mapped)",Beaucoup Creamery,"Oakridge, Vancouver, BC (street address not mapped)",0.668,22.3,False
+Ajisai Sushi Bar,"2081 West 42nd Avenue, Vancouver, BC",Ajisai 2 Go,"2087 West 42nd Avenue, Vancouver, BC",0.563,26.1,False
+Mali Thai Food,"2710 Main Street, Vancouver, BC",Mali Thai Restaurant,"2710 Main St, Vancouver",0.559,8.1,True
+33 Brewing Experiment,"Mount Pleasant, Vancouver, BC (street address not mapped)",33 Acres Brewing,"Mount Pleasant, Vancouver, BC (street address not mapped)",0.514,15.0,False
+33 Brewing Experiment,"Mount Pleasant, Vancouver, BC (street address not mapped)",33 Acres Brewing Company,"15 W 8th Ave, Vancouver",0.549,14.1,False
+33 Acres Brewing,"Mount Pleasant, Vancouver, BC (street address not mapped)",33 Acres Brewing Company,"15 W 8th Ave, Vancouver",0.76,3.4,False
+Dallas Pizza & Souvlaki,"613 East Broadway, Vancouver, BC",Dallas Pizza Ltd.,"613 E Broadway, Vancouver",0.591,15.3,True
+Sunflower Kitchen,"5125 Joyce Street, Vancouver, BC",Sunflower Bubble Tea,"5125 Joyce St, Vancouver",0.616,1.3,True
+Aphrodite's Organic Pie Shop,"3598 W 4th Ave, Vancouver",Aphrodite's Organic Cafe,"3605 W 4th Ave, Vancouver",0.767,32.8,False

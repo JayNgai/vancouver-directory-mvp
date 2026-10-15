@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Search - Vancouver Directory{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 35px;">
+    <h1 class="section-title">Smart Directory Search</h1>
+    <p style="color: #64748b; margin-bottom: 25px;">Search across all 23 Vancouver neighborhoods, venues, streets, phone numbers, cuisines, and curated itineraries.</p>
+
+    <form action="/search" method="GET" style="margin-bottom: 35px;">
+        <div style="background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; max-width: 800px;">
+                        <select name="category" aria-label="Filter by category" style="padding: 12px; border: none; border-radius: 50px; margin-right: 8px; color: #0f172a;" onchange="this.form.submit()">
+                <option value="">All categories</option>
+                {% for c in categoryOptions %}<option value="{{ c }}" {% if c == selectedCategory %}selected{% endif %}>{{ c }}</option>{% endfor %}
+            </select>
+            <input type="text" name="q" placeholder="🔍 Search venue, neighborhood, street, phone, or tag (e.g. Gastown, Miku, Water St, #patio)..." value="{{ searchQuery }}" required style="flex: 1; border: none; padding: 12px 20px; font-size: 1.05rem; border-radius: 50px; outline: none; color: #0f172a;">
+            <button type="submit" class="btn" style="border-radius: 50px; padding: 12px 28px;">Search</button>
+        </div>
+    </form>
+
+    {% if searchQuery %}
+    <div style="background: #e0e7ff; color: #3730a3; padding: 14px 20px; border-radius: 10px; margin-bottom: 35px; font-weight: 600; font-size: 1.05rem;">
+        🔍 Results for "<strong>{{ searchQuery }}</strong>": {{ totalCount }} match(es) found 
+        ({{ matchingNeighborhoods.length }} Neighborhoods, {{ matchingBusinesses.length }} Venues, {{ matchingItineraries.length }} Itineraries)
+    </div>
+
+    <!-- 1. Matching Neighborhoods Section -->
+    {% if matchingNeighborhoods.length > 0 %}
+    <h2 class="section-title" style="margin-top: 10px;">📍 Matching Neighborhoods ({{ matchingNeighborhoods.length }})</h2>
+    <div class="grid">
+        {% for n in matchingNeighborhoods %}
+        <a href="/neighborhoods/{{ n.slug }}" class="card">
+            {% if n.imageUrl %}<img src="{{ n.imageUrl }}" class="card-img" alt="{{ n.name }}" loading="lazy">{% else %}<div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ n.name }}</span></div>{% endif %}
+            <div class="card-body">
+                <div class="card-subtitle">{{ n.citySection }}</div>
+                <h3 class="card-title">{{ n.name }}</h3>
+                <p class="card-desc">{{ n.description }}</p>
+                <div style="font-size: 0.85rem; color: #64748b;">📍 {{ n._count.businesses }} Spots &bull; 🗺️ {{ n._count.itineraries }} Itineraries</div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 2. Matching Venues & Spots Section -->
+    {% if matchingBusinesses.length > 0 %}
+    <h2 class="section-title">🏬 Matching Venues & Spots ({% if pagination %}{{ pagination.total }}{% else %}{{ matchingBusinesses.length }}{% endif %})</h2>
+    <div class="grid">
+        {% for b in matchingBusinesses %}
+        <div class="card">
+            {% if b.photos and b.photos != '[]' %}
+            <img src="{{ b.photos | replace('[', '') | replace(']', '') | replace('"', '') }}" class="card-img" alt="{{ b.name }}">
+            {% else %}
+            <div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ b.category or 'Local spot' }}</span></div>
+            {% endif %}
+            <div class="card-body">
+                {% if b.isVerified %}
+                <span class="badge-verified">✓ Owner-claimed listing</span>
+                {% endif %}
+                <div class="card-subtitle">{{ b.neighborhood.name }} &bull; {{ b.primaryCategory or b.category }}</div>
+                <h3 class="card-title"><a href="/businesses/{{ b.slug }}" style="color: inherit; text-decoration: none;">{{ b.name }}</a></h3>
+                <a href="/businesses/{{ b.slug }}" style="font-size: 0.85rem; color: #2b6cb0; font-weight: 600; margin-bottom: 4px;">View listing &rarr;</a>
+                {% if b.rating and b.reviewCount %}
+                <div class="rating-stars">★ {{ b.rating }} <span style="color: #64748b; font-size: 0.85rem; font-weight: 400;">({{ b.reviewCount }} reviews)</span></div>
+                {% endif %}
+                {% if b.description %}<p class="card-desc" style="margin-top: 8px;">{{ b.description }}</p>{% endif %}
+                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 6px;">📍 {{ b.address }}</div>
+                {% if b.displayPhone %}
+                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 6px;">📞 {{ b.displayPhone }}</div>
+                {% endif %}
+                {% if b.displayHours %}
+                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">🕒 {{ b.displayHours }}</div>
+                {% endif %}
+                <div class="tag-list">
+                    {% for tag in b.parsedTags %}
+                    <a href="/search?q={{ tag }}" class="tag-badge" style="text-decoration: none;">#{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% include "_pagination.html" %}
+    {% endif %}
+
+    <!-- 3. Matching Curated Itineraries Section -->
+    {% if matchingItineraries.length > 0 %}
+    <h2 class="section-title">🗺️ Matching Experience Itineraries ({{ matchingItineraries.length }})</h2>
+    <div class="grid">
+        {% for itin in matchingItineraries %}
+        <a href="/itineraries/{{ itin.slug }}" class="card" style="border-top: 4px solid #e05638;">
+            <div class="card-body">
+                <div class="card-subtitle">⏱️ {{ itin.duration }} &bull; {{ itin.difficulty }} &bull; {{ itin.neighborhood.name if itin.neighborhood else 'Vancouver' }}</div>
+                <h3 class="card-title">{{ itin.title }}</h3>
+                <p class="card-desc">{{ itin.description }}</p>
+                <span class="btn" style="align-self: flex-start;">Explore Route & Export Map &rarr;</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if totalCount == 0 %}
+    <div style="padding: 50px 20px; text-align: center; background: white; border-radius: 12px; margin-top: 20px; border: 1px solid #e2e8f0;">
+        <h3 style="font-size: 1.3rem; color: #334155; margin-bottom: 10px;">No exact matches found for "{{ searchQuery }}"</h3>
+        <p style="color: #64748b; margin-bottom: 20px;">Try searching for a broader term like <em>"Gastown"</em>, <em>"Sushi"</em>, <em>"Coffee"</em>, or <em>"#patio"</em>.</p>
+        <a href="/neighborhoods" class="btn">Browse All 23 Neighborhoods</a>
+    </div>
+    {% endif %}
+
+    {% else %}
+    <div style="padding: 40px 20px; background: white; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center; margin-top: 20px;">
+        <p style="font-size: 1.1rem; color: #475569; margin-bottom: 15px;">Type a keyword above to search venues, neighborhoods, addresses, phone numbers, or tags.</p>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <a href="/search?q=Gastown" class="tag-badge" style="font-size: 0.9rem; padding: 6px 14px; text-decoration: none;">Try "Gastown"</a>
+            <a href="/search?q=Water+St" class="tag-badge" style="font-size: 0.9rem; padding: 6px 14px; text-decoration: none;">Try "Water St"</a>
+            <a href="/search?q=Sushi" class="tag-badge" style="font-size: 0.9rem; padding: 6px 14px; text-decoration: none;">Try "Sushi"</a>
+            <a href="/search?q=patio" class="tag-badge" style="font-size: 0.9rem; padding: 6px 14px; text-decoration: none;">Try "#patio"</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

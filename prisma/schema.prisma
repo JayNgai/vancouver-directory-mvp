@@ -1,0 +1,151 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Neighborhood {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  citySection String?
+  description String
+    photoUrl    String?
+  metaDescription  String?
+  imageUrl         String?
+  imageAttribution String?
+  mapBounds   String?  // JSON string
+  createdAt   DateTime @default(now())
+
+  businesses  Business[]
+  itineraries Itinerary[]
+
+  @@map("neighborhoods")
+}
+
+model Business {
+  id              String   @id @default(cuid())
+  neighborhoodId  String
+  name            String
+  slug            String?
+  category        String
+  primaryCategory String
+  tags            String   @default("[]") // JSON string array e.g. ["patio", "craft-beer"]
+  address         String
+  latitude        Float?
+  longitude       Float?
+  phone           String?
+  website         String?
+  hours           String?  // JSON string
+  priceRange      String?  // $, $$, $$$, $$$$
+  rating          Float?
+  reviewCount     Int?
+  photos          String   @default("[]") // JSON string array of photo URLs
+  description     String?
+  isVerified      Boolean  @default(false)
+  createdAt       DateTime @default(now())
+
+  // Added in the multi-source enrichment pass (all nullable, all additive).
+  cityLicenceStatus   String? // City of Vancouver business-licence status, e.g. "Issued"
+  cityLicenceDataDate String? // extractdate of the City of Vancouver licence dataset
+  liquorLicenceType   String? // BC LCRB licence type (e.g. "Liquor Primary")
+  liquorServiceHours  String? // BC LCRB Hours of Service = serving hours, NOT opening hours
+  dataSources         String? // JSON array of sources that contributed fields to this row
+  overtureConfidence  Float?  // Overture Maps Places confidence score for the matched place
+  slugAliases         String? // JSON array of former slugs, so merged-away links keep working
+  imageUrl            String?
+  imageAttribution    String?
+
+  neighborhood   Neighborhood    @relation(fields: [neighborhoodId], references: [id])
+  itinerarySteps ItineraryStep[]
+  claims         Claim[]
+
+  @@index([neighborhoodId])
+  @@index([category])
+  @@map("businesses")
+}
+
+model Itinerary {
+  id             String   @id @default(cuid())
+  title          String
+  slug           String   @unique
+  neighborhoodId String?
+  duration       String
+  difficulty     String
+  description    String
+  highlights     String   @default("[]") // JSON string array
+  createdAt      DateTime @default(now())
+
+  neighborhood Neighborhood?   @relation(fields: [neighborhoodId], references: [id])
+  steps        ItineraryStep[]
+
+  @@map("itineraries")
+}
+
+model ItineraryStep {
+  id              String   @id @default(cuid())
+  itineraryId     String
+  order           Int
+  time            String
+  activity        String
+  notes           String?
+  durationMinutes Int?
+  businessId      String?
+
+  itinerary Itinerary @relation(fields: [itineraryId], references: [id], onDelete: Cascade)
+  business  Business?  @relation(fields: [businessId], references: [id], onDelete: SetNull)
+
+  @@map("itinerary_steps")
+}
+
+/// Ownership claim submitted from the public claim form. Nothing is auto-verified.
+model Claim {
+  id         String    @id @default(cuid())
+  businessId String
+  name       String
+  role       String // owner | manager | other
+  email      String
+  phone      String?
+  message    String?
+  status     String    @default("new") // new | contacted | verified | rejected
+  createdAt  DateTime  @default(now())
+  consentAt  DateTime?
+
+  business Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@index([businessId])
+  @@index([status])
+  @@map("claims")
+}
+
+/// Privacy-respecting interaction log. No raw IPs, no user agents, no cookies.
+model Event {
+  id           String   @id @default(cuid())
+  type         String // page_view_detail | click_website | click_phone | click_maps_reviews | click_claim | claim_submit | search
+  businessId   String?
+  path         String
+  createdAt    DateTime @default(now())
+  referrerHost String?
+  visitorHash  String? // daily-rotating salted hash, cannot be reversed to an IP
+
+  @@index([type])
+  @@index([createdAt])
+  @@map("events")
+}
+
+/// Money actually received. Amounts are entered in CAD only.
+model RevenueEntry {
+  id         String   @id @default(cuid())
+  date       String // YYYY-MM-DD
+  source     String // sponsorship | affiliate | adsense | other
+  amountCad  Float
+  businessId String?
+  note       String?
+  createdAt  DateTime @default(now())
+
+  @@index([date])
+  @@map("revenue_entries")
+}

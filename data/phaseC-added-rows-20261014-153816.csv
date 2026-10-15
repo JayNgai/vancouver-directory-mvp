@@ -1,0 +1,754 @@
+id,name,address,category,createdAt,neighborhood
+osm-node-13305188099,Annabelle's,"620 Quebec Street, Vancouver, BC",Cafe,1792017391487,chinatown
+osm-node-3933401480,Bao Bei,"163 Keefer Street, Vancouver, BC",Restaurant,1792017391480,chinatown
+osm-node-11062762221,Between 2 Buns Burgers,"105 East Pender Street, Vancouver, BC",Restaurant,1792017391486,chinatown
+osm-node-13302217750,Chinatown BBQ,"130 East Pender Street, Vancouver, BC",Restaurant,1792017391486,chinatown
+osm-node-11062762212,DD Mau Chinatown,"145 East Pender Street, Vancouver, BC",Restaurant,1792017391486,chinatown
+osm-node-8913557681,Dalina,"687 Main Street, Vancouver, BC",Cafe,1792017391484,chinatown
+osm-node-5581881761,El Torito Mexican Restaurant,"139 Keefer Street, Vancouver, BC",Restaurant,1792017391483,chinatown
+osm-node-11057664427,Golden Smell Mee Malaysian Singaporeon Cuisine,"142 East Pender Street, Vancouver, BC",Restaurant,1792017391485,chinatown
+osm-node-11062737501,House of India,"509 Main Street, Vancouver, BC",Restaurant,1792017391485,chinatown
+osm-node-5031457075,Jade Dynasty Restaurant,"137 East Pender Street, Vancouver, BC",Restaurant,1792017391483,chinatown
+osm-node-5031450922,Juke,"182 Keefer Street, Vancouver, BC",Restaurant,1792017391481,chinatown
+osm-node-9032723545,New Brandiz Fast Food,"100 East Hastings Street, Vancouver, BC",Fast Food,1792017391484,chinatown
+osm-node-1827837991,New Town Bakery & Restaurant,"148 East Pender Street, Vancouver, BC",Restaurant,1792017391474,chinatown
+osm-node-5031457072,Pizza Coming Soon,"179 East Pender Street, Vancouver, BC",Restaurant,1792017391482,chinatown
+osm-node-3933398898,The Keefer Bar,"133 Keefer Street, Vancouver, BC",Bar / Pub,1792017391479,chinatown
+osm-node-5031457074,Uchu Cevicheria & Raw Bar,"158 East Pender Street, Vancouver, BC",Restaurant,1792017391482,chinatown
+osm-node-4461277197,Virtuous Pie,"583 Main Street, Vancouver, BC",Restaurant,1792017391481,chinatown
+osm-node-4343349310,A&W,"1158 Alberni Street, Vancouver, BC",Restaurant,1792017391505,coal-harbour
+osm-node-5826204954,A&W,"Bute Street, Vancouver, BC",Restaurant,1792017391506,coal-harbour
+osm-node-686162067,Bisou Bakehouse,"1201 Robson Street, Vancouver, BC",Bakery,1792017391500,coal-harbour
+osm-node-9707783445,Blenz Coffee,"1615 Robson Street, Vancouver, BC",Cafe,1792017391514,coal-harbour
+osm-node-5827984711,Botanist,"1038 Canada Place, Vancouver, BC",Restaurant,1792017391507,coal-harbour
+osm-node-9877790165,Breaking Bean,"551 Cardero Street, Vancouver, BC",Cafe,1792017391514,coal-harbour
+osm-way-89118744,Cactus Club Cafe,"1085 Canada Place, Vancouver, BC",Restaurant,1792017391522,coal-harbour
+osm-node-14148914718,Cafe Villaggio,"Coal Harbour, Vancouver, BC (street address not mapped)",Cafe,1792017391522,coal-harbour
+osm-node-8713632201,Caffe W,"1172 Robson Street, Vancouver, BC",Cafe,1792017391511,coal-harbour
+osm-node-3355437631,Caffè Artigiano,"1101 West Pender Street, Vancouver, BC",Cafe,1792017391502,coal-harbour
+osm-node-10084912091,Captain's Oven Pizza,"1110 West Pender Street, Vancouver, BC",Restaurant,1792017391516,coal-harbour
+osm-node-14148788009,Casa Dolce,"Coal Harbour, Vancouver, BC (street address not mapped)",Dessert,1792017391522,coal-harbour
+osm-node-6752573302,Caviar Bistro,"1390 Coal Harbour Quay, Vancouver, BC",Restaurant,1792017391509,coal-harbour
+osm-node-14093439843,Chaiiwala of London,"1478 Robson Street, Vancouver, BC",Cafe,1792017391521,coal-harbour
+osm-node-9164400185,Chicko Chicken,"1234 Robson Street, Vancouver, BC",Restaurant,1792017391512,coal-harbour
+osm-node-4323279093,Chongqing on Robson,"1260 Robson Street, Vancouver, BC",Restaurant,1792017391504,coal-harbour
+osm-node-14068954886,Cloudstreet,"655 Burrard Street, Vancouver, BC",Restaurant,1792017391520,coal-harbour
+osm-node-9661158738,Cookies by George,"1055 West Georgia Street, Vancouver, BC",Bakery,1792017391513,coal-harbour
+osm-node-8170028356,De Dutch,"1055 Canada Place, Vancouver, BC",Restaurant,1792017391511,coal-harbour
+osm-node-11435670097,Deville Coffee,"745 Thurlow Street, Vancouver, BC",Cafe,1792017391517,coal-harbour
+osm-node-9918283739,Dragon Bowl,"1168 Alberni Street, Vancouver, BC",Restaurant,1792017391515,coal-harbour
+osm-node-6752024455,Freshii,"1185 West Georgia Street, Vancouver, BC",Restaurant,1792017391508,coal-harbour
+osm-node-9817533032,Freshslice Pizza,"1192 Robson Street, Vancouver, BC",Restaurant,1792017391514,coal-harbour
+osm-node-9371296117,Giovane Caffè,"1049 West Cordova Street, Vancouver, BC",Cafe,1792017391513,coal-harbour
+osm-node-2778056579,International Food Fair,"530 Hornby Street, Vancouver, BC",Fast Food,1792017391502,coal-harbour
+osm-node-3687593480,JJ Bean,"1188 Alberni Street, Vancouver, BC",Cafe,1792017391503,coal-harbour
+osm-node-6852386382,JOS,"1190 West Cordova Street, Vancouver, BC",Restaurant,1792017391510,coal-harbour
+osm-node-2500684808,Joey,"507 Burrard Street, Vancouver, BC",Restaurant,1792017391502,coal-harbour
+osm-node-14085819801,Koffie,"1050 West Pender Street, Vancouver, BC",Cafe,1792017391521,coal-harbour
+osm-node-4339201489,Ladurée,"1141 Robson Street, Vancouver, BC",Bakery,1792017391504,coal-harbour
+osm-node-14068954887,Lagman Uyghur Cuisine,"1610 Robson Street, Vancouver, BC",Restaurant,1792017391521,coal-harbour
+osm-way-218949206,Lift Bar and Grill,"333 Menchions Mews, Vancouver, BC",Restaurant,1792017391523,coal-harbour
+osm-node-12859794797,Linh Noodle Bar,"1029 West Cordova Street, Vancouver, BC",Restaurant,1792017391520,coal-harbour
+osm-node-12062122324,Mello,"1428 Robson Street, Vancouver, BC",Restaurant,1792017391519,coal-harbour
+osm-node-11515033415,Menya Tsuzuki,"1610 Robson Street, Vancouver, BC",Restaurant,1792017391518,coal-harbour
+osm-node-10090291541,Nami Vietnamese,"1066 West Hastings Street, Vancouver, BC",Restaurant,1792017391516,coal-harbour
+osm-node-6864549773,Neate Donuts,"1066 West Hastings Street, Vancouver, BC",Restaurant,1792017391510,coal-harbour
+osm-node-9136377517,Nine Dumplings,"1610 Robson Street, Vancouver, BC",Restaurant,1792017391512,coal-harbour
+osm-node-10103491174,P2B Restaurant + Bar,"1133 West Hastings Street, Vancouver, BC",Restaurant,1792017391517,coal-harbour
+osm-node-10049879751,Pallet Coffee Roasters,"1115 Melville Street, Vancouver, BC",Cafe,1792017391516,coal-harbour
+osm-node-5837059823,Panago,"1199 West Pender Street, Vancouver, BC",Restaurant,1792017391507,coal-harbour
+osm-node-8794227521,"Paul Bakery, Café & Restaurant","1164 Robson Street, Vancouver, BC",Bakery,1792017391511,coal-harbour
+osm-node-6752573299,Prestons Restaurant + Lounge,"1177 West Pender Street, Vancouver, BC",Restaurant,1792017391509,coal-harbour
+osm-node-5837059825,Quiznos,"1050 West Pender Street, Vancouver, BC",Restaurant,1792017391507,coal-harbour
+osm-node-926024506,Starbucks,"580 Bute Street, Vancouver, BC",Cafe,1792017391501,coal-harbour
+osm-node-1945200999,Starbucks,"Coal Harbour, Vancouver, BC (street address not mapped)",Cafe,1792017391501,coal-harbour
+osm-node-9906231700,Starbucks,"Coal Harbour, Vancouver, BC (street address not mapped)",Cafe,1792017391515,coal-harbour
+osm-node-11556837609,Starbucks,"655 Burrard Street, Vancouver, BC",Cafe,1792017391518,coal-harbour
+osm-node-12871651142,Starbucks,"Coal Harbour, Vancouver, BC (street address not mapped)",Cafe,1792017391520,coal-harbour
+osm-node-4343349418,Subway,"1162 Alberni Street, Vancouver, BC",Restaurant,1792017391505,coal-harbour
+osm-node-7243292887,Subway,"1368 West Georgia Street, Vancouver, BC",Restaurant,1792017391510,coal-harbour
+osm-node-6476617352,TAP shack Eatery,"1199 West Cordova Street, Vancouver, BC",Bar / Pub,1792017391508,coal-harbour
+osm-node-12859794796,Taco Nori,"595 Burrard Street, Vancouver, BC",Fast Food,1792017391519,coal-harbour
+osm-node-5040239321,Tap & Barrel,"1055 Canada Place, Vancouver, BC",Bar / Pub,1792017391506,coal-harbour
+osm-node-4672996891,The Bagel Stop,"595 Burrard Street, Vancouver, BC",Fast Food,1792017391505,coal-harbour
+osm-node-9559266073,The Candy Room,"1218 Robson Street, Vancouver, BC",Bakery,1792017391513,coal-harbour
+osm-node-5029289522,The Cockpit,"Coal Harbour, Vancouver, BC (street address not mapped)",Cafe,1792017391506,coal-harbour
+osm-node-3712939934,The Keg,"1121 Alberni Street, Vancouver, BC",Restaurant,1792017391503,coal-harbour
+osm-node-3769892469,Tim Hortons,"490 Hornby Street, Vancouver, BC",Cafe,1792017391503,coal-harbour
+osm-node-6322544026,Tim Hortons,"1130 West Pender Street, Vancouver, BC",Cafe,1792017391508,coal-harbour
+osm-node-10090380096,Tractor,"Coal Harbour, Vancouver, BC (street address not mapped)",Restaurant,1792017391517,coal-harbour
+osm-node-9164400183,Uncle Tetsu's Cheesecake,"1151 Robson Street, Vancouver, BC",Bakery,1792017391512,coal-harbour
+osm-node-12617543801,WA-BAGEL,"666 Burrard Street, Vancouver, BC",Dessert,1792017391519,coal-harbour
+osm-node-917878382,A Taste of Vietnam,"1016 West Broadway, Vancouver, BC",Restaurant,1792017391613,fairview
+osm-node-704318028,A&W,"777 West Broadway, Vancouver, BC",Restaurant,1792017391612,fairview
+osm-node-6419924301,A&W,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391624,fairview
+osm-node-6448818285,A.Bento,"656 West Broadway, Vancouver, BC",Restaurant,1792017391625,fairview
+osm-node-6150629570,Aidan's Coffee & Food,"805 West Broadway, Vancouver, BC",Cafe,1792017391624,fairview
+osm-node-12053895952,Avik Bakery,"682 West Broadway, Vancouver, BC",Cafe,1792017391634,fairview
+osm-node-1190106969,Banana Leaf on Broadway,"820 West Broadway, Vancouver, BC",Restaurant,1792017391617,fairview
+osm-node-14113722926,Bar One,"1755 West Broadway, Vancouver, BC",Bar / Pub,1792017391645,fairview
+osm-node-6945901324,Bean Around The World,"820 West 10th Avenue, Vancouver, BC",Cafe,1792017391625,fairview
+osm-node-1262378179,Big Star Sandwich Company,"802 West Broadway, Vancouver, BC",Restaurant,1792017391617,fairview
+osm-node-13816279224,Blaze Cafe,"Fairview, Vancouver, BC (street address not mapped)",Cafe,1792017391638,fairview
+osm-node-14060329910,Bubble Waffle Cafe,"Fairview, Vancouver, BC (street address not mapped)",Cafe,1792017391643,fairview
+osm-node-14060335690,Bubble Waffle Cafe,"Fairview, Vancouver, BC (street address not mapped)",Cafe,1792017391644,fairview
+osm-node-10272183809,COBS Bread,"535 West 8th Avenue, Vancouver, BC",Bakery,1792017391632,fairview
+osm-node-9687098700,Cafe & Life Co.,"511 West 7th Avenue, Vancouver, BC",Cafe,1792017391631,fairview
+osm-node-4061931496,Caffè Cittadella,"2310 Ash Street, Vancouver, BC",Cafe,1792017391620,fairview
+osm-node-1151330325,Celine's Fish & Chips,"Fairview, Vancouver, BC (street address not mapped)",Fast Food,1792017391616,fairview
+osm-node-6222595565,Cha Tra Mue,"736 West Broadway, Vancouver, BC",Cafe,1792017391624,fairview
+osm-node-14060335675,Chaipion,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391643,fairview
+osm-node-11993521969,Chau Cafe,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391634,fairview
+osm-node-5761153819,Chipotle,"532 West Broadway, Vancouver, BC",Restaurant,1792017391621,fairview
+osm-node-998565286,ChiuChow Seafood Restaurant,"555 West 12th Avenue, Vancouver, BC",Restaurant,1792017391613,fairview
+osm-node-7888967878,Chun Fun How,"1067 West Broadway, Vancouver, BC",Cafe,1792017391627,fairview
+osm-node-14060318254,Culture Coffee & Tea,"Fairview, Vancouver, BC (street address not mapped)",Cafe,1792017391641,fairview
+osm-node-7888910502,Dalina,"992 West Broadway, Vancouver, BC",Cafe,1792017391626,fairview
+osm-node-1141732176,De Dutch,"3192 Oak Street, Vancouver, BC",Restaurant,1792017391614,fairview
+osm-node-8826626282,Deja Brew Coffeehouse + Fresh Food Cafe,"943 West Broadway, Vancouver, BC",Cafe,1792017391629,fairview
+osm-node-11349295012,Domino's,"728 West Broadway, Vancouver, BC",Restaurant,1792017391633,fairview
+osm-node-14060329907,Dumpling King,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391642,fairview
+osm-node-5866981376,Dynasty Seafood Restaurant,"777 West Broadway, Vancouver, BC",Restaurant,1792017391621,fairview
+osm-node-1723429815,Feng Cha,"1038 West Broadway, Vancouver, BC",Cafe,1792017391618,fairview
+osm-node-4733303987,Fraser Valley Juice & Salad,"1689 Johnston Street, Vancouver, BC",Fast Food,1792017391620,fairview
+osm-node-13816279225,Fresh slice Pizza,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391638,fairview
+osm-node-1723437041,Freshslice Pizza,"818 West Broadway, Vancouver, BC",Restaurant,1792017391618,fairview
+osm-node-3696416875,Halfday Flower and Tea,"895 West Broadway, Vancouver, BC",Cafe,1792017391619,fairview
+osm-node-12041123880,HiFive Chicken,"792 West Broadway, Vancouver, BC",Restaurant,1792017391634,fairview
+osm-node-6148806073,Hokkaido Ramen Santouka,"558 West Broadway, Vancouver, BC",Restaurant,1792017391623,fairview
+osm-node-7888910505,Homura Yakiniku,"950 West Broadway, Vancouver, BC",Restaurant,1792017391626,fairview
+osm-node-13253263228,Indian Roti Kitchen,"2961 Cambie Street, Vancouver, BC",Restaurant,1792017391636,fairview
+osm-node-9590610117,John 3:16 Malaysian Delights,"1063 West Broadway, Vancouver, BC",Restaurant,1792017391631,fairview
+osm-node-9270469305,Jollibee,"2549 Cambie Street, Vancouver, BC",Restaurant,1792017391629,fairview
+osm-node-1141735533,Joon's Kitchen,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391614,fairview
+osm-node-5866981379,K Cafe,"2533 Heather Street, Vancouver, BC",Cafe,1792017391622,fairview
+osm-node-13938935308,Kaisereck Delicatessen,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391641,fairview
+osm-node-8591698805,Kamei on Broadway,"601 West Broadway, Vancouver, BC",Restaurant,1792017391628,fairview
+osm-node-14060329908,Kim Son,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391643,fairview
+osm-node-14060328642,King's Wok,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391642,fairview
+osm-node-10141634559,Kisokoma Japanese Restaurant,"805 West Broadway, Vancouver, BC",Restaurant,1792017391632,fairview
+osm-node-14060337791,Kojima Ramen,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391644,fairview
+osm-node-13382349784,Krispy Kreme,"519 West Broadway, Vancouver, BC",Restaurant,1792017391637,fairview
+osm-node-9270469306,La Ruota,"514 West Broadway, Vancouver, BC",Restaurant,1792017391629,fairview
+osm-node-1151317774,La Tortilleria,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391616,fairview
+osm-node-9590609720,Legendary Noodle,"887 West Broadway, Vancouver, BC",Restaurant,1792017391630,fairview
+osm-node-13938935307,L’Epicerie Gourmande,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391641,fairview
+osm-node-1141725996,Max's Deli,"3105 Oak Street, Vancouver, BC",Bakery,1792017391614,fairview
+osm-node-704317952,McDonald's,"537 West Broadway, Vancouver, BC",Restaurant,1792017391612,fairview
+osm-node-13253263231,New Sun,"2925 Cambie Street, Vancouver, BC",Restaurant,1792017391636,fairview
+osm-node-13938935306,Northern Bars,"1669 Johnston Street, Vancouver, BC",Bakery,1792017391640,fairview
+osm-node-6148806072,Onigiri Ya,"545 West Broadway, Vancouver, BC",Restaurant,1792017391623,fairview
+osm-node-11061358495,Pablo Cheese Tart,"511 West Broadway, Vancouver, BC",Dessert,1792017391633,fairview
+osm-node-7016378135,Pacific Poke,"730 West Broadway, Vancouver, BC",Restaurant,1792017391625,fairview
+osm-node-13384135227,Peaked Pies,"732 West Broadway, Vancouver, BC",Restaurant,1792017391637,fairview
+osm-node-1151314160,Petit Ami,"1689 Johnston Street, Vancouver, BC",Cafe,1792017391615,fairview
+osm-node-5936269499,Pho & Roll by Wooden Fish,"2323 Cambie Street, Vancouver, BC",Restaurant,1792017391623,fairview
+osm-node-1151319225,Phoenix Fast Food,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391616,fairview
+osm-node-4733303988,Pizza Pzazz,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391620,fairview
+osm-node-5866981381,Pizza Rubato Napoletana,"561 West Broadway, Vancouver, BC",Restaurant,1792017391622,fairview
+osm-way-1230380648,Popina,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391645,fairview
+osm-node-9590609719,Privé,"1001 West Broadway, Vancouver, BC",Restaurant,1792017391630,fairview
+osm-node-1423520252,Purple Grain,"Fairview, Vancouver, BC (street address not mapped)",Fast Food,1792017391618,fairview
+osm-node-2133383695,Rayhan Mediterranean Restaurant,"3170 Oak Street, Vancouver, BC",Restaurant,1792017391619,fairview
+osm-node-10141634557,River Sushi,"678 West Broadway, Vancouver, BC",Restaurant,1792017391631,fairview
+osm-node-5515697225,Saku,"548 West Broadway, Vancouver, BC",Restaurant,1792017391621,fairview
+osm-node-12161027788,Salad House,"555 West 12th Avenue, Vancouver, BC",Restaurant,1792017391635,fairview
+osm-node-7888967880,Salmon n' Bannock,"1128 West Broadway, Vancouver, BC",Restaurant,1792017391627,fairview
+osm-node-11061358496,Seaport City Seafood Restaurant,"2425 Cambie Street, Vancouver, BC",Restaurant,1792017391633,fairview
+osm-node-883748049,Sedap Plus,"2975 Cambie Street, Vancouver, BC",Restaurant,1792017391612,fairview
+osm-node-13914766817,Sen Pad Thai,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391639,fairview
+osm-node-5866981377,Shanghai Lu Restaurant,"705 West Broadway, Vancouver, BC",Restaurant,1792017391621,fairview
+osm-node-5866981378,Song Cafe,"2525 Heather Street, Vancouver, BC",Restaurant,1792017391622,fairview
+osm-node-10183639254,Stages Bistro & Lounge,"711 West Broadway, Vancouver, BC",Restaurant,1792017391632,fairview
+osm-node-1423520071,Starbucks,"2787 Laurel Street, Vancouver, BC",Cafe,1792017391617,fairview
+osm-node-9270469309,Starbucks,"502 West Broadway, Vancouver, BC",Cafe,1792017391630,fairview
+osm-node-14060335677,Subway,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391644,fairview
+osm-node-8298036458,Sushi Tendo,"2315 Cambie Street, Vancouver, BC",Restaurant,1792017391628,fairview
+osm-way-71692703,Tap & Barrel Bridges,"1696 Duranleau Street, Vancouver, BC",Restaurant,1792017391645,fairview
+osm-node-1151311603,Terra Breads,"1689 Johnston Street, Vancouver, BC",Bakery,1792017391615,fairview
+osm-node-14060327099,Teya Grill,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391642,fairview
+osm-node-14060329909,Thai Away Home,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391643,fairview
+osm-node-7888967879,Thai Chili Wasabi,"1073 West Broadway, Vancouver, BC",Restaurant,1792017391627,fairview
+osm-node-1151315893,The Blue Parrot Coffee,"1689 Johnston Street, Vancouver, BC",Cafe,1792017391615,fairview
+osm-node-13302187376,The Golden Horn Turkish Bakery & Cafe,"2857 Cambie Street, Vancouver, BC",Cafe,1792017391637,fairview
+osm-node-13914766816,The Lemon Square,"1669 Johnston Street, Vancouver, BC",Dessert,1792017391639,fairview
+osm-node-12774575671,The Market Grill,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391636,fairview
+osm-node-973007268,Tojos,"1133 West Broadway, Vancouver, BC",Restaurant,1792017391613,fairview
+osm-node-987243004,Tozen Sushi Bar,"967 West Broadway, Vancouver, BC",Restaurant,1792017391613,fairview
+osm-node-7888910500,Tractor,"601 West Broadway, Vancouver, BC",Restaurant,1792017391625,fairview
+osm-node-1668212794,Velo Star Cafe,"3195 Heather Street, Vancouver, BC",Cafe,1792017391618,fairview
+osm-node-14090362223,Wendy's,"2538 Oak Street, Vancouver, BC",Restaurant,1792017391645,fairview
+osm-node-12732424128,Whole Foods Cafe,"Fairview, Vancouver, BC (street address not mapped)",Cafe,1792017391635,fairview
+osm-node-3248618661,Willow Cafe & Bakery,"797 West 16th Avenue, Vancouver, BC",Cafe,1792017391619,fairview
+osm-node-12366145106,Xin Chào,"Fairview, Vancouver, BC (street address not mapped)",Restaurant,1792017391635,fairview
+osm-node-4470506889,Yolks,"546 West Broadway, Vancouver, BC",Restaurant,1792017391620,fairview
+osm-node-7888910503,YuShang Hot Pot,"950 West Broadway, Vancouver, BC",Restaurant,1792017391626,fairview
+osm-node-13929705938,Zaccary's Pizza,"3150 Oak Street, Vancouver, BC",Restaurant,1792017391639,fairview
+osm-node-13841834470,i cafe express,"555 West 12th Avenue, Vancouver, BC",Restaurant,1792017391638,fairview
+osm-node-3947262067,4 Brothers Pizza,"1232 Howe Street, Vancouver, BC",Restaurant,1792017391654,false-creek
+osm-node-4689886691,A&W,"1399 Main Street, Vancouver, BC",Restaurant,1792017391662,false-creek
+osm-node-4435420479,Aburi To-Go,"1112 Mainland Street, Vancouver, BC",Restaurant,1792017391659,false-creek
+osm-node-6564205939,Amato Gelato & Cafè,"78 East 1st Avenue, Vancouver, BC",Cafe,1792017391669,false-creek
+osm-node-12454888383,Andonis,"1193 Granville Street, Vancouver, BC",Restaurant,1792017391681,false-creek
+osm-node-8533713806,Angus T,"1036 Mainland Street, Vancouver, BC",Bakery,1792017391673,false-creek
+osm-node-4358246396,Argo Cafe,"1836 Ontario Street, Vancouver, BC",Cafe,1792017391657,false-creek
+osm-way-292120592,Bae Side,"601 Stamps Landing, Vancouver, BC",Restaurant,1792017391686,false-creek
+osm-node-8462639330,Bake 49,"1066 Mainland Street, Vancouver, BC",Bakery,1792017391673,false-creek
+osm-node-14178501229,Bar Tostitos,"False Creek, Vancouver, BC (street address not mapped)",Restaurant,1792017391684,false-creek
+osm-node-11034887090,Batch,"False Creek, Vancouver, BC (street address not mapped)",Bar / Pub,1792017391678,false-creek
+osm-node-12832645106,Belgian Chocolate Cafe,"False Creek, Vancouver, BC (street address not mapped)",Cafe,1792017391682,false-creek
+osm-node-5901545651,Bevel,"1165 Mainland Street, Vancouver, BC",Restaurant,1792017391665,false-creek
+osm-node-6559045431,Big Way Hot Pot,"115 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391669,false-creek
+osm-node-4358246579,Blaze Gourmet Burgers,"43 East 5th Avenue, Vancouver, BC",Restaurant,1792017391658,false-creek
+osm-way-250247081,Boston Pizza,"808 Beatty Street, Vancouver, BC",Restaurant,1792017391686,false-creek
+osm-way-163679151,Brassneck Brewery,"2148 Main Street, Vancouver, BC",Bar / Pub,1792017391686,false-creek
+osm-node-4631108810,Brewhall,"97 East 2nd Avenue, Vancouver, BC",Bar / Pub,1792017391660,false-creek
+osm-node-3128863797,CRAFT Beer Market (Olympic Village / False Creek),"85 West 1st Avenue, Vancouver, BC",Bar / Pub,1792017391651,false-creek
+osm-node-12176975454,Cafe Take Urban,"1019 Main Street, Vancouver, BC",Cafe,1792017391679,false-creek
+osm-node-8689479701,Casa Molina,"2211 Manitoba Street, Vancouver, BC",Restaurant,1792017391674,false-creek
+osm-node-12465974695,Chai Wagon,"196 East 2nd Avenue, Vancouver, BC",Cafe,1792017391681,false-creek
+osm-node-3930945267,Chez nous Bakery & Coffee,"1262 Homer Street, Vancouver, BC",Bakery,1792017391654,false-creek
+osm-node-13610676415,Convivial Café and Bakery,"False Creek, Vancouver, BC (street address not mapped)",Cafe,1792017391683,false-creek
+osm-node-5734956458,Cream Pony,"2190 Main Street, Vancouver, BC",Restaurant,1792017391664,false-creek
+osm-node-1209181505,Dairy Queen,"1217 Pacific Boulevard, Vancouver, BC",Restaurant,1792017391647,false-creek
+osm-node-11742781269,Dawson's Hot Dogs,"False Creek, Vancouver, BC (street address not mapped)",Restaurant,1792017391678,false-creek
+osm-node-10731995305,Dear Gus,"2040 Quebec Street, Vancouver, BC",Restaurant,1792017391676,false-creek
+osm-node-13436214001,ELEM,"2110 Main Street, Vancouver, BC",Restaurant,1792017391683,false-creek
+osm-node-3466307578,Earnest Ice Cream,"1829 Quebec Street, Vancouver, BC",Dessert,1792017391652,false-creek
+osm-node-5742838921,Electric Bicycle Brewing,"20 East 4th Avenue, Vancouver, BC",Bar / Pub,1792017391664,false-creek
+osm-node-4356771490,Faculty Brewing,"1830 Ontario Street, Vancouver, BC",Bar / Pub,1792017391657,false-creek
+osm-node-7083406172,Field & Social,"18 East 5th Avenue, Vancouver, BC",Restaurant,1792017391670,false-creek
+osm-node-6148834586,Fife Bakery,"64 East 3rd Avenue, Vancouver, BC",Bakery,1792017391668,false-creek
+osm-node-4689872192,Fionn MacCool's,"1601 Main Street, Vancouver, BC",Bar / Pub,1792017391661,false-creek
+osm-node-1383735117,Freshbowl,"1128 Pacific Boulevard, Vancouver, BC",Restaurant,1792017391648,false-creek
+osm-node-12233665294,Freshii,"False Creek, Vancouver, BC (street address not mapped)",Restaurant,1792017391680,false-creek
+osm-node-7005003391,Freshslice Pizza,"1207 Pacific Boulevard, Vancouver, BC",Restaurant,1792017391670,false-creek
+osm-node-3108751086,Fritz's European Fry House/Poutine,"718 Davie Street, Vancouver, BC",Restaurant,1792017391651,false-creek
+osm-node-9403929554,G3 Kitchen and Bar,"496 Drake Street, Vancouver, BC",Restaurant,1792017391675,false-creek
+osm-node-4199711592,Giusti Restaurant,"209 East 6th Avenue, Vancouver, BC",Restaurant,1792017391656,false-creek
+osm-node-1753580670,Glory Juice,"78 East 2nd Avenue, Vancouver, BC",Cafe,1792017391648,false-creek
+osm-way-887954517,Happy Noodle House,"630 Davie Street, Vancouver, BC",Restaurant,1792017391687,false-creek
+osm-node-10732125781,Honest to Pete Roasters,"2109 Alberta Street, Vancouver, BC",Cafe,1792017391676,false-creek
+osm-node-6440030694,Honey Salt,"39 Smithe Street, Vancouver, BC",Restaurant,1792017391668,false-creek
+osm-node-5936269495,Honolulu Coffee,"97 West 2nd Avenue, Vancouver, BC",Cafe,1792017391666,false-creek
+osm-node-3352861550,JJ Bean,"188 West 1st Avenue, Vancouver, BC",Cafe,1792017391652,false-creek
+osm-node-3676488907,Jay Nok,"127 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391652,false-creek
+osm-node-1209175168,Jugo Juice,"202 Davie Street, Vancouver, BC",Restaurant,1792017391646,false-creek
+osm-node-4447002889,Kaide Sushi Bar,"1375 Richards Street, Vancouver, BC",Restaurant,1792017391659,false-creek
+osm-node-8689477642,Lauras Coffee Shop,"1945 Manitoba Street, Vancouver, BC",Cafe,1792017391673,false-creek
+osm-node-9112129053,Linh Café,"1428 Granville Street, Vancouver, BC",Restaurant,1792017391674,false-creek
+osm-node-10738523406,Little Pisces Cafe,"1778 Columbia Street, Vancouver, BC",Cafe,1792017391677,false-creek
+osm-node-4434847321,Living Produce Aisle,"False Creek, Vancouver, BC (street address not mapped)",Fast Food,1792017391658,false-creek
+osm-node-12695870977,Machete,"1007 Main Street, Vancouver, BC",Restaurant,1792017391681,false-creek
+osm-node-4631108811,Mario's Gelati,"88 East 1st Avenue, Vancouver, BC",Dessert,1792017391660,false-creek
+osm-way-136571595,McDonald's,"1527 Main Street, Vancouver, BC",Restaurant,1792017391685,false-creek
+osm-node-9112159969,Monzo Burger,"1401 Granville Street, Vancouver, BC",Restaurant,1792017391674,false-creek
+osm-node-4427334491,Mortadella,"915 Main Street, Vancouver, BC",Restaurant,1792017391658,false-creek
+osm-way-1134550090,Mount Pleasant Vintage and Provisions,"67 West 6th Avenue, Vancouver, BC",Restaurant,1792017391688,false-creek
+osm-node-13797396914,Mr Sushi,"176 East 2nd Avenue, Vancouver, BC",Restaurant,1792017391683,false-creek
+osm-node-12247550586,Nana's Green Tea,"159 West 4th Avenue, Vancouver, BC",Cafe,1792017391680,false-creek
+osm-node-6559045434,Nook,"195 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391669,false-creek
+osm-way-295593128,Nuba,"146 East 3rd Avenue, Vancouver, BC",Restaurant,1792017391687,false-creek
+osm-node-3743635242,Numero Uno Pizza,"708 Davie Street, Vancouver, BC",Fast Food,1792017391654,false-creek
+osm-node-14134019495,Octave Cafe,"1328 Richards Street, Vancouver, BC",Cafe,1792017391684,false-creek
+osm-node-6268389463,Onda by Casereccio,"1610 Salt Street, Vancouver, BC",Restaurant,1792017391668,false-creek
+osm-node-5545551623,Ophelia,"165 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391663,false-creek
+osm-node-8377010347,Panago,"1267 Pacific Street, Vancouver, BC",Restaurant,1792017391672,false-creek
+osm-node-12249179426,Pane e Formaggio,"868 Beatty Street, Vancouver, BC",Bakery,1792017391680,false-creek
+osm-node-8329245579,Passione Gelato,"55 Smithe Street, Vancouver, BC",Dessert,1792017391671,false-creek
+osm-node-3036597070,Pho Quynh Express,"91 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391650,false-creek
+osm-node-5949604500,Pho Quynh Express,"1691 Main Street, Vancouver, BC",Restaurant,1792017391666,false-creek
+osm-node-9607744350,Pizza Hut,"171 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391675,false-creek
+osm-node-14211759501,Prototype Coffee,"222 West 5th Avenue, Vancouver, BC",Cafe,1792017391685,false-creek
+osm-node-6148831984,Purebread,"5 East 5th Avenue, Vancouver, BC",Bakery,1792017391667,false-creek
+osm-node-4358246400,R & B Ale & Pizza House,"False Creek, Vancouver, BC (street address not mapped)",Bar / Pub,1792017391657,false-creek
+osm-node-13007083841,Restaurant Kavita,"250 West 3rd Avenue, Vancouver, BC",Restaurant,1792017391682,false-creek
+osm-node-2927471086,Riviera Cafe & Restaurant,"False Creek, Vancouver, BC (street address not mapped)",Restaurant,1792017391649,false-creek
+osm-node-3951064957,Sake Dining - Hashigo,"1265 Granville Street, Vancouver, BC",Restaurant,1792017391655,false-creek
+osm-node-14178500782,Seoul Food,"False Creek, Vancouver, BC (street address not mapped)",Restaurant,1792017391684,false-creek
+osm-node-11030385270,Small Victory Bakery,"388 West 6th Avenue, Vancouver, BC",Bakery,1792017391677,false-creek
+osm-node-2270985533,Starbucks,"Mainland Street, Vancouver, BC",Cafe,1792017391649,false-creek
+osm-node-3681627724,Starbucks,"860 Drake Street, Vancouver, BC",Cafe,1792017391653,false-creek
+osm-node-4631108809,Starbucks,"1777 Quebec Street, Vancouver, BC",Cafe,1792017391659,false-creek
+osm-node-1209180688,Subway,"1213 Pacific Boulevard, Vancouver, BC",Restaurant,1792017391647,false-creek
+osm-node-2995306949,Subway,"1109 Main Street, Vancouver, BC",Restaurant,1792017391650,false-creek
+osm-node-3725347744,Subway,"1255 Granville Street, Vancouver, BC",Restaurant,1792017391653,false-creek
+osm-node-4842937923,Subway,"1000 Mainland Street, Vancouver, BC",Restaurant,1792017391663,false-creek
+osm-node-5936269492,Subway,"1696 Salt Street, Vancouver, BC",Restaurant,1792017391665,false-creek
+osm-way-768408514,Swiss Bakery,"143 East 3rd Avenue, Vancouver, BC",Bakery,1792017391687,false-creek
+osm-node-860711421,Szechuan Chili Restaurant,"804 West 6th Avenue, Vancouver, BC",Restaurant,1792017391646,false-creek
+osm-node-6148834585,Tacofino Ocho,"8 East 5th Avenue, Vancouver, BC",Restaurant,1792017391667,false-creek
+osm-node-4638868843,Tap & Barrel,"1 Athletes Way, Vancouver, BC",Bar / Pub,1792017391661,false-creek
+osm-node-3951064961,Tequila Cocina,"1224 Granville Street, Vancouver, BC",Restaurant,1792017391655,false-creek
+osm-node-1828159045,Terra Breads,"1605 Manitoba Street, Vancouver, BC",Cafe,1792017391648,false-creek
+osm-node-12164513044,The Boxcar,"917 Main Street, Vancouver, BC",Bar / Pub,1792017391679,false-creek
+osm-node-5936269494,The Bubble Tea Shop,"1764 Manitoba Street, Vancouver, BC",Cafe,1792017391666,false-creek
+osm-node-8282178362,The Juice Truck,"28 West 5th Avenue, Vancouver, BC",Restaurant,1792017391671,false-creek
+osm-node-3725347745,The Morrissey,"1227 Granville Street, Vancouver, BC",Bar / Pub,1792017391653,false-creek
+osm-node-3238927234,The Narrow Lounge,"1898 Main Street, Vancouver, BC",Bar / Pub,1792017391651,false-creek
+osm-node-13007083842,The Skript Kitchen,"250 West 3rd Avenue, Vancouver, BC",Cafe,1792017391682,false-creek
+osm-node-4349328377,The Wicklow,"610 Stamps Landing, Vancouver, BC",Bar / Pub,1792017391656,false-creek
+osm-node-5581881778,Tim Hortons,"195 Terminal Avenue, Vancouver, BC",Cafe,1792017391663,false-creek
+osm-node-5866981374,Tim Hortons,"818 West 6th Avenue, Vancouver, BC",Cafe,1792017391665,false-creek
+osm-node-4631108808,Tractor,"1751 Quebec Street, Vancouver, BC",Restaurant,1792017391659,false-creek
+osm-node-3108751085,Two Parrots,"1202 Granville Street, Vancouver, BC",Bar / Pub,1792017391650,false-creek
+osm-node-12859794798,Unni Pasteries,"1207 Hamilton Street, Vancouver, BC",Restaurant,1792017391682,false-creek
+osm-node-11914510945,Uno Gelato,"601 Stamps Landing, Vancouver, BC",Dessert,1792017391679,false-creek
+osm-node-6806550826,Valoroso Foods,"1155 Pacific Boulevard, Vancouver, BC",Restaurant,1792017391670,false-creek
+osm-node-8376989067,Van Bahn Mi & Yoghurt,"1239 Pacific Street, Vancouver, BC",Fast Food,1792017391672,false-creek
+osm-node-3948676191,White Spot,"712 Drake Street, Vancouver, BC",Restaurant,1792017391655,false-creek
+osm-node-4232387090,White Spot,"False Creek, Vancouver, BC (street address not mapped)",Restaurant,1792017391656,false-creek
+osm-node-9173485186,Wren Cafe,"280 Nelson Street, Vancouver, BC",Bakery,1792017391675,false-creek
+osm-node-860711504,Yanaki Sushi,"816 West 6th Avenue, Vancouver, BC",Restaurant,1792017391646,false-creek
+osm-node-2517664349,Yume Dining,"410 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391649,false-creek
+osm-node-7647469308,Zarak,"2102 Main Street, Vancouver, BC",Restaurant,1792017391671,false-creek
+osm-node-12207626865,@26 Viet Cafe,"2044 West 41st Avenue, Vancouver, BC",Restaurant,1792017391497,kerrisdale
+osm-node-1702227659,ASA Sushi,"2178 West 41st Avenue, Vancouver, BC",Restaurant,1792017391488,kerrisdale
+osm-node-12207663122,Ajisai 2 Go,"2087 West 42nd Avenue, Vancouver, BC",Restaurant,1792017391498,kerrisdale
+osm-node-2290994536,Ajisai Sushi Bar,"2081 West 42nd Avenue, Vancouver, BC",Restaurant,1792017391490,kerrisdale
+osm-node-11072666131,BBT Café,"5979 West Boulevard, Vancouver, BC",Restaurant,1792017391495,kerrisdale
+osm-node-6741265870,Baoguette Vietnamese Bistro,"2114 West 41st Avenue, Vancouver, BC",Restaurant,1792017391493,kerrisdale
+osm-node-9181745900,Bean Around The World,"1846 West 57th Avenue, Vancouver, BC",Cafe,1792017391494,kerrisdale
+osm-node-5759788845,Bento Cafe,"2156 West 41st Avenue, Vancouver, BC",Restaurant,1792017391490,kerrisdale
+osm-node-12207613935,Burrata Pizzeria,"2104 West 41st Avenue, Vancouver, BC",Restaurant,1792017391497,kerrisdale
+osm-node-5759788846,Caffè Artigiano,"2154 West 41st Avenue, Vancouver, BC",Cafe,1792017391491,kerrisdale
+osm-node-1702227670,Cobs Breads,"Kerrisdale, Vancouver, BC (street address not mapped)",Bakery,1792017391489,kerrisdale
+osm-node-1702227739,Faubourg,"2184 West 41st Avenue, Vancouver, BC",Bakery,1792017391489,kerrisdale
+osm-node-11072666130,Fryday Chicken,"6023 West Boulevard, Vancouver, BC",Restaurant,1792017391495,kerrisdale
+osm-node-11512055521,Golden Ocean Seafood Restaurant,"2046 West 41st Avenue, Vancouver, BC",Restaurant,1792017391496,kerrisdale
+osm-node-1677844490,Honolulu Coffee,"2098 West 41st Avenue, Vancouver, BC",Cafe,1792017391488,kerrisdale
+osm-node-1394375543,Kyuzo Japanese Restaurant,"5701 Granville Street, Vancouver, BC",Restaurant,1792017391488,kerrisdale
+osm-node-12207663118,La Cuisson Cafe,"2050 West 41st Avenue, Vancouver, BC",Cafe,1792017391497,kerrisdale
+osm-node-5759788847,Legato Cafe,"2248 West 41st Avenue, Vancouver, BC",Cafe,1792017391491,kerrisdale
+osm-node-5759788851,Lok's Chinese Restaurant,"2436 West 41st Avenue, Vancouver, BC",Restaurant,1792017391492,kerrisdale
+osm-node-12858413055,Macu Tea,"5971 West Boulevard, Vancouver, BC",Cafe,1792017391498,kerrisdale
+osm-node-6741265869,Michele Cake Shop,"6033 West Boulevard, Vancouver, BC",Bakery,1792017391493,kerrisdale
+osm-node-5759788844,Moore's Bakery,"2128 West 41st Avenue, Vancouver, BC",Bakery,1792017391490,kerrisdale
+osm-node-6741265875,Myst Asian Bistro,"2028 West 41st Avenue, Vancouver, BC",Restaurant,1792017391494,kerrisdale
+osm-node-11072666128,Neptune Eats,"2106 West 41st Avenue, Vancouver, BC",Restaurant,1792017391494,kerrisdale
+osm-node-6741265868,Oakberry Açaí bowls,"6075 West Boulevard, Vancouver, BC",Restaurant,1792017391492,kerrisdale
+osm-node-13963165316,Sandeul,"6019 West Boulevard, Vancouver, BC",Restaurant,1792017391500,kerrisdale
+osm-node-13963146330,Sen Vietnamese,"Kerrisdale, Vancouver, BC (street address not mapped)",Restaurant,1792017391499,kerrisdale
+osm-node-13963165312,Southern Delicacy,"6055 West Boulevard, Vancouver, BC",Restaurant,1792017391499,kerrisdale
+osm-node-13963110765,Steam Teahouse & Cafe,"2091 West 43rd Avenue, Vancouver, BC",Cafe,1792017391499,kerrisdale
+osm-node-11512055522,Sweet E's Pastries and Sweets,"2032 West 41st Avenue, Vancouver, BC",Bakery,1792017391496,kerrisdale
+osm-node-11512055520,Tao's Kitchen,"5701 Granville Street, Vancouver, BC",Restaurant,1792017391495,kerrisdale
+osm-node-918960347,Yee Cafe,"5701 Granville Street, Vancouver, BC",Cafe,1792017391487,kerrisdale
+osm-node-12074597822,Yi Fang Tea,"Kerrisdale, Vancouver, BC (street address not mapped)",Cafe,1792017391496,kerrisdale
+osm-node-5866930563,101 Boba,"2828 Cambie Street, Vancouver, BC",Cafe,1792017391539,mount-pleasant
+osm-node-6339114663,33 Acres Brewing,"Mount Pleasant, Vancouver, BC (street address not mapped)",Bar / Pub,1792017391544,mount-pleasant
+osm-node-6339114662,33 Brewing Experiment,"Mount Pleasant, Vancouver, BC (street address not mapped)",Bar / Pub,1792017391544,mount-pleasant
+osm-way-292351765,49th Parallel Coffee Roasters,"2902 Main Street, Vancouver, BC",Cafe,1792017391574,mount-pleasant
+osm-way-163538017,A&W,"467 West Broadway, Vancouver, BC",Restaurant,1792017391570,mount-pleasant
+osm-node-10741979195,AJ's Brooklyn Pizza Joint,"325 East Broadway, Vancouver, BC",Restaurant,1792017391560,mount-pleasant
+osm-node-11911527837,AM Cafe,"2528 Guelph Street, Vancouver, BC",Cafe,1792017391563,mount-pleasant
+osm-node-4957852333,Alley 16,"3190 Cambie Street, Vancouver, BC",Restaurant,1792017391534,mount-pleasant
+osm-way-160298566,Anna's Cake House,"606 East Broadway, Vancouver, BC",Restaurant,1792017391569,mount-pleasant
+osm-way-163538023,Anza Club,"3 West 8th Avenue, Vancouver, BC",Bar / Pub,1792017391570,mount-pleasant
+osm-node-8221578702,BBQ & Co.,"3088 Cambie Street, Vancouver, BC",Restaurant,1792017391552,mount-pleasant
+osm-node-4293468220,Ba Le Deli & Bakery,"691 East Broadway, Vancouver, BC",Restaurant,1792017391531,mount-pleasant
+osm-node-1769856586,Barney's On Main,"2526 Main Street, Vancouver, BC",Restaurant,1792017391527,mount-pleasant
+osm-node-14024322303,Be Cafe,"639 East 15th Avenue, Vancouver, BC",Cafe,1792017391567,mount-pleasant
+osm-node-1769850012,Bean Around The World,"2528 Main Street, Vancouver, BC",Cafe,1792017391526,mount-pleasant
+osm-node-5521168522,Biltmore Cabaret,"2755 Prince Edward Street, Vancouver, BC",Bar / Pub,1792017391538,mount-pleasant
+osm-node-12974372019,Blenz Coffee,"Mount Pleasant, Vancouver, BC (street address not mapped)",Cafe,1792017391565,mount-pleasant
+osm-node-582801100,Budgies Burritos,"44 Kingsway, Vancouver, BC",Restaurant,1792017391523,mount-pleasant
+osm-node-5097621121,Burdock & Co,"2702 Main Street, Vancouver, BC",Restaurant,1792017391536,mount-pleasant
+osm-way-289846713,Burgoo,"3096 Main Street, Vancouver, BC",Restaurant,1792017391571,mount-pleasant
+osm-node-9374931492,COBS Bread,"2924 Main Street, Vancouver, BC",Bakery,1792017391555,mount-pleasant
+osm-node-5249409066,Carp,"2516 Prince Edward Street, Vancouver, BC",Restaurant,1792017391537,mount-pleasant
+osm-way-160298735,Catoro Cafe,"666 East Broadway, Vancouver, BC",Cafe,1792017391569,mount-pleasant
+osm-way-235018180,Cilantro Indian Cuisine,"189 West Broadway, Vancouver, BC",Restaurant,1792017391570,mount-pleasant
+osm-node-6862131651,Como Taperia,"201 East 7th Avenue, Vancouver, BC",Restaurant,1792017391548,mount-pleasant
+osm-node-12532114361,Como Ultramar,"592 East Broadway, Vancouver, BC",Restaurant,1792017391564,mount-pleasant
+osm-way-136052128,Congee Noodle House,"141 East Broadway, Vancouver, BC",Restaurant,1792017391568,mount-pleasant
+osm-node-7647500334,Courtside Food & Drinks,"2415 Main Street, Vancouver, BC",Restaurant,1792017391551,mount-pleasant
+osm-way-292351759,Dairy Queen,"2888 Main Street, Vancouver, BC",Restaurant,1792017391573,mount-pleasant
+osm-node-6664984331,Dallas Pizza & Souvlaki,"613 East Broadway, Vancouver, BC",Restaurant,1792017391547,mount-pleasant
+osm-node-7179955505,Domino's,"585 East Broadway, Vancouver, BC",Restaurant,1792017391549,mount-pleasant
+osm-node-9395656801,Donair and Sub House,"403 West Broadway, Vancouver, BC",Restaurant,1792017391556,mount-pleasant
+osm-node-6139663128,Elysian Coffee Roasters,"2301 Ontario Street, Vancouver, BC",Cafe,1792017391542,mount-pleasant
+osm-node-6721251794,Emelle's Westside Kitchen,"177 West 7th Avenue, Vancouver, BC",Restaurant,1792017391547,mount-pleasant
+osm-node-2933811340,Emeri Matcha Bar,"2833 Main Street, Vancouver, BC",Cafe,1792017391528,mount-pleasant
+osm-node-10826144142,Empress Bakery,"662 Kingsway, Vancouver, BC",Bakery,1792017391561,mount-pleasant
+osm-node-4642541592,Fassil Ethiopian Restaurant,"736 East Broadway, Vancouver, BC",Restaurant,1792017391533,mount-pleasant
+osm-way-292347093,Fatburger,"255 West Broadway, Vancouver, BC",Restaurant,1792017391572,mount-pleasant
+osm-node-9356233655,Forecast Coffee,"2980 Main Street, Vancouver, BC",Cafe,1792017391554,mount-pleasant
+osm-node-5791423754,Foy's Irish Bar & Grill,"395 Kingsway, Vancouver, BC",Bar / Pub,1792017391539,mount-pleasant
+osm-node-6376570580,Freshii,"270 East Broadway, Vancouver, BC",Restaurant,1792017391546,mount-pleasant
+osm-node-12570448370,Freshslice Pizza,"Mount Pleasant, Vancouver, BC (street address not mapped)",Restaurant,1792017391564,mount-pleasant
+osm-way-1467698250,Freshslice Pizza,"Mount Pleasant, Vancouver, BC (street address not mapped)",Restaurant,1792017391576,mount-pleasant
+osm-node-13888787075,Friendlies Bar,"208 East 12th Avenue, Vancouver, BC",Bar / Pub,1792017391566,mount-pleasant
+osm-way-292351764,Good Co. Bars,"2904 Main Street, Vancouver, BC",Bar / Pub,1792017391574,mount-pleasant
+osm-node-6148806058,HYDE on Main,"2960 Main Street, Vancouver, BC",Restaurant,1792017391542,mount-pleasant
+osm-node-4324614329,Hail Mary's,"670 East Broadway, Vancouver, BC",Restaurant,1792017391532,mount-pleasant
+osm-node-7416210953,Hen,"15 West Broadway, Vancouver, BC",Restaurant,1792017391550,mount-pleasant
+osm-node-10736195412,Hime Sushi,"315 East Broadway, Vancouver, BC",Restaurant,1792017391559,mount-pleasant
+osm-node-10736243015,Hiyori Coffee,"279 East 6th Avenue, Vancouver, BC",Cafe,1792017391560,mount-pleasant
+osm-node-10250014803,Hot Delivery,"3002 Cambie Street, Vancouver, BC",Restaurant,1792017391558,mount-pleasant
+osm-way-163538016,Hu Tieu Mom Vietnamese Restaurant,"457 West Broadway, Vancouver, BC",Restaurant,1792017391569,mount-pleasant
+osm-node-6148806076,Italia Bella,"53 West Broadway, Vancouver, BC",Restaurant,1792017391543,mount-pleasant
+osm-node-12532114360,JEJU,"540 East Broadway, Vancouver, BC",Restaurant,1792017391563,mount-pleasant
+osm-way-289846720,JJ Bean,"3010 Main Street, Vancouver, BC",Cafe,1792017391571,mount-pleasant
+osm-way-292460148,KFC,"795 East Broadway, Vancouver, BC",Restaurant,1792017391574,mount-pleasant
+osm-node-822487108,Kaori Izakaya,"3043 Main Street, Vancouver, BC",Restaurant,1792017391524,mount-pleasant
+osm-node-7647499486,Key Party,"2305 Main Street, Vancouver, BC",Bar / Pub,1792017391551,mount-pleasant
+osm-node-4728754195,Klasik Inasal,"650 East Broadway, Vancouver, BC",Restaurant,1792017391533,mount-pleasant
+osm-node-2933774664,Kobo  Ice Cream,"2541 Main Street, Vancouver, BC",Dessert,1792017391528,mount-pleasant
+osm-node-12603425141,Kranky Café,"228 East 4th Avenue, Vancouver, BC",Cafe,1792017391564,mount-pleasant
+osm-node-7179945251,Kwong Chow Congee & Noodle House,"3163 Main Street, Vancouver, BC",Restaurant,1792017391549,mount-pleasant
+osm-node-10798155578,L'Atelier Pâtisserie,"599 East Broadway, Vancouver, BC",Bakery,1792017391560,mount-pleasant
+osm-node-6283748540,La Dulceria Sweets & Treats,"1039 East Broadway, Vancouver, BC",Dessert,1792017391544,mount-pleasant
+osm-node-5866990305,La Petite Cuillère,"55 Kingsway, Vancouver, BC",Cafe,1792017391540,mount-pleasant
+osm-node-5296233721,La Taqueria Pinche Taco Shop,"2450 Yukon Street, Vancouver, BC",Restaurant,1792017391537,mount-pleasant
+osm-node-1205355496,Les Faux Bourgeois,"663 East 15th Avenue, Vancouver, BC",Restaurant,1792017391525,mount-pleasant
+osm-node-12677769301,Level V Bakery,"39 Kingsway, Vancouver, BC",Cafe,1792017391565,mount-pleasant
+osm-node-4957934649,Los Cuervos Taqueria & Cantina,"603 Kingsway, Vancouver, BC",Restaurant,1792017391535,mount-pleasant
+osm-way-533583781,Main Street Brewing,"261 East 7th Avenue, Vancouver, BC",Bar / Pub,1792017391575,mount-pleasant
+osm-node-7027391077,Maizal RMF,"2815 Main Street, Vancouver, BC",Restaurant,1792017391548,mount-pleasant
+osm-node-4338240589,Mali Thai Food,"2710 Main Street, Vancouver, BC",Restaurant,1792017391532,mount-pleasant
+osm-node-6148806064,Maruhachi Gaiden,"2858 Main Street, Vancouver, BC",Restaurant,1792017391543,mount-pleasant
+osm-node-1682930496,Marulilu Cafe,"451 West Broadway, Vancouver, BC",Restaurant,1792017391525,mount-pleasant
+osm-node-4957982990,Matchstick,"639 East 15th Avenue, Vancouver, BC",Cafe,1792017391535,mount-pleasant
+osm-way-305350549,Mercato di Luigi,"580 East 12th Avenue, Vancouver, BC",Cafe,1792017391575,mount-pleasant
+osm-node-5357068721,Milano Cafe,"156 West 8th Avenue, Vancouver, BC",Cafe,1792017391538,mount-pleasant
+osm-node-9398067707,Modus,"112 West Broadway, Vancouver, BC",Cafe,1792017391557,mount-pleasant
+osm-node-2933886279,Monarch Burger,"3034 Main Street, Vancouver, BC",Restaurant,1792017391530,mount-pleasant
+osm-node-7409297804,Moodbe Cafe,"381 East Broadway, Vancouver, BC",Cafe,1792017391550,mount-pleasant
+osm-node-7630613002,Mr. Japanese Curry,"446 West 8th Avenue, Vancouver, BC",Restaurant,1792017391550,mount-pleasant
+osm-node-4331872386,Nha Trang Restaurant,"720 East Broadway, Vancouver, BC",Restaurant,1792017391532,mount-pleasant
+osm-node-14213121983,Ninth Cup,"223 West Broadway, Vancouver, BC",Cafe,1792017391567,mount-pleasant
+osm-node-9119503611,Old Durbar Nepalese & Indian Restaurant,"147 East Broadway, Vancouver, BC",Restaurant,1792017391553,mount-pleasant
+osm-node-11206059291,Osteria Otto,"151 East 8th Avenue, Vancouver, BC",Restaurant,1792017391561,mount-pleasant
+osm-way-293135157,Osteria Savio Volpe,"615 Kingsway, Vancouver, BC",Restaurant,1792017391575,mount-pleasant
+osm-node-9374931493,Panago,"2928 Main Street, Vancouver, BC",Restaurant,1792017391556,mount-pleasant
+osm-node-822487105,Papa's Gourmet Pizza,"3030 Main Street, Vancouver, BC",Fast Food,1792017391524,mount-pleasant
+osm-node-5866990309,Paper Crane Coffee,"531 East Broadway, Vancouver, BC",Cafe,1792017391541,mount-pleasant
+osm-node-5866930562,Passion8 Dessert Cafe,"3010 Cambie Street, Vancouver, BC",Cafe,1792017391539,mount-pleasant
+osm-node-2933870121,Pho Goodness,"3079 Main Street, Vancouver, BC",Restaurant,1792017391529,mount-pleasant
+osm-node-1769910469,Pinky's On Main,"2420 Main Street, Vancouver, BC",Bar / Pub,1792017391527,mount-pleasant
+osm-node-9395656802,Pizza 2 Pakora,"407 West Broadway, Vancouver, BC",Restaurant,1792017391556,mount-pleasant
+osm-node-2933862902,Pizza Garden,"3033 Main Street, Vancouver, BC",Restaurant,1792017391529,mount-pleasant
+osm-node-7226675289,Pizza Pizza,"311 East Broadway, Vancouver, BC",Restaurant,1792017391549,mount-pleasant
+osm-node-9141043290,Pokerrito,"350 West 8th Avenue, Vancouver, BC",Restaurant,1792017391553,mount-pleasant
+osm-node-6376570579,Poké Bar,"280 East Broadway, Vancouver, BC",Fast Food,1792017391546,mount-pleasant
+osm-node-6376570575,Pür & Simple,"299 East 10th Avenue, Vancouver, BC",Restaurant,1792017391545,mount-pleasant
+osm-node-10141634556,Quesada,"81 Kingsway, Vancouver, BC",Restaurant,1792017391558,mount-pleasant
+osm-node-14247232937,Quizine Kitchen,"Mount Pleasant, Vancouver, BC (street address not mapped)",Fast Food,1792017391568,mount-pleasant
+osm-node-5936269500,Red Burrito,"2328 Cambie Street, Vancouver, BC",Restaurant,1792017391541,mount-pleasant
+osm-node-12569845109,Rollz,"2685 Main Street, Vancouver, BC",Dessert,1792017391564,mount-pleasant
+osm-node-9374900289,Rongsi Thai Bar & Bistro,"2650 Main Street, Vancouver, BC",Restaurant,1792017391554,mount-pleasant
+osm-node-872399736,Shiro Japanese Restaurant,"3096 Cambie Street, Vancouver, BC",Restaurant,1792017391524,mount-pleasant
+osm-way-292351757,Sing Sing,"2718 Main Street, Vancouver, BC",Bar / Pub,1792017391573,mount-pleasant
+osm-node-5735264221,Slim's BBQ,"2301 Main Street, Vancouver, BC",Restaurant,1792017391538,mount-pleasant
+osm-node-3401126412,Solly's Bagelry,"378 West 7th Avenue, Vancouver, BC",Bakery,1792017391531,mount-pleasant
+osm-node-5190063023,Song,"317 East Broadway, Vancouver, BC",Restaurant,1792017391536,mount-pleasant
+osm-node-6862131649,Sprezzatura,"265 Kingsway, Vancouver, BC",Restaurant,1792017391548,mount-pleasant
+osm-node-6376570581,Starbucks,"260 East Broadway, Vancouver, BC",Cafe,1792017391546,mount-pleasant
+osm-node-9991877438,Steamworks Brewing Co.,"2275 Main Street, Vancouver, BC",Bar / Pub,1792017391558,mount-pleasant
+osm-node-11072510113,Street Hawker,"3088 Main Street, Vancouver, BC",Restaurant,1792017391561,mount-pleasant
+osm-node-2933811343,Subway,"2827 Main Street, Vancouver, BC",Restaurant,1792017391529,mount-pleasant
+osm-node-4134866290,Subway,"615 East Broadway, Vancouver, BC",Restaurant,1792017391531,mount-pleasant
+osm-node-13920912074,Sula Cafe,"260 East 5th Avenue, Vancouver, BC",Cafe,1792017391566,mount-pleasant
+osm-node-6283748533,Sumibiyaki Arashi,"363 East Broadway, Vancouver, BC",Restaurant,1792017391543,mount-pleasant
+osm-node-7647500333,Superbaba,"2419 Main Street, Vancouver, BC",Restaurant,1792017391551,mount-pleasant
+osm-node-5866981373,Sushi California,"388 West Broadway, Vancouver, BC",Restaurant,1792017391540,mount-pleasant
+osm-way-289846719,Sushi Mura,"3068 Main Street, Vancouver, BC",Restaurant,1792017391571,mount-pleasant
+osm-node-2933811341,Sushi Nami,"2801 Main Street, Vancouver, BC",Restaurant,1792017391528,mount-pleasant
+osm-node-5866990307,Sushi Yama,"371 East Broadway, Vancouver, BC",Restaurant,1792017391540,mount-pleasant
+osm-node-9374900290,Taco Loma,"2652 Main Street, Vancouver, BC",Restaurant,1792017391555,mount-pleasant
+osm-node-1769872902,Tamaly Shop,"2525 Main Street, Vancouver, BC",Restaurant,1792017391527,mount-pleasant
+osm-node-13508394387,Tayybeh,"151 West Broadway, Vancouver, BC",Restaurant,1792017391565,mount-pleasant
+osm-node-2933886280,The Basic,"3048 Main Street, Vancouver, BC",Restaurant,1792017391530,mount-pleasant
+osm-way-292349077,The Cascade Room,"2616 Main Street, Vancouver, BC",Bar / Pub,1792017391572,mount-pleasant
+osm-node-9438673356,The Farmhouse,"352 East 10th Avenue, Vancouver, BC",Restaurant,1792017391557,mount-pleasant
+osm-node-4632854698,The Federal Store,"2601 Quebec Street, Vancouver, BC",Bakery,1792017391533,mount-pleasant
+osm-node-883748003,The Firewood Café,"3004 Cambie Street, Vancouver, BC",Restaurant,1792017391525,mount-pleasant
+osm-node-4957982991,The Gluten Free Epicurean,"633 East 15th Avenue, Vancouver, BC",Bakery,1792017391536,mount-pleasant
+osm-node-11506480683,The Lido,"518 East Broadway, Vancouver, BC",Bar / Pub,1792017391563,mount-pleasant
+osm-node-4957982989,The Lion's Den Cafe,"651 East 15th Avenue, Vancouver, BC",Restaurant,1792017391535,mount-pleasant
+osm-node-11402008072,The Pleasant,"2434 Main Street, Vancouver, BC",Restaurant,1792017391562,mount-pleasant
+osm-node-6751964083,The Watson,"3080 Main Street, Vancouver, BC",Bar / Pub,1792017391547,mount-pleasant
+osm-node-6376570577,Thierry,"265 East 10th Avenue, Vancouver, BC",Cafe,1792017391545,mount-pleasant
+osm-node-1769839637,Tocador,"2610 Main Street, Vancouver, BC",Restaurant,1792017391526,mount-pleasant
+osm-node-5905191685,Trees,"255 East Broadway, Vancouver, BC",Cafe,1792017391541,mount-pleasant
+osm-node-8964473607,Twisted Indian,"69 Kingsway, Vancouver, BC",Restaurant,1792017391552,mount-pleasant
+osm-node-5936269502,Uma Sushi,"450 West 8th Avenue, Vancouver, BC",Restaurant,1792017391542,mount-pleasant
+osm-node-2933886281,Uncle Abe's,"3032 Main Street, Vancouver, BC",Bar / Pub,1792017391530,mount-pleasant
+osm-node-1730973295,Uncle Fatihs Pizza,"477 West 8th Avenue, Vancouver, BC",Restaurant,1792017391526,mount-pleasant
+osm-node-9147261626,VT's Cafe,"370 East Broadway, Vancouver, BC",Cafe,1792017391553,mount-pleasant
+osm-node-13928781901,Vakroulade,"260 East 5th Avenue, Vancouver, BC",Bakery,1792017391567,mount-pleasant
+osm-node-9374931491,Vera's Burger Shack,"2922 Main Street, Vancouver, BC",Restaurant,1792017391555,mount-pleasant
+osm-node-4844724670,Vij's,"3106 Cambie Street, Vancouver, BC",Restaurant,1792017391534,mount-pleasant
+osm-way-135493893,Wendy's,"480 West 8th Avenue, Vancouver, BC",Restaurant,1792017391568,mount-pleasant
+osm-node-10560384655,West Coast Poké,"463 West 8th Avenue, Vancouver, BC",Restaurant,1792017391559,mount-pleasant
+osm-node-9611726512,Whisk Matcha Cafe,"39 Kingsway, Vancouver, BC",Cafe,1792017391557,mount-pleasant
+osm-node-11299026195,Wok&Wings,"1 East Broadway, Vancouver, BC",Restaurant,1792017391562,mount-pleasant
+osm-node-4439974689,Yummy Slice Pizza,"183 East Broadway, Vancouver, BC",Restaurant,1792017391533,mount-pleasant
+osm-node-7888910499,iDen & Quanjude,"2808 Cambie Street, Vancouver, BC",Restaurant,1792017391552,mount-pleasant
+osm-node-5063531417,A&W,"2083 Alma Street, Vancouver, BC",Restaurant,1792017391692,point-grey
+osm-node-8748457713,Bean Around The World,"Point Grey, Vancouver, BC (street address not mapped)",Cafe,1792017391698,point-grey
+osm-node-8748457714,Bella Roma,"Point Grey, Vancouver, BC (street address not mapped)",Restaurant,1792017391699,point-grey
+osm-node-5063531418,Breka Bakery & Café,"3750 West 4th Avenue, Vancouver, BC",Cafe,1792017391692,point-grey
+osm-node-6641165608,Brock House Restaurant,"3875 Point Grey Road, Vancouver, BC",Restaurant,1792017391697,point-grey
+osm-node-5759848945,Burgoo,"4434 West 10th Avenue, Vancouver, BC",Restaurant,1792017391695,point-grey
+osm-node-6862208756,Crazy Zhang Fusion Tea & BBQ Rice,"4515 West 10th Avenue, Vancouver, BC",Cafe,1792017391697,point-grey
+osm-node-8748457715,Danoo Cafe,"Point Grey, Vancouver, BC (street address not mapped)",Cafe,1792017391699,point-grey
+osm-node-8748457708,Domino's,"Point Grey, Vancouver, BC (street address not mapped)",Restaurant,1792017391698,point-grey
+osm-node-4670187993,Everyday Sushi,"4572 West 10th Avenue, Vancouver, BC",Restaurant,1792017391691,point-grey
+osm-node-2778673916,Four Olives Restaurant,"4510 West 10th Avenue, Vancouver, BC",Restaurant,1792017391689,point-grey
+osm-node-5759848941,Ginger & Chili,"4409 West 10th Avenue, Vancouver, BC",Restaurant,1792017391693,point-grey
+osm-way-918374669,Grounds For Coffee,"2565 Alma Street, Vancouver, BC",Cafe,1792017391700,point-grey
+osm-node-2746820279,Hime Sushi,"4480 West 10th Avenue, Vancouver, BC",Restaurant,1792017391689,point-grey
+osm-node-2331434423,Jericho Beach Concession,"Point Grey, Vancouver, BC (street address not mapped)",Cafe,1792017391688,point-grey
+osm-node-10774086296,Jericho Tennis Club's Restaurant,"Point Grey, Vancouver, BC (street address not mapped)",Restaurant,1792017391699,point-grey
+osm-node-8421856503,Jo's Italian Deli,"2505 Alma Street, Vancouver, BC",Restaurant,1792017391698,point-grey
+osm-node-5759848942,Little Umbrella,"4372 West 10th Avenue, Vancouver, BC",Cafe,1792017391694,point-grey
+osm-node-3487812041,Locarno Beach Concession,"4445 Northwest Marine Drive, Vancouver, BC",Restaurant,1792017391690,point-grey
+osm-node-5759848944,Mix the Bakery,"4430 West 10th Avenue, Vancouver, BC",Bakery,1792017391694,point-grey
+osm-node-5837330140,N.S.C.S. Discovery Café,"1515 Discovery Street, Vancouver, BC",Restaurant,1792017391696,point-grey
+osm-node-5759848947,Pizza Hut,"4540 West 10th Avenue, Vancouver, BC",Restaurant,1792017391696,point-grey
+osm-node-6862208761,Pizza Pizza,"4580 West 10th Avenue, Vancouver, BC",Restaurant,1792017391697,point-grey
+osm-node-5759848935,Rajio Japanese Public House,"3763 West 10th Avenue, Vancouver, BC",Restaurant,1792017391693,point-grey
+osm-node-3487821943,Spanish Banks East Concession,"Point Grey, Vancouver, BC (street address not mapped)",Fast Food,1792017391691,point-grey
+osm-node-5063468740,Spanish Banks West Concession,"Point Grey, Vancouver, BC (street address not mapped)",Fast Food,1792017391692,point-grey
+osm-node-5759848938,Subway,"4367 West 10th Avenue, Vancouver, BC",Restaurant,1792017391693,point-grey
+osm-node-2778673917,Sun Sushi,"4512 West 10th Avenue, Vancouver, BC",Restaurant,1792017391689,point-grey
+osm-node-1722586951,Sushi Inn Japanese Cuisine,"3772 West 10th Avenue, Vancouver, BC",Restaurant,1792017391688,point-grey
+osm-node-5759848943,Takumi Japanese Restaurant,"4422 West 10th Avenue, Vancouver, BC",Restaurant,1792017391694,point-grey
+osm-node-5759848946,The Kitchen,"2620 Sasamat Street, Vancouver, BC",Restaurant,1792017391695,point-grey
+osm-node-3260935062,The Kitchen Dada Sushi Bar & Grill,"2535 Alma Street, Vancouver, BC",Restaurant,1792017391690,point-grey
+osm-node-13991614701,Wicked Cafe & Bakery,"3605 West 16th Avenue, Vancouver, BC",Cafe,1792017391700,point-grey
+osm-node-4304851601,Yuji's from Japan,"2083 Alma Street, Vancouver, BC",Restaurant,1792017391691,point-grey
+osm-node-9021676222,852 Kitchen,"4963 Joyce Street, Vancouver, BC",Restaurant,1792017391734,renfrew-collingwood
+osm-node-8577314899,A&W,"5090 Joyce Street, Vancouver, BC",Restaurant,1792017391732,renfrew-collingwood
+osm-node-12865329179,A&W,"2657 Renfrew Street, Vancouver, BC",Restaurant,1792017391742,renfrew-collingwood
+osm-node-4728754111,Amay's House,"3293 Kingsway, Vancouver, BC",Restaurant,1792017391721,renfrew-collingwood
+osm-node-12306500573,Ba Le Deli & Banh Mi,"3779 Rupert Street, Vancouver, BC",Restaurant,1792017391742,renfrew-collingwood
+osm-node-971212692,Ban Bu Xian Szechuan Cuisine,"3665 Kingsway, Vancouver, BC",Restaurant,1792017391711,renfrew-collingwood
+osm-node-4971491101,Bao Bakery,"5115 Joyce Street, Vancouver, BC",Dessert,1792017391725,renfrew-collingwood
+osm-node-6862244142,BlackBall Taiwanese Dessert,"3377 Kingsway, Vancouver, BC",Cafe,1792017391731,renfrew-collingwood
+osm-node-9014648818,Blue Coast Japanese Seafood Cuisine,"3670 Vanness Avenue, Vancouver, BC",Restaurant,1792017391733,renfrew-collingwood
+osm-node-9061008017,Border Burrito,"4453 Boundary Road, Vancouver, BC",Restaurant,1792017391734,renfrew-collingwood
+osm-node-3501506789,Boston Pizza,"1333 Grandview Highway, Vancouver, BC",Restaurant,1792017391715,renfrew-collingwood
+osm-node-4000060601,Bubble World,"3377 Kingsway, Vancouver, BC",Restaurant,1792017391718,renfrew-collingwood
+osm-node-2494631014,Cafe Episode,"2891 Grandview Highway, Vancouver, BC",Cafe,1792017391712,renfrew-collingwood
+osm-node-9164397701,Canffle,"3581 Kingsway, Vancouver, BC",Restaurant,1792017391735,renfrew-collingwood
+osm-node-4971491099,Chicko Chicken,"5171 Joyce Street, Vancouver, BC",Restaurant,1792017391725,renfrew-collingwood
+osm-node-4018495710,Chili Pepper House,"3003 Kingsway, Vancouver, BC",Restaurant,1792017391719,renfrew-collingwood
+osm-way-283020035,Church's Chicken,"2504 Kingsway, Vancouver, BC",Restaurant,1792017391747,renfrew-collingwood
+osm-node-4172611297,CoCo Fresh Tea & Juice,"3275 Kingsway, Vancouver, BC",Cafe,1792017391720,renfrew-collingwood
+osm-node-9949918844,CoCo Fresh Tea & Juice,"5066 Joyce Street, Vancouver, BC",Cafe,1792017391739,renfrew-collingwood
+osm-node-2637705783,Come Along Seafood Restaurant,"2550 Kingsway, Vancouver, BC",Restaurant,1792017391714,renfrew-collingwood
+osm-node-4971484919,Congee Noodle King,"3313 Kingsway, Vancouver, BC",Restaurant,1792017391723,renfrew-collingwood
+osm-way-328894317,Dairy Queen,"2940 Kingsway, Vancouver, BC",Restaurant,1792017391747,renfrew-collingwood
+osm-node-8724475641,Dami Sushi & Korean Restaurant,"3280 East 22nd Avenue, Vancouver, BC",Restaurant,1792017391732,renfrew-collingwood
+osm-node-4911916973,Desserts Artisanaux,"2675 Kingsway, Vancouver, BC",Restaurant,1792017391722,renfrew-collingwood
+osm-node-4558897314,Dharma Garden Veggie Deli,"3195 Kingsway, Vancouver, BC",Restaurant,1792017391721,renfrew-collingwood
+osm-node-10591592106,Donair Affair,"2883 Grandview Highway, Vancouver, BC",Restaurant,1792017391739,renfrew-collingwood
+osm-node-10889439797,ETEA cafe,"3281 East 22nd Avenue, Vancouver, BC",Cafe,1792017391739,renfrew-collingwood
+osm-node-12865388755,Firehouse Subs,"2627 Renfrew Street, Vancouver, BC",Restaurant,1792017391743,renfrew-collingwood
+osm-node-9203561119,Fresh Legend by Eliza Sweet,"3393 Kingsway, Vancouver, BC",Restaurant,1792017391736,renfrew-collingwood
+osm-node-9231317819,Freshslice Pizza,"Renfrew-Collingwood, Vancouver, BC (street address not mapped)",Restaurant,1792017391737,renfrew-collingwood
+osm-node-5005564641,Ganh Vietnamese Kitchen,"2568 Kingsway, Vancouver, BC",Restaurant,1792017391726,renfrew-collingwood
+osm-node-11255930054,Gong Cha,"2887 East 12th Avenue, Vancouver, BC",Cafe,1792017391740,renfrew-collingwood
+osm-node-5759885060,Happy Valley Dim Sum Seafood Restaurant,"3432 Lougheed Highway, Vancouver, BC",Restaurant,1792017391729,renfrew-collingwood
+osm-node-7888845658,Jack's Spot,"3615 Kingsway, Vancouver, BC",Cafe,1792017391732,renfrew-collingwood
+osm-node-5304465686,Jambo Grill,"3219 Kingsway, Vancouver, BC",Restaurant,1792017391728,renfrew-collingwood
+osm-node-4971491096,Japanese Bistro Kamome,"5228 Joyce Street, Vancouver, BC",Restaurant,1792017391725,renfrew-collingwood
+osm-node-14060099297,Jojo Cafe,"2536 Kingsway, Vancouver, BC",Cafe,1792017391745,renfrew-collingwood
+osm-node-9203548824,Joojak,"Renfrew-Collingwood, Vancouver, BC (street address not mapped)",Restaurant,1792017391735,renfrew-collingwood
+osm-node-4000060598,K & H Seafood Restaurant,"3415 Kingsway, Vancouver, BC",Restaurant,1792017391717,renfrew-collingwood
+osm-node-9021676220,Khan Sahab Kitchen,"4942 Joyce Street, Vancouver, BC",Restaurant,1792017391733,renfrew-collingwood
+osm-node-5847961075,Kimu Japanese Cuisine,"4441 Boundary Road, Vancouver, BC",Restaurant,1792017391730,renfrew-collingwood
+osm-node-9527719709,Kopitiam Malaysia,"3885 Rupert Street, Vancouver, BC",Restaurant,1792017391737,renfrew-collingwood
+osm-node-4000060602,Kroren Uyghur Restaurant,"3377 Kingsway, Vancouver, BC",Restaurant,1792017391719,renfrew-collingwood
+osm-node-9231317818,Kumare Express,"5183 Joyce Street, Vancouver, BC",Restaurant,1792017391736,renfrew-collingwood
+osm-node-3908754744,Kwan Luck Seafood Restaurant,"2516 Kingsway, Vancouver, BC",Restaurant,1792017391715,renfrew-collingwood
+osm-node-14225871142,La Tasca,"2308 East 34th Avenue, Vancouver, BC",Cafe,1792017391745,renfrew-collingwood
+osm-node-4000060600,Li's China Grill,"3377 Kingsway, Vancouver, BC",Restaurant,1792017391718,renfrew-collingwood
+osm-node-12990087360,Love for Pho,"2934 Kingsway, Vancouver, BC",Restaurant,1792017391744,renfrew-collingwood
+osm-node-3908778191,Lá Chuối Cuisine,"2780 Kingsway, Vancouver, BC",Restaurant,1792017391717,renfrew-collingwood
+osm-node-13788484992,M Cha Bar,"2557 Renfrew Street, Vancouver, BC",Cafe,1792017391744,renfrew-collingwood
+osm-way-154377800,McDonald's,"2909 Grandview Highway, Vancouver, BC",Restaurant,1792017391746,renfrew-collingwood
+osm-node-4750152821,Metro Coffee Bar & Billiards,"3175 Kingsway, Vancouver, BC",Bar / Pub,1792017391722,renfrew-collingwood
+osm-node-4018980878,Michi Craft Kitchen,"3665 Kingsway, Vancouver, BC",Restaurant,1792017391720,renfrew-collingwood
+osm-node-4497567128,Milk & Sugar BBQ Bar,"5103 Joyce Street, Vancouver, BC",Restaurant,1792017391720,renfrew-collingwood
+osm-node-4971484920,Milk & Sugar Cafe,"3365 Kingsway, Vancouver, BC",Cafe,1792017391723,renfrew-collingwood
+osm-node-4971485223,Namba Curry,"3343 Kingsway, Vancouver, BC",Restaurant,1792017391724,renfrew-collingwood
+osm-node-4018487090,Noople Noodle & Dumpling House,"3003 Kingsway, Vancouver, BC",Restaurant,1792017391719,renfrew-collingwood
+osm-node-9231300319,Pampanga's Cuisine,"5179 Joyce Street, Vancouver, BC",Restaurant,1792017391736,renfrew-collingwood
+osm-node-9021676218,Panaderia Latina Bakery,"4906 Joyce Street, Vancouver, BC",Bakery,1792017391733,renfrew-collingwood
+osm-node-6665118732,Paramount BBQ Restaurant,"3129 Kingsway, Vancouver, BC",Restaurant,1792017391730,renfrew-collingwood
+osm-node-5759885052,Paramount Chinese Seafood Restaurant,"3823 Rupert Street, Vancouver, BC",Restaurant,1792017391728,renfrew-collingwood
+osm-node-11811021980,Pho Kitchen,"2915 Hebb Avenue, Vancouver, BC",Restaurant,1792017391741,renfrew-collingwood
+osm-node-11512091722,Pho Tan Vietnamese Restaurant,"3281 Kingsway, Vancouver, BC",Restaurant,1792017391740,renfrew-collingwood
+osm-node-12306494423,Phở Nhuận,"2989 Rupert Street, Vancouver, BC",Restaurant,1792017391741,renfrew-collingwood
+osm-way-241886802,Pizza Hut,"2850 Grandview Highway, Vancouver, BC",Restaurant,1792017391746,renfrew-collingwood
+osm-node-10889439798,Pizza Pizza,"3878 Rupert Street, Vancouver, BC",Restaurant,1792017391740,renfrew-collingwood
+osm-node-9231317917,Plato Filipino,"5175 Joyce Street, Vancouver, BC",Restaurant,1792017391737,renfrew-collingwood
+osm-node-13788484984,Pokeritto,"2587 Renfrew Street, Vancouver, BC",Restaurant,1792017391744,renfrew-collingwood
+osm-node-9932812723,Pokey Okey Shokudo,"2421 Kingsway, Vancouver, BC",Restaurant,1792017391738,renfrew-collingwood
+osm-node-4750152123,Polarstar Snacks,"3499 Kingsway, Vancouver, BC",Restaurant,1792017391722,renfrew-collingwood
+osm-node-2494631025,Prince Chinese Seafood Restaurant,"2881 Grandview Highway, Vancouver, BC",Restaurant,1792017391713,renfrew-collingwood
+osm-node-12865388753,Quesada,"2617 Renfrew Street, Vancouver, BC",Restaurant,1792017391743,renfrew-collingwood
+osm-node-5235848489,Ragazzi Pizza Co.,"2996 East 22nd Avenue, Vancouver, BC",Restaurant,1792017391728,renfrew-collingwood
+osm-node-5847961073,Roti Wala Snack House & Cafe,"3141 Kingsway, Vancouver, BC",Restaurant,1792017391729,renfrew-collingwood
+osm-node-11952597437,Ruka Coffee,"2406 East Broadway, Vancouver, BC",Cafe,1792017391741,renfrew-collingwood
+osm-node-10727841247,Sabor Mexicano Restaurant,"2665 Kingsway, Vancouver, BC",Restaurant,1792017391739,renfrew-collingwood
+osm-node-5933599347,Sharetea,"3619 Kingsway, Vancouver, BC",Cafe,1792017391730,renfrew-collingwood
+osm-node-9164397700,Snackshot,"3595 Kingsway, Vancouver, BC",Cafe,1792017391735,renfrew-collingwood
+osm-node-3501506777,Starbucks,"2905 Hebb Avenue, Vancouver, BC",Cafe,1792017391715,renfrew-collingwood
+osm-node-2494631032,Subway,"2892 Grandview Highway, Vancouver, BC",Restaurant,1792017391713,renfrew-collingwood
+osm-node-2882826680,Subway,"2312 Kingsway, Vancouver, BC",Restaurant,1792017391714,renfrew-collingwood
+osm-node-4971491093,Subway,"5218 Joyce Street, Vancouver, BC",Restaurant,1792017391724,renfrew-collingwood
+osm-node-4976291284,Subway,"2323 Boundary Road, Vancouver, BC",Restaurant,1792017391726,renfrew-collingwood
+osm-node-4971491102,Sunflower Kitchen,"5125 Joyce Street, Vancouver, BC",Restaurant,1792017391726,renfrew-collingwood
+osm-node-1723548167,Super Great Pizza,"3388 Vanness Avenue, Vancouver, BC",Restaurant,1792017391712,renfrew-collingwood
+osm-node-12477135524,Super Thai Hot Pot,"3329 Kingsway, Vancouver, BC",Restaurant,1792017391742,renfrew-collingwood
+osm-node-5173305065,Sushi Aji,"3339 Kingsway, Vancouver, BC",Restaurant,1792017391727,renfrew-collingwood
+osm-node-2494631035,Sushi Moon,"2893 Grandview Highway, Vancouver, BC",Restaurant,1792017391714,renfrew-collingwood
+osm-node-9932812721,Sushi Sei,"2427 Kingsway, Vancouver, BC",Restaurant,1792017391738,renfrew-collingwood
+osm-node-4971484918,The Captain's Boil,"3309 Kingsway, Vancouver, BC",Restaurant,1792017391723,renfrew-collingwood
+osm-node-4000060597,Tim Hortons,"3451 Kingsway, Vancouver, BC",Cafe,1792017391717,renfrew-collingwood
+osm-node-5063225392,Tim Hortons,"2889 East 12th Avenue, Vancouver, BC",Cafe,1792017391727,renfrew-collingwood
+osm-node-7630559514,Tim Hortons,"2689 Rupert Street, Vancouver, BC",Cafe,1792017391731,renfrew-collingwood
+osm-node-13516201491,Tim Hortons,"5081 Joyce Street, Vancouver, BC",Cafe,1792017391744,renfrew-collingwood
+osm-node-3908761987,Tina Cake Desserts,"2528 Kingsway, Vancouver, BC",Restaurant,1792017391716,renfrew-collingwood
+osm-node-3908778189,Top Cantonese Cuisine Restaurant,"2752 Kingsway, Vancouver, BC",Restaurant,1792017391716,renfrew-collingwood
+osm-node-12865388754,Tree's Organic Coffee,"2607 Renfrew Street, Vancouver, BC",Cafe,1792017391743,renfrew-collingwood
+osm-node-9949918843,Trees Organic Coffee,"5078 Joyce Street, Vancouver, BC",Cafe,1792017391738,renfrew-collingwood
+osm-node-7144757989,Triple O’s,"Renfrew-Collingwood, Vancouver, BC (street address not mapped)",Restaurant,1792017391731,renfrew-collingwood
+osm-node-14060099298,Viet Street Food Cafe,"2522 Kingsway, Vancouver, BC",Restaurant,1792017391745,renfrew-collingwood
+osm-way-154377822,Wendy's,"3698 Grandview Highway, Vancouver, BC",Restaurant,1792017391746,renfrew-collingwood
+osm-node-3908762097,Yue Ting Seafood Restaurant,"2532 Kingsway, Vancouver, BC",Restaurant,1792017391716,renfrew-collingwood
+osm-node-2494631021,Yummy Slice Pizza,"2899 Grandview Highway, Vancouver, BC",Restaurant,1792017391713,renfrew-collingwood
+osm-node-8407863902,chefhyve,"2525 Kingsway, Vancouver, BC",Restaurant,1792017391732,renfrew-collingwood
+osm-node-1188407756,iSushi Japanese Restaurant,"3883 Rupert Street, Vancouver, BC",Restaurant,1792017391712,renfrew-collingwood
+osm-node-3698942864,A Bread Affair,"1680 Johnston Street, Vancouver, BC",Bakery,1792017391591,south-granville
+osm-node-1151336635,A la Mode,"1689 Johnston Street, Vancouver, BC",Dessert,1792017391588,south-granville
+osm-node-4783930222,Afghan Horsemen Restaurant,"Anderson Street, Vancouver, BC",Restaurant,1792017391593,south-granville
+osm-node-14213121982,Alimentaria Mexicana,"1596 Johnston Street, Vancouver, BC",Restaurant,1792017391610,south-granville
+osm-node-12739833654,Anecdote,"1333 West Broadway, Vancouver, BC",Cafe,1792017391605,south-granville
+osm-node-1181743384,Bakery 101,"1505 West 2nd Avenue, Vancouver, BC",Bakery,1792017391588,south-granville
+osm-node-937792782,Bar Asra,"1480 West 11th Avenue, Vancouver, BC",Bar / Pub,1792017391582,south-granville
+osm-node-1116402390,Bean Around The World,"2977 Granville Street, Vancouver, BC",Cafe,1792017391584,south-granville
+osm-node-5125295873,Beaucoup Bakery & Cafe,"2150 Fir Street, Vancouver, BC",Bakery,1792017391593,south-granville
+osm-node-3171220256,Bin 4 Burger Lounge,"2996 Granville Street, Vancouver, BC",Restaurant,1792017391590,south-granville
+osm-node-13938929300,Bon Macaron Patisserie,"1689 Johnston Street, Vancouver, BC",Bakery,1792017391608,south-granville
+osm-node-959508139,Boston Pizza,"1333 West Broadway, Vancouver, BC",Restaurant,1792017391582,south-granville
+osm-node-6741287788,Breakfast Table,"3014 Granville Street, Vancouver, BC",Restaurant,1792017391597,south-granville
+osm-node-12039214657,Broadway Chinese,"1410 West Broadway, Vancouver, BC",Restaurant,1792017391604,south-granville
+osm-node-931897070,Cactus Club Cafe,"1530 West Broadway, Vancouver, BC",Restaurant,1792017391582,south-granville
+osm-node-3428111195,Caffe Barney,"2975 Granville Street, Vancouver, BC",Bar / Pub,1792017391591,south-granville
+osm-node-10555179843,Café salade de fruits,"South Granville, Vancouver, BC (street address not mapped)",Cafe,1792017391603,south-granville
+osm-node-4694721125,Caspian Flame,"1521 West Broadway, Vancouver, BC",Restaurant,1792017391592,south-granville
+osm-node-4172628489,Cheesecake etc.,"2141 Granville Street, Vancouver, BC",Cafe,1792017391592,south-granville
+osm-node-1151305565,ChocolaTas,"1689 Johnston Street, Vancouver, BC",Bakery,1792017391587,south-granville
+osm-node-1383405341,Chocolate Arts,"1620 West 3rd Avenue, Vancouver, BC",Bakery,1792017391590,south-granville
+osm-node-5040169826,Crab Hot Lau,"2993 Granville Street, Vancouver, BC",Restaurant,1792017391593,south-granville
+osm-node-10860804557,Daan Go Cake Lab,"1450 West 7th Avenue, Vancouver, BC",Bakery,1792017391603,south-granville
+osm-node-6219878685,Dockside,"1253 Johnston Street, Vancouver, BC",Restaurant,1792017391594,south-granville
+osm-node-9130946774,Dose Espresso Bar,"1517 West Broadway, Vancouver, BC",Cafe,1792017391602,south-granville
+osm-node-1151299284,Duso's Italia,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391586,south-granville
+osm-node-14052485858,ELLIPSIS,"South Granville, Vancouver, BC (street address not mapped)",Cafe,1792017391610,south-granville
+osm-node-12994950902,El Cafecito,"1596 Johnston Street, Vancouver, BC",Cafe,1792017391606,south-granville
+osm-node-13938935302,Elbo Jamaican Patties,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391608,south-granville
+osm-node-13712443152,Fable Café,"2871 Granville Street, Vancouver, BC",Cafe,1792017391607,south-granville
+osm-node-1151277440,Flavours of Hope,"South Granville, Vancouver, BC (street address not mapped)",Cafe,1792017391585,south-granville
+osm-node-6410366585,Freshii,"1541 West Broadway, Vancouver, BC",Restaurant,1792017391595,south-granville
+osm-node-6277850006,Freshslice Pizza,"2418 Granville Street, Vancouver, BC",Restaurant,1792017391595,south-granville
+osm-node-6659072631,Fu Men Tang,"1545 West Broadway, Vancouver, BC",Cafe,1792017391596,south-granville
+osm-node-6751998159,Fufú Café,"1266 West Broadway, Vancouver, BC",Cafe,1792017391597,south-granville
+osm-node-7154830730,GI Gelato & Coffee House,"South Granville, Vancouver, BC (street address not mapped)",Cafe,1792017391598,south-granville
+osm-node-1116400381,Gary's,"1485 West 12th Avenue, Vancouver, BC",Restaurant,1792017391583,south-granville
+osm-way-407319738,Go Fish,"South Granville, Vancouver, BC (street address not mapped)",Restaurant,1792017391611,south-granville
+osm-node-6219907894,Granville Island Brewing Taproom,"South Granville, Vancouver, BC (street address not mapped)",Bar / Pub,1792017391594,south-granville
+osm-node-7865300979,Granville Island Licorice Parlour,"1550 Anderson Street, Vancouver, BC",Bakery,1792017391599,south-granville
+osm-node-6762782586,Grapes and Soda,"1541 West 6th Avenue, Vancouver, BC",Bar / Pub,1792017391598,south-granville
+osm-node-13938935309,Hobbs Pickles Tasting Bar,"South Granville, Vancouver, BC (street address not mapped)",Restaurant,1792017391609,south-granville
+osm-node-12041123881,JINYA Ramen Bar,"1518 West Broadway, Vancouver, BC",Restaurant,1792017391604,south-granville
+osm-node-1151271753,JJ Bean,"1689 Johnston Street, Vancouver, BC",Cafe,1792017391584,south-granville
+osm-node-9130946770,Kathy's Sandwich House,"1505 West Broadway, Vancouver, BC",Restaurant,1792017391601,south-granville
+osm-node-13938935305,La Bise Canelés,"1689 Johnston Street, Vancouver, BC",Bakery,1792017391608,south-granville
+osm-node-6597261552,La Pache Pizza,"1539 West Broadway, Vancouver, BC",Restaurant,1792017391596,south-granville
+osm-node-12774575670,Laurelle's Fine Foods,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391606,south-granville
+osm-node-1151293867,Lee's Donuts,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391586,south-granville
+osm-node-1296953554,Lin Chinese Cuisine And Tea House,"1537 West Broadway, Vancouver, BC",Restaurant,1792017391589,south-granville
+osm-node-8993704059,Mangia's Sandwiches,"2690 Granville Street, Vancouver, BC",Restaurant,1792017391600,south-granville
+osm-node-1723408512,Maple Leaf Pizza,"1414 West Broadway, Vancouver, BC",Restaurant,1792017391590,south-granville
+osm-node-9453576759,Marché Mon Pitou,"1387 West 7th Avenue, Vancouver, BC",Cafe,1792017391602,south-granville
+osm-node-6283763230,Masa Japanese Restaurant,"1418 West Broadway, Vancouver, BC",Restaurant,1792017391595,south-granville
+osm-node-974735930,Mazahr Lebanese Kitchen,"1488 West 11th Avenue, Vancouver, BC",Restaurant,1792017391583,south-granville
+osm-node-768417669,McDonald's,"1482 West Broadway, Vancouver, BC",Restaurant,1792017391576,south-granville
+osm-node-869587292,My Island Cafe,"1550 Anderson Street, Vancouver, BC",Cafe,1792017391580,south-granville
+osm-node-11113272727,Namiya,"1333 West Broadway, Vancouver, BC",Restaurant,1792017391604,south-granville
+osm-node-13894100481,Nero Belgian Waffle Bar,"2861 Granville Street, Vancouver, BC",Cafe,1792017391607,south-granville
+osm-node-5908899887,Off the Tracks,"1363 Railspur Alley, Vancouver, BC",Cafe,1792017391594,south-granville
+osm-node-1151301270,Oyama Sausage,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391586,south-granville
+osm-node-866150578,Panago,"South Granville, Vancouver, BC (street address not mapped)",Restaurant,1792017391579,south-granville
+osm-way-126228982,Paul's Omelettery,"2211 Granville Street, Vancouver, BC",Cafe,1792017391611,south-granville
+osm-node-9130946773,Pearl Cafe,"1513 West Broadway, Vancouver, BC",Restaurant,1792017391601,south-granville
+osm-node-1116404814,PokéAye,"3010 Granville Street, Vancouver, BC",Restaurant,1792017391584,south-granville
+osm-node-8734858908,Popina Cantina,"1666 Johnston Street, Vancouver, BC",Restaurant,1792017391600,south-granville
+osm-node-924247446,Purdy's Chocolates,"2705 Granville Street, Vancouver, BC",Bakery,1792017391581,south-granville
+osm-node-3281370862,Rogers' Chocolates,"1571 Johnston Street, Vancouver, BC",Bakery,1792017391591,south-granville
+osm-node-13963849780,Saba Foods,"2881 Granville Street, Vancouver, BC",Restaurant,1792017391609,south-granville
+osm-node-1151303058,Siegel's Bagels,"1689 Johnston Street, Vancouver, BC",Dessert,1792017391587,south-granville
+osm-node-11055779595,Small Victory,"3070 Granville Street, Vancouver, BC",Bakery,1792017391603,south-granville
+osm-node-13433792652,Starbucks,"1479 West Broadway, Vancouver, BC",Cafe,1792017391607,south-granville
+osm-node-8654040621,Straight Outta Brooklyn NYC Pizzeria,"1833 Anderson Street, Vancouver, BC",Restaurant,1792017391600,south-granville
+osm-node-1151276383,Stuarts Quality Baked Goods,"South Granville, Vancouver, BC (street address not mapped)",Bakery,1792017391585,south-granville
+osm-node-866150141,Subway,"1288 West Broadway, Vancouver, BC",Restaurant,1792017391579,south-granville
+osm-node-914679363,Subway,"1595 West Broadway, Vancouver, BC",Restaurant,1792017391581,south-granville
+osm-node-14104409291,Sumire Sushi,"1640 West Broadway, Vancouver, BC",Restaurant,1792017391610,south-granville
+osm-node-894568279,Sushi Hanabi,"1542 West 2nd Avenue, Vancouver, BC",Restaurant,1792017391580,south-granville
+osm-node-9130946772,Sushi Master,"1509 West Broadway, Vancouver, BC",Restaurant,1792017391601,south-granville
+osm-node-7427672152,Sushi Umi,"3121 Granville Street, Vancouver, BC",Restaurant,1792017391599,south-granville
+osm-node-6629496053,Sushi Van,"2566 Granville Street, Vancouver, BC",Restaurant,1792017391596,south-granville
+osm-node-7888967881,Tamarind Tales,"1128 West Broadway, Vancouver, BC",Restaurant,1792017391599,south-granville
+osm-node-12549815215,The Corner Store Cafe,"Anderson Street, Vancouver, BC",Cafe,1792017391605,south-granville
+osm-node-1324506542,The Farmers Apprentice,"1535 West 6th Avenue, Vancouver, BC",Restaurant,1792017391589,south-granville
+osm-node-852389649,The Keg,"1499 Anderson Street, Vancouver, BC",Restaurant,1792017391577,south-granville
+osm-node-3699188198,The Liberty Distillery,"1494 Old Bridge Street, Vancouver, BC",Bar / Pub,1792017391592,south-granville
+osm-node-852420584,The Sandbar,"1535 Johnston Street, Vancouver, BC",Restaurant,1792017391578,south-granville
+osm-node-7150381008,The Stable House Bistro,"1520 West 13th Avenue, Vancouver, BC",Restaurant,1792017391598,south-granville
+osm-node-12774575669,The Stock Market,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391606,south-granville
+osm-node-852397122,The Vancouver Fish Company,"1517 Anderson Street, Vancouver, BC",Restaurant,1792017391577,south-granville
+osm-node-852400346,Tony's Fish and Oyster Café,"1511 Anderson Street, Vancouver, BC",Restaurant,1792017391578,south-granville
+osm-way-136052327,Tru Cafe,"1500 West 2nd Avenue, Vancouver, BC",Cafe,1792017391611,south-granville
+osm-node-876023068,Wicked Cafe,"1399 West 7th Avenue, Vancouver, BC",Cafe,1792017391580,south-granville
+osm-node-1151339085,Zara's,"1689 Johnston Street, Vancouver, BC",Restaurant,1792017391588,south-granville
+osm-node-4937598269,BOX Chinese Express Kitchen,"6443 Victoria Drive, Vancouver, BC",Restaurant,1792017391706,victoria-fraserview
+osm-node-5031559284,Bubble Waffle Cafe,"2639 East 49th Avenue, Vancouver, BC",Cafe,1792017391708,victoria-fraserview
+osm-node-13238301781,Caravanserai Uyghur Cuisine,"1652 Southeast Marine Drive, Vancouver, BC",Restaurant,1792017391711,victoria-fraserview
+osm-node-5827916979,East Kitchen,"5794 Victoria Drive, Vancouver, BC",Restaurant,1792017391708,victoria-fraserview
+osm-node-4029426063,Fat Boy Kitchen,"6943 Victoria Drive, Vancouver, BC",Restaurant,1792017391702,victoria-fraserview
+osm-node-1945298722,Galaxy Bakery,"Victoria-Fraserview, Vancouver, BC (street address not mapped)",Bakery,1792017391701,victoria-fraserview
+osm-node-8221577852,Indian Curry Corner,"6956 Victoria Drive, Vancouver, BC",Restaurant,1792017391709,victoria-fraserview
+osm-node-1945299996,Jun Yuan Restaurant,"5728 Victoria Drive, Vancouver, BC",Restaurant,1792017391701,victoria-fraserview
+osm-node-4029426067,Karakoram Restaurant,"6990 Victoria Drive, Vancouver, BC",Restaurant,1792017391703,victoria-fraserview
+osm-node-4937598271,Kim Phung Restaurant,"5764 Victoria Drive, Vancouver, BC",Restaurant,1792017391706,victoria-fraserview
+osm-node-6241032644,Mnimes Restaurant,"6459 Victoria Drive, Vancouver, BC",Restaurant,1792017391708,victoria-fraserview
+osm-node-4439973989,Mui Garden,"5797 Victoria Drive, Vancouver, BC",Restaurant,1792017391704,victoria-fraserview
+osm-node-4417386803,Nirvana Restaurant,"6482 Victoria Drive, Vancouver, BC",Restaurant,1792017391704,victoria-fraserview
+osm-node-12629692193,Northern Cafe,"1640 East Kent Avenue South, Vancouver, BC",Restaurant,1792017391710,victoria-fraserview
+osm-node-4029426064,Paragon Pizza,"6942 Victoria Drive, Vancouver, BC",Fast Food,1792017391702,victoria-fraserview
+osm-node-5031559283,Pho Thai Ha,"2653 East 49th Avenue, Vancouver, BC",Restaurant,1792017391708,victoria-fraserview
+osm-node-4937598267,Pho Thai Son Restaurant,"6471 Victoria Drive, Vancouver, BC",Restaurant,1792017391705,victoria-fraserview
+osm-node-9403562143,Pizza Pizza,"7191 Victoria Drive, Vancouver, BC",Restaurant,1792017391710,victoria-fraserview
+osm-node-10889306875,Prinkle Chicken,"6441 Victoria Drive, Vancouver, BC",Restaurant,1792017391710,victoria-fraserview
+osm-node-4937598275,RGK BBQ,"5755 Victoria Drive, Vancouver, BC",Restaurant,1792017391706,victoria-fraserview
+osm-node-13812238236,Shawarma Cafe,"Victoria-Fraserview, Vancouver, BC (street address not mapped)",Restaurant,1792017391711,victoria-fraserview
+osm-node-4937598276,Shun Fa Noodle House,"5763 Victoria Drive, Vancouver, BC",Restaurant,1792017391707,victoria-fraserview
+osm-node-4396874330,Shun Jing Lou Seafood Restaurant,"5822 Victoria Drive, Vancouver, BC",Restaurant,1792017391704,victoria-fraserview
+osm-node-721674471,Subway,"Victoria-Fraserview, Vancouver, BC (street address not mapped)",Restaurant,1792017391700,victoria-fraserview
+osm-node-8221577846,Supreme Pizza,"6539 Victoria Drive, Vancouver, BC",Restaurant,1792017391709,victoria-fraserview
+osm-node-7024848650,Sushi Taku-en,"6967 Victoria Drive, Vancouver, BC",Restaurant,1792017391709,victoria-fraserview
+osm-node-4029426065,The Clouds Vietnamese Cuisine,"6940 Victoria Drive, Vancouver, BC",Restaurant,1792017391703,victoria-fraserview
+osm-node-4670219989,The First Dessert,"5857 Victoria Drive, Vancouver, BC",Restaurant,1792017391705,victoria-fraserview
+osm-node-4029426066,The One BBQ Kitchen,"6978 Victoria Drive, Vancouver, BC",Restaurant,1792017391703,victoria-fraserview
+osm-node-2653553262,Wally's Burgers,"2661 East 49th Avenue, Vancouver, BC",Restaurant,1792017391701,victoria-fraserview
+osm-node-5031559281,Wing Wah Bakery,"2607 East 49th Avenue, Vancouver, BC",Bakery,1792017391707,victoria-fraserview
+osm-node-5031559282,Yu Ki BBQ Kitchen,"2609 East 49th Avenue, Vancouver, BC",Restaurant,1792017391707,victoria-fraserview
+osm-node-4937598272,Yummy Slice Pizza,"5845 Victoria Drive, Vancouver, BC",Restaurant,1792017391706,victoria-fraserview

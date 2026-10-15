@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Claim a listing{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 30px; max-width: 760px;">
+    <h1 class="section-title">Claim a listing</h1>
+    <p style="color: #475569; margin-bottom: 18px;">
+        Tell us who you are and we will contact you to confirm that you own or manage this
+        business. Nothing changes on the listing until we have spoken with you.
+    </p>
+
+    {% if errors.length %}
+    <div class="form-errors">
+        <strong>Please fix the following:</strong>
+        <ul>{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+
+    {% if business %}
+    <div class="detail-card" style="margin-bottom: 18px;">
+        <div class="card-subtitle">Listing you are claiming</div>
+        <h2 class="detail-title" style="font-size: 1.4rem;">{{ business.name }}</h2>
+        <div style="color: #475569; font-size: 0.95rem;">
+            {{ business.address }}{% if business.neighborhood %} &bull; {{ business.neighborhood.name }}{% endif %}
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <form method="POST" action="/claim">
+            <input type="hidden" name="business" value="{{ business.slug }}">
+            {# Honeypot: hidden from people, tempting to bots. Must stay empty. #}
+            <div class="hp-field" aria-hidden="true">
+                <label for="website_url">Website</label>
+                <input id="website_url" type="text" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+
+            <label class="form-label" for="name">Your name</label>
+            <input class="form-input" id="name" name="name" maxlength="80" required value="{{ values.name or '' }}">
+
+            <label class="form-label" for="role">Your role</label>
+            <select class="form-input" id="role" name="role" required>
+                {% set r = values.role or '' %}
+                <option value="owner" {% if r == 'owner' %}selected{% endif %}>Owner</option>
+                <option value="manager" {% if r == 'manager' %}selected{% endif %}>Manager</option>
+                <option value="other" {% if r == 'other' %}selected{% endif %}>Other</option>
+            </select>
+
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" id="email" name="email" type="email" maxlength="120" required value="{{ values.email or '' }}">
+
+            <label class="form-label" for="phone">Phone (optional)</label>
+            <input class="form-input" id="phone" name="phone" maxlength="40" value="{{ values.phone or '' }}">
+
+            <label class="form-label" for="message">Message (optional)</label>
+            <textarea class="form-input" id="message" name="message" rows="4" maxlength="1000">{{ values.message or '' }}</textarea>
+
+            <label class="form-check">
+                <input type="checkbox" name="consent" value="yes" {% if values.consent == 'yes' %}checked{% endif %}>
+                <span>I agree that the directory may contact me about this listing.</span>
+            </label>
+
+            <button type="submit" class="btn" style="margin-top: 14px;">Send claim request</button>
+        </form>
+    </div>
+    {% else %}
+    <div class="detail-card">
+        <p style="color: #475569;">
+            Open the business you want to claim, then use the “Own this business? Claim it”
+            button on its page. You can also paste the listing address below.
+        </p>
+        <form method="GET" action="/claim">
+            <label class="form-label" for="business">Listing slug or address</label>
+            <input class="form-input" id="business" name="business" placeholder="e.g. alibi-room">
+            <button type="submit" class="btn" style="margin-top: 14px;">Find listing</button>
+        </form>
+    </div>
+    {% endif %}
+
+    <p style="font-size: 0.85rem; color: #64748b; margin-top: 16px;">
+        This form is the only place we ask for your details. See <a href="/privacy">what we collect</a>.
+    </p>
+</div>
+{% endblock %}

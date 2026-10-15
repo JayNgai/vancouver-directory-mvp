@@ -1,0 +1,13 @@
+id,type,businessId,path,createdAt,referrerHost,visitorHash
+"cmv8x7f800000n30jdiu096qd","search","","/search?q=museum",1792031365585,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x7zq3000010dv9hw3a3wt","search","","/search?q=museum",1792031392155,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x823r000110dvh955wz60","search","","/search?q=museum",1792031395239,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82kk000210dvnuagjott","search","","/search?q=sushi",1792031395844,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82l3000310dv5a5s5p8z","search","","/search?q=sushi",1792031395864,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82ls000410dv1d4q8m87","search","","/search?q=Gastown",1792031395889,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82ta000510dvhzq17r0y","page_view_detail","osm_c3a5516ef3024562","/businesses/steamworks",1792031396159,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82tj000610dvztsy3p9t","page_view_detail","cmv77gjmr000et42pycc5kbl2","/businesses/rain-or-shine-ice-cream",1792031396167,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82tp000710dvudpj937c","page_view_detail","overture-cd04be74-342f-44d5-bd71-13b20f1d39ac","/businesses/sip-song-thai-cuisine-13b20f1d",1792031396174,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82tw000810dvv2c75khl","page_view_detail","cmv77gjmy000kt42pvui0qz1f","/businesses/medina-cafe",1792031396180,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x82u3000910dva8ftzdpu","page_view_detail","cmv77gjmy000kt42pvui0qz1f","/businesses/medina-cafe",1792031396187,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8x86dj000a10dv9pc34hig","search","","/search?q=museum",1792031400776,"","3087575b87fb771dcac33fb980ebb0e4"

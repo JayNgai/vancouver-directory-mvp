@@ -1,0 +1,99 @@
+removed_id,removed_name,removed_address,kept_id,kept_name,kept_address,similarity,reason
+overture-d2dc362c-9871-4a76-b55d-985458d9b26c,Neptune Eats Kerrisdale,"2106 W 41st Ave, Vancouver",osm-node-11072666128,Neptune Eats,"2106 West 41st Avenue, Vancouver, BC",0.667,same normalized address
+overture-fb5d1452-71ba-4b64-9a64-e36fd068cc8c,Sushi Bar Ajisai,"2081 W 42nd Ave, Vancouver",osm-node-2290994536,Ajisai Sushi Bar,"2081 West 42nd Avenue, Vancouver, BC",1.0,same normalized address
+overture-ca4402ad-0a61-4a17-84d4-94e5a103221f,MACU Tea - Kerrisdale,"5971 West Blvd, Vancouver",osm-node-12858413055,Macu Tea,"5971 West Boulevard, Vancouver, BC",0.667,same normalized address
+overture-a75a7efe-9f0f-450f-807a-9205c8277b0d,PinYueXuan seafood restaurant,"8532 Granville St, Vancouver",osm-node-5848026983,Pinyuexuan,"8532 Granville Street, Vancouver, BC",0.487,same normalized address
+overture-0f55f65e-1391-4727-b35e-93e7de50471b,Bean Around the World Coffees,"2977 Granville St, Vancouver",osm-node-1116402390,Bean Around The World,"2977 Granville Street, Vancouver, BC",0.769,same normalized address
+overture-a08fcef3-3be1-4236-bd56-7de4766909e3,Pallet Coffee Roasters - Oak Street,"3820 Oak St, Vancouver",osm-780962637,Pallet Coffee Roasters,3820 Oak Street Vancouver,0.76,same normalized address
+overture-55f9b77e-0c4f-4e83-8857-0199c78ed2d5,Rayhan,"3170 Oak St, Vancouver",osm-node-2133383695,Rayhan Mediterranean Restaurant,"3170 Oak Street, Vancouver, BC",0.333,same normalized address
+overture-fa479cd4-995d-4fa0-9d3e-526925231fe9,Dhamaka,"6560 Main St, Vancouver",osm-node-5021105529,Dhamaka Indian Restaurant,"6560 Main Street, Vancouver, BC",0.416,same normalized address
+overture-7be5f825-4328-46ea-ad58-201866d92530,Mary Brown's Chicken,"6549 Main St, Vancouver",osm-node-9389663027,Mary Brown's,"6549 Main Street, Vancouver, BC",0.76,same normalized address
+overture-fec8097a-607d-46b9-9bfa-e14e9c2095c7,Toshi Sushi,"181 E 16th Ave, Vancouver",osm-582801777,Toshi,181 East 16th Avenue Vancouver,0.594,same normalized address
+overture-f08c411f-2227-47eb-95c7-67c2113a57b8,Kaori Izakaya (Sushi & Grill),"3043 Main St, Vancouver",osm-node-822487108,Kaori Izakaya,"3043 Main Street, Vancouver, BC",0.588,same normalized address
+overture-a857ca47-5922-4fa4-a996-4aee8ec265e0,Matchstick Coffee Roasters,"639 E 15th Ave, Vancouver",osm-node-4957982990,Matchstick,"639 East 15th Avenue, Vancouver, BC",0.528,same normalized address
+overture-595e77b9-ae95-47c4-bf8b-18a4fe11997b,Celsius Bubble Tea,"6350 Fraser St, Vancouver",osm-node-12767098202,Celsius,"6350 Fraser Street, Vancouver, BC",0.532,same normalized address
+overture-bbdd455f-8518-4a5d-ab7c-37c56d2a1361,Melriches Coffeehouse,"1244 Davie St, Vancouver",osm_3e39ed8efb0246c7,Melriches Coffee House,1244 Davie Street,0.928,same normalized address
+overture-063f304c-4b4e-48f8-9595-78cf8fe3080a,Red Robin Gourmet Burgers,"803 Thurlow St, Vancouver",osm_aa51599cf9c941ec,Red Robin,803 Thurlow Street,0.503,same normalized address
+overture-1b0210f1-a01e-40f1-9c42-9714d2a5c782,Faubourg,"769 Hornby St, Vancouver",osm_3bc52721c3524deb,Faubourg Paris,769 Hornby Street,0.691,same normalized address
+overture-943ef6bd-e862-49cb-85ff-387c8036da70,Davie's The Best Turkish Cuisine,"1157 Davie St, Vancouver",osm_3634e3789f554830,Davie's the Best,1157 Davie Street,0.633,same normalized address
+overture-749c8f5a-abf1-4b52-a7e8-7f7669b97feb,The Heaven,"1026 Granville St, Vancouver",osm_a026ee7f1ca94a47,The Heaven on Granville,1026 Granville Street,0.456,same normalized address
+overture-265ca253-d836-4ba6-818a-e98e38c21e4b,The Dime Roadhouse,"1017 Granville St, Vancouver",osm_69fcce8908a44a72,The Dime,1017 Granville Street,0.5,same normalized address
+overture-dfe2f975-dd66-4e09-89df-be030219d7cd,Mr Greek Donair Town,"1173 Granville St, Vancouver",osm_52b7839330c2479a,Mr. Greek,1173 Granville Street,0.543,same normalized address
+overture-67a99265-b091-4b39-84bf-dfdc041525a2,Fritz European Fry House,"718 Davie St, Vancouver",osm-node-3108751086,Fritz's European Fry House/Poutine,"718 Davie Street, Vancouver, BC",0.735,same normalized address
+overture-70b2c977-12fe-4f9e-a565-1c06ba523922,Kinkura Sushi,"656 Davie St, Vancouver",osm_ca5b2327738d4c5a,Kinkura Sushi + Sake,656 Davie Street,0.706,same normalized address
+overture-a45a9956-f227-4a5e-85e7-58cbafa33e53,Moltaqa Moroccan Restaurant,"1002 Mainland St, Vancouver",osm_6ae59a55fad94eec,Moltaqa,1002 Mainland Street,0.391,same normalized address
+overture-2aaac12c-376c-4eea-9127-6bb3224e99dd,Tacofino Yaletown,"1025 Mainland St, Vancouver",osm_fc6eb94887964adc,Tacofino,1025 Mainland Street,0.608,same normalized address
+overture-35e9d657-cce0-4e7d-b126-f7b4114ead41,Yopo Sweet Mandarin,"1122 Homer St, Vancouver",osm_c2769358821b4798,Yopo,1122 Homer Street,0.333,same normalized address
+overture-93fdd14a-dc20-49e5-b376-ae815d30711f,Yamato Sushi,"616 Davie St, Vancouver",osm_607c75d212f24379,Sushi Yamato,616 Davie Street,1.0,same normalized address
+overture-3802de52-ba03-4987-8c33-ff79b68ad829,Zab Zaab Thai Cuisine,"1211 Hamilton St, Vancouver",osm_d52d4ef3f14a473c,Zab Zaab,1211 Hamilton Street,0.524,same normalized address
+overture-1258dcce-c9d9-4a3e-aca3-c49246c3378e,Tacofino Kitsilano,"1909 W 4th Ave, Vancouver",osm_fe2fe02375754c70,Tacofino,1909 West 4th Avenue,0.585,same normalized address
+overture-f50f10ba-2cb5-40c1-802e-0f2197d2306c,Cafe Zen On Yew,"1631 Yew St, Vancouver",osm_749360de2d554014,Cafe Zen,1631 Yew Street,0.661,same normalized address
+overture-24a8ff55-f4e2-42bc-be2d-12bde8526fa0,Chewies Smoke and Oyster Bar,"2201 W 1st Ave, Vancouver",osm_7e3774fb7bcc4427,Chewies Oyster Bar,2201 West 1st Avenue,0.743,same normalized address
+overture-71809e0e-d51c-438c-bd49-7da12df93e7e,Simpatico Ristorante,"2222 W 4th Ave, Vancouver",osm_ffb07783b42a486d,Simpatico,2222 West 4th Avenue,0.59,same normalized address
+overture-8e69d3af-78a4-48d5-bfe1-0a8d75490873,Thomas Haas Fine Chocolates & Patisserie,"2539 W Broadway, Vancouver",osm_34fa1fe86320434b,Thomas Haas Chocolates,2539 West Broadway,0.653,same normalized address
+overture-a252d4aa-8a24-4e07-8720-1547c8886252,Sunshine Diner,"2649 W Broadway, Vancouver",osm_33b57959f7d448a4,Sunshine Classic Diner,2649 West Broadway,0.739,same normalized address
+overture-868e5263-5498-48fd-9bab-b05c8cc71e98,Tandoori Fusion Indian Cuisine,"2872 W Broadway, Vancouver",osm_949eb3eadc9c4d43,Tandoori Fusion,2872 West Broadway,0.633,same normalized address
+overture-8af738a9-9f4d-42dd-a0a3-c67d32e1ad61,Banana Leaf in Kitsilano,"3005 W Broadway, Vancouver",osm-651057575,Banana Leaf,3005 West Broadway Vancouver,0.597,same normalized address
+overture-5da89dc4-a2ce-4a11-a77e-51b821ae99ad,Sweet Barrel Creamery and Coffee Roasters,"2729 Arbutus St, Vancouver",osm_a3652fc7b58a498d,Sweet Barrel Creamery,2729 Arbutus Street,0.644,same normalized address
+overture-aafb18aa-6de8-48d7-bcb3-58995f661450,Coquette Brasserie,"2685 Arbutus St, Vancouver",osm-724597034,Coquette,2685 Arbutus Street Vancouver,0.585,same normalized address
+overture-a54a6bce-ac35-4eb2-b5e0-1670433aa157,Pallet Coffee Roasters - West Broadway,"2002 W Broadway, Vancouver",osm_81c9aa04a2da4367,Pallet Coffee Roasters,2002 West Broadway,0.721,same normalized address
+overture-5cc83cc4-28cd-4c0a-84f0-a0324bcaddb2,Akbar's Own Dining Lounge,"1905 W Broadway, Vancouver",osm_7b5164806e054e60,Akbar's Own,1905 West Broadway,0.648,same normalized address
+overture-182625a5-c79c-405b-b557-9a51a83e5d5b,Delhi 6 Indian Bistro,"1766 W 7th Ave, Vancouver",osm_eebc5047b5f34a2a,Delhi 6,1766 West 7th Avenue,0.5,same normalized address
+overture-e783d5d2-399d-4019-a0f5-9f6318b646ae,Suika,"1626 W Broadway, Vancouver",osm_0c2013e3e2fa400a,Suika Japanese Restaurant,1626 West Broadway,0.333,same normalized address
+overture-563e90ab-273b-4ef7-b0f1-5cd57c483d4a,Big Star Sandwich Co.,"802 W Broadway, Vancouver",osm-node-1262378179,Big Star Sandwich Company,"802 West Broadway, Vancouver, BC",1.0,same normalized address
+overture-fbbd6bb0-7fe8-4c65-a327-c6a22ec694d0,Tractor Everyday Healthy Foods,"601 W Broadway, Vancouver",osm-node-7888910500,Tractor,"601 West Broadway, Vancouver, BC",0.359,same normalized address
+overture-7c48a452-d4a6-4e2d-a326-948696552315,Saku Broadway,"548 W Broadway, Vancouver",osm-node-5515697225,Saku,"548 West Broadway, Vancouver, BC",0.5,same normalized address
+overture-edce79b2-a794-4b48-a860-e4304506bdc7,COMEDOR By La Taqueria Pinche Taco Shop,"2450 Yukon St, Vancouver",osm-node-5296233721,La Taqueria Pinche Taco Shop,"2450 Yukon Street, Vancouver, BC",0.794,same normalized address
+overture-5122f093-ac50-4fc9-845e-974f11521cb7,Fatburger West Broadway,"255 W Broadway, Vancouver",osm-way-292347093,Fatburger,"255 West Broadway, Vancouver, BC",0.534,same normalized address
+overture-fc8300be-1d7c-4fba-a76b-ccd554a9f37d,Quesada Burritos and Tacos,"81 Kingsway, Vancouver",osm-node-10141634556,Quesada,"81 Kingsway, Vancouver, BC",0.403,same normalized address
+overture-9e9df4f8-7866-4218-a4c8-154db1136049,Tacofino Ocho (Mount Pleasant),"8 E 5th Ave, Vancouver",osm-node-6148834585,Tacofino Ocho,"8 East 5th Avenue, Vancouver, BC",0.602,same normalized address
+overture-e42e330a-9671-4c43-a683-90c94fac2c1f,Dear Gus Snack Bar,"2040 Quebec St, Vancouver",osm-node-10731995305,Dear Gus,"2040 Quebec Street, Vancouver, BC",0.585,same normalized address
+overture-9f5c91e2-207d-4e03-a185-66ea7db75eae,Zarak by Afghan Kitchen,"2102 Main St, Vancouver",osm-node-7647469308,Zarak,"2102 Main Street, Vancouver, BC",0.339,same normalized address
+overture-c5a0c4a3-2906-4cf5-ab6d-7f49b8e2f70b,JJ Bean Coffee Roasters,"188 W 1st Ave, Vancouver",osm-node-3352861550,JJ Bean,"188 West 1st Avenue, Vancouver, BC",0.5,same normalized address
+overture-55134eda-364e-4d41-b085-d9cde2f0e9ce,nana’s Green Tea Canada,"159 W 4th Ave, Vancouver",osm-node-12247550586,Nana's Green Tea,"159 West 4th Avenue, Vancouver, BC",0.809,same normalized address
+overture-272c9137-2e8a-4140-bc81-15d3def6df19,Rocanini Coffee Roasters,"863 Beatty St, Vancouver",osm_56ab4038959a4c2c,Rocanini,863 Beatty Street,0.475,same normalized address
+overture-93a98f5c-c5df-4269-a71f-566bfb8df8cd,Lupo Restaurant and Vinoteca,"869 Hamilton St, Vancouver",osm-652956529,Lupo,869 Hamilton Street Vancouver,0.25,same normalized address
+overture-6a95bf27-69ec-467d-8a88-fc220b74cc11,Pelicana Chicken Robson,"382 Robson St, Vancouver",osm_9597b25f3abc4cd6,Pelicana Chicken,382 Robson Street,0.779,same normalized address
+overture-74f7ef07-c03f-48ec-aff6-5e55299cab68,Spin Roll Sushi,"535 W Pender St., Vancouver",osm_86caf8c72ce84275,Spin Roll,535 West Pender Street,0.712,same normalized address
+overture-e2415330-b4e3-42db-b0a8-b82d9557e873,Bean Around the World Coffees,"175 W Hastings St, Vancouver",osm_052c89701bbc406f,Bean Around The World,175 West Hastings Street,0.769,same normalized address
+overture-f745c753-ad46-4e61-8ddf-eddf3fa79c2d,LOCAL Public Eatery Gastown,"3 Alexander St, Vancouver",osm_5dbb489e70e0403a,Local Public Eatery,3 Alexander Street,0.785,same normalized address
+overture-6b99b1cd-6998-49d9-bef8-18292d4e0151,Golden Smell Mee,"142 E Pender St, Vancouver",osm-node-11057664427,Golden Smell Mee Malaysian Singaporeon Cuisine,"142 East Pender Street, Vancouver, BC",0.5,same normalized address
+overture-91c11e11-682c-4246-8491-38be31180b65,Juke Fried Chicken,"182 Keefer St, Vancouver",osm-node-5031450922,Juke,"182 Keefer Street, Vancouver, BC",0.345,same normalized address
+overture-a63228d7-f2d9-444f-ae0d-7c14e9a51362,Fiorino Italian Street Food,"212 E Georgia St, Vancouver",osm-node-1604467564,Fiorino,"212 East Georgia Street, Vancouver, BC",0.391,same normalized address
+overture-601ad5d8-7e02-4f16-b043-a733cd471a16,Machete Mexican Ancestral Food,"1007 Main St, Vancouver",osm-node-12695870977,Machete,"1007 Main Street, Vancouver, BC",0.359,same normalized address
+overture-33cde72c-057e-4042-92a5-03efae65e4b2,Coastal Eden Cafe,"643 E Hastings St, Vancouver",osm-node-10947359693,Eden,"643 East Hastings Street, Vancouver, BC",0.362,same normalized address
+overture-672c483c-3c08-4025-bd1c-2b35c58672c6,Axum Restaurant,"1279 E Hastings St, Vancouver",osm-node-971131061,Axum Ethiopian Restaurant,"1279 East Hastings Street, Vancouver, BC",0.712,same normalized address
+overture-225c6ae1-1bec-45f4-80ed-5494150482b5,Klasik Inasal and Noodle Express,"650 E Broadway, Vancouver",osm-node-4728754195,Klasik Inasal,"650 East Broadway, Vancouver, BC",0.549,same normalized address
+overture-c632688a-2d9c-49ac-a2f4-24f63927023e,Zakkushi on Denman,"823 Denman St, Vancouver",osm_29605454cee54832,Zakkushi,823 Denman Street,0.585,same normalized address
+overture-d8fdb9ba-d113-4b87-9345-8c16f33797ca,Banana Leaf on Robson,"1779 Robson St, Vancouver",osm_6ae451d04f3e4e97,Banana Leaf,1779 Robson Street,0.653,same normalized address
+overture-355923b5-1f87-4dfc-bc38-b58d9c60f5fc,Jingle Bao & Yum Yum Wok,"774 Denman St, Vancouver",osm_9be27ae8ac0047ca,Jingle Bao,774 Denman Street,0.528,same normalized address
+overture-b8b404d3-fe60-4228-90a5-6e5cda837eb2,VanLove Sushi and More,"1755 Robson St, Vancouver",osm_383da7172c1849f5,VanLove Sushi,1755 Robson Street,0.706,same normalized address
+overture-832edab5-136d-4260-b2c7-1ecc6bb69be0,Pho 37,"1578 Robson St, Vancouver",osm_baf8f3d0cca447d6,Pho 37 Vietnamese Restaurant,1578 Robson Street,0.5,same normalized address
+overture-b23b6268-b4f8-4754-94b9-8d5001872a04,Liuyishou Hotpot,"1542 Robson St, Vancouver",osm_fc4829e2cf1244d9,Liuyishou Hotpot Robson,1542 Robson Street,0.779,same normalized address
+overture-d3c26ef2-bfc5-43fa-a604-6a3122911d3b,Sura Korean Royal Cuisine,"1518 Robson St, Vancouver",osm_d906fbd8f234474c,Sura Korean,1518 Robson Street,0.581,same normalized address
+overture-38dda200-96a5-4e3a-a4c7-91d4ffe93c29,Miko Sushi Japanese Restaurant,"1335 Robson St, Vancouver",osm_0ca2f4c012a84c7a,Miko Sushi,1335 Robson Street,0.5,same normalized address
+overture-f105773e-246f-4991-9e71-314b029643fc,Cora Breakfast and Lunch,"1368 Robson St, Vancouver",osm_452a29db9e5d4c66,Cora,1368 Robson Street,0.271,same normalized address
+overture-6e084362-1cc4-4de4-8b7b-cd90a09866bd,Chosun Korean BBQ Downtown,"793 Jervis St, Vancouver",osm_18210ccfc07d4230,Chosun Korean BBQ,793 Jervis Street,0.751,same normalized address
+overture-b563ca27-060d-428d-b6e8-79809287b4a3,Uncle Tetsu's Japanese Cheesecake,"1151 Robson St, Vancouver",osm-node-9164400183,Uncle Tetsu's Cheesecake,"1151 Robson Street, Vancouver, BC",0.818,same normalized address
+overture-478bfd39-e3f0-4c81-8d7a-e3542b0fbaf3,JJ Bean Coffee Roasters,"1188 Alberni St, Vancouver",osm-node-3687593480,JJ Bean,"1188 Alberni Street, Vancouver, BC",0.5,same normalized address
+overture-0e067f4c-2fe1-4087-a29a-9f4616458eb1,Spicy 6 Fine Indian Cuisine,"1116 Robson St, Vancouver",osm_c8330b71cfa34017,Spicy 6,1116 Robson Street,0.4,same normalized address
+overture-f098553f-539f-488a-be73-f6d10ed628a4,cafeclub.,"1018 W Georgia St, Vancouver",osm_313e4fd1fa0f4a30,Cafe Club,1018 West Georgia Street,0.894,same normalized address
+overture-4429061d-e7af-4eac-bee6-956fa9ed522a,Kamei Royale Japanese Restaurant,"1066 W Hastings St, Vancouver",osm_4ac87a1534e74410,Kamei Royale,1066 West Hastings Street,0.518,same normalized address
+overture-e7b4cc01-f876-490e-87d0-9abfa19d9c20,Top of Vancouver Revolving Restaurant,"555 W Hastings St, Vancouver",osm_29d12a48139f4f1a,Top of Vancouver,555 West Hastings Street,0.5,same normalized address
+overture-d1dae6e2-8a95-4032-94ae-f3e1cbc6b4ea,Mary Brown's Chicken,"1653 E Broadway, Vancouver",osm-node-11765469139,Mary Brown's,"1653 East Broadway, Vancouver, BC",0.76,same normalized address
+overture-2d13cb42-0fbf-4c32-b411-e635a7e6fdb2,East Van Brewing Company,"1675 Venables St, Vancouver",osm-way-577896312,East Vancouver Brewing,"1675 Venables Street, Vancouver, BC",0.633,same normalized address
+overture-a7aa61ee-d2d7-416a-a172-42dd86fe922f,Pepino's Spaghetti House,"631 Commercial Dr, Vancouver",osm-node-11141972840,Pepino's,"631 Commercial Drive, Vancouver, BC",0.57,same normalized address
+overture-cb17efbf-2a26-436c-8517-14f2f1d666e3,Mr. Greek Donair Store,"2285 Commercial Dr, Vancouver",osm-node-10943493210,Mr. Greek,"2285 Commercial Drive, Vancouver, BC",0.524,same normalized address
+overture-d4ea250e-0fbc-4ee3-9a0b-a7585ab1f7ff,Kishimoto Japanese Restaurant,"2054 Commercial Dr, Vancouver",osm-node-3010625093,Kishimoto,"2054 Commercial Drive, Vancouver, BC",0.45,same normalized address
+overture-795c6284-0950-4aad-b988-cb2c012b8c29,Memphis Blues Barbeque House,"1342 Commercial Dr, Vancouver",osm-node-2953682906,Memphis Blues,"1342 Commercial Drive, Vancouver, BC",0.602,same normalized address
+overture-23eaf6f9-6133-420a-9bc9-ebe401b7ef2c,Sopra Sotto,"1510 Commercial Dr, Vancouver",osm-node-9332552402,Sopra Sotto Pizzeria,"1510 Commercial Drive, Vancouver, BC",0.674,same normalized address
+overture-c846f035-28e8-4afa-877a-ae7aad91e802,Thai Son Restaurant,"6471 Victoria Dr, Vancouver",osm-node-4937598267,Pho Thai Son Restaurant,"6471 Victoria Drive, Vancouver, BC",0.86,same normalized address
+overture-a9d5be5a-0940-4af6-baf6-9aa3be146ead,On Lok Restaurant and Wonton House,"2010 E Hastings St, Vancouver",osm-way-304289903,On Lok Restaurant & Wun Tun House,"2010 East Hastings Street, Vancouver, BC",0.881,same normalized address
+overture-d4b4a6d4-362e-439f-9881-5cceca9ce8ed,Kwan Luck Restaurant,"2516 Kingsway, Vancouver",osm-node-3908754744,Kwan Luck Seafood Restaurant,"2516 Kingsway, Vancouver, BC",0.792,same normalized address
+overture-73604df6-9240-45c1-9678-1b49025d3c3f,Come Along Chinese Seafood Restaurant,"2550 Kingsway, Vancouver",osm-node-2637705783,Come Along Seafood Restaurant,"2550 Kingsway, Vancouver, BC",0.835,same normalized address
+overture-9375010b-41f9-465b-8ae5-486f5175194a,James on Hastings,"2683 E Hastings St, Vancouver",osm-node-1407840913,James on Hastings Chinese Restaurant,"2683 East Hastings Street, Vancouver, BC",0.609,same normalized address
+overture-dd22ff67-08fb-4b77-8580-c13d44973366,Blowfish Sushi & Japanese Food,"2828 E Hastings St, Vancouver",osm-node-3661058437,Blowfish Sushi,"2828 East Hastings Street, Vancouver, BC",0.578,same normalized address
+overture-2ae9bad1-6a95-4a45-b311-80bf0cf60e51,Domino's Pizza,"5522 Joyce St, Vancouver",osm-node-5847961070,Domino's,"5522 Joyce Street, Vancouver, BC",0.76,same normalized address
+overture-becf72e7-cf4e-4e8e-b092-7b9971bfa971,iSushi Japanese & Korean Restaurant,"3883 Rupert St, Vancouver",osm-node-1188407756,iSushi Japanese Restaurant,"3883 Rupert Street, Vancouver, BC",0.784,same normalized address
+overture-e7cbbd63-202b-4a15-b4a0-442cb3d1dc8f,350°F Chicken,"3307 E Broadway, Vancouver",osm-node-5295018298,350°F Korean Fried Chicken,"3307 East Broadway, Vancouver, BC",0.633,same normalized address
+overture-8fbd3b1b-8058-4937-84f3-ac51f28fa10b,Panago Pizza,"5738 Tyne St, Vancouver",osm-node-6129167621,Panago,"5738 Tyne Street, Vancouver, BC",0.633,same normalized address

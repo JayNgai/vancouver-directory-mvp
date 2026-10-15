@@ -1,0 +1,11 @@
+id,type,businessId,path,createdAt,referrerHost,visitorHash
+"cmv8z6dqe0000p9r14mhrxgbv","search","","/search?q=stanley",1792034676231,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z94lf0000lli6p4su997g","search","","/search?q=stanley",1792034804355,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z98tj0001lli6063266ou","search","","/search?q=sushi",1792034809831,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z98u60002lli6bi96rnkn","search","","/search?q=sushi",1792034809855,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z98uq0003lli6l79ker9n","search","","/search?q=Gastown",1792034809874,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z991t0004lli69d7uzcwi","page_view_detail","osm_c3a5516ef3024562","/businesses/steamworks",1792034810129,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z99220005lli6w88ne106","page_view_detail","cmv77gjmr000et42pycc5kbl2","/businesses/rain-or-shine-ice-cream",1792034810138,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z992f0006lli6bpxcusut","page_view_detail","overture-cd04be74-342f-44d5-bd71-13b20f1d39ac","/businesses/sip-song-thai-cuisine-13b20f1d",1792034810151,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z992m0007lli6zgzs0aq4","page_view_detail","cmv77gjmy000kt42pvui0qz1f","/businesses/medina-cafe",1792034810159,"","3087575b87fb771dcac33fb980ebb0e4"
+"cmv8z992t0008lli6llhpf0p0","page_view_detail","cmv77gjmy000kt42pvui0qz1f","/businesses/medina-cafe",1792034810165,"","3087575b87fb771dcac33fb980ebb0e4"
