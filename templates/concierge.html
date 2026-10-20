@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Smart Concierge - Vancouver Directory{% endblock %}
+{% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">{% endblock %}
 
 {% block content %}
 <style>
@@ -19,7 +20,7 @@
   .hood-note { font-size: 0.9rem; color: var(--muted-foreground, #64748b); margin-top: 8px; }
   .generate-btn { width: 100%; min-height: 52px; margin-top: 22px; background: var(--accent, #007bff); color: #fff; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
   .generate-btn:disabled { opacity: 0.6; cursor: wait; }
-  .export-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 2px 0 16px; }
+  .export-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 0; }
   .export-label { color: var(--muted-foreground, #475569); font-size: 0.95rem; }
   .export-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--border, #cbd5e1); background: var(--card, #fff); color: var(--accent, #007bff); font-weight: 600; text-decoration: none; }
   .export-btn:hover { background: #f0f7ff; }
@@ -40,6 +41,24 @@
     .swap-card { flex: 0 0 calc(50% - 6px); }
   }
   @media (max-width: 380px) { .concierge-prompt { font-size: 1rem; } }
+
+  /* ---- route canvas (slice 2). Single DOM order reads top-to-bottom on a phone exactly as
+     specified: steps -> map -> export -> swaps. On a wide screen the grid places the map beside
+     the steps and the swaps, so no duplicate markup is needed for the two layouts. ---- */
+  .results-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .map-col { display: none; }
+  .map-col.ready { display: block; }
+  #routeMap { width: 100%; height: 240px; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; background: #f8fafc; }
+  .pin-badge { width: 28px; height: 28px; border-radius: 50%; background: #e05638; color: #fff; font-weight: 700; font-size: 13px; line-height: 1; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.3); box-sizing: border-box; }
+  .map-popup strong { display: block; }
+  .map-popup-addr { color: #64748b; font-size: 12px; }
+  @media (min-width: 768px) {
+    .results-grid { grid-template-columns: 55fr 45fr; gap: 24px; align-items: start; }
+    #itinerarySteps { grid-column: 1; grid-row: 1; }
+    #swapSection { grid-column: 1; grid-row: 2; }
+    .map-col { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 16px; }
+    #routeMap { height: 420px; }
+  }
 </style>
 
 <div class="concierge-wrap">
@@ -97,24 +116,30 @@
     <div id="resultsArea" class="results">
         <h2 style="margin: 0 0 6px;">Your custom itinerary</h2>
         <p class="swap-hint">On a computer, drag an alternative onto a stop. On a phone, tap an alternative, then tap the stop to replace.</p>
-        <div id="itinerarySteps"></div>
 
-        {# Navigation export. Rendered from the itinerary ON SCREEN, not from a server value: the
-           itinerary is edited in the browser (tap/drag swaps), so a URL computed once server-side
-           would drift the moment a stop changed. See public/maps-url.js. #}
-        <div id="exportRow" class="export-row" style="display:none">
-            <span class="export-label">Take this route with you &rarr;</span>
-            <a id="exportGoogle" class="export-btn" target="_blank" rel="noopener">Google Maps</a>
-            <a id="exportApple" class="export-btn" target="_blank" rel="noopener">Apple Maps</a>
-        </div>
+        <div class="results-grid">
+            <div id="itinerarySteps"></div>
 
-        <div id="swapSection" class="swap-section">
-            <h3 style="margin: 0 0 6px;">Swap options</h3>
-            <div id="swapOptions" class="swap-row"></div>
+            {# The canvas and the export sit together: see the route, then take it. Hidden until there is
+               a route to draw, so an empty itinerary never shows a blank grey box. #}
+            <div class="map-col" id="mapCol">
+                <div id="routeMap" role="img" aria-label="Map of the itinerary stops"></div>
+                <div id="exportRow" class="export-row" style="display:none">
+                    <span class="export-label">Take this route with you &rarr;</span>
+                    <a id="exportGoogle" class="export-btn" target="_blank" rel="noopener">Google Maps</a>
+                    <a id="exportApple" class="export-btn" target="_blank" rel="noopener">Apple Maps</a>
+                </div>
+            </div>
+
+            <div id="swapSection" class="swap-section">
+                <h3 style="margin: 0 0 6px;">Swap options</h3>
+                <div id="swapOptions" class="swap-row"></div>
+            </div>
         </div>
     </div>
 </div>
 
+<script src="/vendor/leaflet/leaflet.js"></script>
 <script src="/maps-url.js"></script>
 <script>
 let currentSteps = [];
@@ -231,6 +256,7 @@ function renderItinerary() {
     `).join('');
     document.getElementById('swapOptions').innerHTML = swapsHtml || '<p style="color: var(--muted-foreground, #777);">No extra options available.</p>';
     updateExportLinks();
+    drawRoute();
 }
 
 // ---- navigation export: keep the link in step with the itinerary ON SCREEN ----
@@ -246,6 +272,67 @@ function updateExportLinks() {
     document.getElementById('exportGoogle').href = g;
     document.getElementById('exportApple').href = a;
     row.style.display = 'flex';
+}
+
+// ---- route canvas: Leaflet, VENDORED into public/vendor/ (no npm package, no key, no account) ----
+let routeMap = null;
+let routeLayer = null;
+
+function ensureMap() {
+    if (routeMap) return routeMap;
+    if (typeof L === 'undefined') return null;
+    routeMap = L.map('routeMap', { scrollWheelZoom: false });
+    // OpenStreetMap tiles: free, no key — and the tile policy REQUIRES attribution on the map
+    // surface, so Leaflet's default control is left exactly as it comes.
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(routeMap);
+    return routeMap;
+}
+
+function numberedIcon(n) {
+    return L.divIcon({
+        className: '',
+        html: `<span class="pin-badge">${n}</span>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+        popupAnchor: [0, -14]
+    });
+}
+
+function drawRoute() {
+    const col = document.getElementById('mapCol');
+    const pts = currentSteps
+        .map((s) => s.business)
+        .filter((b) => b && b.latitude != null && b.longitude != null);
+    const map = pts.length ? ensureMap() : null;
+    if (!map) { col.classList.remove('ready'); return; }
+
+    col.classList.add('ready');
+    if (routeLayer) { routeLayer.remove(); routeLayer = null; }
+    routeLayer = L.layerGroup().addTo(map);
+
+    pts.forEach((b, i) => {
+        L.marker([b.latitude, b.longitude], { icon: numberedIcon(i + 1), title: b.name })
+            .bindPopup(`<div class="map-popup"><strong>${i + 1}. ${esc(b.name)}</strong><span class="map-popup-addr">${esc(b.address)}</span></div>`)
+            .addTo(routeLayer);
+    });
+
+    const latlngs = pts.map((b) => [b.latitude, b.longitude]);
+    if (latlngs.length > 1) {
+        // DASHED deliberately. These are STRAIGHT segments between stops — this app uses no routing
+        // API anywhere, so a solid line would imply a turn-by-turn path we cannot actually produce.
+        // Walking times are NOT repeated here; the step cards already say "Walk to next stop".
+        L.polyline(latlngs, { color: '#e05638', weight: 3, opacity: 0.75, dashArray: '6, 8' }).addTo(routeLayer);
+    }
+
+    const bounds = routeLayer.getBounds();
+    requestAnimationFrame(() => {
+        map.invalidateSize();
+        if (latlngs.length > 1 && bounds.isValid()) map.fitBounds(bounds, { padding: [24, 24] });
+        else if (latlngs.length === 1) map.setView(latlngs[0], 15);
+    });
 }
 
 // ---- tap-to-swap (touch screens) ----
