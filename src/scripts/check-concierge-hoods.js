@@ -15,12 +15,15 @@
  */
 const BASE = process.env.CONCIERGE_BASE || 'http://127.0.0.1:5050';
 
-// The four preset chips, exactly as specified in VDMVP_Experience_Studio_Dock_Spec.md §3.
+// The four preset chips. These are the REVISED single-intent payloads (Gus, slice 3): the original
+// drafts carried multi-term activity strings ("beer pizza pub"), and the engine collapses a multi-term
+// string to ONE term, so they returned the wrong venues while looking healthy. Single terms resolve
+// correctly. Each chip now carries the intent it is named for, plus the one category it must contain.
 const CHIPS = [
-  { name: 'Gastown Coffee & Heritage', body: { activity: 'coffee bakery art', neighborhoodId: 'gastown', duration: '2h', timeOfDay: 'morning' } },
-  { name: 'Yaletown Patio & Cocktails', body: { activity: 'dinner cocktails patio wine', neighborhoodId: 'yaletown', duration: '4h', timeOfDay: 'evening' } },
-  { name: 'Kitsilano Beach & Food Tour', body: { activity: 'lunch beach ice cream walk', neighborhoodId: 'kitsilano', duration: '4h', timeOfDay: 'afternoon' } },
-  { name: 'Commercial Drive Craft Brews', body: { activity: 'beer pizza pub', neighborhoodId: 'commercial-drive', duration: '4h', timeOfDay: 'evening' } },
+  { name: 'Gastown Coffee & Bakery', body: { activity: 'coffee', neighborhoodId: 'gastown', duration: '2h', timeOfDay: 'morning' } },
+  { name: 'Yaletown Cocktails & Dinner', body: { activity: 'cocktails', neighborhoodId: 'yaletown', duration: '4h', timeOfDay: 'evening' } },
+  { name: 'Kitsilano Beach & Ice Cream', body: { activity: 'ice cream', neighborhoodId: 'kitsilano', duration: '4h', timeOfDay: 'afternoon' } },
+  { name: 'Commercial Drive Craft Beer', body: { activity: 'beer', neighborhoodId: 'commercial-drive', duration: '4h', timeOfDay: 'evening' }, expectCategory: /bar \/ pub/i },
 ];
 
 let failures = 0;
@@ -53,6 +56,13 @@ async function post(body) {
     if (steps.length) {
       check(withCoords === steps.length, `  every stop has coordinates (the map needs them)`,
         `${withCoords}/${steps.length}`);
+      // The chip must deliver the thing it is NAMED for, not merely four rows. A chip called
+      // "Craft Beer" that returns four pizzerias is the same defect class as a silent empty result:
+      // it looks healthy and is wrong.
+      if (chip.expectCategory) {
+        const hits = steps.filter(s => chip.expectCategory.test(String((s.business && s.business.category) || ''))).length;
+        check(hits >= 1, `  the chip delivers what it is named for`, `${hits}/${steps.length} match ${chip.expectCategory}`);
+      }
     }
   }
 
