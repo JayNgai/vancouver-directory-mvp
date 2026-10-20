@@ -1,0 +1,62 @@
+{# The Experience Studio dock. Gus's spec, slice 3. Sits in normal document flow, never sticky. #}
+<div class="dock" id="studioDock">
+    <div class="dock-modes" role="tablist" aria-label="Experience Studio modes">
+        <button type="button" class="dock-mode" role="tab" aria-selected="true" data-mode="curate">✨ Curate My Outing</button>
+        <button type="button" class="dock-mode" role="tab" aria-selected="false" data-mode="search">🔍 Search Directory</button>
+        <button type="button" class="dock-mode" role="tab" aria-selected="false" data-mode="browse">🗺 Browse Neighborhoods</button>
+    </div>
+
+    <div class="dock-panel" id="dockCurate">
+        <label for="dockPrompt" class="dock-label">What do you feel like?</label>
+        <div class="dock-inputrow">
+            <input type="text" id="dockPrompt" class="dock-prompt" autocomplete="off"
+                   placeholder="e.g. coffee crawl in Gastown, 3 hours, afternoon">
+            <button type="button" id="dockPlan" class="dock-plan">Plan ⚡</button>
+        </div>
+
+        {# Each chip carries the exact payload it sends. The activity strings are SINGLE-INTENT on
+           purpose: the engine resolves a multi-term string against ONE term, so a multi-term chip
+           looks healthy and silently returns venues it was not named for. #}
+        <div class="dock-chips" id="dockChips">
+            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-activity="coffee" data-hood="gastown" data-duration="2h" data-time="morning"
+                    data-prompt="Morning coffee &amp; pastries in Gastown, 2 hours">☕ Gastown Coffee &amp; Bakery</button>
+            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-activity="cocktails" data-hood="yaletown" data-duration="4h" data-time="evening"
+                    data-prompt="Evening drinks and dinner in Yaletown, 4 hours">🍸 Yaletown Cocktails &amp; Dinner</button>
+            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-activity="ice cream" data-hood="kitsilano" data-duration="4h" data-time="afternoon"
+                    data-prompt="Afternoon beach walk and ice cream in Kitsilano, 4 hours">🏖 Kitsilano Beach &amp; Ice Cream</button>
+            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-activity="beer" data-hood="commercial-drive" data-duration="4h" data-time="evening"
+                    data-prompt="Craft brewery crawl on Commercial Drive, 4 hours">🍺 Commercial Drive Craft Beer</button>
+        </div>
+        <p class="dock-status" id="dockStatus" role="alert" hidden></p>
+    </div>
+
+    <div class="dock-panel" id="dockSearch" hidden>
+        <form action="/search" method="GET" class="dock-searchform">
+            <input type="text" name="q" required
+                   placeholder="🔍 Search anything (e.g. Gastown, Miku, Water St, 604-689-2832, #patio, Italian)">
+            <button type="submit">Smart Search</button>
+        </form>
+        <div class="dock-quick">
+            <span>Popular:</span>
+            <a href="/search?q=Gastown">Gastown</a>
+            <a href="/search?q=Water+St">Water St</a>
+            <a href="/search?q=Sushi">Sushi</a>
+            <a href="/search?q=patio">#patio</a>
+        </div>
+    </div>
+
+    <div class="dock-panel" id="dockBrowse" hidden>
+        <div class="dock-hoods">
+            {% for n in neighborhoods %}<a href="/neighborhoods/{{ n.slug }}">{{ n.name }}</a>{% endfor %}
+        </div>
+    </div>
+
+    <div class="dock-loading" id="dockLoading" role="status" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p style="margin:0;">✨ Crafting your custom day...</p>
+    </div>
+</div>

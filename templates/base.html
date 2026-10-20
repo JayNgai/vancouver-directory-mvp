@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ themeCss if themeCss else '/styles.css' }}">
     <link rel="stylesheet" href="/mobile.css">
 </head>
-<body>
+<body class="{% block bodyclass %}{% endblock %}">
     {% if themeName %}
     <div style="background: #1e293b; color: #f8fafc; text-align: center; padding: 10px 15px; font-size: 0.95rem; font-weight: 600; border-bottom: 2px solid #38bdf8; position: sticky; top: 0; z-index: 1000;">
         🎨 <span>Previewing Theme: <strong style="color: #38bdf8;">{{ themeName }}</strong></span>
@@ -23,7 +23,7 @@
         <div class="container nav-container">
             <a href="/" class="logo">📍 Vancouver Directory</a>
             
-            <form action="/search" method="GET" style="margin: 0; flex: 1; max-width: 380px; margin: 0 20px;">
+            <form action="/search" method="GET" class="nav-search" style="margin: 0; flex: 1; max-width: 380px; margin: 0 20px;">
                 <input type="text" name="q" placeholder="🔍 Smart Search (venue, hood, phone, street...)" value="{{ searchQuery }}" style="width: 100%; padding: 7px 16px; border-radius: 20px; border: 1px solid #cbd5e1; font-size: 0.88rem; outline: none; background: #f8fafc;">
             </form>
 

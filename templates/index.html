@@ -1,31 +1,25 @@
 {% extends "base.html" %}
 
 {% block title %}Vancouver Neighborhood Directory & Experience Curator{% endblock %}
+{% block bodyclass %}home-hero{% endblock %}
+{% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="/studio.css">{% endblock %}
 
 {% block content %}
 <div class="hero">
     <div class="container" style="text-align: center;">
-        <h1 style="font-size: 3rem; margin-bottom: 12px; color: #fff7ed;">Discover & Design Your Vancouver Experience</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 30px; color: #cbd5e1;">Search any venue, neighborhood, street, phone number, or tag — all in one place.</p>
-        
-        <div style="max-width: 780px; margin: 0 auto 20px auto; background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 12px 35px rgba(0,0,0,0.25);">
-            <form action="/search" method="GET" style="display: flex; width: 100%; margin: 0;">
-                <input type="text" name="q" placeholder="🔍 Search anything (e.g. Gastown, Miku, Water St, 604-689-2832, #patio, Italian)..." required style="flex: 1; border: none; padding: 16px 25px; font-size: 1.1rem; border-radius: 50px 0 0 50px; outline: none; color: #0f172a;">
-                <button type="submit" class="btn" style="background: #e05638; color: white; border: none; padding: 16px 32px; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 1.05rem;">Smart Search</button>
-            </form>
-        </div>
+        <h1 style="font-size: 3rem; margin-bottom: 12px; color: #fff7ed;">Discover &amp; Design Your Vancouver Experience</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 26px; color: #cbd5e1;">Tell us what you feel like, or search any venue, neighborhood, street, phone number, or tag.</p>
 
-        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;">
-            <span style="color: #cbd5e1; font-size: 0.9rem; align-self: center;">Popular Searches:</span>
-            <a href="/search?q=Gastown" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">Gastown</a>
-            <a href="/search?q=Water+St" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">Water St</a>
-            <a href="/search?q=Sushi" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">Sushi</a>
-            <a href="/search?q=patio" style="background: rgba(255,255,255,0.15); color: #fff7ed; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">#patio</a>
-            <a href="/concierge" style="background: #d97706; color: white; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; font-weight: 600;">✨ Custom Day Concierge</a>
-        </div>
-        
+        {% include "_studio_dock.html" %}
+
         <a href="/itineraries" style="color: #cbd5e1; text-decoration: underline; font-size: 0.95rem;">Or browse pre-made itineraries &rarr;</a>
     </div>
+</div>
+
+{# Results render DIRECTLY below the dock, inlined on the homepage, using the same surface as
+   /concierge (templates/_studio_results.html + public/studio.js). Nothing is duplicated. #}
+<div class="container">
+    {% include "_studio_results.html" %}
 </div>
 
 <div class="container">
@@ -52,10 +46,96 @@
                 <div class="card-subtitle">{{ itin.neighborhood.name if itin.neighborhood else 'Vancouver' }} &bull; {{ itin.duration }}</div>
                 <h3 class="card-title">{{ itin.title }}</h3>
                 <p class="card-desc">{{ itin.description }}</p>
-                <span class="btn" style="background: #38a169; align-self: flex-start;">View Route & Export Map &rarr;</span>
+                <span class="btn" style="background: #38a169; align-self: flex-start;">View Route &amp; Export Map &rarr;</span>
             </div>
         </a>
         {% endfor %}
     </div>
 </div>
+
+<script src="/vendor/leaflet/leaflet.js"></script>
+<script src="/maps-url.js"></script>
+<script src="/studio.js"></script>
+<script>
+// ---- the Experience Studio dock ----
+const dockModes = Array.from(document.querySelectorAll('.dock-mode'));
+const DOCK_PANELS = { curate: 'dockCurate', search: 'dockSearch', browse: 'dockBrowse' };
+function setDockMode(mode) {
+    dockModes.forEach((b) => b.setAttribute('aria-selected', String(b.dataset.mode === mode)));
+    Object.keys(DOCK_PANELS).forEach((k) => { document.getElementById(DOCK_PANELS[k]).hidden = (k !== mode); });
+}
+dockModes.forEach((b) => b.addEventListener('click', () => setDockMode(b.dataset.mode)));
+
+// The navbar carries its own search form on every page. On the homepage the dock already offers one,
+// so hide the navbar copy while the dock is on screen - two search boxes on one screen is the
+// duplicate-surface problem. visibility, not display, so nothing shifts when it returns.
+const dockEl = document.getElementById('studioDock');
+const navSearch = document.querySelector('.nav-search');
+if (dockEl && navSearch && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+        navSearch.style.visibility = entry.isIntersecting ? 'hidden' : 'visible';
+    }, { threshold: 0 }).observe(dockEl);
+}
+
+const chipEls = Array.from(document.querySelectorAll('.dock-chip'));
+const promptEl = document.getElementById('dockPrompt');
+const statusEl = document.getElementById('dockStatus');
+const planBtn = document.getElementById('dockPlan');
+
+function clearChipSelection() { chipEls.forEach((c) => c.setAttribute('aria-pressed', 'false')); }
+function showStatus(msg) { statusEl.textContent = msg || ''; statusEl.hidden = !msg; }
+
+async function plan(payload) {
+    planBtn.disabled = true;
+    document.getElementById('dockLoading').hidden = false;
+    showStatus('');
+    try {
+        const response = await fetch('/api/concierge', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const res = await response.json();
+        if (!res.success) { showStatus('Could not build an itinerary: ' + (res.error || 'unknown error')); return; }
+        Studio.setData(res.data.steps, res.data.swapOptions);
+        Studio.show();
+        Studio.render();
+        document.getElementById('resultsArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (e) {
+        showStatus('Could not reach the concierge. Check your connection and try again.');
+    } finally {
+        document.getElementById('dockLoading').hidden = true;
+        planBtn.disabled = false;
+    }
+}
+
+// A chip fires IMMEDIATELY. Tapping the active chip again deselects it and clears the input.
+chipEls.forEach((chip) => chip.addEventListener('click', () => {
+    if (chip.getAttribute('aria-pressed') === 'true') {
+        chip.setAttribute('aria-pressed', 'false');
+        promptEl.value = '';
+        return;
+    }
+    clearChipSelection();
+    chip.setAttribute('aria-pressed', 'true');
+    promptEl.value = chip.dataset.prompt;
+    plan({
+        activity: chip.dataset.activity,
+        neighborhoodId: chip.dataset.hood,
+        duration: chip.dataset.duration,
+        timeOfDay: chip.dataset.time
+    });
+}));
+
+// Typing clears the active chip - the input and the highlight must not disagree.
+promptEl.addEventListener('input', () => { clearChipSelection(); showStatus(''); });
+
+function planFromInput() {
+    const text = promptEl.value.trim();
+    if (!text) { promptEl.focus(); return; }
+    plan({ activity: text, duration: '4h', timeOfDay: 'flexible' });
+}
+planBtn.addEventListener('click', planFromInput);
+promptEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); planFromInput(); } });
+</script>
 {% endblock %}
