@@ -146,7 +146,7 @@ router.get('/itineraries/:slug', async (req, res) => {
     }
 
     // Build Google Maps directions export URL
-        const googleMapsUrl = mapsUrl.googleDirectionsUrl(itinerary.steps.map(s => s.business));
+    const googleMapsUrl = mapsUrl.googleDirectionsUrl(itinerary.steps.map(s => s.business));
 
     res.json({
       success: true,
@@ -168,22 +168,53 @@ router.get('/itineraries/:slug', async (req, res) => {
 router.post('/concierge', async (req, res) => {
   try {
     const { activity, duration, timeOfDay, neighborhoodId, categories } = req.body || {};
+
+    // Resolve the neighbourhood HERE, at the HTTP boundary, because it arrives under TWO legitimate
+    // names: this site's own <select> sends the row id, while a hand-authored payload — the
+    // Experience Studio preset chips — sends the slug. Both must work; neither is malformed.
+    //
+    // An UNKNOWN value is an ERROR, never an empty itinerary. Answering success=true with zero steps
+    // is how a chip that opens nothing ships unnoticed, and it is precisely what made a slug/id
+    // mismatch look like a broken engine: the pool emptied, the fallback fired with nothing to fill,
+    // and the caller got a cheerful empty result.
+    let scopeId = null;
+    if (neighborhoodId) {
+      const hood = await prisma.neighborhood.findFirst({
+        where: {
+          OR: [
+            { id: String(neighborhoodId) },
+            // No `mode: 'insensitive'` here: this client's provider rejects that argument outright
+            // ("Unknown argument `mode`"), which threw on EVERY neighbourhood-carrying request — so
+            // match the stored slug exactly and also its lowercased form.
+            { slug: String(neighborhoodId) },
+            { slug: String(neighborhoodId).toLowerCase() }
+          ]
+        },
+        select: { id: true }
+      });
+      if (!hood) {
+        return res.status(400).json({ success: false, error: `Unknown neighborhood: ${neighborhoodId}` });
+      }
+      scopeId = hood.id;
+    }
+
     const businesses = await prisma.business.findMany({ include: { neighborhood: true } });
-    const data = buildConcierge({ activity, duration, timeOfDay, neighborhoodId: neighborhoodId || null, categories: Array.isArray(categories) ? categories : null }, businesses);
-        // Navigation export. Until now an outing could be BUILT and then not taken anywhere: the
-            // itinerary pages had a maps link, the concierge result had none — a dead end at the exact
-            // moment the user had something worth keeping. Same builder as those pages.
-            // The browser also recomputes these after a swap, because the itinerary is edited client-side;
-            // these values are the API's answer for the itinerary AS GENERATED, for non-browser consumers.
-            const stops = data.steps.map((s) => s.business);
-            res.json({
-              success: true,
-              data: {
-                ...data,
-                googleMapsUrl: mapsUrl.googleDirectionsUrl(stops),
-                appleMapsUrl: mapsUrl.appleDirectionsUrl(stops)
-              }
-            });
+    const data = buildConcierge({ activity, duration, timeOfDay, neighborhoodId: scopeId, categories: Array.isArray(categories) ? categories : null }, businesses);
+
+    // Navigation export. Until now an outing could be BUILT and then not taken anywhere: the
+    // itinerary pages had a maps link, the concierge result had none — a dead end at the exact
+    // moment the user had something worth keeping. Same builder as those pages.
+    // The browser also recomputes these after a swap, because the itinerary is edited client-side;
+    // these values are the API's answer for the itinerary AS GENERATED, for non-browser consumers.
+    const stops = data.steps.map((s) => s.business);
+    res.json({
+      success: true,
+      data: {
+        ...data,
+        googleMapsUrl: mapsUrl.googleDirectionsUrl(stops),
+        appleMapsUrl: mapsUrl.appleDirectionsUrl(stops)
+      }
+    });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
   }
