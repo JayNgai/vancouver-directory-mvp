@@ -7,6 +7,7 @@ const { decorate } = require('../lib/format');
 // One navigation-export implementation shared with the itinerary route and the browser —
 // see public/maps-url.js. It replaced a byte-identical copy that lived in this file.
 const mapsUrl = require('../../public/maps-url');
+const { failJson } = require('../lib/errors');
 const prisma = new PrismaClient();
 
 /** Public shape: no price/rating/review-count fields and no raw OSM codes. */
@@ -42,7 +43,7 @@ router.get('/neighborhoods', async (req, res) => {
     });
     res.json({ success: true, data: neighborhoods });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    failJson(res, 'GET /neighborhoods', error);
   }
 });
 
@@ -65,7 +66,7 @@ router.get('/neighborhoods/:slug', async (req, res) => {
 
     res.json({ success: true, data: neighborhood });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    failJson(res, 'GET /neighborhoods/:slug', error);
   }
 });
 
@@ -98,7 +99,7 @@ router.get('/businesses', async (req, res) => {
 
     res.json({ success: true, count: businesses.length, data: businesses.map(publicBusiness) });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    failJson(res, 'GET /businesses', error);
   }
 });
 
@@ -123,7 +124,7 @@ router.get('/itineraries', async (req, res) => {
     }));
     res.json({ success: true, data: publicItineraries });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    failJson(res, 'GET /itineraries', error);
   }
 });
 
@@ -160,7 +161,7 @@ router.get('/itineraries/:slug', async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    failJson(res, 'GET /itineraries/:slug', error);
   }
 });
 
@@ -216,7 +217,7 @@ router.post('/concierge', async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    failJson(res, 'POST /concierge', error);
   }
 });
 

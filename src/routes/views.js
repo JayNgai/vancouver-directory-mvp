@@ -6,6 +6,7 @@ const { decorate } = require('../lib/format');
 const { record } = require('../lib/tracking');
 // One navigation-export implementation shared with the browser and the API — see public/maps-url.js.
 const mapsUrl = require('../../public/maps-url');
+const { failText } = require('../lib/errors');
 const prisma = new PrismaClient();
 
 const PER_PAGE = 24;
@@ -66,7 +67,7 @@ router.get('/', async (req, res) => {
       featuredBusinesses
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /', error);
   }
 });
 
@@ -112,7 +113,7 @@ router.get('/businesses/:slug', async (req, res) => {
       mapsEmbedUrl
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /businesses/:slug', error);
   }
 });
 
@@ -157,7 +158,7 @@ router.get('/neighborhoods', async (req, res) => {
       selectedSort: sort || 'name_asc'
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /neighborhoods', error);
   }
 });
 
@@ -201,7 +202,7 @@ router.get('/neighborhoods/:slug', async (req, res) => {
       categoryCounts
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /neighborhoods/:slug', error);
   }
 });
 
@@ -261,7 +262,7 @@ router.get('/businesses', async (req, res) => {
       selectedSort: sort || 'completeness_desc'
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /businesses', error);
   }
 });
 
@@ -351,7 +352,7 @@ router.get('/search', async (req, res) => {
       pagination: businessPagination
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /search', error);
   }
 });
 
@@ -405,7 +406,7 @@ router.get('/itineraries', async (req, res) => {
       selectedSort: sort || 'title_asc'
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /itineraries', error);
   }
 });
 
@@ -435,7 +436,7 @@ router.get('/itineraries/:slug', async (req, res) => {
       googleMapsUrl
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /itineraries/:slug', error);
   }
 });
 
@@ -445,7 +446,7 @@ router.get('/concierge', async (req, res) => {
     const neighborhoods = await prisma.neighborhood.findMany({ orderBy: { name: 'asc' } });
     res.render('concierge.html', { neighborhoods, categoryOptions: require('../lib/categories').CATEGORY_OPTIONS });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /concierge', error);
   }
 });
 
@@ -477,7 +478,7 @@ router.get('/theme/:name', async (req, res) => {
       themeName: selectedTheme.name
     });
   } catch (error) {
-    res.status(500).send('Server error: ' + error.message);
+    failText(res, 'GET /theme/:name', error);
   }
 });
 
