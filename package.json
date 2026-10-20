@@ -4,14 +4,16 @@
   "description": "Vancouver Neighborhood Directory & Experience Curator - MVP",
   "main": "server.js",
   "scripts": {
-      "start": "node server.js",
-      "dev": "nodemon server.js",
-      "db:generate": "prisma migrate dev --name init",
-      "db:migrate": "prisma db push",
-      "db:seed": "node prisma/seed.js",
-      "scrape:venues": "node src/scripts/scrape-venues.js",
-      "scrape:full": "node src/scripts/scrape-venues-full.js"
-    },
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "db:generate": "prisma migrate dev --name init",
+        "db:migrate": "prisma db push",
+        "db:seed": "node prisma/seed.js",
+        "scrape:venues": "node src/scripts/scrape-venues.js",
+        "scrape:full": "node src/scripts/scrape-venues-full.js",
+        "qa:baseline": "node src/data-qa/run-baseline.js",
+        "qa:compare": "node src/data-qa/compare.js"
+      },
   "keywords": [
     "vancouver",
     "directory",

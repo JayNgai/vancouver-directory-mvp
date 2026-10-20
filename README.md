@@ -80,3 +80,20 @@ Visit `http://localhost:5050` in your web browser.
 - **Itinerary Detail (with Google Maps export):** `http://localhost:5050/itineraries/gastown-historic-culinary-stroll`
 - **Claim Business Portal:** `http://localhost:5050/claim`
 - **API Health Check:** `http://localhost:5050/api/health`
+
+---
+
+## 🧪 DIRECTORY DATA QA (D4 JEV pilot — tooling, not user-facing)
+
+A deterministic data-QA tool runs alongside the site (it does not change any page or the Smart
+Concierge). It finds duplicate records, checks category correctness, and scores each record
+0–100 from its own fields. A swappable classifier sits behind one interface so a candidate model
+(JEV) can be plugged in and measured against the baseline later — with a local stub today.
+
+```bash
+npm run qa:baseline                          # baseline over all records
+npm run qa:compare -- --candidate stub --limit 300
+```
+
+See `src/data-qa/README.md` for how to enable JEV when a key lands (profile `.env` only) and the
+rule that it must never touch a risk gate, a rule engine or position sizing.
