@@ -4,6 +4,9 @@ const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
 const { sortByCompleteness } = require('../lib/business-order');
 const { decorate } = require('../lib/format');
+// One navigation-export implementation shared with the itinerary route and the browser —
+// see public/maps-url.js. It replaced a byte-identical copy that lived in this file.
+const mapsUrl = require('../../public/maps-url');
 const prisma = new PrismaClient();
 
 /** Public shape: no price/rating/review-count fields and no raw OSM codes. */
@@ -143,17 +146,7 @@ router.get('/itineraries/:slug', async (req, res) => {
     }
 
     // Build Google Maps directions export URL
-    const waypoints = itinerary.steps
-      .map(s => s.business ? encodeURIComponent(s.business.address) : null)
-      .filter(Boolean);
-
-    let googleMapsUrl = '';
-    if (waypoints.length > 0) {
-      const origin = waypoints[0];
-      const destination = waypoints[waypoints.length - 1];
-      const intermediate = waypoints.slice(1, -1).join('|');
-      googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}${intermediate ? `&waypoints=${intermediate}` : ''}&travelmode=walking`;
-    }
+        const googleMapsUrl = mapsUrl.googleDirectionsUrl(itinerary.steps.map(s => s.business));
 
     res.json({
       success: true,
@@ -177,7 +170,20 @@ router.post('/concierge', async (req, res) => {
     const { activity, duration, timeOfDay, neighborhoodId, categories } = req.body || {};
     const businesses = await prisma.business.findMany({ include: { neighborhood: true } });
     const data = buildConcierge({ activity, duration, timeOfDay, neighborhoodId: neighborhoodId || null, categories: Array.isArray(categories) ? categories : null }, businesses);
-    res.json({ success: true, data });
+        // Navigation export. Until now an outing could be BUILT and then not taken anywhere: the
+            // itinerary pages had a maps link, the concierge result had none — a dead end at the exact
+            // moment the user had something worth keeping. Same builder as those pages.
+            // The browser also recomputes these after a swap, because the itinerary is edited client-side;
+            // these values are the API's answer for the itinerary AS GENERATED, for non-browser consumers.
+            const stops = data.steps.map((s) => s.business);
+            res.json({
+              success: true,
+              data: {
+                ...data,
+                googleMapsUrl: mapsUrl.googleDirectionsUrl(stops),
+                appleMapsUrl: mapsUrl.appleDirectionsUrl(stops)
+              }
+            });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
   }

@@ -4,6 +4,8 @@ const { PrismaClient } = require('@prisma/client');
 const { sortByCompleteness } = require('../lib/business-order');
 const { decorate } = require('../lib/format');
 const { record } = require('../lib/tracking');
+// One navigation-export implementation shared with the browser and the API — see public/maps-url.js.
+const mapsUrl = require('../../public/maps-url');
 const prisma = new PrismaClient();
 
 const PER_PAGE = 24;
@@ -426,17 +428,7 @@ router.get('/itineraries/:slug', async (req, res) => {
     }
 
     // Build Google Maps export URL
-    const waypoints = itinerary.steps
-      .map(s => s.business ? encodeURIComponent(s.business.address) : null)
-      .filter(Boolean);
-
-    let googleMapsUrl = '';
-    if (waypoints.length > 0) {
-      const origin = waypoints[0];
-      const destination = waypoints[waypoints.length - 1];
-      const intermediate = waypoints.slice(1, -1).join('|');
-      googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}${intermediate ? `&waypoints=${intermediate}` : ''}&travelmode=walking`;
-    }
+        const googleMapsUrl = mapsUrl.googleDirectionsUrl(itinerary.steps.map(s => s.business));
 
     res.render('itinerary-detail.html', {
       itinerary,
