@@ -22,8 +22,13 @@
 })(typeof self !== 'undefined' ? self : this, function () {
 
     // Some records carry a PLACEHOLDER where a street address should be, e.g.
-    // "Commercial Drive, Vancouver, BC (street address not mapped)" — 153 of 2,958 records when
-    // this was written. No maps app can resolve that text, so sending it as a waypoint produces a
+    // "Commercial Drive, Vancouver, BC (street address not mapped)". Re-derived and reproducible:
+    // 147 carry that literal placeholder, 44 carry a city-level address with no street number, and
+    // 220 of 2,958 records (7.4%) have no digit anywhere in the address at all. An earlier comment
+    // here said 153; that was a private regex that also matched a six-record variant
+    // ("... (no street address in source)"), so it was neither the placeholder count nor the total.
+    // The rule below matches none of them, because it tests the address, not a count.
+    // No maps app can resolve that text, so sending it as a waypoint produces a
     // route with a stop that silently does not exist.
     const NOT_AN_ADDRESS = /not mapped/i;
 

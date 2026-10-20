@@ -79,6 +79,57 @@ const check = (cond, label, detail) => {
     check(new RegExp(`class="[^"]*\\b${cls}\\b`).test(html), `  ".${cls}" matches real markup`);
   }
 
+
+  // ---- THE ACTUAL REQUIREMENT: never two search inputs on one screen ----
+  // The dock replaces the hero search; the navbar keeps its own form for sub-pages. What satisfies the
+  // requirement is that the navbar copy is HIDDEN while the dock is on screen. Testing that the dock
+  // renders does not test this - so drive the real inline code with a stubbed IntersectionObserver and
+  // assert the visibility it sets.
+  console.log('\n--- the real requirement: one search input on screen at a time ---');
+  const ioCallbacks = [];
+  class IOStub { constructor(cb) { ioCallbacks.push(cb); } observe() {} }
+  const stubEls = {};
+  const anyEl = (id) => (stubEls[id] = stubEls[id] || {
+    id, style: {}, dataset: {}, value: '', hidden: false, disabled: false, textContent: '',
+    addEventListener() {}, setAttribute() {}, getAttribute() { return null; },
+    scrollIntoView() {}, classList: { add() {}, remove() {}, contains() { return false; } },
+  });
+  const navSearchEl = { style: {} };
+  const stubDoc = {
+    getElementById: anyEl,
+    querySelector: (sel) => (sel === '.nav-search' ? navSearchEl : null),
+    querySelectorAll: () => [],
+    addEventListener() {},
+  };
+  const stubWindow = { IntersectionObserver: IOStub };
+  const stubStudio = { setData() {}, show() {}, render() {} };
+
+  let ran = true, runErr = '';
+  try {
+    // eslint-disable-next-line no-new-func
+    new Function('document', 'IntersectionObserver', 'fetch', 'window', 'Studio', inline + '\nreturn true;')(
+      stubDoc, IOStub, () => new Promise(() => {}), stubWindow, stubStudio);
+  } catch (e) { ran = false; runErr = e.message; }
+  check(ran, 'the served dock script executes without throwing', runErr);
+
+  check(ioCallbacks.length === 1, 'the dock observes itself for visibility', `${ioCallbacks.length} observer(s)`);
+  if (ioCallbacks.length === 1) {
+    ioCallbacks[0]([{ isIntersecting: true }]);
+    check(navSearchEl.style.visibility === 'hidden',
+      'navbar search is HIDDEN while the dock is in view  <-- the requirement');
+    ioCallbacks[0]([{ isIntersecting: false }]);
+    check(navSearchEl.style.visibility === 'visible',
+      'and returns once the dock scrolls away (sub-page behaviour preserved)');
+  }
+
+  // Structurally: the page holds exactly TWO search forms - the navbar's and the dock's - and the
+  // dock's sits inside a panel that is hidden by default, so only one is ever on screen at rest.
+  // (The dock's form living inside the hero is correct; it is the DEFAULT that matters.)
+  const forms = (html.match(/action="\/search"/g) || []).length;
+  check(forms === 2, 'exactly two search forms exist: the navbar copy and the dock\'s', `${forms} found`);
+  check(/id="dockSearch"[^>]*\shidden/.test(html) || /id="dockSearch"[^>]*hidden>/.test(html),
+    'the dock\'s Search Directory panel is hidden by DEFAULT (so it is not a second search box at rest)');
+
   console.log(`\nRESULT: ${failures === 0 ? 'ALL PASS' : failures + ' FAILURE(S)'}`);
   process.exit(failures === 0 ? 0 : 1);
 })().catch((e) => { console.error('ERROR:', e.message); process.exit(1); });
