@@ -21,16 +21,40 @@
     else root.MapsUrl = api;
 })(typeof self !== 'undefined' ? self : this, function () {
 
+    // Some records carry a PLACEHOLDER where a street address should be, e.g.
+    // "Commercial Drive, Vancouver, BC (street address not mapped)" — 153 of 2,958 records when
+    // this was written. No maps app can resolve that text, so sending it as a waypoint produces a
+    // route with a stop that silently does not exist.
+    const NOT_AN_ADDRESS = /not mapped/i;
+
     /**
-     * Addresses -> encoded stop list, order preserved.
+     * The best usable token for one stop, or '' if there is nothing usable.
+     *
+     * Falls back to "lat,lng" rather than dropping the stop, because coordinates are present on
+     * every record while a real street address is not — and both Google and Apple accept a
+     * coordinate pair as a stop. A stop is only omitted when it has neither.
+     */
+    function stopToken(s) {
+        if (typeof s === 'string') return NOT_AN_ADDRESS.test(s) ? '' : s.trim();
+        if (!s) return '';
+        const address = typeof s.address === 'string' ? s.address.trim() : '';
+        if (address && !NOT_AN_ADDRESS.test(address)) return address;
+        if (typeof s.latitude === 'number' && typeof s.longitude === 'number') {
+            return s.latitude + ',' + s.longitude;
+        }
+        return '';
+    }
+
+    /**
+     * Stops -> encoded stop list, order preserved.
      * Accepts an address string, a business object, or null, so a caller can hand it whatever it
      * already holds instead of pre-mapping.
      */
     function cleanStops(stops) {
         return (stops || [])
-            .map(function (s) { return (typeof s === 'string' ? s : (s && s.address)); })
-            .filter(function (a) { return typeof a === 'string' && a.trim() !== ''; })
-            .map(function (a) { return encodeURIComponent(a.trim()); });
+            .map(stopToken)
+            .filter(function (t) { return t !== ''; })
+            .map(function (t) { return encodeURIComponent(t); });
     }
 
     /**
@@ -62,5 +86,5 @@
         return `https://maps.apple.com/?saddr=${saddr}&daddr=${daddr}${via.length ? `&via=${via.join('+to:')}` : ''}&dirflg=w`;
     }
 
-    return { googleDirectionsUrl, appleDirectionsUrl, cleanStops };
+    return { googleDirectionsUrl, appleDirectionsUrl, cleanStops, stopToken };
 });
