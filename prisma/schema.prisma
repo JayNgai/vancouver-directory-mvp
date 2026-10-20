@@ -131,10 +131,20 @@ model Event {
   referrerHost String?
   visitorHash  String? // daily-rotating salted hash, cannot be reversed to an IP
 
+  // INTERNAL-TRAFFIC MARK. Our own verification and build traffic landed in this table
+  // indistinguishable from a real visit, which makes the ">=500 sessions/month" checkpoint
+  // unmeasurable - and the act of BUILDING is what contaminates it. An explicitly marked request is
+  // RECORDED carrying this flag rather than dropped: the row survives for audit, and every
+  // human-facing count excludes it. Never inferred from shape; only an explicit marker sets it.
+  internal       Boolean @default(false)
+  internalReason String? // how it was marked, so a flagged row explains itself
+
   @@index([type])
   @@index([createdAt])
+  @@index([internal])
   @@map("events")
 }
+
 
 /// Money actually received. Amounts are entered in CAD only.
 model RevenueEntry {
