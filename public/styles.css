@@ -1,5 +1,5 @@
 /* Vancouver Directory MVP - Default Theme (Option 2: Pacific Sunset) */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Outfit:wght@400;500;600;700&display=swap');
+@import url('/vendor/fonts/fonts.css');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 

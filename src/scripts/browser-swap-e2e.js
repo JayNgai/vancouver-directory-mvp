@@ -130,6 +130,83 @@ const ok = (c, l, d) => { console.log(`  ${c ? 'PASS' : 'FAIL'}  ${l}${d ? '  ' 
   ok(/script-src-attr 'none'/.test(cspHeader), "the served CSP still carries script-src-attr 'none'",
     (cspHeader.match(/script-src-attr[^;]*/) || [''])[0]);
 
+  console.log('\n=== F. the webfonts, under a CSP that blocks remote stylesheets ===');
+  await send('Page.navigate', { url: BASE + '/concierge' });
+  events.length = 0;
+  for (let i = 0; i < 80; i++) { if (events.includes('Page.loadEventFired')) break; await sleep(200); }
+  await sleep(1200);
+  // NOTE ON THE ASSERTION: `document.fonts.check('600 ...')` is the WRONG probe here - a browser loads
+  // only the faces a page actually uses, so a weight the CSS never asks for is legitimately "unloaded".
+  // Assert the family the heading ASKS for, then prove the glyph is the real font by measuring: the
+  // webfont and the fallback cannot have identical advance widths.
+  const fontState = JSON.parse(await ev(`(async () => {
+    await document.fonts.ready;
+    // which families does the rendered page actually ASK for?
+    const wanted = new Set();
+    for (const el of document.querySelectorAll('body *')) {
+      const fam = getComputedStyle(el).fontFamily || '';
+      for (const name of ['Playfair Display', 'Outfit']) if (fam.includes(name)) wanted.add(name);
+    }
+    const sheet = [...document.styleSheets].map(s => s.href).filter(Boolean);
+    const remoteSheets = sheet.filter(href => !href.startsWith(location.origin));
+    const faces = [...document.fonts].length;
+    const loadedFamilies = [...new Set([...document.fonts].filter(f => f.status === 'loaded').map(f => f.family))];
+    // glyph proof: same string, same size, webfont vs a forced fallback
+    await document.fonts.load('800 40px "Playfair Display"');
+    const mk = (family) => {
+      const sp = document.createElement('span');
+      sp.textContent = 'Vancouver Directory';
+      sp.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font-size:40px;font-weight:800;font-family:' + family;
+      document.body.appendChild(sp);
+      const w = Math.round(sp.getBoundingClientRect().width * 100) / 100;
+      sp.remove();
+      return w;
+    };
+    const webfont = mk("'Playfair Display', monospace");
+    const fallback = mk('monospace');
+    return JSON.stringify({ faces, wanted: [...wanted], loadedFamilies, remoteSheets, webfont, fallback,
+                            differs: Math.abs(webfont - fallback) > 1 });
+  })()`, true));
+  console.log('  @font-face rules registered:', fontState.faces);
+  console.log('  families the page asks for:', fontState.wanted.join(', ') || '(none)');
+  console.log('  families the browser loaded:', fontState.loadedFamilies.join(', ') || '(none)');
+  console.log('  remote stylesheets loaded:', fontState.remoteSheets.length ? fontState.remoteSheets : '(none - all same-origin)');
+  console.log(`  glyph width: webfont ${fontState.webfont} vs fallback ${fontState.fallback}`);
+  ok(fontState.faces > 0, 'the vendored faces are registered with the document');
+  ok(fontState.wanted.includes('Playfair Display') && fontState.wanted.includes('Outfit'),
+    'the page still ASKS for both intended families', fontState.wanted.join(', '));
+  const neverLoaded = fontState.wanted.filter((f) => !fontState.loadedFamilies.includes(f));
+  ok(neverLoaded.length === 0, 'every family the page asks for is actually LOADED (not silently falling back)',
+    neverLoaded.length ? 'missing: ' + neverLoaded.join(', ') : 'all loaded');
+  ok(fontState.loadedFamilies.length > 0, 'the browser actually loaded a vendored family', fontState.loadedFamilies.join(','));
+  ok(fontState.differs, 'the rendered glyph is the VENDORED font, not a system fallback', `${fontState.webfont} vs ${fontState.fallback}`);
+  ok(fontState.remoteSheets.length === 0, 'no third-party stylesheet is fetched for fonts');
+  const fontViol = msgs.filter((m) => /fonts\.googleapis|fonts\.gstatic/.test(m));
+  ok(fontViol.length === 0, 'no Google Fonts CSP violation in the console', fontViol.length ? JSON.stringify(fontViol[0]).slice(0, 80) : '');
+  const res = await send('Performance.getMetrics').catch(() => null);
+  const woof = await ev(`(() => { const e = performance.getEntriesByType('resource').filter(r => r.name.includes('/vendor/fonts/')); return JSON.stringify({ count: e.length, bytes: e.reduce((a,b)=>a+(b.transferSize||0),0) }); })()`);
+  console.log('  vendored font requests:', woof);
+  ok(JSON.parse(woof).count > 0, 'the page actually fetches the vendored .woff2 files');
+
+  console.log('\n=== G. the search filter that was ALSO dead (onchange) ===');
+  await send('Page.navigate', { url: BASE + '/search?q=coffee' });
+  events.length = 0;
+  for (let i = 0; i < 80; i++) { if (events.includes('Page.loadEventFired')) break; await sleep(200); }
+  await sleep(600);
+  const sel = await ev(`(() => { const s = document.querySelector('select[data-autosubmit]'); if (!s) return JSON.stringify({none:true}); return JSON.stringify({ options: s.options.length, second: s.options[1] ? s.options[1].value : '' }); })()`);
+  console.log('  select:', sel);
+  const selInfo = JSON.parse(sel);
+  ok(!selInfo.none, 'the category select is marked data-autosubmit');
+  if (!selInfo.none && selInfo.second) {
+    await ev(`(() => { const s = document.querySelector('select[data-autosubmit]'); s.value = ${JSON.stringify(selInfo.second)}; s.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`);
+    await sleep(1500);
+    const url = await ev(`location.search`);
+    console.log('  url now:', url);
+    ok(url.includes('category='), 'changing the filter NAVIGATES (the autosubmit actually fires)', url);
+  }
+  const searchViol = msgs.filter((m) => /inline event handler/i.test(m));
+  ok(searchViol.length === 0, 'no inline-handler CSP violation on the search page');
+
   console.log(`\nRESULT: ${fails === 0 ? 'ALL PASS' : fails + ' FAILURE(S)'}`);
   ws.close(); try { chrome.kill('SIGKILL'); } catch {}
   try { fs.rmSync(PROFILE, { recursive: true, force: true }); } catch {}

@@ -9,7 +9,7 @@
 
     <form action="/search" method="GET" style="margin-bottom: 35px;">
         <div style="background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; max-width: 800px;">
-                        <select name="category" aria-label="Filter by category" style="padding: 12px; border: none; border-radius: 50px; margin-right: 8px; color: #0f172a;" onchange="this.form.submit()">
+                        <select name="category" aria-label="Filter by category" style="padding: 12px; border: none; border-radius: 50px; margin-right: 8px; color: #0f172a;" data-autosubmit>
                 <option value="">All categories</option>
                 {% for c in categoryOptions %}<option value="{{ c }}" {% if c == selectedCategory %}selected{% endif %}>{{ c }}</option>{% endfor %}
             </select>
@@ -120,4 +120,6 @@
     </div>
     {% endif %}
 </div>
+
+<script src="/forms.js"></script>
 {% endblock %}
