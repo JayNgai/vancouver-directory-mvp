@@ -30,7 +30,12 @@ app.use(helmet({
       frameSrc: ["'self'", 'https://www.google.com'],
       childSrc: ["'self'", 'https://www.google.com'],
       imgSrc: ["'self'", 'data:', 'https:'],
-      // Templates use small inline scripts (Smart Concierge) and inline styles.
+      // Templates use small inline <script> blocks and inline styles.
+      // ⚠️ 'unsafe-inline' HERE COVERS <script> BLOCKS ONLY - it does NOT enable inline handler
+      // ATTRIBUTES. helmet's defaults (useDefaults: true) separately send `script-src-attr 'none'`,
+      // which makes onclick=/ondrop=/ondragstart= INERT: the attribute still reads correctly in the
+      // DOM, so the page looks wired and does nothing. That is how drag-to-swap shipped broken.
+      // Do NOT add scriptSrcAttr here to "fix" it - attach handlers with addEventListener instead.
       scriptSrc: ["'self'", "'unsafe-inline'"],
       styleSrc: ["'self'", "'unsafe-inline'"],
       connectSrc: ["'self'"],

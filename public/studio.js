@@ -5,8 +5,12 @@
  * templates/_studio_results.html for the markup and drive it through this file, so the two cannot
  * render the same itinerary differently.
  *
- * Loaded as a CLASSIC script (not a module) on purpose: the markup uses inline handlers
- * (ondrop="drop(event, 1)"), which resolve against globals. Keep those functions top-level.
+ * Loaded as a CLASSIC script (not a module), but it wires its events with addEventListener on
+ * delegated containers. It must NOT use inline handlers (ondrop="..."/onclick="..."): this app serves
+ * `script-src-attr 'none'`, which makes every inline handler attribute INERT. The browser says so
+ * outright - "Executing inline event handler violates ... 'script-src-attr 'none''" - and the
+ * attributes still READ correctly in the DOM, so the page looks wired and does nothing. That is
+ * exactly how drag-to-swap shipped broken while a DOM-stub test passed.
  *
  * Depends on: public/maps-url.js (window.MapsUrl) and Leaflet (window.L) — both loaded before this.
  */
@@ -20,7 +24,7 @@ function esc(v) {
 
 function renderResults() {
   const stepsHtml = currentSteps.map((step, idx) => `
-      <div class="step-card" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" ondrop="drop(event, ${idx})" onclick="tapStep(${idx})" id="step-${idx}">
+      <div class="step-card" data-step-idx="${idx}" id="step-${idx}">
           <h4 style="margin: 0 0 4px; color: var(--accent, #007bff); font-size: 1.05em;">${esc(step.time)}</h4>
           <strong style="font-size: 1.1em;">${esc(step.business.name)}</strong>
           <p style="margin: 2px 0; color: var(--muted-foreground, #555);">${esc(step.business.category)} &bull; ${esc(step.business.address)}${step.business.displayHours ? ' &bull; 🕒 ' + esc(step.business.displayHours) : ''}</p>
@@ -34,7 +38,7 @@ function renderResults() {
   document.getElementById('itinerarySteps').innerHTML = stepsHtml || '<p>No spots found. Try broader terms.</p>';
 
   const swapsHtml = currentSwaps.map((biz, idx) => `
-      <div draggable="true" ondragstart="drag(event, ${idx})" ondragend="dragEnd(event)" onclick="tapSwap(${idx})"
+      <div draggable="true" data-swap-idx="${idx}"
            class="swap-card${selectedSwap === idx ? ' selected' : ''}" id="swap-${idx}">
           <div style="font-weight: 700; margin-bottom: 4px;">${esc(biz.name)}</div>
           <div style="color: var(--muted-foreground, #555); margin-bottom: 4px;">${esc(biz.category)}${biz.displayHours ? ' &bull; 🕒 ' + esc(biz.displayHours) : ''}</div>
@@ -43,6 +47,7 @@ function renderResults() {
       </div>
   `).join('');
   document.getElementById('swapOptions').innerHTML = swapsHtml || '<p style="color: var(--muted-foreground, #777);">No extra options available.</p>';
+  installWiring();
   updateExportLinks();
   drawRoute();
 }
@@ -116,7 +121,12 @@ function drawRoute() {
     L.polyline(latlngs, { color: '#e05638', weight: 3, opacity: 0.75, dashArray: '6, 8' }).addTo(routeLayer);
   }
 
-  const bounds = routeLayer.getBounds();
+  // Bounds from the POINTS, not from the layer. `L.layerGroup()` has no getBounds() - only
+  // L.FeatureGroup does - so asking the group threw a TypeError here, which propagated out of
+  // renderResults and killed the render: the map never drew a single pin, and every swap's redraw
+  // died mid-way. A stub that gave the group a getBounds() it does not really have is why the unit
+  // tests passed while the page was broken.
+  const bounds = L.latLngBounds(latlngs);
   requestAnimationFrame(() => {
     map.invalidateSize();
     if (latlngs.length > 1 && bounds.isValid()) map.fitBounds(bounds, { padding: [24, 24] });
@@ -137,29 +147,82 @@ function tapStep(idx) {
 }
 
 // ---- drag and drop (computers) ----
-function allowDrop(ev) {
+// A drop carries no swap index if the drag BEGAN somewhere this code did not handle, so the index is
+// kept locally as well as in dataTransfer. DataTransfer is the source of truth; the local is the
+// fallback for engines that drop a custom type.
+let draggingSwapIdx = null;
+
+function dragStartFrom(ev, card) {
+  draggingSwapIdx = Number(card.dataset.swapIdx);
+  try {
+    // 'text/plain' is a real MIME type. The old key ('swapIdx') is not, and although Chrome happens to
+    // accept it, relying on that is relying on unspecified behaviour.
+    ev.dataTransfer.setData('text/plain', String(draggingSwapIdx));
+    ev.dataTransfer.effectAllowed = 'move';
+  } catch (e) { /* some engines restrict setData; the local fallback still applies */ }
+  card.style.opacity = '0.5';
+}
+
+function dropOnStep(ev, card) {
   ev.preventDefault();
-  ev.currentTarget.style.background = '#e6f2ff';
-}
-function dragLeave(ev) {
-  ev.currentTarget.style.background = '#fff';
-}
-function drag(ev, swapIdx) {
-  ev.dataTransfer.setData('swapIdx', swapIdx);
-  ev.target.style.opacity = '0.5';
-}
-function dragEnd(ev) {
-  ev.target.style.opacity = '1';
-}
-function drop(ev, stepIdx) {
-  ev.preventDefault();
-  ev.currentTarget.style.background = '#fff';
-  const swapIdx = ev.dataTransfer.getData('swapIdx');
-  if (swapIdx !== '') {
-    swapInto(stepIdx, Number(swapIdx));
-    renderResults();
+  card.style.background = '#fff';
+  let raw = '';
+  try { raw = ev.dataTransfer.getData('text/plain'); } catch (e) { /* fall through to the local */ }
+  const idx = raw !== '' ? Number(raw) : draggingSwapIdx;
+  draggingSwapIdx = null;
+  // A failed read and a legitimate value must be DISTINGUISHABLE. Silently doing nothing here is what
+  // made this defect take a browser to find, so an unusable drop says so out loud.
+  if (idx === null || Number.isNaN(idx)) {
+    console.warn('[studio] a drop arrived carrying no swap index - nothing swapped');
+    return;
   }
+  swapInto(Number(card.dataset.stepIdx), idx);
+  renderResults();
 }
+
+/** Wires the delegated listeners ONCE per container. Idempotent, and safe to call before the
+ *  containers exist (it simply does nothing until they do). */
+function installWiring() {
+  if (installWiring.done) return;
+  const stepsBox = document.getElementById('itinerarySteps');
+  const swapsBox = document.getElementById('swapOptions');
+  if (!stepsBox || !swapsBox) return;
+  installWiring.done = true;
+
+  stepsBox.addEventListener('click', (ev) => {
+    const card = ev.target.closest('.step-card');
+    if (card) tapStep(Number(card.dataset.stepIdx));
+  });
+  stepsBox.addEventListener('dragover', (ev) => {
+    const card = ev.target.closest('.step-card');
+    if (!card) return;
+    ev.preventDefault();                       // REQUIRED, or the drop never fires
+    if (ev.dataTransfer) ev.dataTransfer.dropEffect = 'move';
+    card.style.background = '#e6f2ff';
+  });
+  stepsBox.addEventListener('dragleave', (ev) => {
+    const card = ev.target.closest('.step-card');
+    if (card) card.style.background = '#fff';
+  });
+  stepsBox.addEventListener('drop', (ev) => {
+    const card = ev.target.closest('.step-card');
+    if (card) dropOnStep(ev, card);
+  });
+
+  swapsBox.addEventListener('click', (ev) => {
+    const card = ev.target.closest('.swap-card');
+    if (card) tapSwap(Number(card.dataset.swapIdx));
+  });
+  swapsBox.addEventListener('dragstart', (ev) => {
+    const card = ev.target.closest('.swap-card');
+    if (card) dragStartFrom(ev, card);
+  });
+  swapsBox.addEventListener('dragend', (ev) => {
+    const card = ev.target.closest('.swap-card');
+    if (card) card.style.opacity = '1';
+  });
+}
+
 function swapInto(stepIdx, swapIdx) {
   const oldBusiness = currentSteps[stepIdx].business;
   currentSteps[stepIdx].business = currentSwaps[swapIdx];
@@ -178,3 +241,7 @@ window.Studio = {
   show() { document.getElementById('resultsArea').classList.add('is-open'); },
   hide() { document.getElementById('resultsArea').classList.remove('is-open'); },
 };
+
+// The containers live in templates/_studio_results.html, which both pages include.
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', installWiring);
+else installWiring();
