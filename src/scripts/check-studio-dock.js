@@ -5,6 +5,7 @@
  * mistyped in the template, or a neighbourhood slug that stops resolving, fails here. Requires the
  * app running.  Run:  node src/scripts/check-studio-dock.js
  */
+const fs = require('fs'), path = require('path');
 const BASE = process.env.STUDIO_BASE || 'http://127.0.0.1:5050';
 
 let failures = 0;
@@ -52,6 +53,30 @@ const check = (cond, label, detail) => {
         check(hoods.includes(chip.neighborhoodId), `  all stops are inside ${chip.neighborhoodId}`, hoods.join(', '));
       }
     }
+  }
+
+
+  // ---- the dock's own inline script, which a 200 response does not prove is even valid JS ----
+  console.log('\n--- the served dock script parses and resolves ---');
+  const inlineScripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+  const inline = inlineScripts.length ? inlineScripts[inlineScripts.length - 1] : '';
+  check(inline.length > 0, 'the dock ships an inline script');
+  const tmp = path.join(require('os').tmpdir(), `dock-guard-${process.pid}.js`);
+  fs.writeFileSync(tmp, inline);
+  let parses = true, parseErr = '';
+  try { require('child_process').execFileSync(process.execPath, ['--check', tmp], { stdio: 'pipe' }); }
+  catch (e) { parses = false; parseErr = String(e.stderr || e.message).split('\n')[0]; }
+  fs.rmSync(tmp, { force: true });
+  check(parses, 'node --check accepts it (a syntax error still returns HTTP 200)', parseErr);
+
+  const usedIds = [...new Set([...inline.matchAll(/getElementById\('([^']+)'\)/g)].map((m) => m[1]))];
+  const declaredIds = [...new Set([...html.matchAll(/id="([^"]+)"/g)].map((m) => m[1]))];
+  check(usedIds.every((i) => declaredIds.includes(i)), 'every id the dock script looks up exists on the page',
+    usedIds.filter((i) => !declaredIds.includes(i)).join(', ') || usedIds.length + ' checked');
+
+  const usedSel = [...new Set([...inline.matchAll(/querySelector(?:All)?\('\.([A-Za-z0-9_-]+)'\)/g)].map((m) => m[1]))];
+  for (const cls of usedSel) {
+    check(new RegExp(`class="[^"]*\\b${cls}\\b`).test(html), `  ".${cls}" matches real markup`);
   }
 
   console.log(`\nRESULT: ${failures === 0 ? 'ALL PASS' : failures + ' FAILURE(S)'}`);
