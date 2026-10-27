@@ -268,18 +268,35 @@ router.get('/businesses', async (req, res) => {
 
     const neighborhoods = await prisma.neighborhood.findMany({ orderBy: { name: 'asc' } });
 
-    const ordered = sortByCompleteness(businesses);
-    const pagination = paginate(ordered, req.query.page, queryBase(req.query));
+    // Hours are stored as an OSM string ("Mo-Fr 08:00-17:00"), so "open now" cannot be a
+    // SQL predicate. Decorate first, then filter on the parsed state the row will print
+    // anyway - so the badge and the filter can never disagree about whether a place is open.
+    const openNow = req.query.open === '1';
+    const verifiedOnly = req.query.verified === '1';
+
+    const unfilteredCount = businesses.length;
+    let filtered = sortByCompleteness(businesses).map(decorate);
+    if (openNow) filtered = filtered.filter((b) => b.openState && b.openState.state === 'open');
+    if (verifiedOnly) filtered = filtered.filter((b) => b.isVerified);
+
+    const pagination = paginate(filtered, req.query.page, queryBase(req.query));
 
     res.render('search.html', {
-      businesses: pagination.items.map(decorate),
+      businesses: pagination.items,
       pagination,
       neighborhoods,
+      categories: require('../lib/categories').CATEGORY_OPTIONS,
       selectedCategory: category || '',
       selectedNeighborhood: neighborhood || '',
       selectedSearch: search || '',
       selectedTag: tag || '',
-      selectedSort: sort || 'completeness_desc'
+      selectedSort: sort || 'completeness_desc',
+      filterOpen: openNow,
+      filterVerified: verifiedOnly,
+      unfilteredCount,
+      // Anything the user switched on, so the page can say how narrow the view is.
+      activeFilterCount: [category, neighborhood, tag, search, openNow, verifiedOnly]
+        .filter((v) => v && v !== 'undefined').length
     });
   } catch (error) {
     failText(res, 'GET /businesses', error);

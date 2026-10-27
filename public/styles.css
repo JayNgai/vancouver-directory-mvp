@@ -570,3 +570,59 @@ textarea:focus-visible,
 }
 
 
+
+/* ===========================================================================
+   Accessibility floor — applies to every page, not per-component.
+   ========================================================================= */
+
+/* Skip link: off-screen until focused, then a real, visible target. */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    background: var(--brand);
+    color: var(--panel);
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 var(--radius) 0;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+    left: 0;
+    outline: 3px solid var(--ink);
+    outline-offset: 2px;
+}
+
+/* One focus ring for the whole site. Components may narrow this, but nothing
+   is allowed to remove it — an invisible focus state is a broken keyboard. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* The main landmark must be focusable for the skip link to actually move focus. */
+#main:focus { outline: none; }
+
+/* Motion is decoration here: nothing in this site conveys meaning by moving.
+   So when the visitor asks for less of it, all of it goes. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}

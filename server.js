@@ -64,6 +64,37 @@ app.get('/robots.txt', (req, res) => {
   res.type('text/plain').send(exposure.robotsBody());
 });
 
+// Sitemap. Only meaningful once SITE_NOINDEX flips to false — while indexing is off the
+// robots.txt disallows everything, so this is published but unused. It lists real rows
+// from the database rather than a hand-written list, so it cannot drift from the site.
+app.get('/sitemap.xml', async (req, res) => {
+  try {
+    const { PrismaClient } = require('@prisma/client');
+    const prisma = new PrismaClient();
+    const [neighborhoods, businesses, itineraries] = await Promise.all([
+      prisma.neighborhood.findMany({ select: { slug: true } }),
+      prisma.business.findMany({ select: { slug: true } }),
+      prisma.itinerary.findMany({ select: { slug: true } }),
+    ]);
+    await prisma.$disconnect();
+
+    const base = app.locals.publicBaseUrl;
+    const urls = [
+      '/', '/neighborhoods', '/businesses', '/itineraries', '/concierge', '/claim', '/privacy',
+      ...neighborhoods.map((n) => `/neighborhoods/${n.slug}`),
+      ...businesses.map((b) => `/businesses/${b.slug}`),
+      ...itineraries.map((i) => `/itineraries/${i.slug}`),
+    ];
+    const body = ['<?xml version="1.0" encoding="UTF-8"?>',
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+      ...urls.map((u) => `  <url><loc>${base}${u}</loc></url>`),
+      '</urlset>'].join('\n');
+    res.type('application/xml').send(body);
+  } catch (error) {
+    res.status(500).type('text/plain').send('sitemap unavailable');
+  }
+});
+
 // Configure Nunjucks view engine
 const nunjucksEnv = nunjucks.configure(path.join(__dirname, 'templates'), {
   autoescape: true,
@@ -79,6 +110,15 @@ app.set('view engine', 'html');
 app.locals.noindex = indexingDisabled();
 app.locals.contactEmail = process.env.CONTACT_EMAIL || 'contact@example.com';
 app.locals.publicBaseUrl = (process.env.PUBLIC_BASE_URL || `http://localhost:${PORT}`).replace(/\/$/, '');
+
+// Canonical URL for every request. The query string is stripped on purpose: a filtered
+// view like /businesses?category=Cafe is a different view of the same page, and giving it
+// its own canonical would split the page across hundreds of near-duplicates.
+app.use((req, res, next) => {
+  res.locals.canonicalUrl = app.locals.publicBaseUrl + req.path;
+  res.locals.siteName = 'Vancouver Directory';
+  next();
+});
 
 // Mount Routes
 const apiRoutes = require('./src/routes/api');

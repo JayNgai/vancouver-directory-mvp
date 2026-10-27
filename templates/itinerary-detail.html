@@ -2,6 +2,26 @@
 
 {% block title %}{{ itinerary.title }} - Itinerary{% endblock %}
 
+{% block description %}{{ itinerary.description }}{% endblock %}
+
+{% block ogtitle %}{{ itinerary.title }}{% endblock %}
+{% block ogdescription %}{{ itinerary.description }}{% endblock %}
+
+{% block social %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": {{ itinerary.title | dump | safe }},
+    "description": {{ itinerary.description | dump | safe }}{% if itinerary.duration %},
+    "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": {{ itinerary.steps | length if itinerary.steps else 0 }}
+    }{% endif %}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="hero">
     <div class="container">

@@ -472,7 +472,7 @@ const kitsilanoItinerary = await createItinerary(
   kitsilano.id,
   '4 hours',
   'Easy',
-  'Experience Canada premier beach neighborhood with gourmet coffee, beach patio tacos, and handcrafted ice cream.',
+  'Kitsilano's beach-side afternoon: coffee and doughnuts on West 4th, patio tacos across from the sand, then ice cream on the walk back.',
   ['Kits Beach mountain views', 'Lucky Doughnuts', 'Beachfront patio tacos', 'Local ice cream'],
   [
     { order: 1, time: '10:00 AM', activity: "Coffee and Lucky's Doughnuts at 49th Parallel on West 4th Ave", notes: 'Grab a seat on the sunny patio.', durationMinutes: 45 },
@@ -489,7 +489,7 @@ const downtownItinerary = await createItinerary(
   downtown.id,
   '5 hours',
   'Easy',
-  "Vancouver ultimate city culture and waterfront dining day: Mediterranean brunch, art gallery, Canada Place harbour walk, and gourmet flame-seared sushi.",
+  "Vancouver's city-and-waterfront day: Mediterranean brunch, an hour and a half in the art gallery, the Canada Place promenade, and flame-seared sushi to finish.",
   ['Medina Cafe brunch', 'Vancouver Art Gallery', 'Canada Place waterfront', 'Miku Aburi sushi'],
   [
     { order: 1, time: '10:00 AM', activity: 'Mediterranean brunch & Liege waffles at Medina Cafe', notes: 'Arrive early or put your name on the waitlist.', durationMinutes: 90 },

@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block title %}Vancouver Neighbourhood Guide &amp; Experience Curator{% endblock %}
+{% block description %}Find the Vancouver you are hungry for. Tell us what you feel like and we build a walking day from {{ totalPlaces }} real listings across {{ totalNeighborhoods }} districts.{% endblock %}
+{% block ogtitle %}Find the Vancouver you are hungry for{% endblock %}
+{% block ogdescription %}Tell us what you feel like. We build a walking day from {{ totalPlaces }} real listings, and you can swap any stop.{% endblock %}
 {% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="/studio.css">{% endblock %}
 
 {% block content %}

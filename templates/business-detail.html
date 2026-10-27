@@ -2,6 +2,37 @@
 
 {% block title %}{{ business.name }} - {{ business.neighborhood.name }}{% endblock %}
 
+{% block description %}{{ business.name }}{% if business.primaryCategory or business.category %} is a {{ business.primaryCategory or business.category }}{% endif %} at {{ business.address }}{% if business.neighborhood %} in {{ business.neighborhood.name }}{% endif %}, Vancouver.{% endblock %}
+
+{% block ogtitle %}{{ business.name }} — {{ business.neighborhood.name }}{% endblock %}
+{% block ogdescription %}{{ business.name }} at {{ business.address }}, Vancouver. Hours, contact details and what is nearby.{% endblock %}
+
+{% block social %}
+{# Describes the listing with the fields we actually hold. Nothing is invented: the
+   rating and price blocks are omitted because both are null across this directory. #}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": {{ business.name | dump | safe }},
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ business.address | dump | safe }},
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+    }{% if business.latitude and business.longitude %},
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ business.latitude }},
+        "longitude": {{ business.longitude }}
+    }{% endif %}{% if business.phone %},
+    "telephone": {{ business.phone | dump | safe }}{% endif %}{% if business.website %},
+    "url": {{ business.website | dump | safe }}{% endif %}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="container pt-25">
 
