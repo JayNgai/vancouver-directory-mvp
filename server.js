@@ -106,6 +106,11 @@ const nunjucksEnv = nunjucks.configure(path.join(__dirname, 'templates'), {
 // like a database value; "2,958" looks like a published number.
 nunjucksEnv.addFilter('num', (value) => Number(value || 0).toLocaleString('en-CA'));
 
+// ---- responsive images -------------------------------------------------------
+// Implementation lives in src/lib/image-filters.js so the template guards render with
+// the same filters the server uses.
+require('./src/lib/image-filters').registerImageFilters(nunjucksEnv);
+
 app.set('view engine', 'html');
 app.locals.noindex = indexingDisabled();
 app.locals.contactEmail = process.env.CONTACT_EMAIL || 'contact@example.com';

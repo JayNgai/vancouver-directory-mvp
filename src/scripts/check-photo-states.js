@@ -27,6 +27,7 @@ const ok = (c, label, detail) => {
 };
 
 const env = nunjucks.configure(tplDir, { autoescape: true, throwOnUndefined: false });
+require('../lib/image-filters').registerImageFilters(env);
 
 const render = (item) => {
   try {

@@ -58,22 +58,69 @@ function validateClaim(body) {
 // ---------------------------------------------------------------- public pages
 
 router.get('/claim', async (req, res) => {
-  const slug = String(req.query.business || '').trim();
-  let business = null;
-  if (slug) {
-    business = await prisma.business.findFirst({
-      where: { slug },
+  const raw = String(req.query.business || '').trim();
+
+  // Owners know the name of their business, not the slug we invented for it. So the
+  // lookup accepts any of the three things a person might actually have:
+  //   the listing's slug, a slug alias from an older import, or the business name.
+  // Only an unambiguous single match opens the form; two matches means we show a
+  // chooser rather than guessing which branch the owner meant.
+  let matches = [];
+  if (raw) {
+    const bySlug = await prisma.business.findFirst({
+      where: { slug: raw },
       include: { neighborhood: true }
     });
-    if (!business) {
-      business = await prisma.business.findFirst({
-        where: { slugAliases: { contains: `"${slug}"` } },
+    if (bySlug) {
+      matches = [bySlug];
+    } else {
+      const byAlias = await prisma.business.findFirst({
+        where: { slugAliases: { contains: `"${raw}"` } },
         include: { neighborhood: true }
       });
+      if (byAlias) {
+        matches = [byAlias];
+      } else {
+        // SQLite's LIKE is case-insensitive for ASCII, so this covers "alibi room".
+        const candidates = await prisma.business.findMany({
+          where: { name: { contains: raw } },
+          include: { neighborhood: true },
+          take: 25
+        });
+        const exact = candidates.filter((b) => b.name.toLowerCase().trim() === raw.toLowerCase());
+        matches = exact.length ? exact : candidates;
+
+        // A chain can return 25 branches that all read "Starbucks". When the query has
+        // more than one word, try the words against the address too, so "Starbucks
+        // Robson" finds the Robson Street one instead of listing every branch.
+        const tokens = raw.split(/\s+/).filter((t) => t.length > 1);
+        if (matches.length !== 1 && tokens.length > 1) {
+          const byTokens = await prisma.business.findMany({
+            where: {
+              AND: tokens.map((t) => ({
+                OR: [{ name: { contains: t } }, { address: { contains: t } }]
+              }))
+            },
+            include: { neighborhood: true },
+            take: 15
+          });
+          if (byTokens.length) matches = byTokens;
+        }
+      }
     }
-    if (business) await record(prisma, req, 'click_claim', { businessId: business.id });
   }
-  res.render('claim.html', { business, errors: [], values: {}, previous: false });
+
+  const business = matches.length === 1 ? matches[0] : null;
+  if (business) await record(prisma, req, 'click_claim', { businessId: business.id });
+
+  res.render('claim.html', {
+    business,
+    candidates: business ? [] : matches,
+    searchedQuery: raw,
+    errors: [],
+    values: {},
+    previous: false
+  });
 });
 
 router.post('/claim', async (req, res) => {

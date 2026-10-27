@@ -443,6 +443,23 @@
 .claim-benefit p { font-size: 0.88rem; color: var(--muted); line-height: 1.5; margin: 0; }
 
 .claim-alt { margin-top: var(--s4); border-top: 1px solid var(--rule); padding-top: var(--s3); }
+
+/* Chooser shown when a name matches more than one listing. */
+.claim-matches { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.claim-matches li { border-bottom: 1px solid var(--rule); }
+.claim-matches a {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: var(--s2) 0;
+    min-height: 44px;
+    text-decoration: none;
+    color: inherit;
+}
+.claim-matches a:hover .cm-name { color: var(--brand); }
+.cm-name { font-weight: 600; color: var(--ink); font-size: 0.95rem; }
+.cm-meta { font-size: 0.8rem; color: var(--muted); }
+
 .claim-alt summary {
     cursor: pointer;
     font-size: 0.86rem;

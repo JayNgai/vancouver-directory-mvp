@@ -90,9 +90,43 @@
         </form>
     </div>
 
+    {% elif candidates and candidates | length %}
+
+    {# ---- more than one match: let the owner pick, never guess ---- #}
+    <div class="detail-card mb-18">
+        <h3 class="claim-step-heading">{{ candidates | length }} listings match &ldquo;{{ searchedQuery }}&rdquo;</h3>
+        <p class="c-body fs-base mb-18">Pick the one that is yours.{% if candidates | length > 8 %} This is a common name &mdash; adding the street narrows it down.{% else %} If none of them are, search again with the street name.{% endif %}</p>
+        <ul class="claim-matches">
+            {% for c in candidates %}
+            <li>
+                <a href="/claim?business={{ c.slug }}">
+                    <span class="cm-name">{{ c.name }}</span>
+                    <span class="cm-meta">{{ c.address }}{% if c.neighborhood %} &middot; {{ c.neighborhood.name }}{% endif %}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <details class="claim-alt">
+        <summary>None of these are mine</summary>
+        <form method="GET" action="/claim" class="mt-sm">
+            <label class="form-label" for="business">Try another name</label>
+            <input class="form-input" id="business" name="business" value="{{ searchedQuery }}">
+            <button type="submit" class="btn mt-14">Search again</button>
+        </form>
+    </details>
+
     {% else %}
 
-    {# ---- step 1: what you get, then the two ways to find your listing ---- #}
+    {# ---- step 1: what you get, then find your listing by name ---- #}
+    {% if searchedQuery %}
+    <div class="form-errors">
+        <strong>No listing matched &ldquo;{{ searchedQuery }}&rdquo;.</strong>
+        <p class="mb-0 mt-8">Try the street name, or pick it out of the directory.</p>
+    </div>
+    {% endif %}
+
     <div class="claim-benefits">
         <div class="claim-benefit">
             <h3>Fix what is wrong</h3>
@@ -111,17 +145,22 @@
     <div class="detail-card mb-18">
         <h3 class="claim-step-heading">Step 1 of 2 &mdash; find your listing</h3>
         <p class="c-body fs-base mb-18">
-            Search the directory for your business, then use the claim link on its page.
-            That is the reliable way, and it needs nothing from you but the name.
+            Type the name of your business. If more than one place matches, we will show
+            you the list rather than guessing which branch is yours.
         </p>
-        <a href="/businesses" class="btn">Open the directory</a>
+        <form method="GET" action="/claim">
+            <label class="form-label" for="business">Your business name</label>
+            <input class="form-input" id="business" name="business" value="{{ searchedQuery or '' }}"
+                   placeholder="e.g. Alibi Room" autocomplete="organization">
+            <button type="submit" class="btn mt-14">Find my listing</button>
+        </form>
     </div>
 
     <details class="claim-alt">
         <summary>I already have my listing's link</summary>
         <form method="GET" action="/claim" class="mt-sm">
-            <label class="form-label" for="business">The end of your listing link</label>
-            <input class="form-input" id="business" name="business" placeholder="e.g. alibi-room">
+            <label class="form-label" for="business-slug">The end of your listing link</label>
+            <input class="form-input" id="business-slug" name="business" placeholder="e.g. alibi-room">
             <p class="fs-sm c-muted mt-sm">
                 If your listing is <span class="data">/businesses/alibi-room</span>, that last part is what goes here.
             </p>
