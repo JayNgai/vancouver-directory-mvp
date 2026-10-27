@@ -3,7 +3,7 @@
    export and the swaps. Two copies would eventually disagree, and a route that contradicts itself on
    two pages is worse than one fewer feature. #}
 <div id="resultsArea" class="results">
-    <h2 style="margin: 0 0 6px;">{{ resultsHeading or 'Your custom itinerary' }}</h2>
+    <h2 class="mb-6">{{ resultsHeading or 'Your custom itinerary' }}</h2>
     <p class="swap-hint">On a computer, drag an alternative onto a stop. On a phone, tap an alternative, then tap the stop to replace.</p>
 
     <div class="results-grid">
@@ -13,7 +13,7 @@
            route to draw, so an empty itinerary never shows a blank grey box. #}
         <div class="map-col" id="mapCol">
             <div id="routeMap" role="img" aria-label="Map of the itinerary stops"></div>
-            <div id="exportRow" class="export-row" style="display:none">
+            <div id="exportRow" class="export-row hidden">
                 <span class="export-label">Take this route with you &rarr;</span>
                 <a id="exportGoogle" class="export-btn" target="_blank" rel="noopener">Google Maps</a>
                 <a id="exportApple" class="export-btn" target="_blank" rel="noopener">Apple Maps</a>
@@ -21,7 +21,7 @@
         </div>
 
         <div id="swapSection" class="swap-section">
-            <h3 style="margin: 0 0 6px;">Swap options</h3>
+            <h3 class="mb-6">Swap options</h3>
             <div id="swapOptions" class="swap-row"></div>
         </div>
     </div>

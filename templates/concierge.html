@@ -4,34 +4,13 @@
 {% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="/studio.css">{% endblock %}
 
 {% block content %}
-<style>
-  /* Form-only styles. The RESULT surface (steps, canvas, export, swaps) lives in public/studio.css
-     and templates/_studio_results.html so the homepage dock renders it identically. */
-  .concierge-wrap { max-width: 880px; margin: 24px auto; padding: 0 14px; color: var(--foreground, #0f172a); }
-  .concierge-card { background: var(--card, #ffffff); border: 1px solid var(--border, #e2e8f0); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-  .concierge-prompt { width: 100%; min-height: 110px; font-size: 1.1rem; line-height: 1.4; padding: 14px; border: 1px solid var(--border, #cbd5e1); border-radius: 12px; resize: vertical; box-sizing: border-box; font-family: inherit; }
-  .concierge-prompt:focus { outline: 2px solid var(--accent, #007bff); outline-offset: 1px; }
-  .concierge-label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--muted-foreground, #64748b); text-transform: uppercase; letter-spacing: 0.04em; margin: 18px 0 8px; }
-  .pill-group { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill { min-height: 44px; min-width: 44px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--border, #cbd5e1); background: var(--card, #fff); color: var(--foreground, #0f172a); font-size: 0.95rem; cursor: pointer; font-family: inherit; }
-  .pill[aria-pressed="true"] { background: var(--accent, #007bff); border-color: var(--accent, #007bff); color: #fff; font-weight: 600; }
-  .pill:focus-visible { outline: 2px solid var(--accent, #007bff); outline-offset: 2px; }
-  .hood-details { margin-top: 16px; }
-  .hood-details summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; color: var(--accent, #007bff); font-weight: 600; }
-  .hood-details select { width: 100%; min-height: 44px; padding: 10px; margin-top: 8px; border: 1px solid var(--border, #cbd5e1); border-radius: 8px; font-size: 1rem; }
-  .hood-note { font-size: 0.9rem; color: var(--muted-foreground, #64748b); margin-top: 8px; }
-  .generate-btn { width: 100%; min-height: 52px; margin-top: 22px; background: var(--accent, #007bff); color: #fff; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
-  .generate-btn:disabled { opacity: 0.6; cursor: wait; }
-  .loading-box { display: none; text-align: center; padding: 24px 12px; color: var(--muted-foreground, #475569); }
-  .spinner { width: 32px; height: 32px; margin: 0 auto 10px; border: 3px solid var(--border, #cbd5e1); border-top-color: var(--accent, #007bff); border-radius: 50%; animation: spin 0.9s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @media (min-width: 720px) { .concierge-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; } }
-  @media (max-width: 380px) { .concierge-prompt { font-size: 1rem; } }
-</style>
+{# The form styles used to live in an inline <style> block right here, holding 22
+   raw hex values. They are in public/studio.css now, alongside the result surface
+   they share a component with. Nothing in this file carries a colour. #}
 
 <div class="concierge-wrap">
-    <h1 style="margin: 8px 0 4px;">✨ Smart Concierge</h1>
-    <p style="margin: 0 0 16px; color: var(--muted-foreground, #475569);">Tell us what you feel like. We will build a walking day from real listings, and you can swap any stop.</p>
+    <h1 class="detail-title">Smart Concierge</h1>
+    <p class="c-body fs-base mb-md">Tell us what you feel like. We will build a walking day from real listings, and you can swap any stop.</p>
 
     <form id="conciergeForm" class="concierge-card" novalidate>
         <label for="prompt" class="concierge-label">What do you feel like?</label>
@@ -41,24 +20,24 @@
         <div class="concierge-grid">
             <div>
                 <span class="concierge-label">Categories</span>
-                <div id="categoryPills" class="pill-group">
-                    {% for c in categoryOptions %}<button type="button" class="pill" aria-pressed="false" data-category="{{ c }}">{{ c }}</button>{% endfor %}
+                <div id="categoryPills" class="cpill-group">
+                    {% for c in categoryOptions %}<button type="button" class="cpill" aria-pressed="false" data-category="{{ c }}">{{ c }}</button>{% endfor %}
                 </div>
             </div>
             <div>
                 <span class="concierge-label">Time of day</span>
-                <div id="timePills" class="pill-group">
-                    <button type="button" class="pill" aria-pressed="false" data-time="morning">Morning</button>
-                    <button type="button" class="pill" aria-pressed="false" data-time="afternoon">Afternoon</button>
-                    <button type="button" class="pill" aria-pressed="false" data-time="evening">Evening</button>
-                    <button type="button" class="pill" aria-pressed="true" data-time="flexible">Flexible</button>
+                <div id="timePills" class="cpill-group">
+                    <button type="button" class="cpill" aria-pressed="false" data-time="morning">Morning</button>
+                    <button type="button" class="cpill" aria-pressed="false" data-time="afternoon">Afternoon</button>
+                    <button type="button" class="cpill" aria-pressed="false" data-time="evening">Evening</button>
+                    <button type="button" class="cpill" aria-pressed="true" data-time="flexible">Flexible</button>
                 </div>
 
                 <span class="concierge-label">Time available</span>
-                <div id="durationPills" class="pill-group">
-                    <button type="button" class="pill" aria-pressed="false" data-duration="2h">2 hours</button>
-                    <button type="button" class="pill" aria-pressed="true" data-duration="4h">4 hours</button>
-                    <button type="button" class="pill" aria-pressed="false" data-duration="8h">8 hours</button>
+                <div id="durationPills" class="cpill-group">
+                    <button type="button" class="cpill" aria-pressed="false" data-duration="2h">2 hours</button>
+                    <button type="button" class="cpill" aria-pressed="true" data-duration="4h">4 hours</button>
+                    <button type="button" class="cpill" aria-pressed="false" data-duration="8h">8 hours</button>
                 </div>
 
                 <details class="hood-details">
@@ -78,7 +57,7 @@
 
     <div id="loading" class="loading-box" role="status">
         <div class="spinner" aria-hidden="true"></div>
-        <p style="margin: 0;">✨ Our Concierge is crafting your perfect day...</p>
+        <p class="mb-0">Our Concierge is crafting your perfect day...</p>
     </div>
 
     {% include "_studio_results.html" %}
@@ -91,21 +70,21 @@
 // Form behaviour only. The result surface (steps, canvas, export, swaps) is rendered by studio.js,
 // which the homepage dock drives too.
 function setSingle(groupId, attr, value) {
-    document.querySelectorAll('#' + groupId + ' .pill').forEach((b) => {
+    document.querySelectorAll('#' + groupId + ' .cpill').forEach((b) => {
         b.setAttribute('aria-pressed', b.dataset[attr] === value ? 'true' : 'false');
     });
 }
 function activeSingle(groupId, attr) {
-    const b = document.querySelector('#' + groupId + ' .pill[aria-pressed="true"]');
+    const b = document.querySelector('#' + groupId + ' .cpill[aria-pressed="true"]');
     return b ? b.dataset[attr] : null;
 }
-document.querySelectorAll('#timePills .pill').forEach((b) => b.addEventListener('click', () => setSingle('timePills', 'time', b.dataset.time)));
-document.querySelectorAll('#durationPills .pill').forEach((b) => b.addEventListener('click', () => setSingle('durationPills', 'duration', b.dataset.duration)));
-document.querySelectorAll('#categoryPills .pill').forEach((b) => b.addEventListener('click', () => {
+document.querySelectorAll('#timePills .cpill').forEach((b) => b.addEventListener('click', () => setSingle('timePills', 'time', b.dataset.time)));
+document.querySelectorAll('#durationPills .cpill').forEach((b) => b.addEventListener('click', () => setSingle('durationPills', 'duration', b.dataset.duration)));
+document.querySelectorAll('#categoryPills .cpill').forEach((b) => b.addEventListener('click', () => {
     b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
 }));
 function activeCategories() {
-    return Array.from(document.querySelectorAll('#categoryPills .pill[aria-pressed="true"]')).map((b) => b.dataset.category);
+    return Array.from(document.querySelectorAll('#categoryPills .cpill[aria-pressed="true"]')).map((b) => b.dataset.category);
 }
 
 // ---- hint only: the server does the real parsing of neighbourhood names ----
@@ -132,8 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('conciergeForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('generateBtn');
+    const loading = document.getElementById('loading');
     btn.disabled = true;
-    document.getElementById('loading').style.display = 'block';
+    loading.classList.add('is-on');
     Studio.hide();
 
     const payload = {
@@ -162,7 +142,7 @@ document.getElementById('conciergeForm').addEventListener('submit', async (e) =>
         console.error('Error:', error);
         alert('Failed to generate itinerary.');
     } finally {
-        document.getElementById('loading').style.display = 'none';
+        loading.classList.remove('is-on');
         btn.disabled = false;
     }
 });

@@ -1,0 +1,401 @@
+/* ============================================================================
+   atlas.css — the Atlas component layer.
+
+   Why a separate file: styles.css is the inheritance from the old theme and it
+   stops growing here. Every NEW component lands in this file, consumes tokens
+   only, and follows the Atlas rules:
+
+     - structure comes from rules and space, never from shadow elevation
+     - radius is 0 (var(--radius)); only inputs get 2px
+     - numerals, times, distances and counts use var(--font-data)
+     - --marker is a graphic accent and never carries body copy
+
+   Components: section header, data strip, bento districts, listing table,
+   no-photo state, itinerary summary bar.
+   ========================================================================= */
+
+/* ---------------------------------------------------------------------------
+   Section header — rule-underlined, with a letterspaced kicker.
+   ------------------------------------------------------------------------ */
+.atlas-sec { padding-top: var(--s6); }
+
+.atlas-sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s4);
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: var(--s2);
+    margin-bottom: var(--s4);
+}
+
+.atlas-sec-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.6vw, 2.35rem);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    color: var(--ink);
+}
+
+.atlas-sec-head .atlas-more {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brand);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.atlas-sec-head .atlas-more:hover { color: var(--brand-deep); }
+
+.atlas-kicker {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brand);
+    margin-bottom: var(--s2);
+}
+
+/* ---------------------------------------------------------------------------
+   Data strip — the four real counts. Numbers are the point, so they are the
+   largest thing in the band and they are monospaced.
+   ------------------------------------------------------------------------ */
+.atlas-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--rule);
+    border-top: 1px solid var(--rule);
+    margin-top: var(--s5);
+}
+
+.atlas-stat {
+    padding: var(--s3) var(--s4) var(--s3) 0;
+    border-right: 1px solid var(--rule);
+}
+.atlas-stat:last-child { border-right: 0; }
+
+.atlas-stat b {
+    display: block;
+    font-family: var(--font-data);
+    font-size: 1.75rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ink);
+}
+
+.atlas-stat span {
+    display: block;
+    margin-top: var(--s1);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Bento districts — deliberately UNEVEN. The old homepage was eight identical
+   rows for 7,204px; variation is the fix, not decoration.
+   ------------------------------------------------------------------------ */
+.atlas-bento {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 176px;
+    gap: var(--s2);
+}
+
+.atlas-tile {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    border: 1px solid var(--rule);
+    text-decoration: none;
+    display: block;
+}
+.atlas-tile.w3 { grid-column: span 3; }
+.atlas-tile.w2 { grid-column: span 2; }
+
+.atlas-tile img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--dur) var(--ease);
+}
+.atlas-tile:hover img { transform: scale(1.035); }
+
+.atlas-tile-label {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: var(--s2) var(--s3);
+    background: linear-gradient(to top, rgba(16, 35, 31, 0.94), rgba(16, 35, 31, 0.52) 58%, transparent);
+    color: var(--surface);
+}
+.atlas-tile-label h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--surface);
+}
+.atlas-tile-label .n {
+    font-family: var(--font-data);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    margin-top: 3px;
+    color: var(--rule);
+}
+
+/* ---------------------------------------------------------------------------
+   Listing table — what 2,958 records actually need. The old card grid put 34%
+   of every card into an empty grey box.
+   ------------------------------------------------------------------------ */
+.atlas-table { border-top: 1px solid var(--ink); }
+
+.atlas-row {
+    display: grid;
+    grid-template-columns: 38px 1.7fr 1fr 0.8fr 0.9fr 74px;
+    gap: var(--s3);
+    align-items: center;
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: inherit;
+}
+
+.atlas-row.hd {
+    padding: var(--s1) 0;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.atlas-row:hover { background: var(--sunk); }
+
+.atlas-row .rk { font-family: var(--font-data); font-size: 0.7rem; color: var(--muted); }
+
+.atlas-row .nm {
+    font-family: var(--font-display);
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--ink);
+}
+.atlas-row .nm small {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.atlas-row .cat { font-size: 0.8rem; color: var(--ink-2); }
+.atlas-row .dist { font-family: var(--font-data); font-size: 0.76rem; color: var(--ink-2); }
+
+.atlas-row .st {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.atlas-row .st.is-open { color: var(--open); }
+.atlas-row .st.is-closed { color: var(--muted); }
+
+.atlas-row .go {
+    text-align: right;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brand);
+}
+
+/* ---------------------------------------------------------------------------
+   No-photo state — ONE definition, used everywhere. Tier 0 of the photography
+   model: a venue with no curated stand-in and no owner photo. It must look
+   designed, and it must never collapse or be mistaken for a failed load.
+   ------------------------------------------------------------------------ */
+.atlas-nophoto {
+    aspect-ratio: 4 / 3;
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--s3);
+    gap: var(--s1);
+}
+.atlas-nophoto .street {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-2);
+    line-height: 1.15;
+}
+.atlas-nophoto .note {
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Itinerary summary bar — the total the old Concierge never showed.
+   ------------------------------------------------------------------------ */
+.atlas-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s4);
+    padding-top: var(--s3);
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-data);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.atlas-summary b { color: var(--ink); font-weight: 500; }
+
+/* ---------------------------------------------------------------------------
+   Reasons — the three human reasons per stop. Replaces the provenance dump.
+   ------------------------------------------------------------------------ */
+.stop-reasons { list-style: none; margin-top: var(--s1); display: grid; gap: 3px; }
+.stop-reasons li {
+    font-size: 0.82rem;
+    color: var(--ink-2);
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.45;
+}
+.stop-reasons li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--marker);
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive: the table drops its secondary columns, the bento collapses to
+   two columns. Nothing here may produce horizontal scroll at 320px.
+   ------------------------------------------------------------------------ */
+@media (max-width: 980px) {
+    .atlas-stats { grid-template-columns: 1fr 1fr; }
+    .atlas-stat:nth-child(2n) { border-right: 0; }
+    .atlas-stat:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+
+    .atlas-bento { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+    .atlas-tile.w3, .atlas-tile.w2 { grid-column: span 2; }
+
+    .atlas-row { grid-template-columns: 28px 1.5fr 62px; gap: var(--s2); }
+    .atlas-row .cat,
+    .atlas-row .dist,
+    .atlas-row .go { display: none; }
+}
+
+@media (max-width: 420px) {
+    .atlas-bento { grid-template-columns: 1fr; }
+    .atlas-tile.w3, .atlas-tile.w2 { grid-column: span 1; }
+    .atlas-row { grid-template-columns: 24px 1fr 58px; }
+}
+
+/* ============================================================================
+   Detail-page components.
+   These replace the last inline-style clusters. Named for what they ARE rather
+   than accumulating micro-utilities, because "padding: 40px 20px; background:
+   white; border-radius: 12px; border: 1px solid #e2e8f0" is a component that
+   was never given a name.
+   ========================================================================= */
+
+/* Hero kicker above a neighbourhood or itinerary title. */
+.hero-kicker {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.9;
+}
+
+/* Neighbourhood editorial column. */
+.editorial { max-width: 820px; margin-bottom: var(--s4); }
+.figure-tight { margin: 0 0 var(--s3); }
+
+.img-lead {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+}
+
+.body-lede { line-height: 1.7; color: var(--ink-2); }
+
+.chip-row {
+    margin-top: var(--s2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s1);
+}
+
+/* Search: the "N results for …" banner and the category select. */
+.result-banner {
+    background: var(--sunk);
+    color: var(--brand);
+    border: 1px solid var(--rule);
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.filter-select {
+    padding: 12px;
+    border: 1px solid var(--rule);
+    border-radius: 50px;
+    margin-right: 8px;
+    color: var(--ink);
+    background: var(--panel);
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+/* Centred panels: empty states and prompt blocks. */
+.panel-center {
+    padding: 40px 20px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    text-align: center;
+    margin-top: var(--s4);
+}
+.panel-center-lg { padding: 50px 20px; }
+
+/* Itinerary detail steps and the maps call to action. */
+.iti-step {
+    margin: var(--s1) 0;
+    padding: 10px;
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+}
+
+.iti-step-link { color: var(--brand); margin-left: 8px; }
+
+.iti-cta {
+    text-align: center;
+    margin: var(--s5) 0;
+    padding: 30px;
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+}

@@ -1,30 +1,106 @@
 /* The itinerary result surface: steps, route canvas, export, swap options.
-   Shared by /concierge and the homepage Experience Studio dock, so the two cannot drift into
-   two different renderings of the same itinerary. Keep it dependency-free. */
+   Shared by /concierge and the homepage Experience Studio dock, so the two cannot
+   drift into two different renderings of the same itinerary. Keep it dependency-free.
+
+   TOKENIZED. This file previously held `var(--accent, #007bff)` five times — and
+   because --accent was never defined anywhere, every one of those fell back to
+   Bootstrap blue. That is why the site's best product looked like a different
+   website from the rest of it. Fallbacks are gone: an undefined token is now a
+   visible failure rather than a silent one.
+*/
 
 .results { display: none; margin-top: 24px; text-align: left; }
 .results.is-open { display: block; }
-.step-card { border-left: 4px solid var(--accent, #007bff); padding: 14px; margin-bottom: 12px; background: var(--card, #fff); border-radius: 0 10px 10px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.06); cursor: pointer; }
-.swap-section { background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px dashed var(--border, #cbd5e1); margin-top: 18px; }
-.swap-row { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
-.swap-card { flex: 0 0 240px; min-height: 44px; border: 1px solid var(--border, #d1d5db); background: #fff; padding: 12px; border-radius: 10px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-.swap-card.selected { border-color: var(--accent, #007bff); box-shadow: 0 0 0 2px var(--accent, #007bff); }
-.swap-hint { font-size: 0.9rem; color: var(--muted-foreground, #64748b); margin: 0 0 10px; }
-.export-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 0; }
-.export-label { color: var(--muted-foreground, #475569); font-size: 0.95rem; }
-.export-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--border, #cbd5e1); background: var(--card, #fff); color: var(--accent, #007bff); font-weight: 600; text-decoration: none; }
-.export-btn:hover { background: #f0f7ff; }
-.export-btn:focus-visible { outline: 2px solid var(--accent, #007bff); outline-offset: 2px; }
 
-/* Route canvas (slice 2). One DOM order reads steps -> map -> export -> swaps on a phone exactly as
-   specified; on a wide screen the grid places the map beside the steps, so no markup is duplicated. */
+.step-card {
+    border-left: 4px solid var(--brand);
+    padding: 14px;
+    margin-bottom: 12px;
+    background: var(--panel);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    border-top: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+}
+
+.swap-section {
+    background: var(--sunk);
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1px dashed var(--rule);
+    margin-top: 18px;
+}
+
+.swap-row { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
+
+.swap-card {
+    flex: 0 0 240px;
+    min-height: 44px;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    padding: 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.swap-card.selected { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand); }
+
+.swap-hint { font-size: 0.88rem; color: var(--muted); margin: 0 0 10px; }
+
+.export-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 0; }
+.export-label { color: var(--muted); font-size: 0.92rem; }
+
+.export-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--brand);
+    background: var(--panel);
+    color: var(--brand);
+    font-weight: 600;
+    font-size: 0.86rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.export-btn:hover { background: var(--brand); color: var(--panel); }
+.export-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Route canvas (slice 2). One DOM order reads steps -> map -> export -> swaps on a
+   phone exactly as specified; on a wide screen the grid places the map beside the
+   steps, so no markup is duplicated. */
 .results-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .map-col { display: none; }
 .map-col.ready { display: block; }
-#routeMap { width: 100%; height: 240px; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; background: #f8fafc; }
-.pin-badge { width: 28px; height: 28px; border-radius: 50%; background: #e05638; color: #fff; font-weight: 700; font-size: 13px; line-height: 1; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.3); box-sizing: border-box; }
+
+#routeMap {
+    width: 100%;
+    height: 240px;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    background: var(--sunk);
+}
+
+.pin-badge {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--marker);
+    color: var(--panel);
+    font-family: var(--font-data);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--panel);
+    box-sizing: border-box;
+}
+
 .map-popup strong { display: block; }
-.map-popup-addr { color: #64748b; font-size: 12px; }
+.map-popup-addr { color: var(--muted); font-size: 12px; font-family: var(--font-data); }
 
 @media (min-width: 720px) {
   .swap-row { flex-wrap: wrap; overflow-x: visible; }
@@ -38,35 +114,314 @@
   #routeMap { height: 420px; }
 }
 
+/* ---- Experience Studio dock (slice 3). Normal document flow, never sticky. ---- */
+.dock {
+    max-width: 780px;
+    margin: 0 auto 22px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 14px;
+    text-align: left;
+}
 
-/* ---- Experience Studio dock (slice 3). Normal document flow, never sticky, per Gus's spec. ---- */
-.dock { max-width: 780px; margin: 0 auto 22px; background: #fff; border-radius: 18px; padding: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.25); text-align: left; }
-.dock-modes { display: flex; gap: 6px; background: #f1f5f9; padding: 5px; border-radius: 999px; margin-bottom: 12px; flex-wrap: wrap; }
-.dock-mode { flex: 1 1 auto; min-height: 44px; border: none; background: transparent; color: #475569; font: inherit; font-size: 0.92rem; font-weight: 600; border-radius: 999px; cursor: pointer; padding: 8px 14px; }
-.dock-mode[aria-selected="true"] { background: #fff; color: #0f172a; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
-.dock-mode:focus-visible { outline: 2px solid #e05638; outline-offset: 2px; }
+.dock-modes {
+    display: flex; gap: 6px;
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    padding: 5px;
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.dock-mode {
+    flex: 1 1 auto;
+    min-height: 44px;
+    border: none;
+    background: transparent;
+    color: var(--ink-2);
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    cursor: pointer;
+    padding: 8px 14px;
+}
+.dock-mode[aria-selected="true"] { background: var(--panel); color: var(--ink); box-shadow: inset 0 -2px 0 var(--brand); }
+.dock-mode:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
 .dock-panel[hidden] { display: none; }
-.dock-label { display: block; font-size: 0.78rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 6px 4px; }
+
+.dock-label {
+    display: block;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 6px 4px;
+}
+
 .dock-inputrow { display: flex; gap: 8px; }
-.dock-prompt { flex: 1; min-height: 52px; padding: 14px 18px; font-size: 1.05rem; font-family: inherit; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 12px; box-sizing: border-box; }
-.dock-prompt:focus { outline: 2px solid #e05638; outline-offset: 1px; border-color: #e05638; }
-.dock-plan { min-height: 52px; padding: 0 22px; border: none; border-radius: 12px; background: #e05638; color: #fff; font: inherit; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+
+.dock-prompt {
+    flex: 1;
+    min-height: 52px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-input);
+    box-sizing: border-box;
+    background: var(--panel);
+}
+.dock-prompt:focus { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--brand); }
+
+.dock-plan {
+    min-height: 52px;
+    padding: 0 22px;
+    border: 1px solid var(--brand);
+    border-radius: var(--radius);
+    background: var(--brand);
+    color: var(--panel);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    align-self: stretch;
+}
+.dock-plan:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
 .dock-plan:disabled { opacity: 0.6; cursor: wait; }
+
 .dock-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.dock-chip { min-height: 44px; padding: 8px 16px; border-radius: 999px; border: 1px solid #cbd5e1; background: #fff; color: #0f172a; font: inherit; font-size: 0.9rem; cursor: pointer; }
-.dock-chip[aria-pressed="true"] { background: #e05638; border-color: #e05638; color: #fff; font-weight: 600; }
-.dock-chip:focus-visible { outline: 2px solid #e05638; outline-offset: 2px; }
+
+.dock-chip {
+    min-height: 44px;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink-2);
+    font: inherit;
+    font-size: 0.86rem;
+    cursor: pointer;
+}
+.dock-chip:hover { border-color: var(--brand); }
+.dock-chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--panel); font-weight: 600; }
+.dock-chip:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
 .dock-searchform { display: flex; gap: 8px; }
-.dock-searchform input { flex: 1; min-height: 52px; padding: 14px 18px; font-size: 1.05rem; font-family: inherit; border: 1px solid #cbd5e1; border-radius: 12px; box-sizing: border-box; }
-.dock-searchform button { min-height: 52px; padding: 0 22px; border: none; border-radius: 12px; background: #e05638; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.dock-searchform input {
+    flex: 1; min-height: 52px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-input);
+    box-sizing: border-box;
+    background: var(--panel);
+    color: var(--ink);
+}
+.dock-searchform button {
+    min-height: 52px;
+    padding: 0 22px;
+    border: 1px solid var(--brand);
+    border-radius: var(--radius);
+    background: var(--brand);
+    color: var(--panel);
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
 .dock-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
-.dock-quick span { color: #64748b; font-size: 0.85rem; }
-.dock-quick a { min-height: 44px; display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background: #f1f5f9; color: #334155; font-size: 0.85rem; text-decoration: none; }
+.dock-quick span { color: var(--muted); font-size: 0.8rem; }
+.dock-quick a {
+    min-height: 44px;
+    display: inline-flex; align-items: center;
+    padding: 4px 14px;
+    border-radius: var(--radius);
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    color: var(--ink-2);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
 .dock-hoods { display: flex; flex-wrap: wrap; gap: 8px; }
-.dock-hoods a { min-height: 44px; display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 999px; background: #f1f5f9; color: #334155; font-size: 0.9rem; text-decoration: none; }
-.dock-hoods a:hover { background: #e2e8f0; }
-.dock-loading { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 8px 6px; color: #475569; }
+.dock-hoods a {
+    min-height: 44px;
+    display: inline-flex; align-items: center;
+    padding: 6px 16px;
+    border-radius: var(--radius);
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    color: var(--ink-2);
+    font-size: 0.86rem;
+    text-decoration: none;
+}
+.dock-hoods a:hover { background: var(--panel); border-color: var(--brand); color: var(--brand); }
+
+.dock-loading { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 8px 6px; color: var(--muted); }
 .dock-loading[hidden] { display: none; }
-.dock-loading .spinner { width: 22px; height: 22px; margin: 0; border-width: 3px; border-color: #e2e8f0; border-top-color: #e05638; }
-.dock-status { margin: 10px 4px 0; font-size: 0.9rem; color: #b91c1c; }
+.dock-loading .spinner {
+    width: 22px; height: 22px; margin: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--rule);
+    border-top-color: var(--brand);
+    border-radius: 50%;
+    animation: dockspin 0.8s linear infinite;
+}
+@keyframes dockspin { to { transform: rotate(360deg); } }
+
+.dock-status { margin: 10px 4px 0; font-size: 0.86rem; color: var(--marker); }
 .dock-status[hidden] { display: none; }
+
+/* ============================================================================
+   Concierge form surface.
+   Moved here from an inline <style> block inside templates/concierge.html, which
+   held 22 raw hex values and redefined `var(--accent, #007bff)` seven times. A
+   <style> block in a template is a second stylesheet with no guard on it; this
+   file has one.
+   ========================================================================= */
+
+.concierge-wrap {
+    max-width: 880px;
+    margin: 24px auto;
+    padding: 0 14px;
+    color: var(--ink);
+}
+
+.concierge-card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+.concierge-prompt {
+    width: 100%;
+    min-height: 110px;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    padding: 14px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-input);
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    background: var(--panel);
+    color: var(--ink);
+}
+.concierge-prompt:focus { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--brand); }
+
+.concierge-label {
+    display: block;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 18px 0 8px;
+}
+
+/* Named cpill, not pill: styles.css already defines a generic .pill utility and
+   a component redefining the same class is how two design systems start. */
+.cpill-group { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.cpill {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink-2);
+    font-size: 0.88rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+.cpill:hover { border-color: var(--brand); }
+.cpill[aria-pressed="true"] {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: var(--panel);
+    font-weight: 600;
+}
+.cpill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.hood-details { margin-top: 16px; }
+.hood-details summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--brand);
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+.hood-details select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-input);
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--panel);
+    color: var(--ink);
+}
+.hood-note { font-size: 0.84rem; color: var(--muted); margin-top: 8px; }
+
+.generate-btn {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 22px;
+    padding: 0 22px;
+    text-align: center;
+    background: var(--brand);
+    color: var(--panel);
+    border: 1px solid var(--brand);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+}
+.generate-btn:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.generate-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.loading-box { display: none; text-align: center; padding: 24px 12px; color: var(--muted); }
+.loading-box.is-on { display: block; }
+
+.spinner {
+    width: 32px; height: 32px;
+    margin: 0 auto 10px;
+    border: 3px solid var(--rule);
+    border-top-color: var(--brand);
+    border-radius: 50%;
+    animation: concierge-spin 0.9s linear infinite;
+}
+@keyframes concierge-spin { to { transform: rotate(360deg); } }
+
+@media (min-width: 720px) {
+    .concierge-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
+}
+@media (max-width: 380px) {
+    .concierge-prompt { font-size: 1rem; }
+}

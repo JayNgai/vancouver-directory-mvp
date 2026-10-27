@@ -6,13 +6,13 @@
 
 {% block content %}
 <div class="hero">
-    <div class="container" style="text-align: center;">
-        <h1 style="font-size: 3rem; margin-bottom: 12px; color: #fff7ed;">Discover &amp; Design Your Vancouver Experience</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 26px; color: #cbd5e1;">Tell us what you feel like, or search any venue, neighborhood, street, phone number, or tag.</p>
+    <div class="container center">
+        <h1>Discover &amp; Design Your Vancouver Experience</h1>
+        <p>Tell us what you feel like, or search any venue, neighborhood, street, phone number, or tag.</p>
 
         {% include "_studio_dock.html" %}
 
-        <a href="/itineraries" style="color: #cbd5e1; text-decoration: underline; font-size: 0.95rem;">Or browse pre-made itineraries &rarr;</a>
+        <a href="/itineraries" class="c-soft fs-base">Or browse pre-made itineraries &rarr;</a>
     </div>
 </div>
 
@@ -32,7 +32,7 @@
                 <div class="card-subtitle">{{ n.citySection }}</div>
                 <h3 class="card-title">{{ n.name }}</h3>
                 <p class="card-desc">{{ n.description }}</p>
-                <span style="color: #2b6cb0; font-weight: 600; font-size: 0.9rem;">Explore Guide &rarr;</span>
+                <span class="c-brand fw-600 fs-base">Explore Guide &rarr;</span>
             </div>
         </a>
         {% endfor %}
@@ -41,12 +41,12 @@
     <h2 class="section-title">Curated Experience Itineraries</h2>
     <div class="grid">
         {% for itin in itineraries %}
-        <a href="/itineraries/{{ itin.slug }}" class="card" style="border-top: 4px solid #38a169;">
+        <a href="/itineraries/{{ itin.slug }}" class="card accent-open">
             <div class="card-body">
                 <div class="card-subtitle">{{ itin.neighborhood.name if itin.neighborhood else 'Vancouver' }} &bull; {{ itin.duration }}</div>
                 <h3 class="card-title">{{ itin.title }}</h3>
                 <p class="card-desc">{{ itin.description }}</p>
-                <span class="btn" style="background: #38a169; align-self: flex-start;">View Route &amp; Export Map &rarr;</span>
+                <span class="btn bg-open self-start">View Route &amp; Export Map &rarr;</span>
             </div>
         </a>
         {% endfor %}

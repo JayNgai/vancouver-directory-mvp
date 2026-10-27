@@ -3,42 +3,42 @@
 {% block title %}Curated Experience Itineraries - Vancouver Directory{% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 40px;">
+<div class="container pt-xl">
     <h1 class="section-title">Curated Experience Itineraries</h1>
-    <p style="color: #64748b; margin-bottom: 20px; font-size: 1.1rem;">Step-by-step local routes designed for walking, dining, culture, and coastal relaxation in Vancouver.</p>
+    <p class="c-muted mb-lg fs-md">Step-by-step local routes designed for walking, dining, culture, and coastal relaxation in Vancouver.</p>
 
     <!-- All-Inclusive Smart Search Input (No Dropdowns) -->
-    <form action="/search" method="GET" style="margin-bottom: 15px;">
-        <div style="background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; max-width: 800px;">
-            <input type="text" name="q" placeholder="🔍 Search any itinerary, walking tour, stop, or neighborhood..." value="{{ selectedSearch }}" required style="flex: 1; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 50px; outline: none; color: #0f172a;">
-            <button type="submit" class="btn" style="border-radius: 50px; padding: 12px 28px; background: #e05638; color: white;">Search</button>
+    <form class="mb-md" action="/search" method="GET">
+        <div class="bg-panel p-xs r-pill flex flat bordered mw-prose">
+            <input class="flex-1 no-border p-md fs-base r-pill no-outline c-ink" type="text" name="q" placeholder="🔍 Search any itinerary, walking tour, stop, or neighborhood..." value="{{ selectedSearch }}" required>
+            <button type="submit" class="btn">Search</button>
         </div>
     </form>
 
     <!-- Quick Pill Links (No Dropdowns) -->
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 25px; align-items: center;">
-        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Popular Itineraries:</span>
-        <a href="/search?q=Gastown" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">📍 Gastown Stroll</a>
-        <a href="/search?q=Kitsilano" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">🏖️ Kitsilano Beach & Brews</a>
-        <a href="/search?q=Yaletown" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">🍸 Yaletown Nightlife</a>
-        <a href="/concierge" class="tag-badge" style="text-decoration: none; font-size: 0.85rem; background: #d97706; color: white;">✨ Smart Concierge (Custom Day)</a>
+    <div class="flex gap-sm flex-wrap mb-xl items-center">
+        <span class="fs-sm c-muted fw-600">Popular Itineraries:</span>
+        <a href="/search?q=Gastown" class="tag-badge no-underline fs-sm">📍 Gastown Stroll</a>
+        <a href="/search?q=Kitsilano" class="tag-badge no-underline fs-sm">🏖️ Kitsilano Beach & Brews</a>
+        <a href="/search?q=Yaletown" class="tag-badge no-underline fs-sm">🍸 Yaletown Nightlife</a>
+        <a href="/concierge" class="tag-badge bg-marker no-underline">Smart Concierge (Custom Day)</a>
     </div>
 
-    <div style="margin-bottom: 20px; font-weight: 600; color: #475569;">
+    <div class="mb-lg fw-600 c-body">
         Showing {{ itineraries.length }} curated itinerary(ies)
     </div>
 
     <div class="grid">
         {% for itin in itineraries %}
-        <a href="/itineraries/{{ itin.slug }}" class="card" style="border-top: 4px solid #e05638;">
+        <a href="/itineraries/{{ itin.slug }}" class="card accent-brand">
             <div class="card-body">
                 <div class="card-subtitle">⏱️ {{ itin.duration }} &bull; {{ itin.difficulty }} &bull; {{ itin.neighborhood.name if itin.neighborhood else "Vancouver" }}</div>
                 <h3 class="card-title">{{ itin.title }}</h3>
                 <p class="card-desc">{{ itin.description }}</p>
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">
+                <div class="fs-sm c-muted mb-md">
                     📍 {{ itin.steps.length }} Stops &bull; Interactive Directions Included
                 </div>
-                <span class="btn" style="background: #e05638; align-self: flex-start;">Explore Route & Export &rarr;</span>
+                <span class="btn bg-brand self-start">Explore Route & Export &rarr;</span>
             </div>
         </a>
         {% endfor %}

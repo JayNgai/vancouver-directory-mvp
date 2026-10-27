@@ -5,26 +5,26 @@
 {% block meta %}{% if neighborhood.metaDescription %}<meta name="description" content="{{ neighborhood.metaDescription }}">{% endif %}{% endblock %}
 
 {% block content %}
-<div class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), #1e293b;">
+<div class="hero">
     <div class="container">
-        <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">{{ neighborhood.citySection }}</div>
+        <div class="hero-kicker">{{ neighborhood.citySection }}</div>
         <h1>{{ neighborhood.name }}</h1>
     </div>
 </div>
 
-<div class="container" style="padding-top: 30px;">
-    <section class="neighbourhood-editorial" style="max-width: 820px; margin-bottom: 28px;">
+<div class="container pt-lg">
+    <section class="neighbourhood-editorial editorial">
         {% if neighborhood.imageUrl %}
-        <figure style="margin: 0 0 16px;">
-            <img src="{{ neighborhood.imageUrl }}" alt="{{ neighborhood.name }}" style="width: 100%; max-height: 380px; object-fit: cover; border-radius: 8px;" loading="lazy">
-            <figcaption style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">{{ neighborhood.imageAttribution }}</figcaption>
+        <figure class="figure-tight">
+            <img src="{{ neighborhood.imageUrl }}" alt="{{ neighborhood.name }}" class="img-lead" loading="lazy">
+            <figcaption class="fs-sm c-muted mt-xs">{{ neighborhood.imageAttribution }}</figcaption>
         </figure>
         {% endif %}
-        <p style="line-height: 1.7; color: #334155;">{{ neighborhood.description }}</p>
+        <p class="body-lede">{{ neighborhood.description }}</p>
         {% if categoryCounts and categoryCounts.length %}
-        <div class="category-breakdown" style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px;">
+        <div class="category-breakdown chip-row">
             {% for c in categoryCounts %}
-            <a href="/businesses?category={{ c.slug }}&neighborhood={{ neighborhood.slug }}" class="tag-badge" style="text-decoration: none;">{{ c.name }} ({{ c.count }})</a>
+            <a href="/businesses?category={{ c.slug }}&neighborhood={{ neighborhood.slug }}" class="tag-badge no-underline">{{ c.name }} ({{ c.count }})</a>
             {% endfor %}
         </div>
         {% endif %}
@@ -34,12 +34,12 @@
     <h2 class="section-title">Curated Itineraries in {{ neighborhood.name }}</h2>
     <div class="grid">
         {% for itin in itineraries %}
-        <a href="/itineraries/{{ itin.slug }}" class="card" style="border-top: 4px solid #38a169;">
+        <a href="/itineraries/{{ itin.slug }}" class="card accent-open">
             <div class="card-body">
                 <div class="card-subtitle">⏱️ {{ itin.duration }} &bull; {{ itin.difficulty }}</div>
                 <h3 class="card-title">{{ itin.title }}</h3>
                 <p class="card-desc">{{ itin.description }}</p>
-                <span class="btn" style="background: #38a169;">Explore Itinerary &rarr;</span>
+                <span class="btn bg-open">Explore Itinerary &rarr;</span>
             </div>
         </a>
         {% endfor %}
@@ -60,14 +60,14 @@
                 <span class="badge-verified">✓ Owner-claimed listing</span>
                 {% endif %}
                 <div class="card-subtitle">{{ b.primaryCategory or b.category }}</div>
-                <h3 class="card-title"><a href="/businesses/{{ b.slug }}" style="color: inherit; text-decoration: none;">{{ b.name }}</a></h3>
+                <h3 class="card-title"><a class="c-inherit no-underline" href="/businesses/{{ b.slug }}">{{ b.name }}</a></h3>
                 {% if b.rating and b.reviewCount %}
-                <div class="rating-stars">★ {{ b.rating }} <span style="color: #718096; font-size: 0.85rem; font-weight: 400;">({{ b.reviewCount }} reviews)</span></div>
+                <div class="rating-stars">★ {{ b.rating }} <span class="c-muted fs-sm fw-400">({{ b.reviewCount }} reviews)</span></div>
                 {% endif %}
-                {% if b.description %}<p class="card-desc" style="margin-top: 8px;">{{ b.description }}</p>{% endif %}
-                <div style="font-size: 0.85rem; color: #718096; margin-bottom: 10px;">📍 {{ b.address }}</div>
-                {% if b.displayPhone %}<div style="font-size: 0.85rem; color: #718096; margin-bottom: 10px;">📞 {{ b.displayPhone }}</div>{% endif %}
-                {% if b.displayHours %}<div style="font-size: 0.85rem; color: #718096; margin-bottom: 10px;">🕒 {{ b.displayHours }}</div>{% endif %}
+                {% if b.description %}<p class="card-desc mt-8">{{ b.description }}</p>{% endif %}
+                <div class="fs-sm c-muted mb-sm">📍 {{ b.address }}</div>
+                {% if b.displayPhone %}<div class="fs-sm c-muted mb-sm">📞 {{ b.displayPhone }}</div>{% endif %}
+                {% if b.displayHours %}<div class="fs-sm c-muted mb-sm">🕒 {{ b.displayHours }}</div>{% endif %}
                 <div class="tag-list">
                     {% for tag in b.parsedTags %}
                     <span class="tag-badge">#{{ tag }}</span>

@@ -3,31 +3,31 @@
 {% block title %}Explore Vancouver Businesses & Spots{% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 30px;">
+<div class="container pt-lg">
     <h1 class="section-title">Directory Spots & Businesses</h1>
-    <p style="color: #64748b; margin-bottom: 20px;">Search dining spots, cafes, craft breweries, and local gems across Vancouver.</p>
+    <p class="c-muted mb-lg">Search dining spots, cafes, craft breweries, and local gems across Vancouver.</p>
 
     <!-- All-Inclusive Smart Search Input (No Dropdowns) -->
-    <form action="/search" method="GET" style="margin-bottom: 15px;">
-        <div style="background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; max-width: 800px;">
-            <input type="text" name="q" placeholder="🔍 All-inclusive search: venue, neighborhood, street, phone, cuisine, #tag..." value="{{ selectedSearch }}" required style="flex: 1; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 50px; outline: none; color: #0f172a;">
-            <button type="submit" class="btn" style="border-radius: 50px; padding: 12px 28px; background: #e05638; color: white;">Search</button>
+    <form class="mb-md" action="/search" method="GET">
+        <div class="bg-panel p-xs r-pill flex flat bordered mw-prose">
+            <input class="flex-1 no-border p-md fs-base r-pill no-outline c-ink" type="text" name="q" placeholder="🔍 All-inclusive search: venue, neighborhood, street, phone, cuisine, #tag..." value="{{ selectedSearch }}" required>
+            <button type="submit" class="btn">Search</button>
         </div>
     </form>
 
     <!-- Quick Filter Pills (Clickable Tags, Not Dropdowns) -->
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 25px; align-items: center;">
-        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Popular Searches:</span>
-        <a href="/search?q=Restaurant" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">🍽️ Restaurants</a>
-        <a href="/search?q=Cafe" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">☕ Cafes</a>
-        <a href="/search?q=Bar" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">🍸 Bars & Lounges</a>
-        <a href="/search?q=Gastown" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">📍 Gastown</a>
-        <a href="/search?q=Kitsilano" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">📍 Kitsilano</a>
-        <a href="/search?q=patio" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">☀️ #patio</a>
-        <a href="/businesses" class="tag-badge" style="text-decoration: none; font-size: 0.85rem; background: #e2e8f0; color: #475569;">Show All</a>
+    <div class="flex gap-sm flex-wrap mb-xl items-center">
+        <span class="fs-sm c-muted fw-600">Popular Searches:</span>
+        <a href="/search?q=Restaurant" class="tag-badge no-underline fs-sm">🍽️ Restaurants</a>
+        <a href="/search?q=Cafe" class="tag-badge no-underline fs-sm">☕ Cafes</a>
+        <a href="/search?q=Bar" class="tag-badge no-underline fs-sm">🍸 Bars & Lounges</a>
+        <a href="/search?q=Gastown" class="tag-badge no-underline fs-sm">📍 Gastown</a>
+        <a href="/search?q=Kitsilano" class="tag-badge no-underline fs-sm">📍 Kitsilano</a>
+        <a href="/search?q=patio" class="tag-badge no-underline fs-sm">☀️ #patio</a>
+        <a href="/businesses" class="tag-badge no-underline fs-sm bg-sunk c-body">Show All</a>
     </div>
 
-    <div style="margin-bottom: 20px; font-weight: 600; color: #475569;">
+    <div class="mb-lg fw-600 c-body">
         Found {{ pagination.total }} spot(s)
     </div>
 
@@ -44,30 +44,30 @@
                 <span class="badge-verified">✓ Owner-claimed listing</span>
                 {% endif %}
                 <div class="card-subtitle">{{ b.neighborhood.name }} &bull; {{ b.primaryCategory or b.category }}</div>
-                <h3 class="card-title"><a href="/businesses/{{ b.slug }}" style="color: inherit; text-decoration: none;">{{ b.name }}</a></h3>
-                <a href="/businesses/{{ b.slug }}" style="font-size: 0.85rem; color: #2b6cb0; font-weight: 600; margin-bottom: 4px;">View listing &rarr;</a>
+                <h3 class="card-title"><a class="c-inherit no-underline" href="/businesses/{{ b.slug }}">{{ b.name }}</a></h3>
+                <a href="/businesses/{{ b.slug }}" class="fs-sm c-brand fw-600 mb-xs no-underline">View listing &rarr;</a>
                 {% if b.rating and b.reviewCount %}
-                <div class="rating-stars">★ {{ b.rating }} <span style="color: #64748b; font-size: 0.85rem; font-weight: 400;">({{ b.reviewCount }} reviews)</span></div>
+                <div class="rating-stars">★ {{ b.rating }} <span class="c-muted fs-sm fw-400">({{ b.reviewCount }} reviews)</span></div>
                 {% endif %}
-                {% if b.description %}<p class="card-desc" style="margin-top: 8px;">{{ b.description }}</p>{% endif %}
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 6px;">📍 {{ b.address }}</div>
+                {% if b.description %}<p class="card-desc mt-8">{{ b.description }}</p>{% endif %}
+                <div class="fs-sm c-muted mb-xs">📍 {{ b.address }}</div>
                 {% if b.displayPhone %}
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 6px;">📞 {{ b.displayPhone }}</div>
+                <div class="fs-sm c-muted mb-xs">📞 {{ b.displayPhone }}</div>
                 {% endif %}
                 {% if b.displayHours %}
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">🕒 {{ b.displayHours }}</div>
+                <div class="fs-sm c-muted mb-sm">🕒 {{ b.displayHours }}</div>
                 {% endif %}
                 <div class="tag-list">
                     {% for tag in b.parsedTags %}
-                    <a href="/search?q={{ tag }}" class="tag-badge" style="text-decoration: none;">#{{ tag }}</a>
+                    <a href="/search?q={{ tag }}" class="tag-badge no-underline">#{{ tag }}</a>
                     {% endfor %}
                 </div>
             </div>
         </div>
         {% else %}
-        <div style="grid-column: 1/-1; padding: 40px; text-align: center; background: white; border-radius: 8px;">
-            <p style="font-size: 1.1rem; color: #64748b;">No businesses found matching your criteria.</p>
-            <a href="/businesses" class="btn" style="margin-top: 15px;">View All Businesses</a>
+        <div class="span-all p-40 center bg-panel r-sm">
+            <p class="fs-md c-muted">No businesses found matching your criteria.</p>
+            <a href="/businesses" class="btn mt-15">View All Businesses</a>
         </div>
         {% endfor %}
     </div>

@@ -3,16 +3,16 @@
 {% block title %}{{ itinerary.title }} - Itinerary{% endblock %}
 
 {% block content %}
-<div class="hero" style="background: linear-gradient(135deg, #2f855a 0%, #1a365d 100%);">
+<div class="hero">
     <div class="container">
-        <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">
+        <div class="hero-kicker">
             ⏱️ {{ itinerary.duration }} &bull; {{ itinerary.difficulty }} &bull; {{ itinerary.neighborhood.name if itinerary.neighborhood else 'Vancouver' }}
         </div>
         <h1>{{ itinerary.title }}</h1>
         <p>{{ itinerary.description }}</p>
         
         {% if googleMapsUrl %}
-        <div style="margin-top: 25px;">
+        <div class="mt-25">
             <a href="{{ googleMapsUrl }}" target="_blank" class="btn-maps">
                 🗺️ 1-Click Export to Google Maps Walking Directions
             </a>
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="container" style="padding-top: 40px; max-width: 900px;">
+<div class="container pt-40 mw-900">
     <h2 class="section-title">Step-by-Step Route</h2>
 
     <div class="timeline">
@@ -31,9 +31,9 @@
             <div class="step-content">
                 <div class="step-title">{{ step.order }}. {{ step.activity }}</div>
                 {% if step.business %}
-                <div style="margin: 8px 0; padding: 10px; background: #f7fafc; border-radius: 6px; font-size: 0.9rem;">
+                <div class="iti-step">
                     <strong>📍 Featured Spot:</strong> {{ step.business.name }} ({{ step.business.address }})
-                    <a href="/businesses?search={{ step.business.name }}" style="color: #2b6cb0; margin-left: 8px;">View Details &rarr;</a>
+                    <a href="/businesses?search={{ step.business.name }}" class="iti-step-link">View Details &rarr;</a>
                 </div>
                 {% endif %}
                 {% if step.notes %}
@@ -45,9 +45,9 @@
     </div>
 
     {% if googleMapsUrl %}
-    <div style="text-align: center; margin: 40px 0; padding: 30px; background: #f0fff4; border: 1px solid #c6f6d5; border-radius: 10px;">
+    <div class="iti-cta">
         <h3>Ready to take this tour?</h3>
-        <p style="color: #4a5568; margin: 10px 0 20px;">Open turn-by-turn walking directions directly on your phone's Google Maps app.</p>
+        <p class="c-body my-10-20">Open turn-by-turn walking directions directly on your phone's Google Maps app.</p>
         <a href="{{ googleMapsUrl }}" target="_blank" class="btn-maps">
             🗺️ Open Walking Route in Google Maps
         </a>

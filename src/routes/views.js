@@ -450,38 +450,6 @@ router.get('/concierge', async (req, res) => {
   }
 });
 
-// Theme Previews
-router.get('/theme/:name', async (req, res) => {
-  try {
-    const themeNameMap = {
-      coastal: { css: '/theme-coastal.css', name: 'Option 1: Coastal Emerald (Pacific Northwest / Lonely Planet Style)' },
-      sunset: { css: '/theme-sunset.css', name: 'Option 2: Pacific Sunset (Warm Coastal & Editorial Serif Style)' },
-      minimalist: { css: '/theme-minimalist.css', name: 'Option 3: Minimalist Slate (Sleek Tech Precision Style)' }
-    };
-
-    const selectedTheme = themeNameMap[req.params.name] || themeNameMap.coastal;
-
-    const neighborhoods = await prisma.neighborhood.findMany({ orderBy: { name: 'asc' } });
-    const itineraries = await prisma.itinerary.findMany({
-      take: 3,
-      include: { neighborhood: true, steps: true }
-    });
-    const featuredBusinesses = sortByCompleteness(
-      await prisma.business.findMany({ include: { neighborhood: true } })
-    ).slice(0, 6);
-
-    res.render('index.html', {
-      neighborhoods,
-      itineraries,
-      featuredBusinesses,
-      themeCss: selectedTheme.css,
-      themeName: selectedTheme.name
-    });
-  } catch (error) {
-    failText(res, 'GET /theme/:name', error);
-  }
-});
-
 // Business claim / Portal page
 router.get('/claim', (req, res) => {
   res.render('claim.html');

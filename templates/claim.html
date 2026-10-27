@@ -3,9 +3,9 @@
 {% block title %}Claim a listing{% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 30px; max-width: 760px;">
+<div class="container pt-lg mw-760">
     <h1 class="section-title">Claim a listing</h1>
-    <p style="color: #475569; margin-bottom: 18px;">
+    <p class="c-body mb-18">
         Tell us who you are and we will contact you to confirm that you own or manage this
         business. Nothing changes on the listing until we have spoken with you.
     </p>
@@ -18,10 +18,10 @@
     {% endif %}
 
     {% if business %}
-    <div class="detail-card" style="margin-bottom: 18px;">
+    <div class="detail-card mb-18">
         <div class="card-subtitle">Listing you are claiming</div>
-        <h2 class="detail-title" style="font-size: 1.4rem;">{{ business.name }}</h2>
-        <div style="color: #475569; font-size: 0.95rem;">
+        <h2 class="detail-title fs-lg">{{ business.name }}</h2>
+        <div class="c-body fs-base">
             {{ business.address }}{% if business.neighborhood %} &bull; {{ business.neighborhood.name }}{% endif %}
         </div>
     </div>
@@ -60,24 +60,24 @@
                 <span>I agree that the directory may contact me about this listing.</span>
             </label>
 
-            <button type="submit" class="btn" style="margin-top: 14px;">Send claim request</button>
+            <button type="submit" class="btn mt-14">Send claim request</button>
         </form>
     </div>
     {% else %}
     <div class="detail-card">
-        <p style="color: #475569;">
+        <p class="c-body">
             Open the business you want to claim, then use the “Own this business? Claim it”
             button on its page. You can also paste the listing address below.
         </p>
         <form method="GET" action="/claim">
             <label class="form-label" for="business">Listing slug or address</label>
             <input class="form-input" id="business" name="business" placeholder="e.g. alibi-room">
-            <button type="submit" class="btn" style="margin-top: 14px;">Find listing</button>
+            <button type="submit" class="btn mt-14">Find listing</button>
         </form>
     </div>
     {% endif %}
 
-    <p style="font-size: 0.85rem; color: #64748b; margin-top: 16px;">
+    <p class="fs-sm c-muted mt-16">
         This form is the only place we ask for your details. See <a href="/privacy">what we collect</a>.
     </p>
 </div>
