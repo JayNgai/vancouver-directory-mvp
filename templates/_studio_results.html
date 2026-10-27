@@ -4,6 +4,10 @@
    two pages is worse than one fewer feature. #}
 <div id="resultsArea" class="results">
     <h2 class="mb-6">{{ resultsHeading or 'Your custom itinerary' }}</h2>
+    {# The total the old surface never showed: how many stops, how long, how far,
+       and when it ends. studio.js fills it from the same steps it renders, so the
+       summary cannot disagree with the cards below it. #}
+    <div id="itiSummary" class="atlas-summary" hidden></div>
     <p class="swap-hint">On a computer, drag an alternative onto a stop. On a phone, tap an alternative, then tap the stop to replace.</p>
 
     <div class="results-grid">

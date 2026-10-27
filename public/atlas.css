@@ -266,6 +266,9 @@
 }
 .atlas-summary b { color: var(--ink); font-weight: 500; }
 
+/* `display: flex` above would beat the hidden attribute, so state it. */
+.atlas-summary[hidden] { display: none; }
+
 /* ---------------------------------------------------------------------------
    Reasons — the three human reasons per stop. Replaces the provenance dump.
    ------------------------------------------------------------------------ */

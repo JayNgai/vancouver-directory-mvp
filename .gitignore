@@ -39,4 +39,5 @@ __pycache__/
 venv/
 
 # Large generated data dumps
-osm_data.json.superpowers/
+osm_data.json
+.superpowers/

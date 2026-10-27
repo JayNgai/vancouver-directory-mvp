@@ -26,9 +26,10 @@
             <div>
                 <div class="card-subtitle">{{ business.category }}{% if business.primaryCategory and business.primaryCategory != business.category %} &bull; {{ business.primaryCategory }}{% endif %}</div>
                 <h1 class="detail-title">{{ business.name }}</h1>
-                {% if business.cityLicenceStatus == 'Issued' %}
-                <span class="badge-licence">✓ City of Vancouver licensed business{% if business.cityLicenceDataDate %} <span class="badge-asof">as of {{ business.cityLicenceDataDate }}</span>{% endif %}</span>
-                {% endif %}
+                {# The "City of Vancouver licensed business — as of 2026-10-14" badge was
+                   here. It is compliance metadata, not something a person choosing where
+                   to eat acts on, and spec §7.2 bans licence provenance from consumer UI
+                   permanently. The licence fields stay on the record for admin. #}
             </div>
         </div>
 
@@ -58,7 +59,7 @@
 
             {% if business.displayLiquorHours %}
             <dt>Alcohol service</dt>
-            <dd><div class="hours-lead">Licensed to serve alcohol{% if business.liquorLicenceType %} ({{ business.liquorLicenceType }}){% endif %}</div>
+            <dd><div class="hours-lead">Licensed to serve alcohol</div>
                 {% if business.liquorRows %}<table class="hours-table"><tbody>
                 {% for r in business.liquorRows %}<tr><th scope="row">{{ r.label }}</th><td>{% for t in r.times %}<div>{{ t }}</div>{% endfor %}</td></tr>
                 {% endfor %}</tbody></table>{% else %}{{ business.displayLiquorHours }}{% endif %}</dd>

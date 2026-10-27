@@ -22,31 +22,107 @@ function esc(v) {
   return String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function renderResults() {
-  const stepsHtml = currentSteps.map((step, idx) => `
-      <div class="step-card" data-step-idx="${idx}" id="step-${idx}">
-          <h4 style="margin: 0 0 4px; color: var(--accent, #007bff); font-size: 1.05em;">${esc(step.time)}</h4>
-          <strong style="font-size: 1.1em;">${esc(step.business.name)}</strong>
-          <p style="margin: 2px 0; color: var(--muted-foreground, #555);">${esc(step.business.category)} &bull; ${esc(step.business.address)}${step.business.displayHours ? ' &bull; 🕒 ' + esc(step.business.displayHours) : ''}</p>
-          <div style="margin-top: 10px; background: #f8fafc; padding: 10px; border-radius: 8px; font-size: 0.9em;">
-              <div style="margin-bottom: 4px;"><strong>⏳ Est. time:</strong> ${esc(step.estimatedDuration)}</div>
-              <div><strong>💡 Why here:</strong> ${esc(step.why)}</div>
-          </div>
-          ${step.walkToNextMinutes != null ? `<div style="font-size: 0.85em; color: var(--muted-foreground, #64748b); margin-top: 6px;">Walk to next stop: about ${esc(step.walkToNextMinutes)} min</div>` : ''}
-      </div>
-  `).join('');
-  document.getElementById('itinerarySteps').innerHTML = stepsHtml || '<p>No spots found. Try broader terms.</p>';
+/** Read a design token at runtime. Leaflet and element.style need a real value, not var(). */
+function token(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
 
+/** "1:00 PM" -> 780. Returns null rather than guessing. */
+function parseClockLabel(label) {
+  const m = /^(\d{1,2}):(\d{2})\s*(AM|PM)$/i.exec(String(label || '').trim());
+  if (!m) return null;
+  let h = Number(m[1]) % 12;
+  if (/pm/i.test(m[3])) h += 12;
+  return h * 60 + Number(m[2]);
+}
+
+/** 258 -> "4h 18m". Plain arithmetic, no locale surprises. */
+function spanLabel(minutes) {
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  if (!h) return `${m}m`;
+  return m ? `${h}h ${m}m` : `${h}h`;
+}
+
+function clockLabel(minutes) {
+  const total = ((Math.round(minutes) % 1440) + 1440) % 1440;
+  const h24 = Math.floor(total / 60);
+  const m = total % 60;
+  const suffix = h24 >= 12 ? 'pm' : 'am';
+  const h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+  return m === 0 ? `${h12} ${suffix}` : `${h12}:${String(m).padStart(2, '0')} ${suffix}`;
+}
+
+/** The itinerary total: stops, elapsed time, distance walked, and when it ends. */
+function renderSummary() {
+  const box = document.getElementById('itiSummary');
+  if (!box) return;
+
+  if (!currentSteps.length) {
+    box.hidden = true;
+    box.innerHTML = '';
+    return;
+  }
+
+  const dwell = currentSteps.reduce((sum, s) => sum + (parseInt(s.estimatedDuration, 10) || 0), 0);
+  const walk = currentSteps.reduce((sum, s) => sum + (s.walkToNextMinutes || 0), 0);
+  const total = dwell + walk;
+  const metres = walk * 80; // the same 80 m/min the scheduler walks at
+  const start = parseClockLabel(currentSteps[0].time);
+
+  const distance = metres >= 1000 ? `${(metres / 1000).toFixed(1)} km` : `${Math.round(metres)} m`;
+  const ends = start == null ? null : clockLabel(start + total);
+
+  const bits = [
+    `<span><b>${currentSteps.length} stops</b></span>`,
+    `<span><b>${spanLabel(total)}</b> out</span>`,
+    `<span><b>${distance}</b> walked</span>`,
+    ends ? `<span>ends <b>${ends}</b></span>` : '',
+  ].filter(Boolean);
+
+  box.innerHTML = bits.join('');
+  box.hidden = false;
+}
+
+function renderResults() {
+  // No inline style attributes and no colour literals here. This markup is the
+  // most visible surface on the site and it used to carry `var(--accent, #007bff)`
+  // in six places. The token guard scanned templates and CSS only, so a page
+  // script shipping hardcoded colour was a hole; it scans page scripts now.
+  const stepsHtml = currentSteps.map((step, idx) => {
+    const reasons = Array.isArray(step.reasons) ? step.reasons : [];
+    const reasonsHtml = reasons.length
+      ? `<ul class="stop-reasons">${reasons.map((r) => `<li>${esc(r.text)}</li>`).join('')}</ul>`
+      : '';
+    const meta = [step.business.category, step.business.address].filter(Boolean).map(esc).join(' &bull; ');
+    const hours = step.business.displayHours ? ` &bull; ${esc(step.business.displayHours)}` : '';
+    return `
+      <div class="step-card" data-step-idx="${idx}" id="step-${idx}">
+          <div class="step-head">
+              <span class="step-time">${esc(step.time)}</span>
+              <span class="step-dur">${esc(step.estimatedDuration)}</span>
+          </div>
+          <strong class="step-name">${esc(step.business.name)}</strong>
+          <p class="step-meta">${meta}${hours}</p>
+          ${reasonsHtml}
+          ${step.walkToNextMinutes != null ? `<div class="step-walk">${esc(step.walkToNextMinutes)} min walk to the next stop</div>` : ''}
+      </div>
+  `;
+  }).join('');
+  document.getElementById('itinerarySteps').innerHTML = stepsHtml || '<p class="empty-note">No spots found. Try broader terms.</p>';
+
+  // The per-card "tap, then tap a stop" instruction is gone: it was repeated on
+  // every card while one instruction already sits above the row.
   const swapsHtml = currentSwaps.map((biz, idx) => `
       <div draggable="true" data-swap-idx="${idx}"
            class="swap-card${selectedSwap === idx ? ' selected' : ''}" id="swap-${idx}">
-          <div style="font-weight: 700; margin-bottom: 4px;">${esc(biz.name)}</div>
-          <div style="color: var(--muted-foreground, #555); margin-bottom: 4px;">${esc(biz.category)}${biz.displayHours ? ' &bull; 🕒 ' + esc(biz.displayHours) : ''}</div>
-          ${biz.distanceFromStopMetres != null ? `<div style="color: var(--muted-foreground, #555); font-size: 0.85em;">${esc(biz.distanceFromStopMetres)} m from ${esc(biz.swapForStop)}</div>` : ''}
-          <div style="color: var(--accent, #007bff); font-size: 0.85em; margin-top: 6px;">Tap, then tap a stop &middot; or drag on a computer</div>
+          <div class="swap-name">${esc(biz.name)}</div>
+          <div class="swap-meta">${esc(biz.category)}${biz.displayHours ? ' &bull; ' + esc(biz.displayHours) : ''}</div>
+          ${biz.distanceFromStopMetres != null ? `<div class="swap-dist">${esc(biz.distanceFromStopMetres)} m from ${esc(biz.swapForStop)}</div>` : ''}
       </div>
   `).join('');
-  document.getElementById('swapOptions').innerHTML = swapsHtml || '<p style="color: var(--muted-foreground, #777);">No extra options available.</p>';
+  document.getElementById('swapOptions').innerHTML = swapsHtml || '<p class="empty-note">No extra options available.</p>';
+  renderSummary();
   installWiring();
   updateExportLinks();
   drawRoute();
@@ -118,7 +194,7 @@ function drawRoute() {
     // DASHED deliberately. These are STRAIGHT segments between stops - this app uses no routing API
     // anywhere, so a solid line would imply a turn-by-turn path we cannot produce. Walking times are
     // NOT repeated here; the step cards already say "Walk to next stop".
-    L.polyline(latlngs, { color: '#e05638', weight: 3, opacity: 0.75, dashArray: '6, 8' }).addTo(routeLayer);
+    L.polyline(latlngs, { color: token('--marker'), weight: 3, opacity: 0.75, dashArray: '6, 8' }).addTo(routeLayer);
   }
 
   // Bounds from the POINTS, not from the layer. `L.layerGroup()` has no getBounds() - only
@@ -165,7 +241,7 @@ function dragStartFrom(ev, card) {
 
 function dropOnStep(ev, card) {
   ev.preventDefault();
-  card.style.background = '#fff';
+  card.classList.remove('is-drop-target');
   let raw = '';
   try { raw = ev.dataTransfer.getData('text/plain'); } catch (e) { /* fall through to the local */ }
   const idx = raw !== '' ? Number(raw) : draggingSwapIdx;
@@ -198,11 +274,11 @@ function installWiring() {
     if (!card) return;
     ev.preventDefault();                       // REQUIRED, or the drop never fires
     if (ev.dataTransfer) ev.dataTransfer.dropEffect = 'move';
-    card.style.background = '#e6f2ff';
+    card.classList.add('is-drop-target');
   });
   stepsBox.addEventListener('dragleave', (ev) => {
     const card = ev.target.closest('.step-card');
-    if (card) card.style.background = '#fff';
+    if (card) card.classList.remove('is-drop-target');
   });
   stepsBox.addEventListener('drop', (ev) => {
     const card = ev.target.closest('.step-card');

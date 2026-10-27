@@ -47,6 +47,48 @@
 
 .swap-hint { font-size: 0.88rem; color: var(--muted); margin: 0 0 10px; }
 
+/* Step-card internals. These used to be inline styles inside public/studio.js,
+   which meant the most visible surface on the site carried its own colours and
+   the token guard could not see any of them. */
+.step-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+
+.step-time {
+    font-family: var(--font-data);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--brand);
+    font-weight: 500;
+}
+
+.step-dur {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.step-name {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+.step-meta { font-size: 0.78rem; color: var(--muted); margin: 3px 0 0; }
+.step-walk { font-size: 0.74rem; color: var(--muted); margin-top: 8px; font-family: var(--font-data); }
+
+/* Drag target, as a class rather than an inline background set from JS. */
+.step-card.is-drop-target { border-color: var(--brand); background: var(--sunk); }
+
+.swap-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 3px; color: var(--ink); }
+.swap-meta { color: var(--muted); font-size: 0.78rem; }
+.swap-dist { color: var(--muted); font-size: 0.74rem; margin-top: 4px; font-family: var(--font-data); }
+
+.empty-note { color: var(--muted); font-size: 0.9rem; }
+
 .export-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 0; }
 .export-label { color: var(--muted); font-size: 0.92rem; }
 

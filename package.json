@@ -13,7 +13,7 @@
     "scrape:full": "node src/scripts/scrape-venues-full.js",
     "qa:baseline": "node src/data-qa/run-baseline.js",
     "qa:compare": "node src/data-qa/compare.js",
-    "check": "node src/scripts/check-design-tokens.js && node src/scripts/check-csp-interactions.js && node src/scripts/check-swap-wiring.js && node src/scripts/check-studio-dock.js && node src/scripts/check-concierge-hoods.js && node src/scripts/check-error-leaks.js",
+    "check": "node src/scripts/check-design-tokens.js && node src/scripts/check-consumer-copy.js && node src/scripts/check-concierge-variety.js && node src/scripts/check-csp-interactions.js && node src/scripts/check-swap-wiring.js && node src/scripts/check-studio-dock.js && node src/scripts/check-concierge-hoods.js && node src/scripts/check-error-leaks.js",
     "test": "npm run check"
   },
   "keywords": [

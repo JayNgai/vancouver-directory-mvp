@@ -43,7 +43,8 @@
         <div id="durationPills" class="composer-group" role="group" aria-labelledby="grpHowLong">
             <span class="glabel" id="grpHowLong">How long</span>
             <button type="button" class="composer-chip" aria-pressed="false" data-duration="2h">2 hours</button>
-            <button type="button" class="composer-chip" aria-pressed="true" data-duration="4h">4 hours</button>
+            <button type="button" class="composer-chip" aria-pressed="true" data-duration="3h">3 hours</button>
+            <button type="button" class="composer-chip" aria-pressed="false" data-duration="4h">4 hours</button>
             <button type="button" class="composer-chip" aria-pressed="false" data-duration="8h">8 hours</button>
         </div>
 
@@ -118,8 +119,26 @@ function autosize() {
 }
 promptEl.addEventListener('input', autosize);
 
+// ---- the duration the user typed must win over the default chip ----
+// A prompt saying "3 hours" used to be ignored entirely: the request carried
+// whatever chip happened to be pressed. The chips are the contract with the
+// server, so the prompt snaps the chip rather than being quietly discarded.
+const DURATION_BY_HOURS = { 2: '2h', 3: '3h', 4: '4h', 8: '8h' };
+function syncDurationFromPrompt() {
+    const m = /(\d+)\s*(?:hours?|hrs?|h)\b/i.exec(promptEl.value);
+    if (!m) return;
+    const asked = Number(m[1]);
+    if (!Number.isFinite(asked) || asked < 1) return;
+    // Snap to the nearest offered option so the plan can actually honour it.
+    const nearest = Object.keys(DURATION_BY_HOURS)
+        .map(Number)
+        .reduce((a, b) => (Math.abs(b - asked) < Math.abs(a - asked) ? b : a));
+    setSingle('durationPills', 'duration', DURATION_BY_HOURS[nearest]);
+}
+
 // ---- hint only: the server does the real parsing of neighbourhood names ----
 promptEl.addEventListener('input', updateHoodNote);
+promptEl.addEventListener('input', syncDurationFromPrompt);
 function updateHoodNote() {
     const text = promptEl.value.toLowerCase();
     const hoods = Array.from(document.querySelectorAll('#neighborhood option')).filter((o) => o.value);

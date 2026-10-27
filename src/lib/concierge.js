@@ -2,13 +2,16 @@
  * Smart Concierge: deterministic, rule-based itinerary builder.
  * No language model and no randomness: the same inputs always give the same itinerary.
  *
- * Every 'why' sentence is built only from real stored fields (category, City licence status and
- * date, phone, website, tags, listed hours). Ratings and review counts are never used.
+ * Each stop's explanation is produced by src/lib/reasons.js, which returns three
+ * human reasons (timing, sequence, character) drawn only from stored fields a
+ * diner acts on. Provenance fields — City licence status, licence date, Overture
+ * confidence, data-source lists — are deliberately not reachable from there.
  */
 const { decorate } = require('./format');
+const { stopReasons } = require('./reasons');
 
-const SLOT_MINUTES = { '2h': 30, '4h': 60, '8h': 90 };
-const TOTAL_MINUTES = { '2h': 120, '4h': 240, '8h': 480 };
+const SLOT_MINUTES = { '2h': 30, '3h': 45, '4h': 60, '8h': 90 };
+const TOTAL_MINUTES = { '2h': 120, '3h': 180, '4h': 240, '8h': 480 };
 const START_TIMES = { morning: 9 * 60, afternoon: 13 * 60, evening: 17 * 60 + 30, flexible: 11 * 60 };
 const WALK_METRES_PER_MIN = 80;
 
@@ -118,30 +121,6 @@ function matchesRules(b, parsed) {
   return parsed.tags.some((t) => tags.includes(t));
 }
 
-function matchReason(b, parsed) {
-  const cats = [b.category, b.primaryCategory].filter(Boolean);
-  const cat = parsed.categories.find((c) => cats.includes(c));
-  if (cat) return `category "${cat}"`;
-  const tags = businessTags(b);
-  const tag = parsed.tags.find((t) => tags.includes(t));
-  return tag ? `listed tag "${tag}"` : null;
-}
-
-function whyText(b, reason, usedFallback) {
-  const parts = [];
-  if (reason) parts.push(`matches your request by ${reason}`);
-  else if (usedFallback) parts.push('picked for listing completeness (no keyword match in the directory)');
-  parts.push(`category: ${b.category}`);
-  if (b.cityLicenceStatus === 'Issued') {
-    parts.push(`City of Vancouver licence Issued${b.cityLicenceDataDate ? ' (data as of ' + b.cityLicenceDataDate + ')' : ''}`);
-  }
-  if (b.displayHours) parts.push(`listed hours: ${b.displayHours}`);
-  if (businessTags(b).includes('patio')) parts.push('patio listed');
-  if (b.phone) parts.push('phone listed');
-  if (b.website) parts.push('website listed');
-  return parts.join('; ') + '.';
-}
-
 function formatClock(minutes) {
   const h24 = Math.floor(minutes / 60) % 24;
   const m = minutes % 60;
@@ -159,7 +138,7 @@ function formatClock(minutes) {
  * Each segment becomes one intent; each intent takes one venue; no category repeats.
  */
 const SEGMENT_SPLIT = /\s*(?:,|;|&|\band then\b|\bthen\b|\bafter\b|\bfollowed by\b|\bbefore\b|\band\b)\s*/i;
-const MULTI_SLOT_MINUTES = { '2h': 30, '4h': 45, '8h': 60 };
+const MULTI_SLOT_MINUTES = { '2h': 30, '3h': 40, '4h': 45, '8h': 60 };
 
 function parseIntents(activity) {
   const segments = String(activity || '').split(SEGMENT_SPLIT).map((s) => s.trim()).filter(Boolean);
@@ -190,19 +169,47 @@ function parseIntents(activity) {
   return { intents: unique, unmatched, dropped };
 }
 
-function intentReason(intent, b) {
-  const cats = [b.category, b.primaryCategory].filter(Boolean);
-  if (intent.categories.length && cats.includes(intent.categories[0])) return `category "${intent.categories[0]}" for "${intent.label}"`;
-  const tags = businessTags(b);
-  const tag = intent.tags.find((t) => tags.includes(t));
-  return tag ? `listed tag "${tag}" for "${intent.label}"` : null;
-}
-
 function intentMatches(b, intent) {
   const cats = [b.category, b.primaryCategory].filter(Boolean);
   if (intent.categories.length) return intent.categories.some((c) => cats.includes(c));
   const tags = businessTags(b);
   return intent.tags.some((t) => tags.includes(t));
+}
+
+/**
+ * Cap repeated categories so an unqualified prompt does not produce four cafés.
+ *
+ * The proximity walk picks the nearest unchosen venue at every step, which is
+ * right for walking distance and wrong for variety: with a broad prompt every
+ * candidate is eligible, so the route can end up four of the same thing.
+ *
+ * A third consecutive repeat is swapped for the nearest candidate of a different
+ * category. When the user explicitly asked to crawl ("coffee crawl", "bar crawl"),
+ * repetition is the request, so nothing is swapped.
+ */
+function diversifyRoute(route, pool, isCrawl) {
+  if (isCrawl || route.length < 3) return route;
+
+  const out = route.slice();
+  const used = new Set(out.map((b) => b.id));
+
+  for (let i = 2; i < out.length; i += 1) {
+    const repeats = out[i].category === out[i - 1].category && out[i].category === out[i - 2].category;
+    if (!repeats) continue;
+
+    const candidates = pool
+      .filter((b) => !used.has(b.id) && b.category !== out[i - 1].category)
+      .map((b) => ({ b, d: haversine(out[i - 1], b) }))
+      .sort((x, y) => x.d - y.d || x.b.name.localeCompare(y.b.name));
+
+    if (!candidates.length) continue; // nothing else to walk to; keep the repeat
+
+    used.delete(out[i].id);
+    used.add(candidates[0].b.id);
+    out[i] = candidates[0].b;
+  }
+
+  return out;
 }
 
 function buildMulti(input, businesses, planned) {
@@ -266,11 +273,16 @@ function buildMulti(input, businesses, planned) {
   }
 
   let clock = START_TIMES[timeOfDay];
+  const dayIndex = new Date().getDay();
+  const startMinutes = START_TIMES[timeOfDay];
+  const requestedHours = TOTAL_MINUTES[duration] / 60;
   const steps = ordered.map((p, i) => {
+    const prev = i > 0 ? ordered[i - 1].business : null;
+    const walkFromPrevMinutes = prev ? Math.round(haversine(prev, p.business) / WALK_METRES_PER_MIN) + 5 : null;
     const step = {
       time: formatClock(clock),
       estimatedDuration: `${slot} min`,
-      why: whyText(p.business, intentReason(p.intent, p.business), false),
+      reasons: stopReasons(p.business, { nowMinutes: clock, dayIndex, prev, startMinutes, requestedHours, walkFromPrevMinutes }),
       business: decorate(p.business),
       intent: p.intent.label
     };
@@ -346,8 +358,8 @@ function buildConcierge(input, businesses) {
       if (re.test(text)) { scopeId = id; parsed.neighbourhoodFromText = name; break; }
     }
   }
-  const slot = SLOT_MINUTES[duration];
-  const stopCount = Math.floor(TOTAL_MINUTES[duration] / slot);
+  const baseSlot = SLOT_MINUTES[duration];
+  const stopCount = Math.floor(TOTAL_MINUTES[duration] / baseSlot);
 
   const inScope = businesses.filter((b) => !scopeId || b.neighborhoodId === scopeId);
   const eligible = inScope.filter((b) => contactable(b) && b.latitude != null && b.longitude != null
@@ -377,30 +389,50 @@ function buildConcierge(input, businesses) {
     }
   }
 
-  // Timed steps, with walking gaps between stops (80 m/min plus 5 minutes).
+  // Speak only when the user asked to crawl. A "coffee crawl" is four cafés on
+  // purpose; an "afternoon in Gastown" is not.
+  const isCrawl = /\bcrawl\b/i.test(String(input.activity || ''));
+  const route = diversifyRoute(chosen, candidates, isCrawl);
+
+  // Walking legs. Computed BEFORE the slot size, because the dwell time has to be
+  // whatever is left of the requested budget once the walking is paid for.
+  // The old code budgeted dwell and ignored walking entirely, so a 4-hour request
+  // produced a 4h18 route.
+  const gaps = route.map((b, i) => (i < route.length - 1
+    ? Math.round(haversine(b, route[i + 1]) / WALK_METRES_PER_MIN) + 5
+    : null));
+  const totalWalk = gaps.reduce((sum, g) => sum + (g || 0), 0);
+  const budget = TOTAL_MINUTES[duration];
+  const slot = route.length
+    ? Math.max(25, Math.floor((budget - totalWalk) / route.length))
+    : baseSlot;
+
+  // Timed steps, with walking gaps between stops.
   let clock = START_TIMES[timeOfDay];
-  const steps = chosen.map((b, i) => {
-    const reason = matchReason(b, parsed);
+  const dayIndex = new Date().getDay();
+  const startMinutes = START_TIMES[timeOfDay];
+  const requestedHours = TOTAL_MINUTES[duration] / 60;
+  const steps = route.map((b, i) => {
+    const prev = i > 0 ? route[i - 1] : null;
+    const walkFromPrevMinutes = i > 0 ? gaps[i - 1] : null;
     const step = {
       time: formatClock(clock),
       estimatedDuration: `${slot} min`,
-      why: whyText(b, reason, fallback),
+      reasons: stopReasons(b, { nowMinutes: clock, dayIndex, prev, startMinutes, requestedHours, walkFromPrevMinutes }),
       business: decorate(b)
     };
-    if (i < chosen.length - 1) {
-      const gap = Math.round(haversine(b, chosen[i + 1]) / WALK_METRES_PER_MIN) + 5;
-      step.walkToNextMinutes = gap;
-      clock += slot + gap;
+    if (i < route.length - 1) {
+      step.walkToNextMinutes = gaps[i];
+      clock += slot + gaps[i];
     }
     return step;
   });
 
-  // Swap options: up to 5 other matching businesses, nearest to the stop they would replace.
-  const used = new Set(chosen.map((c) => c.id));
+  const used = new Set(route.map((c) => c.id));
   const swapPool = (fallback ? eligible : eligible.filter((b) => matchesRules(b, parsed))).filter((b) => !used.has(b.id));
   const swapOptions = [];
   const seen = new Set();
-  for (const stop of chosen) {
+  for (const stop of route) {
     const near = swapPool
       .filter((b) => !seen.has(b.id))
       .map((b) => ({ b, d: haversine(stop, b) }))
@@ -420,7 +452,10 @@ function buildConcierge(input, businesses) {
     meta: {
       duration,
       timeOfDay,
-      stopCount,
+      stopCount: route.length,
+      slotMinutes: slot,
+      walkMinutes: totalWalk,
+      totalMinutes: route.length ? route.length * slot + totalWalk : 0,
       usedFallback: fallback,
       matchedKeywords: parsed.matched,
       unsupportedRequests: parsed.unsupported,
@@ -431,4 +466,4 @@ function buildConcierge(input, businesses) {
   };
 }
 
-module.exports = { buildConcierge, parseActivity, completeness, haversine, formatClock };
+module.exports = { buildConcierge, parseActivity, completeness, haversine, formatClock, diversifyRoute };

@@ -34,10 +34,13 @@ const exists = (p) => fs.existsSync(path.join(root, p));
 
 // Comments are prose, not paint. A hex value inside a comment explains WHY a
 // colour was removed; scanning it would force us to stop writing down the reason.
+// The `//` rule uses the same `(^|[^:])` guard as check-csp-interactions.js so a
+// `https://` in code is never mistaken for a comment.
 const stripComments = (s) => s
   .replace(/\/\*[\s\S]*?\*\//g, '')
   .replace(/<!--[\s\S]*?-->/g, '')
-  .replace(/\{#[\s\S]*?#\}/g, '');
+  .replace(/\{#[\s\S]*?#\}/g, '')
+  .replace(/(^|[^:])\/\/.*$/gm, '$1');
 
 // ---- the contract -----------------------------------------------------------
 // Every token the rest of the codebase is allowed to consume. Adding a token
@@ -79,6 +82,14 @@ const HEX = /#[0-9a-fA-F]{3,8}\b/g;
 
 const cssFiles = fs.readdirSync(path.join(root, 'public'))
   .filter((f) => f.endsWith('.css'))
+  .map((f) => `public/${f}`);
+
+// Page scripts RENDER markup, so a hardcoded colour here is a hardcoded colour on
+// the page. public/studio.js used to build the itinerary surface with
+// `var(--accent, #007bff)` in six places; scanning only CSS and templates left
+// that hole open.
+const jsFiles = fs.readdirSync(path.join(root, 'public'))
+  .filter((f) => f.endsWith('.js'))
   .map((f) => `public/${f}`);
 
 const templateFiles = fs.readdirSync(path.join(root, 'templates'))
@@ -135,6 +146,10 @@ for (const f of templateFiles) {
   const hits = stripComments(read(f)).match(HEX) || [];
   ok(hits.length === 0, f, hits.length ? `${hits.length} hex value(s): ${[...new Set(hits)].slice(0, 6).join(' ')}` : '');
 }
+for (const f of jsFiles) {
+  const hits = stripComments(read(f)).match(HEX) || [];
+  ok(hits.length === 0, f, hits.length ? `${hits.length} hex value(s): ${[...new Set(hits)].slice(0, 6).join(' ')}` : '');
+}
 
 // ============================================================================
 console.log('--- 4. no colour borrowed from another design system, anywhere ---');
@@ -166,6 +181,16 @@ for (const f of templateFiles) {
 }
 ok(inlineStyle.length === 0, 'no style="..." attributes in consumer templates',
   inlineStyle.length ? inlineStyle.join(', ') : '');
+
+// Page scripts build markup too, so an inline style there lands on the page just
+// as surely as one in a template — and template-only scanning was blind to it.
+const jsInlineStyle = [];
+for (const f of jsFiles) {
+  const hits = stripComments(read(f)).match(/style\s*=\s*"/g) || [];
+  if (hits.length) jsInlineStyle.push(`${f} (${hits.length})`);
+}
+ok(jsInlineStyle.length === 0, 'no style="..." written by page scripts',
+  jsInlineStyle.length ? jsInlineStyle.join(', ') : '');
 
 // ============================================================================
 console.log(`\n${fails === 0 ? 'OK' : 'FAILED'} — ${fails} problem(s)`);
