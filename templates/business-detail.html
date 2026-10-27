@@ -14,14 +14,7 @@
 
     <div class="detail-card">
         {% set icon = {'Restaurant': '🍽️', 'Cafe': '☕', 'Bar / Pub': '🍺', 'Bakery': '🥐', 'Dessert': '🍰', 'Fast Food': '🍔'}[business.category] or '📍' %}
-        {% if business.imageUrl %}
-        <figure class="mb-18">
-            <img src="{{ business.imageUrl }}" alt="{{ business.name }}" class="w-full maxh-360 obj-cover r-sm" loading="lazy">
-            <figcaption class="fs-sm c-muted mt-xs">{{ business.imageAttribution }}</figcaption>
-        </figure>
-        {% else %}
-        <div aria-hidden="true" class="icon-block mb-18">{{ icon }}</div>
-        {% endif %}
+        {% set photoItem = business %}{% include "_listing-photo.html" %}
         <div class="detail-header">
             <div>
                 <div class="card-subtitle">{{ business.category }}{% if business.primaryCategory and business.primaryCategory != business.category %} &bull; {{ business.primaryCategory }}{% endif %}</div>

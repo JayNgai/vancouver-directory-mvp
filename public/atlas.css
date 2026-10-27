@@ -218,6 +218,41 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Photo surface — the single render path from templates/_listing-photo.html.
+   The aspect ratio is fixed so a late, missing or differently-shaped image can
+   never shift the layout under the reader.
+   ------------------------------------------------------------------------ */
+.photo {
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--sunk);
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.photo-credit {
+    display: block;
+    padding-top: 5px;
+    font-size: 0.64rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    background: var(--panel);
+}
+
+/* Inside a card the credit must not add a white stripe under the image. */
+.card .photo,
+.card .photo-credit { border-radius: 0; }
+
+/* The detail page shows the lead photo larger than a card thumbnail. */
+.detail-card .photo img { max-height: 380px; }
+
+/* ---------------------------------------------------------------------------
    No-photo state — ONE definition, used everywhere. Tier 0 of the photography
    model: a venue with no curated stand-in and no owner photo. It must look
    designed, and it must never collapse or be mistaken for a failed load.

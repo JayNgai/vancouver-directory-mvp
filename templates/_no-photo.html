@@ -1,0 +1,16 @@
+{# Tier 0 of the photography model: the venue has no photograph at all.
+
+   The old site rendered this as `.card-img-placeholder` — a 170px empty grey box
+   that was 34% of every card on /businesses, so a directory of 2,958 real places
+   looked like a broken page. This is the same absence, designed: a ruled block
+   with the street in Playfair italic, so it reads as a deliberate print
+   convention rather than a failed load. A fixed aspect ratio means it can never
+   collapse or cause a layout jump.
+
+   Expects `photoItem` in context. #}
+{% set _p = photoItem %}
+<div class="atlas-nophoto" role="img"
+     aria-label="No photograph yet for {{ _p.name if _p else 'this listing' }}">
+    <span class="street">{{ (_p.address.split(',')[0] if _p and _p.address else (_p.neighborhood.name if _p and _p.neighborhood else 'Vancouver')) }}</span>
+    <span class="note">No photo yet</span>
+</div>

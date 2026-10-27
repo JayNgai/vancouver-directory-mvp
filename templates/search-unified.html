@@ -30,7 +30,7 @@
     <div class="grid">
         {% for n in matchingNeighborhoods %}
         <a href="/neighborhoods/{{ n.slug }}" class="card">
-            {% if n.imageUrl %}<img src="{{ n.imageUrl }}" class="card-img" alt="{{ n.name }}" loading="lazy">{% else %}<div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ n.name }}</span></div>{% endif %}
+            {% set photoItem = n %}{% set photoStrict = false %}{% include "_listing-photo.html" %}
             <div class="card-body">
                 <div class="card-subtitle">{{ n.citySection }}</div>
                 <h3 class="card-title">{{ n.name }}</h3>
@@ -48,11 +48,7 @@
     <div class="grid">
         {% for b in matchingBusinesses %}
         <div class="card">
-            {% if b.photos and b.photos != '[]' %}
-            <img src="{{ b.photos | replace('[', '') | replace(']', '') | replace('"', '') }}" class="card-img" alt="{{ b.name }}">
-            {% else %}
-            <div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ b.category or 'Local spot' }}</span></div>
-            {% endif %}
+            {% set photoItem = b %}{% include "_listing-photo.html" %}
             <div class="card-body">
                 {% if b.isVerified %}
                 <span class="badge-verified">✓ Owner-claimed listing</span>

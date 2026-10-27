@@ -1,0 +1,38 @@
+{# One render path for all three photo tiers. Nothing else in the codebase should
+   emit an <img> for a listing.
+
+   Expects `photoItem` in context (set it with {% set photoItem = b %}).
+
+   TIER 2 'owner'   : a real photograph supplied by the business. Alt names the venue.
+   TIER 1 'standin' : a licensed stock photograph used as a GENERIC stand-in. The
+                      alt and the visible caption both say it is not this venue —
+                      passing someone else's photo off as a business is the single
+                      most damaging thing this component could do.
+   TIER 0 null      : the designed no-photo state, never an empty grey box. #}
+{% set _p = photoItem %}
+{# photoStrict defaults to true, which is what businesses need: an image is only
+   rendered when the record says WHICH KIND of image it is, so an unlabelled one
+   can never pass as a real photo of the venue.
+
+   Neighbourhoods are included with photoStrict = false. A street photograph of
+   Gastown is not claiming to be a specific business — it IS the neighbourhood —
+   so the stricter rule would be noise there, and would blank every district card. #}
+{% set _strict = photoStrict !== false %}
+{% if _p and _p.imageUrl and (_p.imageKind == 'standin' or _p.imageKind == 'owner' or not _strict) %}
+<figure class="photo{% if photoClass %} {{ photoClass }}{% endif %}">
+    <img src="{{ _p.imageUrl }}"
+         {% if '-1x.webp' in _p.imageUrl %}srcset="{{ _p.imageUrl }} 400w, {{ _p.imageUrl | replace('-1x.webp', '-2x.webp') }} 800w"
+         sizes="(max-width: 600px) 92vw, (max-width: 1000px) 45vw, 360px"{% endif %}
+         alt="{% if _p.imageKind == 'standin' %}Stand-in photograph, not {{ _p.name }}{% else %}{{ _p.name }}{% endif %}"
+         width="400" height="300"
+         loading="lazy" decoding="async">
+    {% if _p.imageKind == 'standin' %}
+    {# Structural, not conditional: if the attribution field is empty this still
+       prints the disclosure, because an unlabelled stand-in is indistinguishable
+       from a real photo of the business. #}
+    <figcaption class="photo-credit">{{ _p.imageAttribution or 'Stock photo — stand-in, not this venue' }}</figcaption>
+    {% endif %}
+</figure>
+{% else %}
+{% include "_no-photo.html" %}
+{% endif %}

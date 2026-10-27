@@ -1,0 +1,40 @@
+{
+  "_readme": [
+    "Stand-in photography for jayngai.com v2.",
+    "",
+    "Every image here is a licensed stock photograph used as a GENERIC stand-in for",
+    "a category, not a photograph of the specific venue. The UI must say so on every",
+    "rendered card ('stand-in, not this venue'). When a business owner claims a",
+    "listing and supplies their own photo, imageKind becomes 'owner' and the stand-in",
+    "notice disappears.",
+    "",
+    "Each entry was inspected before being assigned: a bakery gets bread, a bar gets",
+    "a bar, a cafe gets an interior. Assigning by guesswork is how the old site ended",
+    "up showing Denman Arena as the West End's food identity.",
+    "",
+    "Source: Unsplash (free licence, commercial use permitted, attribution not",
+    "required but credited). Downloaded at render size and self-hosted; no third-party",
+    "host is contacted at runtime.",
+    "",
+    "LIMITATION, stated plainly: 20 photographs across 9 categories means venues in",
+    "the same category share a stand-in. That is visible. The fix is licensed",
+    "per-venue photography or owner uploads, not more stock."
+  ],
+  "credit": "Stock photo, Unsplash",
+  "byCategory": {
+    "Restaurant": ["1414235077428-338989a2e8c0", "1476224203421-9ac39bcb3327", "1517248135467-4c7edcad34c4", "1544025162-d76694265947", "1546069901-ba9599a7e63c", "1551218808-94e220e084d2", "1552566626-52f8b828add9", "1555396273-367ea4eb4db5", "1424847651672-bf20a4b0982b", "1467003909585-2f8a72700288"],
+    "Cafe": ["1510812431401-41d2bd2722f3", "1495474472287-4d71bcdd2085", "1504674900247-0877df9cc836"],
+    "Bar / Pub": ["1559925393-8be0ec4767c8", "1517433670267-08bbd4be890f"],
+    "Bakery": ["1484723091739-30a097e8f929", "1509440159596-0249088772ff"],
+    "Dessert": ["1540189549336-e6e99c3679fe"],
+    "Fast Food": ["1533777857889-4be7c70b33f7", "1529006557810-274b9b2fc783"]
+  },
+  "byNeighborhood": {
+    "_note": "A street-level exterior reads as a neighbourhood without claiming to be a food photograph.",
+    "default": ["1414235077428-338989a2e8c0"]
+  },
+  "editorial": {
+    "_note": "Hand-picked for the neighbourhood cards. Exterior street scene only.",
+    "street": ["1414235077428-338989a2e8c0"]
+  }
+}
