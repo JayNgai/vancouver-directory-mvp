@@ -9,8 +9,9 @@
 
    Expects `photoItem` in context. #}
 {% set _p = photoItem %}
+{% set _street = (_p.address.split(',')[0] if _p and _p.address else '') %}
 <div class="atlas-nophoto" role="img"
      aria-label="No photograph yet for {{ _p.name if _p else 'this listing' }}">
-    <span class="street">{{ (_p.address.split(',')[0] if _p and _p.address else (_p.neighborhood.name if _p and _p.neighborhood else 'Vancouver')) }}</span>
+    {% if _street %}<span class="street">{{ _street }}</span>{% endif %}
     <span class="note">No photo yet</span>
 </div>

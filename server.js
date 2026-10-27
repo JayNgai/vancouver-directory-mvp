@@ -65,11 +65,16 @@ app.get('/robots.txt', (req, res) => {
 });
 
 // Configure Nunjucks view engine
-nunjucks.configure(path.join(__dirname, 'templates'), {
+const nunjucksEnv = nunjucks.configure(path.join(__dirname, 'templates'), {
   autoescape: true,
   express: app,
   noCache: process.env.NODE_ENV !== 'production'
 });
+
+// Thousands separators for the counting surfaces. A stat that reads "2958" looks
+// like a database value; "2,958" looks like a published number.
+nunjucksEnv.addFilter('num', (value) => Number(value || 0).toLocaleString('en-CA'));
+
 app.set('view engine', 'html');
 app.locals.noindex = indexingDisabled();
 app.locals.contactEmail = process.env.CONTACT_EMAIL || 'contact@example.com';

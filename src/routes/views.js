@@ -50,8 +50,17 @@ function paginate(items, requestedPage, baseQuery) {
 // Homepage
 router.get('/', async (req, res) => {
   try {
-    const neighborhoods = await prisma.neighborhood.findMany({
-      orderBy: { name: 'asc' }
+    // Photographed districts first, then by how many places they hold: the bento
+    // leads with tiles that actually have an image rather than a row of blanks.
+    const neighborhoodsAll = await prisma.neighborhood.findMany({
+      include: { _count: { select: { businesses: true } } },
+    });
+    const neighborhoods = neighborhoodsAll.sort((a, b) => {
+      const img = (b.imageUrl ? 1 : 0) - (a.imageUrl ? 1 : 0);
+      if (img) return img;
+      const count = b._count.businesses - a._count.businesses;
+      if (count) return count;
+      return a.name.localeCompare(b.name);
     });
     const itineraries = await prisma.itinerary.findMany({
       take: 3,
@@ -61,10 +70,21 @@ router.get('/', async (req, res) => {
       await prisma.business.findMany({ include: { neighborhood: true } })
     ).slice(0, 6);
 
+    // Real counts, so the data strip states facts rather than vibes.
+    const [totalPlaces, totalItineraries, totalStandins] = await Promise.all([
+      prisma.business.count(),
+      prisma.itinerary.count(),
+      prisma.business.count({ where: { imageKind: 'standin' } }),
+    ]);
+
     res.render('index.html', {
       neighborhoods,
       itineraries,
-      featuredBusinesses
+      featuredBusinesses,
+      totalPlaces,
+      totalItineraries,
+      totalNeighborhoods: neighborhoods.length,
+      totalStandins
     });
   } catch (error) {
     failText(res, 'GET /', error);

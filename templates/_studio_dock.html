@@ -1,47 +1,63 @@
-{# The Experience Studio dock. Gus's spec, slice 3. Sits in normal document flow, never sticky. #}
-<div class="dock" id="studioDock">
+{# The Experience Studio dock — same composer shape as /concierge.
+   Sits in normal document flow, never sticky.
+
+   Two things are load-bearing and must not be renamed: `class="dock-mode"` with
+   `data-mode` (check-studio-dock.js asserts on them), and the ids #dockPrompt,
+   #dockPlan, #dockChips, #dockStatus, #dockLoading (the page script wires them). #}
+<div class="dock composer" id="studioDock">
+
     <div class="dock-modes" role="tablist" aria-label="Experience Studio modes">
-        <button type="button" class="dock-mode" role="tab" aria-selected="true" data-mode="curate">✨ Curate My Outing</button>
-        <button type="button" class="dock-mode" role="tab" aria-selected="false" data-mode="search">🔍 Search Directory</button>
-        <button type="button" class="dock-mode" role="tab" aria-selected="false" data-mode="browse">🗺 Browse Neighborhoods</button>
+        <button type="button" class="dock-mode" role="tab" aria-selected="true" data-mode="curate">Curate my outing</button>
+        <button type="button" class="dock-mode" role="tab" aria-selected="false" data-mode="search">Search the directory</button>
+        <button type="button" class="dock-mode" role="tab" aria-selected="false" data-mode="browse">Browse districts</button>
     </div>
 
     <div class="dock-panel" id="dockCurate">
-        <label for="dockPrompt" class="dock-label">What do you feel like?</label>
-        <div class="dock-inputrow">
-            <input type="text" id="dockPrompt" class="dock-prompt" autocomplete="off"
-                   placeholder="e.g. coffee crawl in Gastown, 3 hours, afternoon">
-            <button type="button" id="dockPlan" class="dock-plan">Plan ⚡</button>
-        </div>
+        <label for="dockPrompt" class="visually-hidden">What do you feel like?</label>
+        <textarea id="dockPrompt" class="dock-composer-input" rows="1" autocomplete="off"
+                  placeholder="What do you feel like? e.g. coffee crawl in Gastown, 3 hours"></textarea>
 
         {# Each chip carries the exact payload it sends. The activity strings are SINGLE-INTENT on
            purpose: the engine resolves a multi-term string against ONE term, so a multi-term chip
            looks healthy and silently returns venues it was not named for. #}
-        <div class="dock-chips" id="dockChips">
-            <button type="button" class="dock-chip" aria-pressed="false"
+        <div class="composer-group dock-chips" id="dockChips">
+            <span class="glabel">Try</span>
+            <button type="button" class="composer-chip dock-chip" aria-pressed="false"
                     data-activity="coffee" data-hood="gastown" data-duration="2h" data-time="morning"
-                    data-prompt="Morning coffee &amp; pastries in Gastown, 2 hours">☕ Gastown Coffee &amp; Bakery</button>
-            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-prompt="Morning coffee &amp; pastries in Gastown, 2 hours">Gastown coffee</button>
+            <button type="button" class="composer-chip dock-chip" aria-pressed="false"
                     data-activity="cocktails" data-hood="yaletown" data-duration="4h" data-time="evening"
-                    data-prompt="Evening drinks and dinner in Yaletown, 4 hours">🍸 Yaletown Cocktails &amp; Dinner</button>
-            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-prompt="Evening drinks and dinner in Yaletown, 4 hours">Yaletown cocktails</button>
+            <button type="button" class="composer-chip dock-chip" aria-pressed="false"
                     data-activity="ice cream" data-hood="kitsilano" data-duration="4h" data-time="afternoon"
-                    data-prompt="Afternoon beach walk and ice cream in Kitsilano, 4 hours">🏖 Kitsilano Beach &amp; Ice Cream</button>
-            <button type="button" class="dock-chip" aria-pressed="false"
+                    data-prompt="Afternoon beach walk and ice cream in Kitsilano, 4 hours">Kitsilano beach</button>
+            <button type="button" class="composer-chip dock-chip" aria-pressed="false"
                     data-activity="beer" data-hood="commercial-drive" data-duration="4h" data-time="evening"
-                    data-prompt="Craft brewery crawl on Commercial Drive, 4 hours">🍺 Commercial Drive Craft Beer</button>
+                    data-prompt="Craft brewery crawl on Commercial Drive, 4 hours">Commercial Drive beer</button>
         </div>
+
         <p class="dock-status" id="dockStatus" role="alert" hidden></p>
+
+        <div class="composer-foot">
+            <span class="hint"><kbd>Enter</kbd> to build &middot; <kbd>Shift</kbd>+<kbd>Enter</kbd> for a new line</span>
+            <button type="button" id="dockPlan" class="send-btn" aria-label="Build my day">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>
+                </svg>
+            </button>
+        </div>
     </div>
 
     <div class="dock-panel" id="dockSearch" hidden>
         <form action="/search" method="GET" class="dock-searchform">
-            <input type="text" name="q" required
-                   placeholder="🔍 Search anything (e.g. Gastown, Miku, Water St, 604-689-2832, #patio, Italian)">
-            <button type="submit">Smart Search</button>
+            <label class="visually-hidden" for="dock-q">Search the directory</label>
+            <input type="text" id="dock-q" name="q" required
+                   placeholder="Venue, street, phone, cuisine or #tag">
+            <button type="submit">Search</button>
         </form>
         <div class="dock-quick">
-            <span>Popular:</span>
+            <span>Popular</span>
             <a href="/search?q=Gastown">Gastown</a>
             <a href="/search?q=Water+St">Water St</a>
             <a href="/search?q=Sushi">Sushi</a>
@@ -57,6 +73,6 @@
 
     <div class="dock-loading" id="dockLoading" role="status" hidden>
         <div class="spinner" aria-hidden="true"></div>
-        <p class="mb-0">Crafting your custom day...</p>
+        <p class="mb-0">Building your day from real listings&hellip;</p>
     </div>
 </div>

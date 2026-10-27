@@ -1,57 +1,120 @@
 {% extends "base.html" %}
 
-{% block title %}Vancouver Neighborhood Directory & Experience Curator{% endblock %}
-{% block bodyclass %}home-hero{% endblock %}
+{% block title %}Vancouver Neighbourhood Guide &amp; Experience Curator{% endblock %}
 {% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="/studio.css">{% endblock %}
 
 {% block content %}
-<div class="hero">
-    <div class="container center">
-        <h1>Discover &amp; Design Your Vancouver Experience</h1>
-        <p>Tell us what you feel like, or search any venue, neighborhood, street, phone number, or tag.</p>
+
+{# ---------------------------------------------------------------------------
+   Hero. One job: get a person to describe what they feel like. The 23-card grid
+   that used to run for 7,204px below this is gone — it is replaced by a small
+   curated set plus a table that actually scans.
+   ------------------------------------------------------------------------ #}
+<section class="hero hero--home">
+    <div class="container">
+        <span class="hero-kicker">{{ totalNeighborhoods }} districts &middot; {{ totalPlaces | num }} places</span>
+        <h1>Find the Vancouver <em>you're hungry for.</em></h1>
+        <p class="hero-sub">Tell us what you feel like in your own words. We will build a walking day from real listings, and you can swap any stop.</p>
 
         {% include "_studio_dock.html" %}
-
-        <a href="/itineraries" class="c-soft fs-base">Or browse pre-made itineraries &rarr;</a>
     </div>
-</div>
+</section>
 
-{# Results render DIRECTLY below the dock, inlined on the homepage, using the same surface as
-   /concierge (templates/_studio_results.html + public/studio.js). Nothing is duplicated. #}
+{# Results render DIRECTLY below the dock, using the same surface as /concierge
+   (templates/_studio_results.html + public/studio.js). Nothing is duplicated. #}
 <div class="container">
     {% include "_studio_results.html" %}
 </div>
 
 <div class="container">
-    <h2 class="section-title">Explore Flagship Neighborhoods</h2>
-    <div class="grid">
-        {% for n in neighborhoods %}
-        <a href="/neighborhoods/{{ n.slug }}" class="card">
-            {% set photoItem = n %}{% set photoStrict = false %}{% include "_listing-photo.html" %}
-            <div class="card-body">
-                <div class="card-subtitle">{{ n.citySection }}</div>
-                <h3 class="card-title">{{ n.name }}</h3>
-                <p class="card-desc">{{ n.description }}</p>
-                <span class="c-brand fw-600 fs-base">Explore Guide &rarr;</span>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-
-    <h2 class="section-title">Curated Experience Itineraries</h2>
-    <div class="grid">
-        {% for itin in itineraries %}
-        <a href="/itineraries/{{ itin.slug }}" class="card accent-open">
-            <div class="card-body">
-                <div class="card-subtitle">{{ itin.neighborhood.name if itin.neighborhood else 'Vancouver' }} &bull; {{ itin.duration }}</div>
-                <h3 class="card-title">{{ itin.title }}</h3>
-                <p class="card-desc">{{ itin.description }}</p>
-                <span class="btn bg-open self-start">View Route &amp; Export Map &rarr;</span>
-            </div>
-        </a>
-        {% endfor %}
+    <div class="atlas-stats">
+        <div class="atlas-stat"><b>{{ totalPlaces | num }}</b><span>Listed places</span></div>
+        <div class="atlas-stat"><b>{{ totalNeighborhoods }}</b><span>Districts</span></div>
+        <div class="atlas-stat"><b>{{ totalItineraries }}</b><span>Itineraries</span></div>
+        <div class="atlas-stat"><b>{{ totalStandins | num }}</b><span>Photographed so far</span></div>
     </div>
 </div>
+
+<div class="container">
+
+    {# ---- Where to start: six districts, deliberately uneven sizes ---- #}
+    <section class="atlas-sec">
+        <div class="atlas-sec-head">
+            <h2>Where to start</h2>
+            <a class="atlas-more" href="/neighborhoods">All {{ totalNeighborhoods }} districts &rarr;</a>
+        </div>
+        <div class="atlas-bento">
+            {% for n in neighborhoods %}
+            {% if loop.index <= 5 %}
+            {% set isBig = loop.index <= 2 %}
+            <a href="/neighborhoods/{{ n.slug }}" class="atlas-tile {{ 'w3' if isBig else 'w2' }}">
+                {% set photoItem = n %}{% set photoClass = 'atlas-tile-photo' %}{% set photoStrict = false %}{% include "_listing-photo.html" %}
+                <span class="atlas-tile-label">
+                    <h3>{{ n.name }}</h3>
+                    <span class="n">{{ n._count.businesses }} places</span>
+                </span>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+    {# ---- Worth the detour: a table, because 2,958 records need columns ---- #}
+    <section class="atlas-sec">
+        <div class="atlas-sec-head">
+            <h2>Worth the detour</h2>
+            <a class="atlas-more" href="/businesses">All {{ totalPlaces }} places &rarr;</a>
+        </div>
+        <div class="atlas-table">
+            <div class="atlas-row hd">
+                <span class="rk">#</span>
+                <span>Place</span>
+                <span class="cat">Category</span>
+                <span>District</span>
+                <span class="go"></span>
+            </div>
+            {% for b in featuredBusinesses %}
+            <a href="/businesses/{{ b.slug }}" class="atlas-row">
+                <span class="rk">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+                <span class="nm">{{ b.name }}<small>{{ b.address }}</small></span>
+                <span class="cat">{{ b.primaryCategory or b.category }}</span>
+                <span class="dist">{{ b.neighborhood.name if b.neighborhood else 'Vancouver' }}</span>
+                <span class="go">Open &rarr;</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    {# ---- Three walks ---- #}
+    <section class="atlas-sec">
+        <div class="atlas-sec-head">
+            <h2>Three walks</h2>
+            <a class="atlas-more" href="/itineraries">All itineraries &rarr;</a>
+        </div>
+        <div class="walk-grid">
+            {% for itin in itineraries %}
+            <a href="/itineraries/{{ itin.slug }}" class="walk-card">
+                <span class="atlas-kicker">{{ itin.neighborhood.name if itin.neighborhood else 'Vancouver' }} &middot; {{ itin.duration }}</span>
+                <h3>{{ itin.title }}</h3>
+                <p>{{ itin.description }}</p>
+                <span class="walk-meta">{{ itin.steps | length if itin.steps else 0 }} stops <span aria-hidden="true">&middot;</span> {{ itin.difficulty or 'Easy walking' }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+
+</div>
+
+{# ---- The owner funnel, on the page everyone lands on ---- #}
+<section class="claim-strip">
+    <div class="container claim-strip-in">
+        <div>
+            <h3>Own one of these places?</h3>
+            <p>Claim your listing free — fix your hours, add your own photos, and stop the stand-in label appearing on your card.</p>
+        </div>
+        <a href="/claim" class="claim-strip-btn">Claim a listing</a>
+    </div>
+</section>
 
 <script src="/vendor/leaflet/leaflet.js"></script>
 <script src="/maps-url.js"></script>
@@ -66,9 +129,10 @@ function setDockMode(mode) {
 }
 dockModes.forEach((b) => b.addEventListener('click', () => setDockMode(b.dataset.mode)));
 
-// The navbar carries its own search form on every page. On the homepage the dock already offers one,
-// so hide the navbar copy while the dock is on screen - two search boxes on one screen is the
-// duplicate-surface problem. visibility, not display, so nothing shifts when it returns.
+// The navbar carries its own search form on every page. On the homepage the dock
+// already offers one, so hide the navbar copy while the dock is on screen — two
+// search boxes on one screen is the duplicate-surface problem. visibility, not
+// display, so nothing shifts when it returns.
 const dockEl = document.getElementById('studioDock');
 const navSearch = document.querySelector('.nav-search');
 if (dockEl && navSearch && 'IntersectionObserver' in window) {
@@ -84,6 +148,10 @@ const planBtn = document.getElementById('dockPlan');
 
 function clearChipSelection() { chipEls.forEach((c) => c.setAttribute('aria-pressed', 'false')); }
 function showStatus(msg) { statusEl.textContent = msg || ''; statusEl.hidden = !msg; }
+function autosizeDock() {
+    promptEl.style.height = 'auto';
+    promptEl.style.height = Math.min(promptEl.scrollHeight, 180) + 'px';
+}
 
 async function plan(payload) {
     planBtn.disabled = true;
@@ -114,11 +182,13 @@ chipEls.forEach((chip) => chip.addEventListener('click', () => {
     if (chip.getAttribute('aria-pressed') === 'true') {
         chip.setAttribute('aria-pressed', 'false');
         promptEl.value = '';
+        autosizeDock();
         return;
     }
     clearChipSelection();
     chip.setAttribute('aria-pressed', 'true');
     promptEl.value = chip.dataset.prompt;
+    autosizeDock();
     plan({
         activity: chip.dataset.activity,
         neighborhoodId: chip.dataset.hood,
@@ -128,14 +198,17 @@ chipEls.forEach((chip) => chip.addEventListener('click', () => {
 }));
 
 // Typing clears the active chip - the input and the highlight must not disagree.
-promptEl.addEventListener('input', () => { clearChipSelection(); showStatus(''); });
+promptEl.addEventListener('input', () => { clearChipSelection(); showStatus(''); autosizeDock(); });
 
 function planFromInput() {
     const text = promptEl.value.trim();
     if (!text) { promptEl.focus(); return; }
-    plan({ activity: text, duration: '4h', timeOfDay: 'flexible' });
+    plan({ activity: text, duration: '3h', timeOfDay: 'flexible' });
 }
 planBtn.addEventListener('click', planFromInput);
-promptEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); planFromInput(); } });
+// Enter sends, Shift+Enter makes a new line — the same convention as /concierge.
+promptEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); planFromInput(); }
+});
 </script>
 {% endblock %}

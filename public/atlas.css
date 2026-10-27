@@ -157,7 +157,7 @@
 
 .atlas-row {
     display: grid;
-    grid-template-columns: 38px 1.7fr 1fr 0.8fr 0.9fr 74px;
+    grid-template-columns: 38px 1.7fr 1fr .9fr 74px;
     gap: var(--s3);
     align-items: center;
     padding: var(--s2) 0;
@@ -252,8 +252,211 @@
 /* The detail page shows the lead photo larger than a card thumbnail. */
 .detail-card .photo img { max-height: 380px; }
 
+/* ============================================================================
+   Homepage composition
+   ========================================================================= */
+
+/* Hero: the composer is the hero. Slightly taller than the shared .hero so the
+   card has room to breathe, and the headline is allowed to be loud. */
+.hero--home { padding: var(--s6) 0 var(--s5); text-align: left; }
+
+.hero--home .hero-kicker {
+    display: block;
+    color: var(--rule);
+    margin-bottom: var(--s3);
+}
+
+.hero--home h1 {
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    margin-bottom: var(--s3);
+    text-align: left;
+}
+.hero--home h1 em { font-style: italic; color: var(--saffron-fallback, var(--rule)); }
+
+.hero--home .hero-sub {
+    text-align: left;
+    margin: 0 0 var(--s4);
+    max-width: 52ch;
+    font-size: 1.05rem;
+    color: var(--rule);
+}
+
+/* The dock sits inside the dark hero, so it becomes a light surface that lifts. */
+.hero--home .dock {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    max-width: none;
+    margin: 0;
+    text-align: left;
+}
+
+/* ---- walks ---- */
+.walk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+}
+
+.walk-card {
+    display: block;
+    padding: var(--s4) var(--s4) var(--s4) 0;
+    border-right: 1px solid var(--rule);
+    text-decoration: none;
+    color: inherit;
+}
+.walk-card:last-child { border-right: 0; padding-right: 0; }
+.walk-card:not(:first-child) { padding-left: var(--s4); }
+
+.walk-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 var(--s2);
+}
+.walk-card:hover h3 { color: var(--brand); }
+
+.walk-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: var(--s3);
+}
+
+.walk-card .walk-meta {
+    font-family: var(--font-data);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    border-top: 1px solid var(--rule);
+    padding-top: var(--s2);
+    display: block;
+}
+
+/* ---- claim strip ---- */
+.claim-strip {
+    background: var(--brand);
+    color: var(--panel);
+    margin-top: var(--s6);
+    padding: var(--s5) 0;
+}
+.claim-strip-in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s5);
+}
+.claim-strip h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.3vw, 1.9rem);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    color: var(--panel);
+    margin-bottom: 6px;
+}
+.claim-strip p {
+    font-size: 0.92rem;
+    color: var(--rule);
+    max-width: 56ch;
+    margin: 0;
+}
+.claim-strip-btn {
+    flex: 0 0 auto;
+    background: var(--ink);
+    color: var(--panel);
+    padding: 13px 22px;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+}
+.claim-strip-btn:hover { background: var(--panel); color: var(--ink); }
+
+/* Bentos need the photo rule to fill the tile, not adopt the card ratio. */
+.atlas-tile .photo { height: 100%; border-radius: 0; }
+.atlas-tile .photo img { height: 100%; aspect-ratio: auto; }
+.atlas-tile .photo-credit { display: none; }
+
+@media (max-width: 900px) {
+    .walk-grid { grid-template-columns: 1fr; border-top: 1px solid var(--ink); }
+    .walk-card { border-right: 0; border-bottom: 1px solid var(--rule); padding: var(--s3) 0; }
+    .walk-card:not(:first-child) { padding-left: 0; }
+    .claim-strip-in { flex-direction: column; align-items: flex-start; gap: var(--s3); }
+}
+
+/* ============================================================================
+   Claim page
+   ========================================================================= */
+.claim-hero { background: var(--ink); color: var(--surface); padding: var(--s6) 0 var(--s5); }
+.claim-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--surface);
+    margin-bottom: var(--s3);
+}
+.claim-hero .atlas-kicker { color: var(--rule); }
+.claim-hero-sub { color: var(--rule); font-size: 1.02rem; max-width: 54ch; margin: 0; }
+
+.claim-step-heading {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: var(--s1);
+}
+
+.claim-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    margin: var(--s5) 0;
+}
+.claim-benefit { padding: var(--s4) var(--s4) var(--s4) 0; border-right: 1px solid var(--rule); }
+.claim-benefit:last-child { border-right: 0; padding-right: 0; }
+.claim-benefit:not(:first-child) { padding-left: var(--s4); }
+.claim-benefit h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: var(--s1);
+}
+.claim-benefit p { font-size: 0.88rem; color: var(--muted); line-height: 1.5; margin: 0; }
+
+.claim-alt { margin-top: var(--s4); border-top: 1px solid var(--rule); padding-top: var(--s3); }
+.claim-alt summary {
+    cursor: pointer;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--brand);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+.claim-alt summary:hover { color: var(--brand-deep); }
+
+@media (max-width: 900px) {
+    .claim-benefits { grid-template-columns: 1fr; }
+    .claim-benefit { border-right: 0; border-bottom: 1px solid var(--rule); padding: var(--s3) 0; }
+    .claim-benefit:not(:first-child) { padding-left: 0; }
+    .claim-benefit:last-child { border-bottom: 0; }
+}
+
 /* ---------------------------------------------------------------------------
-   No-photo state — ONE definition, used everywhere. Tier 0 of the photography
+   The no-photo state — ONE definition, used everywhere. Tier 0 of the photography
    model: a venue with no curated stand-in and no owner photo. It must look
    designed, and it must never collapse or be mistaken for a failed load.
    ------------------------------------------------------------------------ */
@@ -334,7 +537,7 @@
     .atlas-bento { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
     .atlas-tile.w3, .atlas-tile.w2 { grid-column: span 2; }
 
-    .atlas-row { grid-template-columns: 28px 1.5fr 62px; gap: var(--s2); }
+    .atlas-row { grid-template-columns: 26px 1fr; gap: var(--s2); }
     .atlas-row .cat,
     .atlas-row .dist,
     .atlas-row .go { display: none; }

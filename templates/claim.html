@@ -1,14 +1,32 @@
 {% extends "base.html" %}
 
-{% block title %}Claim a listing{% endblock %}
+{% block title %}Claim your listing{% endblock %}
 
 {% block content %}
-<div class="container pt-lg mw-760">
-    <h1 class="section-title">Claim a listing</h1>
-    <p class="c-body mb-18">
-        Tell us who you are and we will contact you to confirm that you own or manage this
-        business. Nothing changes on the listing until we have spoken with you.
-    </p>
+{# Rebuilt as an owner-facing pitch.
+
+   The old page opened by sending the owner somewhere else ("Open the business you
+   want to claim, then use the button on its page") and then asked for a "listing
+   slug" — a term no restaurant owner knows. It had no value proposition at all: no
+   benefits, no example, no mention that it is free.
+
+   The lookup below still resolves by slug, because src/routes/claims.js is out of
+   scope and I will not change how claims are matched. So the primary path is now
+   "find your listing in the directory", which needs no vocabulary at all, and the
+   paste field is described in plain words for people who already have the link. #}
+
+<section class="claim-hero">
+    <div class="container mw-760">
+        <span class="atlas-kicker">For business owners</span>
+        <h1>Claim your listing. It is free.</h1>
+        <p class="claim-hero-sub">
+            Your business is already in the directory — 2,958 of them are, gathered from
+            public data. Claiming it lets you correct what is wrong and add what is missing.
+        </p>
+    </div>
+</section>
+
+<div class="container mw-760">
 
     {% if errors.length %}
     <div class="form-errors">
@@ -18,6 +36,8 @@
     {% endif %}
 
     {% if business %}
+
+    {# ---- the form itself, for a listing that resolved ---- #}
     <div class="detail-card mb-18">
         <div class="card-subtitle">Listing you are claiming</div>
         <h2 class="detail-title fs-lg">{{ business.name }}</h2>
@@ -27,6 +47,12 @@
     </div>
 
     <div class="detail-card">
+        <h3 class="claim-step-heading">Step 2 of 2 &mdash; who you are</h3>
+        <p class="c-body fs-base mb-18">
+            Nothing changes on the listing until we have spoken with you. We do this so a
+            listing cannot be taken over by someone who does not run the place.
+        </p>
+
         <form method="POST" action="/claim">
             <input type="hidden" name="business" value="{{ business.slug }}">
             {# Honeypot: hidden from people, tempting to bots. Must stay empty. #}
@@ -52,7 +78,7 @@
             <label class="form-label" for="phone">Phone (optional)</label>
             <input class="form-input" id="phone" name="phone" maxlength="40" value="{{ values.phone or '' }}">
 
-            <label class="form-label" for="message">Message (optional)</label>
+            <label class="form-label" for="message">What should we correct? (optional)</label>
             <textarea class="form-input" id="message" name="message" rows="4" maxlength="1000">{{ values.message or '' }}</textarea>
 
             <label class="form-check">
@@ -63,18 +89,46 @@
             <button type="submit" class="btn mt-14">Send claim request</button>
         </form>
     </div>
+
     {% else %}
-    <div class="detail-card">
-        <p class="c-body">
-            Open the business you want to claim, then use the “Own this business? Claim it”
-            button on its page. You can also paste the listing address below.
-        </p>
-        <form method="GET" action="/claim">
-            <label class="form-label" for="business">Listing slug or address</label>
-            <input class="form-input" id="business" name="business" placeholder="e.g. alibi-room">
-            <button type="submit" class="btn mt-14">Find listing</button>
-        </form>
+
+    {# ---- step 1: what you get, then the two ways to find your listing ---- #}
+    <div class="claim-benefits">
+        <div class="claim-benefit">
+            <h3>Fix what is wrong</h3>
+            <p>Hours that changed, a phone number that rings nowhere, a menu description written by an algorithm.</p>
+        </div>
+        <div class="claim-benefit">
+            <h3>Add your own photos</h3>
+            <p>Cards without a photograph show a stand-in labelled "not this venue". Yours replaces it.</p>
+        </div>
+        <div class="claim-benefit">
+            <h3>Answer the questions</h3>
+            <p>Patio, takeaway, dietary options, whether you take walk-ins — the things people ask before they arrive.</p>
+        </div>
     </div>
+
+    <div class="detail-card mb-18">
+        <h3 class="claim-step-heading">Step 1 of 2 &mdash; find your listing</h3>
+        <p class="c-body fs-base mb-18">
+            Search the directory for your business, then use the claim link on its page.
+            That is the reliable way, and it needs nothing from you but the name.
+        </p>
+        <a href="/businesses" class="btn">Open the directory</a>
+    </div>
+
+    <details class="claim-alt">
+        <summary>I already have my listing's link</summary>
+        <form method="GET" action="/claim" class="mt-sm">
+            <label class="form-label" for="business">The end of your listing link</label>
+            <input class="form-input" id="business" name="business" placeholder="e.g. alibi-room">
+            <p class="fs-sm c-muted mt-sm">
+                If your listing is <span class="data">/businesses/alibi-room</span>, that last part is what goes here.
+            </p>
+            <button type="submit" class="btn mt-14">Find my listing</button>
+        </form>
+    </details>
+
     {% endif %}
 
     <p class="fs-sm c-muted mt-16">

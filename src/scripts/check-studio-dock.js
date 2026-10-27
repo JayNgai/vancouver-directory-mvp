@@ -2,11 +2,45 @@
  * Guards the homepage Experience Studio dock.
  *
  * The chips are read from the SERVED PAGE, not from a copy of the payloads - so a chip that is
- * mistyped in the template, or a neighbourhood slug that stops resolving, fails here. Requires the
- * app running.  Run:  node src/scripts/check-studio-dock.js
+ * mistyped in the template, or a neighbourhood slug that stops resolving, fails here.
+ *
+ * The guard starts its OWN server and shuts it down, so `npm test` is self-contained. It used to
+ * default to port 5050 and quietly tested whatever happened to be listening there - which meant a
+ * green run proved something about a stale process, and a red run could mean nothing at all.
+ * Set STUDIO_BASE to point it at an already-running instance instead.
+ *
+ * Run:  node src/scripts/check-studio-dock.js
  */
 const fs = require('fs'), path = require('path');
-const BASE = process.env.STUDIO_BASE || 'http://127.0.0.1:5050';
+const { spawn } = require('child_process');
+
+let serverChild = null;
+let BASE = process.env.STUDIO_BASE || '';
+
+async function ensureServer() {
+  if (BASE) return BASE;
+  const port = 4900 + Math.floor(Math.random() * 90);
+  const root = path.join(__dirname, '..', '..');
+  serverChild = spawn(process.execPath, ['server.js'], {
+    cwd: root,
+    env: { ...process.env, PORT: String(port), NODE_ENV: 'test' },
+    stdio: 'ignore',
+  });
+  const base = `http://127.0.0.1:${port}`;
+  for (let i = 0; i < 80; i++) {
+    try {
+      const r = await fetch(`${base}/`);
+      if (r.status === 200) { BASE = base; return base; }
+    } catch (error) { /* not listening yet */ }
+    await new Promise((r) => setTimeout(r, 500));
+  }
+  throw new Error(`server did not become ready on ${port}`);
+}
+
+function shutdown(code) {
+  if (serverChild) { try { serverChild.kill('SIGKILL'); } catch (error) { /* already gone */ } }
+  process.exit(code);
+}
 
 let failures = 0;
 const check = (cond, label, detail) => {
@@ -15,6 +49,7 @@ const check = (cond, label, detail) => {
 };
 
 (async () => {
+  await ensureServer();
   const html = await (await fetch(`${BASE}/`)).text();
 
   console.log('--- the dock is on the homepage ---');
@@ -131,5 +166,5 @@ const check = (cond, label, detail) => {
     'the dock\'s Search Directory panel is hidden by DEFAULT (so it is not a second search box at rest)');
 
   console.log(`\nRESULT: ${failures === 0 ? 'ALL PASS' : failures + ' FAILURE(S)'}`);
-  process.exit(failures === 0 ? 0 : 1);
-})().catch((e) => { console.error('ERROR:', e.message); process.exit(1); });
+  shutdown(failures === 0 ? 0 : 1);
+})().catch((e) => { console.error('ERROR:', e.message); shutdown(1); });

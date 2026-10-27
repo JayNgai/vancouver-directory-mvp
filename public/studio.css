@@ -197,6 +197,25 @@
 
 .dock-panel[hidden] { display: none; }
 
+/* The dock's prompt is the same surface as /concierge's composer. */
+.dock-composer-input {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    resize: none;
+    font-family: var(--font-ui);
+    font-size: 1.02rem;
+    line-height: 1.5;
+    color: var(--ink);
+    padding: 4px 2px 8px;
+    min-height: 34px;
+    outline: none;
+}
+.dock-composer-input::placeholder { color: var(--muted); }
+.dock-composer-input:focus,
+.dock-composer-input:focus-visible { outline: none; box-shadow: none; }
+
 .dock-label {
     display: block;
     font-size: 0.74rem;
