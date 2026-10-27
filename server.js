@@ -8,6 +8,7 @@ require('dotenv').config();
 require('dotenv').config({ path: path.join(__dirname, 'config', 'site.env') });
 
 const exposure = require('./src/middleware/exposure');
+const { failText } = require('./src/lib/errors');
 const { globalLimiter, outboundLimiter, noindexMiddleware, indexingDisabled } = exposure;
 
 const app = express();
@@ -140,9 +141,12 @@ app.use('/', claimRoutes);
 app.use('/', viewRoutes);
 
 // Error handling middleware
+// Routed through the same helper the routes use, so CR_ERROR_DETAIL=1 explains an
+// unhandled render failure too. A bare "Internal Server Error" gives the developer
+// nothing: this cost a hunt through a stale process whose real error was
+// "filter not found: srcset". Verbose stays OFF by default, as errors.js requires.
 app.use((err, req, res, next) => {
-  console.error('Server error:', err.stack);
-  res.status(500).send('Internal Server Error');
+  failText(res, 'unhandled', err);
 });
 
 // Start server
