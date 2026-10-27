@@ -71,6 +71,8 @@
   /* ---- form ---- */
   --radius: 0;         /* Atlas: structure comes from rules, not rounding */
   --radius-input: 2px;
+  --radius-card: 18px; /* the conversational composer — see studio.css */
+  --radius-pill: 999px;
 
   /* ---- motion ---- */
   --ease: cubic-bezier(.2, .6, .2, 1);

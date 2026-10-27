@@ -4,60 +4,73 @@
 {% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="/studio.css">{% endblock %}
 
 {% block content %}
-{# The form styles used to live in an inline <style> block right here, holding 22
-   raw hex values. They are in public/studio.css now, alongside the result surface
-   they share a component with. Nothing in this file carries a colour. #}
+{# A conversational composer, not a form. The previous layout split categories
+   and time-of-day into two columns of wildly different length and put a
+   full-width button underneath; that is why the halves never balanced and why
+   the button's label looked clipped (it had no horizontal padding). Now the
+   prompt, the option chips and the send control share one rounded surface, and
+   each chip group is a single wrapping row — balance is structural.
 
-<div class="concierge-wrap">
-    <h1 class="detail-title">Smart Concierge</h1>
-    <p class="c-body fs-base mb-md">Tell us what you feel like. We will build a walking day from real listings, and you can swap any stop.</p>
+   All colours come from tokens.css. Nothing here carries a colour or an inline
+   style. #}
 
-    <form id="conciergeForm" class="concierge-card" novalidate>
-        <label for="prompt" class="concierge-label">What do you feel like?</label>
-        <textarea id="prompt" class="concierge-prompt" placeholder="What do you feel like? e.g. coffee crawl in Gastown, 3 hours, afternoon"></textarea>
+<div class="composer-page">
+
+    <div class="composer-intro">
+        <h1>What do you feel like?</h1>
+        <p>Tell us in your own words. We will build a walking day from real listings, and you can swap any stop.</p>
+    </div>
+
+    <form id="conciergeForm" class="composer" novalidate>
+
+        <label class="visually-hidden" for="prompt">What do you feel like?</label>
+        <textarea id="prompt" rows="2" placeholder="e.g. coffee crawl in Gastown, 3 hours, afternoon"></textarea>
         <div id="hoodNote" class="hood-note" aria-live="polite"></div>
 
-        <div class="concierge-grid">
-            <div>
-                <span class="concierge-label">Categories</span>
-                <div id="categoryPills" class="cpill-group">
-                    {% for c in categoryOptions %}<button type="button" class="cpill" aria-pressed="false" data-category="{{ c }}">{{ c }}</button>{% endfor %}
-                </div>
-            </div>
-            <div>
-                <span class="concierge-label">Time of day</span>
-                <div id="timePills" class="cpill-group">
-                    <button type="button" class="cpill" aria-pressed="false" data-time="morning">Morning</button>
-                    <button type="button" class="cpill" aria-pressed="false" data-time="afternoon">Afternoon</button>
-                    <button type="button" class="cpill" aria-pressed="false" data-time="evening">Evening</button>
-                    <button type="button" class="cpill" aria-pressed="true" data-time="flexible">Flexible</button>
-                </div>
-
-                <span class="concierge-label">Time available</span>
-                <div id="durationPills" class="cpill-group">
-                    <button type="button" class="cpill" aria-pressed="false" data-duration="2h">2 hours</button>
-                    <button type="button" class="cpill" aria-pressed="true" data-duration="4h">4 hours</button>
-                    <button type="button" class="cpill" aria-pressed="false" data-duration="8h">8 hours</button>
-                </div>
-
-                <details class="hood-details">
-                    <summary>Choose a neighbourhood instead</summary>
-                    <select id="neighborhood" aria-label="Neighbourhood">
-                        <option value="">Anywhere in Vancouver</option>
-                        {% for n in neighborhoods %}
-                        <option value="{{ n.id }}">{{ n.name }}</option>
-                        {% endfor %}
-                    </select>
-                </details>
-            </div>
+        <div id="categoryPills" class="composer-group" role="group" aria-labelledby="grpCategory">
+            <span class="glabel" id="grpCategory">Category</span>
+            {% for c in categoryOptions %}<button type="button" class="composer-chip" aria-pressed="false" data-category="{{ c }}">{{ c }}</button>{% endfor %}
         </div>
 
-        <button type="submit" id="generateBtn" class="generate-btn">Generate my day</button>
+        <div id="timePills" class="composer-group" role="group" aria-labelledby="grpWhen">
+            <span class="glabel" id="grpWhen">When</span>
+            <button type="button" class="composer-chip" aria-pressed="false" data-time="morning">Morning</button>
+            <button type="button" class="composer-chip" aria-pressed="false" data-time="afternoon">Afternoon</button>
+            <button type="button" class="composer-chip" aria-pressed="false" data-time="evening">Evening</button>
+            <button type="button" class="composer-chip" aria-pressed="true" data-time="flexible">Flexible</button>
+        </div>
+
+        <div id="durationPills" class="composer-group" role="group" aria-labelledby="grpHowLong">
+            <span class="glabel" id="grpHowLong">How long</span>
+            <button type="button" class="composer-chip" aria-pressed="false" data-duration="2h">2 hours</button>
+            <button type="button" class="composer-chip" aria-pressed="true" data-duration="4h">4 hours</button>
+            <button type="button" class="composer-chip" aria-pressed="false" data-duration="8h">8 hours</button>
+        </div>
+
+        <div class="composer-foot">
+            <span class="hint"><kbd>Enter</kbd> to build &middot; <kbd>Shift</kbd>+<kbd>Enter</kbd> for a new line</span>
+            <button type="submit" id="generateBtn" class="send-btn" aria-label="Build my day">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>
+                </svg>
+            </button>
+        </div>
     </form>
+
+    <details class="hood-details composer-extra">
+        <summary>Choose a neighbourhood instead</summary>
+        <select id="neighborhood" aria-label="Neighbourhood">
+            <option value="">Anywhere in Vancouver</option>
+            {% for n in neighborhoods %}
+            <option value="{{ n.id }}">{{ n.name }}</option>
+            {% endfor %}
+        </select>
+    </details>
 
     <div id="loading" class="loading-box" role="status">
         <div class="spinner" aria-hidden="true"></div>
-        <p class="mb-0">Our Concierge is crafting your perfect day...</p>
+        <span>Building your day from real listings&hellip;</span>
     </div>
 
     {% include "_studio_results.html" %}
@@ -70,27 +83,45 @@
 // Form behaviour only. The result surface (steps, canvas, export, swaps) is rendered by studio.js,
 // which the homepage dock drives too.
 function setSingle(groupId, attr, value) {
-    document.querySelectorAll('#' + groupId + ' .cpill').forEach((b) => {
+    document.querySelectorAll('#' + groupId + ' .composer-chip').forEach((b) => {
         b.setAttribute('aria-pressed', b.dataset[attr] === value ? 'true' : 'false');
     });
 }
 function activeSingle(groupId, attr) {
-    const b = document.querySelector('#' + groupId + ' .cpill[aria-pressed="true"]');
+    const b = document.querySelector('#' + groupId + ' .composer-chip[aria-pressed="true"]');
     return b ? b.dataset[attr] : null;
 }
-document.querySelectorAll('#timePills .cpill').forEach((b) => b.addEventListener('click', () => setSingle('timePills', 'time', b.dataset.time)));
-document.querySelectorAll('#durationPills .cpill').forEach((b) => b.addEventListener('click', () => setSingle('durationPills', 'duration', b.dataset.duration)));
-document.querySelectorAll('#categoryPills .cpill').forEach((b) => b.addEventListener('click', () => {
+document.querySelectorAll('#timePills .composer-chip').forEach((b) => b.addEventListener('click', () => setSingle('timePills', 'time', b.dataset.time)));
+document.querySelectorAll('#durationPills .composer-chip').forEach((b) => b.addEventListener('click', () => setSingle('durationPills', 'duration', b.dataset.duration)));
+document.querySelectorAll('#categoryPills .composer-chip').forEach((b) => b.addEventListener('click', () => {
     b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
 }));
 function activeCategories() {
-    return Array.from(document.querySelectorAll('#categoryPills .cpill[aria-pressed="true"]')).map((b) => b.dataset.category);
+    return Array.from(document.querySelectorAll('#categoryPills .composer-chip[aria-pressed="true"]')).map((b) => b.dataset.category);
 }
 
+// ---- chat convention: Enter sends, Shift+Enter makes a new line ----
+// A delegated listener on the composer, never an inline onkeydown: script-src-attr
+// 'none' makes inline handler attributes inert.
+const promptEl = document.getElementById('prompt');
+promptEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) {
+        e.preventDefault();
+        document.getElementById('conciergeForm').requestSubmit();
+    }
+});
+
+// ---- grow the composer with the prompt, without a fixed-height box ----
+function autosize() {
+    promptEl.style.height = 'auto';
+    promptEl.style.height = Math.min(promptEl.scrollHeight, 220) + 'px';
+}
+promptEl.addEventListener('input', autosize);
+
 // ---- hint only: the server does the real parsing of neighbourhood names ----
-document.getElementById('prompt').addEventListener('input', updateHoodNote);
+promptEl.addEventListener('input', updateHoodNote);
 function updateHoodNote() {
-    const text = document.getElementById('prompt').value.toLowerCase();
+    const text = promptEl.value.toLowerCase();
     const hoods = Array.from(document.querySelectorAll('#neighborhood option')).filter((o) => o.value);
     const hit = hoods.find((o) => text.includes(o.textContent.toLowerCase()));
     document.getElementById('hoodNote').textContent = hit ? `Neighbourhood: ${hit.textContent} (from your prompt)` : '';
@@ -101,9 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const activity = params.get('activity');
     if (activity) {
-        document.getElementById('prompt').value = activity;
+        promptEl.value = activity;
+        autosize();
         updateHoodNote();
-        setTimeout(() => document.getElementById('conciergeForm').dispatchEvent(new Event('submit', { cancelable: true, bubbles: true })), 50);
+        setTimeout(() => document.getElementById('conciergeForm').requestSubmit(), 50);
     }
 });
 
@@ -117,7 +149,7 @@ document.getElementById('conciergeForm').addEventListener('submit', async (e) =>
     Studio.hide();
 
     const payload = {
-        activity: document.getElementById('prompt').value,
+        activity: promptEl.value,
         categories: activeCategories(),
         duration: activeSingle('durationPills', 'duration') || '4h',
         timeOfDay: activeSingle('timePills', 'time') || 'flexible',
