@@ -5,26 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if noindex %}<meta name="robots" content="noindex, nofollow, noarchive">{% endif %}
     <title>{% block title %}Vancouver Neighborhood Directory{% endblock %}</title>
+
+    {# A page without a description is a page search engines write for you. Each
+       template supplies its own; the fallback is the site's one-line promise. #}
+    <meta name="description" content="{% block description %}A directory of Vancouver places, with a concierge that builds walking days from real listings.{% endblock %}">
+
+    {% if canonicalUrl %}<link rel="canonical" href="{{ canonicalUrl }}">{% endif %}
+    <meta property="og:site_name" content="{{ siteName }}">
+    <meta property="og:type" content="website">
+    {# Overridable rather than self.title(): Nunjucks cannot call a child's block back
+       through inheritance, so each template that wants its own share card sets these. #}
+    <meta property="og:title" content="{% block ogtitle %}Vancouver Directory{% endblock %}">
+    <meta property="og:description" content="{% block ogdescription %}A directory of Vancouver places, with a concierge that builds walking days from real listings.{% endblock %}">
+    {% if canonicalUrl %}<meta property="og:url" content="{{ canonicalUrl }}">{% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    {% block social %}{% endblock %}
+
     {% block meta %}{% endblock %}
-    <link rel="stylesheet" href="{{ themeCss if themeCss else '/styles.css' }}">
+
+    {# Load order matters. tokens.css MUST come first: styles.css, atlas.css and
+       studio.css resolve every colour and type family through var() against it,
+       and an undefined token is now a visible failure rather than a silent
+       fallback to Bootstrap blue. #}
+    <link rel="stylesheet" href="/tokens.css">
+    <link rel="stylesheet" href="/vendor/fonts/fonts.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/atlas.css">
     <link rel="stylesheet" href="/mobile.css">
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
-    {% if themeName %}
-    <div style="background: #1e293b; color: #f8fafc; text-align: center; padding: 10px 15px; font-size: 0.95rem; font-weight: 600; border-bottom: 2px solid #38bdf8; position: sticky; top: 0; z-index: 1000;">
-        🎨 <span>Previewing Theme: <strong style="color: #38bdf8;">{{ themeName }}</strong></span>
-        <span style="margin: 0 15px; color: #64748b;">|</span>
-        <a href="/theme/coastal" style="color: #6ee7b7; margin: 0 8px; text-decoration: none;">1. Coastal Emerald</a>
-        <a href="/theme/sunset" style="color: #fb923c; margin: 0 8px; text-decoration: none;">2. Pacific Sunset</a>
-        <a href="/theme/minimalist" style="color: #a78bfa; margin: 0 8px; text-decoration: none;">3. Minimalist Slate</a>
-    </div>
-    {% endif %}
+    {# Keyboard users should not have to tab through six nav links on every page. #}
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="/" class="logo">📍 Vancouver Directory</a>
-            
-            <form action="/search" method="GET" class="nav-search" style="margin: 0; flex: 1; max-width: 380px; margin: 0 20px;">
-                <input type="text" name="q" placeholder="🔍 Smart Search (venue, hood, phone, street...)" value="{{ searchQuery }}" style="width: 100%; padding: 7px 16px; border-radius: 20px; border: 1px solid #cbd5e1; font-size: 0.88rem; outline: none; background: #f8fafc;">
+            <a href="/" class="logo">Vancouver Directory</a>
+
+            <form action="/search" method="GET" class="nav-search">
+                <label class="visually-hidden" for="nav-q">Search Vancouver listings</label>
+                <input id="nav-q" type="text" name="q" placeholder="Venue, street, phone or tag" value="{{ searchQuery }}">
             </form>
 
             <ul class="nav-links">
@@ -32,21 +51,21 @@
                 <li><a href="/neighborhoods">Neighborhoods</a></li>
                 <li><a href="/businesses">Businesses</a></li>
                 <li><a href="/itineraries">Itineraries</a></li>
-                <li><a href="/concierge" style="color: #e05638; font-weight: bold;">✨ Concierge</a></li>
+                <li><a href="/concierge">Concierge</a></li>
                 <li><a href="/claim" class="btn-claim">Claim</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content" id="main">
         {% block content %}{% endblock %}
     </main>
 
     <footer class="footer">
         <div class="container text-center">
-            <p>&copy; 2026 Vancouver Neighborhood Directory. Curated local guides & experience itineraries.
-                &bull; <a href="/privacy" style="color: #cbd5e1;">What we collect</a>
-                &bull; <a href="/claim" style="color: #cbd5e1;">Claim a listing</a></p>
+            <p>&copy; 2026 Vancouver Neighborhood Directory. Curated local guides &amp; experience itineraries.
+                &bull; <a href="/privacy">What we collect</a>
+                &bull; <a href="/claim">Claim a listing</a></p>
             {% include "_attribution.html" %}
         </div>
     </footer>

@@ -40,3 +40,4 @@ venv/
 
 # Large generated data dumps
 osm_data.json
+.superpowers/

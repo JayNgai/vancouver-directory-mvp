@@ -50,8 +50,17 @@ function paginate(items, requestedPage, baseQuery) {
 // Homepage
 router.get('/', async (req, res) => {
   try {
-    const neighborhoods = await prisma.neighborhood.findMany({
-      orderBy: { name: 'asc' }
+    // Photographed districts first, then by how many places they hold: the bento
+    // leads with tiles that actually have an image rather than a row of blanks.
+    const neighborhoodsAll = await prisma.neighborhood.findMany({
+      include: { _count: { select: { businesses: true } } },
+    });
+    const neighborhoods = neighborhoodsAll.sort((a, b) => {
+      const img = (b.imageUrl ? 1 : 0) - (a.imageUrl ? 1 : 0);
+      if (img) return img;
+      const count = b._count.businesses - a._count.businesses;
+      if (count) return count;
+      return a.name.localeCompare(b.name);
     });
     const itineraries = await prisma.itinerary.findMany({
       take: 3,
@@ -61,10 +70,21 @@ router.get('/', async (req, res) => {
       await prisma.business.findMany({ include: { neighborhood: true } })
     ).slice(0, 6);
 
+    // Real counts, so the data strip states facts rather than vibes.
+    const [totalPlaces, totalItineraries, totalStandins] = await Promise.all([
+      prisma.business.count(),
+      prisma.itinerary.count(),
+      prisma.business.count({ where: { imageKind: 'standin' } }),
+    ]);
+
     res.render('index.html', {
       neighborhoods,
       itineraries,
-      featuredBusinesses
+      featuredBusinesses,
+      totalPlaces,
+      totalItineraries,
+      totalNeighborhoods: neighborhoods.length,
+      totalStandins
     });
   } catch (error) {
     failText(res, 'GET /', error);
@@ -248,18 +268,35 @@ router.get('/businesses', async (req, res) => {
 
     const neighborhoods = await prisma.neighborhood.findMany({ orderBy: { name: 'asc' } });
 
-    const ordered = sortByCompleteness(businesses);
-    const pagination = paginate(ordered, req.query.page, queryBase(req.query));
+    // Hours are stored as an OSM string ("Mo-Fr 08:00-17:00"), so "open now" cannot be a
+    // SQL predicate. Decorate first, then filter on the parsed state the row will print
+    // anyway - so the badge and the filter can never disagree about whether a place is open.
+    const openNow = req.query.open === '1';
+    const verifiedOnly = req.query.verified === '1';
+
+    const unfilteredCount = businesses.length;
+    let filtered = sortByCompleteness(businesses).map(decorate);
+    if (openNow) filtered = filtered.filter((b) => b.openState && b.openState.state === 'open');
+    if (verifiedOnly) filtered = filtered.filter((b) => b.isVerified);
+
+    const pagination = paginate(filtered, req.query.page, queryBase(req.query));
 
     res.render('search.html', {
-      businesses: pagination.items.map(decorate),
+      businesses: pagination.items,
       pagination,
       neighborhoods,
+      categories: require('../lib/categories').CATEGORY_OPTIONS,
       selectedCategory: category || '',
       selectedNeighborhood: neighborhood || '',
       selectedSearch: search || '',
       selectedTag: tag || '',
-      selectedSort: sort || 'completeness_desc'
+      selectedSort: sort || 'completeness_desc',
+      filterOpen: openNow,
+      filterVerified: verifiedOnly,
+      unfilteredCount,
+      // Anything the user switched on, so the page can say how narrow the view is.
+      activeFilterCount: [category, neighborhood, tag, search, openNow, verifiedOnly]
+        .filter((v) => v && v !== 'undefined').length
     });
   } catch (error) {
     failText(res, 'GET /businesses', error);
@@ -447,38 +484,6 @@ router.get('/concierge', async (req, res) => {
     res.render('concierge.html', { neighborhoods, categoryOptions: require('../lib/categories').CATEGORY_OPTIONS });
   } catch (error) {
     failText(res, 'GET /concierge', error);
-  }
-});
-
-// Theme Previews
-router.get('/theme/:name', async (req, res) => {
-  try {
-    const themeNameMap = {
-      coastal: { css: '/theme-coastal.css', name: 'Option 1: Coastal Emerald (Pacific Northwest / Lonely Planet Style)' },
-      sunset: { css: '/theme-sunset.css', name: 'Option 2: Pacific Sunset (Warm Coastal & Editorial Serif Style)' },
-      minimalist: { css: '/theme-minimalist.css', name: 'Option 3: Minimalist Slate (Sleek Tech Precision Style)' }
-    };
-
-    const selectedTheme = themeNameMap[req.params.name] || themeNameMap.coastal;
-
-    const neighborhoods = await prisma.neighborhood.findMany({ orderBy: { name: 'asc' } });
-    const itineraries = await prisma.itinerary.findMany({
-      take: 3,
-      include: { neighborhood: true, steps: true }
-    });
-    const featuredBusinesses = sortByCompleteness(
-      await prisma.business.findMany({ include: { neighborhood: true } })
-    ).slice(0, 6);
-
-    res.render('index.html', {
-      neighborhoods,
-      itineraries,
-      featuredBusinesses,
-      themeCss: selectedTheme.css,
-      themeName: selectedTheme.name
-    });
-  } catch (error) {
-    failText(res, 'GET /theme/:name', error);
   }
 });
 

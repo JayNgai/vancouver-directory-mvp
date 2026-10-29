@@ -35,7 +35,9 @@ const ON = /\b(onclick|onchange|onsubmit|oninput|ondrop|ondragover|ondragenter|o
 
 // A file here may keep inline handlers ONLY because it cannot reach a user.
 const EXEMPT = {
-  'concierge.before-redesign.html': 'pre-redesign snapshot superseded by concierge.html; no render call references it',
+  // Empty by design. The pre-redesign concierge snapshot was the only entry and
+  // it is now deleted, so there is nothing left to exempt. A file may keep inline
+  // handlers ONLY because it cannot reach a user - prefer deleting it to listing it.
 };
 
 console.log('--- 1. no inline on* handler attribute anywhere in the templates or page scripts ---');

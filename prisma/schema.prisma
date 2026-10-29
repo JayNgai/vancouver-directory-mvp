@@ -58,6 +58,10 @@ model Business {
   slugAliases         String? // JSON array of former slugs, so merged-away links keep working
   imageUrl            String?
   imageAttribution    String?
+  // 'standin' = a licensed stock photograph used as a generic stand-in, clearly
+  // labelled as such in the UI. 'owner' = supplied by the business after claiming.
+  // null = no photograph; the designed no-photo state renders instead.
+  imageKind           String?
 
   neighborhood   Neighborhood    @relation(fields: [neighborhoodId], references: [id])
   itinerarySteps ItineraryStep[]

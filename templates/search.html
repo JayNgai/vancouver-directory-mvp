@@ -1,77 +1,144 @@
 {% extends "base.html" %}
 
-{% block title %}Explore Vancouver Businesses & Spots{% endblock %}
+{% block title %}Every place in the directory{% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 30px;">
-    <h1 class="section-title">Directory Spots & Businesses</h1>
-    <p style="color: #64748b; margin-bottom: 20px;">Search dining spots, cafes, craft breweries, and local gems across Vancouver.</p>
+{# The directory page. Previously a shopping grid of 2,958 cards, each 501px tall with
+   170px of empty grey box, producing 13,345px of scroll at 390px wide with no way to
+   narrow it. This is a filterable table: one row per place, every filter in the URL
+   so a narrowed view can be linked and shared. #}
 
-    <!-- All-Inclusive Smart Search Input (No Dropdowns) -->
-    <form action="/search" method="GET" style="margin-bottom: 15px;">
-        <div style="background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; max-width: 800px;">
-            <input type="text" name="q" placeholder="🔍 All-inclusive search: venue, neighborhood, street, phone, cuisine, #tag..." value="{{ selectedSearch }}" required style="flex: 1; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 50px; outline: none; color: #0f172a;">
-            <button type="submit" class="btn" style="border-radius: 50px; padding: 12px 28px; background: #e05638; color: white;">Search</button>
-        </div>
-    </form>
+<div class="container">
 
-    <!-- Quick Filter Pills (Clickable Tags, Not Dropdowns) -->
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 25px; align-items: center;">
-        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Popular Searches:</span>
-        <a href="/search?q=Restaurant" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">🍽️ Restaurants</a>
-        <a href="/search?q=Cafe" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">☕ Cafes</a>
-        <a href="/search?q=Bar" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">🍸 Bars & Lounges</a>
-        <a href="/search?q=Gastown" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">📍 Gastown</a>
-        <a href="/search?q=Kitsilano" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">📍 Kitsilano</a>
-        <a href="/search?q=patio" class="tag-badge" style="text-decoration: none; font-size: 0.85rem;">☀️ #patio</a>
-        <a href="/businesses" class="tag-badge" style="text-decoration: none; font-size: 0.85rem; background: #e2e8f0; color: #475569;">Show All</a>
-    </div>
+    <header class="dir-head">
+        <span class="atlas-kicker">The directory</span>
+        <h1>Every place we have.</h1>
+        <p class="dir-sub">
+            Gathered from public listings and kept plain: no scores, no rankings we cannot
+            justify. Narrow it below, then open a listing for the detail.
+        </p>
+    </header>
 
-    <div style="margin-bottom: 20px; font-weight: 600; color: #475569;">
-        Found {{ pagination.total }} spot(s)
-    </div>
+    <form class="filterbar" action="/businesses" method="GET" id="filterForm">
+        {% if selectedTag %}<input type="hidden" name="tag" value="{{ selectedTag }}">{% endif %}
 
-    <div class="grid">
-        {% for b in businesses %}
-        <div class="card">
-            {% if b.photos and b.photos != '[]' %}
-            <img src="{{ b.photos | replace('[', '') | replace(']', '') | replace('"', '') }}" class="card-img" alt="{{ b.name }}">
-            {% else %}
-            <div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ b.category or 'Local spot' }}</span></div>
-            {% endif %}
-            <div class="card-body">
-                {% if b.isVerified %}
-                <span class="badge-verified">✓ Owner-claimed listing</span>
-                {% endif %}
-                <div class="card-subtitle">{{ b.neighborhood.name }} &bull; {{ b.primaryCategory or b.category }}</div>
-                <h3 class="card-title"><a href="/businesses/{{ b.slug }}" style="color: inherit; text-decoration: none;">{{ b.name }}</a></h3>
-                <a href="/businesses/{{ b.slug }}" style="font-size: 0.85rem; color: #2b6cb0; font-weight: 600; margin-bottom: 4px;">View listing &rarr;</a>
-                {% if b.rating and b.reviewCount %}
-                <div class="rating-stars">★ {{ b.rating }} <span style="color: #64748b; font-size: 0.85rem; font-weight: 400;">({{ b.reviewCount }} reviews)</span></div>
-                {% endif %}
-                {% if b.description %}<p class="card-desc" style="margin-top: 8px;">{{ b.description }}</p>{% endif %}
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 6px;">📍 {{ b.address }}</div>
-                {% if b.displayPhone %}
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 6px;">📞 {{ b.displayPhone }}</div>
-                {% endif %}
-                {% if b.displayHours %}
-                <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">🕒 {{ b.displayHours }}</div>
-                {% endif %}
-                <div class="tag-list">
-                    {% for tag in b.parsedTags %}
-                    <a href="/search?q={{ tag }}" class="tag-badge" style="text-decoration: none;">#{{ tag }}</a>
+        <div class="filterbar-row">
+            <div class="field">
+                <label for="f-category">Category</label>
+                <select id="f-category" name="category">
+                    <option value="">All categories</option>
+                    {% for c in categories %}
+                    <option value="{{ c.value or c }}" {% if selectedCategory == (c.value or c) %}selected{% endif %}>{{ c.label or c }}</option>
                     {% endfor %}
-                </div>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="f-hood">District</label>
+                <select id="f-hood" name="neighborhood">
+                    <option value="">All districts</option>
+                    {% for n in neighborhoods %}
+                    <option value="{{ n.slug }}" {% if selectedNeighborhood == n.slug %}selected{% endif %}>{{ n.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="f-sort">Sort</label>
+                <select id="f-sort" name="sort">
+                    <option value="completeness_desc" {% if selectedSort == 'completeness_desc' %}selected{% endif %}>Most complete first</option>
+                    <option value="name_asc" {% if selectedSort == 'name_asc' %}selected{% endif %}>Name A &ndash; Z</option>
+                </select>
+            </div>
+
+            <div class="field field--check">
+                <label class="chk" for="f-open">
+                    <input type="checkbox" id="f-open" name="open" value="1" {% if filterOpen %}checked{% endif %}>
+                    <span>Open now</span>
+                </label>
+                <label class="chk" for="f-verified">
+                    <input type="checkbox" id="f-verified" name="verified" value="1" {% if filterVerified %}checked{% endif %}>
+                    <span>Owner-claimed</span>
+                </label>
+            </div>
+
+            <div class="field field--go">
+                <button type="submit" class="btn">Apply</button>
             </div>
         </div>
+
+        {% if activeFilterCount %}
+        <div class="filterbar-active">
+            <span>{{ activeFilterCount }} filter{{ 's' if activeFilterCount != 1 }} on</span>
+            {% if selectedCategory %}<a class="fchip" href="/businesses?{{ pagination.baseQuery }}">{{ selectedCategory }} &times;</a>{% endif %}
+            {% if selectedNeighborhood %}<a class="fchip" href="/businesses?{{ pagination.baseQuery }}">{{ selectedNeighborhood }} &times;</a>{% endif %}
+            {% if selectedTag %}<a class="fchip" href="/businesses?{{ pagination.baseQuery }}">#{{ selectedTag }} &times;</a>{% endif %}
+            <a class="filterbar-clear" href="/businesses">Clear all</a>
+        </div>
+        {% endif %}
+    </form>
+
+    <p class="dir-count">
+        {% if activeFilterCount %}
+        <b>{{ pagination.total }}</b> of {{ unfilteredCount }} places match
         {% else %}
-        <div style="grid-column: 1/-1; padding: 40px; text-align: center; background: white; border-radius: 8px;">
-            <p style="font-size: 1.1rem; color: #64748b;">No businesses found matching your criteria.</p>
-            <a href="/businesses" class="btn" style="margin-top: 15px;">View All Businesses</a>
+        <b>{{ pagination.total }}</b> places, showing {{ pagination.from }}&ndash;{{ pagination.to }}
+        {% endif %}
+    </p>
+
+    <div class="atlas-table" id="listingRows">
+        <div class="atlas-row hd">
+            <span class="rk">#</span>
+            <span>Place</span>
+            <span class="cat">Category</span>
+            <span class="dist">District</span>
+            <span class="st">Now</span>
+            <span class="go"></span>
+        </div>
+
+        {% for b in businesses %}
+        <a href="/businesses/{{ b.slug }}" class="atlas-row">
+            <span class="rk">{% if pagination.from + loop.index0 < 10 %}0{% endif %}{{ pagination.from + loop.index0 }}</span>
+            <span class="nm">
+                {{ b.name }}
+                <small>{{ b.address }}</small>
+            </span>
+            <span class="cat">{{ b.primaryCategory or b.category }}</span>
+            <span class="dist">{{ b.neighborhood.name if b.neighborhood else 'Vancouver' }}</span>
+            <span class="st">
+                {% if b.openState and b.openState.state == 'open' %}
+                <span class="is-open">Open{% if b.openState.closesAt %} &middot; {{ b.openState.closesAt }}{% endif %}</span>
+                {% elif b.openState and b.openState.state == 'closed' and b.openState.opensAt %}
+                <span class="is-closed">Opens {{ b.openState.opensAt }}</span>
+                {% elif b.openState and b.openState.closedToday %}
+                <span class="is-closed">Closed</span>
+                {% else %}
+                <span class="is-unknown">&mdash;</span>
+                {% endif %}
+            </span>
+            <span class="go">Open &rarr;</span>
+        </a>
+        {% else %}
+        <div class="dir-empty">
+            <p>Nothing matches those filters.</p>
+            <a href="/businesses" class="btn">Clear the filters</a>
         </div>
         {% endfor %}
     </div>
 
-    {% include "_pagination.html" %}
+    {% if pagination.page < pagination.totalPages %}
+    {% set qs = pagination.baseQuery %}{% set nextPage = pagination.page + 1 %}
+    <div class="morerow">
+        <a class="btn" id="loadMore"
+           href="/businesses?{{ qs }}{% if qs %}&amp;{% endif %}page={{ nextPage }}"
+           data-next="{{ nextPage }}"
+           data-base="/businesses?{{ qs }}{% if qs %}&amp;{% endif %}"
+           data-total-pages="{{ pagination.totalPages }}">Load {{ pagination.perPage }} more</a>
+        <span class="morerow-note">{{ pagination.to }} of {{ pagination.total }} shown</span>
+    </div>
+    {% endif %}
+
 </div>
+
+<script src="/filter.js"></script>
 {% endblock %}

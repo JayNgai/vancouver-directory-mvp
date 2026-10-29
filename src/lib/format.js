@@ -1,3 +1,9 @@
+'use strict';
+
+// The hours parser lives in reasons.js — one implementation, so the open/closed
+// badge on a listing and the "closes at" sentence in an itinerary cannot disagree.
+const hoursParser = require('./reasons');
+
 /**
  * Display formatting helpers.
  *
@@ -266,6 +272,42 @@ function formatPhone(raw) {
   return value;
 }
 
+/**
+ * Open / closed right now, from the stored OSM hours.
+ *
+ * Reuses the same parser the Concierge reasons use (src/lib/reasons.js), so the
+ * state printed on a listing and the sentence printed in an itinerary cannot
+ * disagree about when a place shuts.
+ *
+ * Returns { state, closesAt, opensAt } where state is 'open' | 'closed' | 'unknown'.
+ * 'unknown' means the record has no usable hours — it is never guessed.
+ */
+function openState(hoursRaw, now) {
+  const at = now instanceof Date ? now : new Date();
+  const minutes = at.getHours() * 60 + at.getMinutes();
+  const clock = (m) => {
+    const total = ((Math.round(m) % 1440) + 1440) % 1440;
+    const h24 = Math.floor(total / 60);
+    const mi = total % 60;
+    const suffix = h24 >= 12 ? 'pm' : 'am';
+    const h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+    return mi === 0 ? `${h12} ${suffix}` : `${h12}:${String(mi).padStart(2, '0')} ${suffix}`;
+  };
+
+  const windows = hoursParser.parseHoursWindows(hoursRaw);
+  if (!windows.length) return { state: 'unknown', closesAt: null, opensAt: null };
+
+  if (windows.length === 1 && windows[0].open === 0 && windows[0].close === 1440) {
+    return { state: 'open', closesAt: null, opensAt: null, allDay: true };
+  }
+
+  const w = hoursParser.windowFor(windows, at.getDay(), minutes);
+  if (!w) return { state: 'closed', closesAt: null, opensAt: null, closedToday: true };
+  if (w.past) return { state: 'closed', closesAt: clock(w.close), opensAt: null, closedToday: true };
+  if (!w.fromYesterday && minutes < w.open) return { state: 'closed', closesAt: null, opensAt: clock(w.open) };
+  return { state: 'open', closesAt: clock(w.close), opensAt: null };
+}
+
 const INTERNAL_TAG_PREFIXES = ['source-'];
 
 function visibleTags(rawTags) {
@@ -349,10 +391,11 @@ function decorate(business) {
     parsedTags: visibleTags(parsedTags),
     displayHours: formatHours(business.hours),
     displayPhone: formatPhone(business.phone),
+    openState: openState(business.hours),
     displayLiquorHours: formatLiquorHours(business.liquorServiceHours),
     hoursRows: formatHoursRows(business.hours),
     liquorRows: formatLiquorRows(business.liquorServiceHours)
   };
 }
 
-module.exports = { formatHoursRows, formatLiquorRows, formatHours, formatPhone, visibleTags, formatLiquorHours, decorate };
+module.exports = { formatHoursRows, formatLiquorRows, formatHours, formatPhone, visibleTags, formatLiquorHours, decorate, openState };

@@ -3,31 +3,31 @@
 {% block title %}All Vancouver Neighborhoods - Directory{% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 40px;">
+<div class="container pt-xl">
     <h1 class="section-title">Vancouver Neighborhoods</h1>
-    <p style="color: #64748b; margin-bottom: 25px; font-size: 1.1rem;">Explore 23 official City of Vancouver neighborhoods to discover dining, cafes, craft breweries, and curated local itineraries.</p>
+    <p class="c-muted mb-xl fs-md">Explore 23 official City of Vancouver neighborhoods to discover dining, cafes, craft breweries, and curated local itineraries.</p>
 
     <!-- All-Inclusive Smart Search Input (No Dropdowns) -->
-    <form action="/search" method="GET" style="margin-bottom: 25px;">
-        <div style="background: white; padding: 6px; border-radius: 50px; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; max-width: 800px;">
-            <input type="text" name="q" placeholder="🔍 Search any neighborhood, venue, street, or tag (e.g. Gastown, Kitsilano, Miku)..." required style="flex: 1; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 50px; outline: none; color: #0f172a;">
-            <button type="submit" class="btn" style="border-radius: 50px; padding: 12px 28px; background: #e05638; color: white;">All-Inclusive Search</button>
+    <form class="mb-xl" action="/search" method="GET">
+        <div class="bg-panel p-xs r-pill flex flat bordered mw-prose">
+            <input class="flex-1 no-border p-md fs-base r-pill no-outline c-ink" type="text" name="q" placeholder="🔍 Search any neighborhood, venue, street, or tag (e.g. Gastown, Kitsilano, Miku)..." required>
+            <button type="submit" class="btn">All-Inclusive Search</button>
         </div>
     </form>
 
-    <div style="margin-bottom: 20px; font-weight: 600; color: #475569;">
+    <div class="mb-lg fw-600 c-body">
         Showing all {{ neighborhoods.length }} Vancouver neighborhoods
     </div>
 
     <div class="grid">
         {% for n in neighborhoods %}
         <a href="/neighborhoods/{{ n.slug }}" class="card">
-            {% if n.imageUrl %}<img src="{{ n.imageUrl }}" class="card-img" alt="{{ n.name }}" loading="lazy">{% else %}<div class="card-img card-img-placeholder" aria-hidden="true"><span>{{ n.name }}</span></div>{% endif %}
+            {% set photoItem = n %}{% set photoStrict = false %}{% include "_listing-photo.html" %}
             <div class="card-body">
                 <div class="card-subtitle">{{ n.citySection }}</div>
                 <h3 class="card-title">{{ n.name }}</h3>
                 <p class="card-desc">{{ n.description }}</p>
-                <div style="font-size: 0.85rem; color: #64748b; margin-top: 10px;">
+                <div class="fs-sm c-muted mt-sm">
                     📍 {{ n._count.businesses }} Businesses &bull; 🗺️ {{ n._count.itineraries }} Itineraries
                 </div>
             </div>

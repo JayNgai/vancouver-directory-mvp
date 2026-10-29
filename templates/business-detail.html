@@ -2,8 +2,39 @@
 
 {% block title %}{{ business.name }} - {{ business.neighborhood.name }}{% endblock %}
 
+{% block description %}{{ business.name }}{% if business.primaryCategory or business.category %} is a {{ business.primaryCategory or business.category }}{% endif %} at {{ business.address }}{% if business.neighborhood %} in {{ business.neighborhood.name }}{% endif %}, Vancouver.{% endblock %}
+
+{% block ogtitle %}{{ business.name }} — {{ business.neighborhood.name }}{% endblock %}
+{% block ogdescription %}{{ business.name }} at {{ business.address }}, Vancouver. Hours, contact details and what is nearby.{% endblock %}
+
+{% block social %}
+{# Describes the listing with the fields we actually hold. Nothing is invented: the
+   rating and price blocks are omitted because both are null across this directory. #}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": {{ business.name | dump | safe }},
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ business.address | dump | safe }},
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+    }{% if business.latitude and business.longitude %},
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ business.latitude }},
+        "longitude": {{ business.longitude }}
+    }{% endif %}{% if business.phone %},
+    "telephone": {{ business.phone | dump | safe }}{% endif %}{% if business.website %},
+    "url": {{ business.website | dump | safe }}{% endif %}
+}
+</script>
+{% endblock %}
+
 {% block content %}
-<div class="container" style="padding-top: 25px;">
+<div class="container pt-25">
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a> <span>&rsaquo;</span>
@@ -14,21 +45,15 @@
 
     <div class="detail-card">
         {% set icon = {'Restaurant': '🍽️', 'Cafe': '☕', 'Bar / Pub': '🍺', 'Bakery': '🥐', 'Dessert': '🍰', 'Fast Food': '🍔'}[business.category] or '📍' %}
-        {% if business.imageUrl %}
-        <figure style="margin: 0 0 18px;">
-            <img src="{{ business.imageUrl }}" alt="{{ business.name }}" style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 8px;" loading="lazy">
-            <figcaption style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">{{ business.imageAttribution }}</figcaption>
-        </figure>
-        {% else %}
-        <div aria-hidden="true" style="height: 140px; border-radius: 8px; margin: 0 0 18px; display: flex; align-items: center; justify-content: center; background: #f1f5f9; font-size: 3.5rem;">{{ icon }}</div>
-        {% endif %}
+        {% set photoItem = business %}{% include "_listing-photo.html" %}
         <div class="detail-header">
             <div>
                 <div class="card-subtitle">{{ business.category }}{% if business.primaryCategory and business.primaryCategory != business.category %} &bull; {{ business.primaryCategory }}{% endif %}</div>
                 <h1 class="detail-title">{{ business.name }}</h1>
-                {% if business.cityLicenceStatus == 'Issued' %}
-                <span class="badge-licence">✓ City of Vancouver licensed business{% if business.cityLicenceDataDate %} <span class="badge-asof">as of {{ business.cityLicenceDataDate }}</span>{% endif %}</span>
-                {% endif %}
+                {# The "City of Vancouver licensed business — as of 2026-10-14" badge was
+                   here. It is compliance metadata, not something a person choosing where
+                   to eat acts on, and spec §7.2 bans licence provenance from consumer UI
+                   permanently. The licence fields stay on the record for admin. #}
             </div>
         </div>
 
@@ -58,7 +83,7 @@
 
             {% if business.displayLiquorHours %}
             <dt>Alcohol service</dt>
-            <dd><div class="hours-lead">Licensed to serve alcohol{% if business.liquorLicenceType %} ({{ business.liquorLicenceType }}){% endif %}</div>
+            <dd><div class="hours-lead">Licensed to serve alcohol</div>
                 {% if business.liquorRows %}<table class="hours-table"><tbody>
                 {% for r in business.liquorRows %}<tr><th scope="row">{{ r.label }}</th><td>{% for t in r.times %}<div>{{ t }}</div>{% endfor %}</td></tr>
                 {% endfor %}</tbody></table>{% else %}{{ business.displayLiquorHours }}{% endif %}</dd>
@@ -71,15 +96,15 @@
         </dl>
 
         {% if business.parsedTags.length %}
-        <div class="tag-list" style="margin: 10px 0 18px 0;">
+        <div class="tag-list tags-block">
             {% for tag in business.parsedTags %}
-            <a href="/search?q={{ tag }}" class="tag-badge" style="text-decoration: none;">#{{ tag }}</a>
+            <a href="/search?q={{ tag }}" class="tag-badge no-underline">#{{ tag }}</a>
             {% endfor %}
         </div>
         {% endif %}
 
         {% if business.description %}
-        <p style="color: #475569; margin-bottom: 18px;">{{ business.description }}</p>
+        <p class="c-body mb-18">{{ business.description }}</p>
         {% endif %}
 
         <div class="detail-actions">
@@ -88,9 +113,9 @@
         </div>
 
         {% if mapsEmbedUrl %}
-        <div style="margin: 8px 0 18px 0;">
+        <div class="mt-8 mb-18">
             <iframe title="Map of {{ business.name }}" src="{{ mapsEmbedUrl }}" width="100%" height="320"
-                    style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    class="no-border" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         {% endif %}
 
