@@ -472,7 +472,7 @@ const kitsilanoItinerary = await createItinerary(
   kitsilano.id,
   '4 hours',
   'Easy',
-  'Kitsilano's beach-side afternoon: coffee and doughnuts on West 4th, patio tacos across from the sand, then ice cream on the walk back.',
+  "Kitsilano's beach-side afternoon: coffee and doughnuts on West 4th, patio tacos across from the sand, then ice cream on the walk back.",
   ['Kits Beach mountain views', 'Lucky Doughnuts', 'Beachfront patio tacos', 'Local ice cream'],
   [
     { order: 1, time: '10:00 AM', activity: "Coffee and Lucky's Doughnuts at 49th Parallel on West 4th Ave", notes: 'Grab a seat on the sunny patio.', durationMinutes: 45 },
