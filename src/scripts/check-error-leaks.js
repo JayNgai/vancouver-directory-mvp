@@ -71,14 +71,25 @@ check(s400.error === 'Unknown neighborhood: gastown', 'a deliberate, safe messag
 console.log('\n--- the verbose flag defaults OFF ---');
 check(process.env.CR_ERROR_DETAIL !== '1', 'CR_ERROR_DETAIL is not set in this environment');
 const { execFileSync } = require('child_process');
-const verboseOut = execFileSync(process.execPath, ['-e', `
+// Capture the child's stdout through a FILE, not a pipe: a sandboxed Windows session
+// cannot open the named pipe child_process uses for stdio:'pipe' (EPERM), which would
+// make this check fail for reasons unrelated to the verbose flag it is testing.
+const verboseLog = path.join(require('os').tmpdir(), `error-leaks-${process.pid}.out`);
+const outFd = fs.openSync(verboseLog, 'w');
+try {
+  execFileSync(process.execPath, ['-e', `
   const { failJson } = require(${JSON.stringify(path.join(ROOT, 'src', 'lib', 'errors.js'))});
   const quiet = console.error; console.error = () => {};
   let sent = null;
   failJson({ status(c){ return this; }, json(b){ sent = b; } }, 't', new Error('the raw detail'));
   console.error = quiet;
   console.log(sent.error);
-`], { encoding: 'utf8', env: { ...process.env, CR_ERROR_DETAIL: '1' } }).trim();
+`], { stdio: ['ignore', outFd, 'ignore'], env: { ...process.env, CR_ERROR_DETAIL: '1' } });
+} finally {
+  fs.closeSync(outFd);
+}
+const verboseOut = fs.readFileSync(verboseLog, 'utf8').trim();
+fs.rmSync(verboseLog, { force: true });
 check(verboseOut === 'the raw detail', 'CR_ERROR_DETAIL=1 restores verbose errors for local debugging', JSON.stringify(verboseOut));
 
 console.log(`\nRESULT: ${failures === 0 ? 'ALL PASS' : failures + ' FAILURE(S)'}`);

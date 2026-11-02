@@ -99,8 +99,14 @@ const check = (cond, label, detail) => {
   const tmp = path.join(require('os').tmpdir(), `dock-guard-${process.pid}.js`);
   fs.writeFileSync(tmp, inline);
   let parses = true, parseErr = '';
-  try { require('child_process').execFileSync(process.execPath, ['--check', tmp], { stdio: 'pipe' }); }
-  catch (e) { parses = false; parseErr = String(e.stderr || e.message).split('\n')[0]; }
+  // Capture to FILES, never pipes: a sandboxed Windows session cannot open the named pipes
+  // child_process uses for stdio:'pipe', so a piped node --check dies with EPERM even though
+  // the served script is valid. The exit status still reports a syntax error.
+  const parseLog = path.join(require('os').tmpdir(), `dock-guard-${process.pid}.err`);
+  const errFd = fs.openSync(parseLog, 'w');
+  try { require('child_process').execFileSync(process.execPath, ['--check', tmp], { stdio: ['ignore', errFd, errFd] }); }
+  catch (e) { parses = false; parseErr = String((fs.readFileSync(parseLog, 'utf8') || e.message)).split('\n')[0]; }
+  finally { fs.closeSync(errFd); fs.rmSync(parseLog, { force: true }); }
   fs.rmSync(tmp, { force: true });
   check(parses, 'node --check accepts it (a syntax error still returns HTTP 200)', parseErr);
 
