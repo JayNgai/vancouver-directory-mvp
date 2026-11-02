@@ -41,3 +41,10 @@ venv/
 # Large generated data dumps
 osm_data.json
 .superpowers/
+
+# Agent instructions and local skills: machine-specific, not part of the product.
+# DSH loads AGENTS.local.md as a local overlay, so the rules still apply to sessions here
+# without ever being published with the repository.
+AGENTS.local.md
+CLAUDE.local.md
+.agents/
