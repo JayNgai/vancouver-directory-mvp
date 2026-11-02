@@ -166,7 +166,7 @@ router.get('/itineraries/:slug', async (req, res) => {
 });
 
 // POST /api/concierge: deterministic rule-based itinerary (see src/lib/concierge.js)
-router.post('/concierge', async (req, res) => {
+router.post('/concierge', require('../middleware/exposure').conciergeLimiter, async (req, res) => {
   try {
     const { activity, duration, timeOfDay, neighborhoodId, categories } = req.body || {};
 

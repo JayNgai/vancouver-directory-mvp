@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}About Vancouver Directory{% endblock %}
+{% block description %}What this directory is: 2,958 places across 23 districts, a planner that runs on rules rather than a language model, and the things we refuse to show.{% endblock %}
+{% block ogtitle %}About Vancouver Directory{% endblock %}
+{% block ogdescription %}A plain listing of places in Vancouver, with a planner that turns them into a walking day.{% endblock %}
+
+{% block content %}
+<article class="about-page container">
+
+    <header class="about-head">
+        <span class="atlas-kicker">The site</span>
+        <h1>About this directory</h1>
+        <p class="body-lede">A plain listing of places in Vancouver, with a planner that turns them into a
+            walking day. No scores, no sponsored placement, no badges.</p>
+    </header>
+
+    <section class="about-sec">
+        <h2>What this is</h2>
+        <p class="body-lede">Vancouver Directory lists 2,958 places across 23 districts, plus 26 itineraries
+            built from them. The listings are gathered from public data rather than paid placement, which is
+            why the order is plain: there is no ranking this site could justify.</p>
+    </section>
+
+    <section class="about-sec">
+        <h2>How the planner works</h2>
+        <p class="body-lede">The concierge reads what you type, matches it against categories, neighbourhoods
+            and opening hours, then orders stops by distance and checks the time. It runs on rules, not a
+            language model, so it cannot invent a restaurant. When it says a place opens at 10:30, that came
+            from the listing. You can swap any stop for one of the alternatives it offers, and export the
+            route to Google Maps or Apple Maps.</p>
+    </section>
+
+    <section class="about-sec">
+        <h2>What this site does not show</h2>
+        <p class="body-lede">Ratings, review counts, prices, and "verified" labels. Free data cannot confirm
+            them, and a number nobody can check is worse than no number.</p>
+    </section>
+
+    <section class="about-sec">
+        <h2>Photographs</h2>
+        <p class="body-lede">A photo captioned "Stand-in photograph" is a licensed stock image, not the venue.
+            That caption appears on every card and every detail page, and it is the only reason a stand-in is
+            allowed here. If you own a listed business, <a href="/claim">claim the listing</a> and add your
+            own photographs; the stand-in caption goes when a real one replaces it.</p>
+    </section>
+
+    <section class="about-sec">
+        <h2>Corrections</h2>
+        <p class="body-lede">Listings go stale. Hours change, kitchens close, a place moves two blocks. Every
+            detail page names the data sources it came from, and <a href="/claim">the claim form</a> is the
+            fastest route to a correction. What the site collects is on
+            <a href="/privacy">the privacy page</a>.</p>
+    </section>
+
+</article>
+{% endblock %}

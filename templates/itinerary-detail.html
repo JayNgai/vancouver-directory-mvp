@@ -22,19 +22,21 @@
 </script>
 {% endblock %}
 
+{% block meta %}<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">{% endblock %}
+
 {% block content %}
 <div class="hero">
     <div class="container">
         <div class="hero-kicker">
-            ⏱️ {{ itinerary.duration }} &bull; {{ itinerary.difficulty }} &bull; {{ itinerary.neighborhood.name if itinerary.neighborhood else 'Vancouver' }}
+            {{ itinerary.duration }} &bull; {{ itinerary.difficulty }} &bull; {{ itinerary.neighborhood.name if itinerary.neighborhood else 'Vancouver' }}
         </div>
         <h1>{{ itinerary.title }}</h1>
         <p>{{ itinerary.description }}</p>
-        
+
         {% if googleMapsUrl %}
         <div class="mt-25">
-            <a href="{{ googleMapsUrl }}" target="_blank" class="btn-maps">
-                🗺️ 1-Click Export to Google Maps Walking Directions
+            <a href="{{ googleMapsUrl }}" target="_blank" rel="noopener" class="btn-maps">
+                1-Click export to Google Maps walking directions
             </a>
         </div>
         {% endif %}
@@ -42,36 +44,45 @@
 </div>
 
 <div class="container pt-40 mw-900">
-    <h2 class="section-title">Step-by-Step Route</h2>
+    <h2 class="section-title">Step-by-step route</h2>
 
     <div class="timeline">
         {% for step in itinerary.steps %}
-        <div class="timeline-step">
+        <div class="timeline-step"
+             {% if step.business %}data-lat="{{ step.business.latitude }}" data-lng="{{ step.business.longitude }}" data-name="{{ step.business.name }}"{% endif %}>
             <div class="step-time">{{ step.time }}</div>
             <div class="step-content">
                 <div class="step-title">{{ step.order }}. {{ step.activity }}</div>
                 {% if step.business %}
                 <div class="iti-step">
-                    <strong>📍 Featured Spot:</strong> {{ step.business.name }} ({{ step.business.address }})
-                    <a href="/businesses?search={{ step.business.name }}" class="iti-step-link">View Details &rarr;</a>
+                    <strong>Featured spot:</strong> {{ step.business.name }} ({{ step.business.address }})
+                    <a href="/businesses/{{ step.business.slug }}" class="iti-step-link">View details &rarr;</a>
                 </div>
                 {% endif %}
                 {% if step.notes %}
-                <p class="step-notes">💡 Local Tip: {{ step.notes }}</p>
+                <p class="step-notes">Local tip: {{ step.notes }}</p>
                 {% endif %}
             </div>
         </div>
         {% endfor %}
     </div>
 
+    {# The walk, drawn, after the list: read the steps, then see them on the map.
+       Every stop carries its own coordinates, so the map needs no server data, and
+       a step without a business simply contributes none. #}
+    <div id="routeMap" class="iti-map" role="img" aria-label="Map of the route"></div>
+
     {% if googleMapsUrl %}
     <div class="iti-cta">
         <h3>Ready to take this tour?</h3>
         <p class="c-body my-10-20">Open turn-by-turn walking directions directly on your phone's Google Maps app.</p>
-        <a href="{{ googleMapsUrl }}" target="_blank" class="btn-maps">
-            🗺️ Open Walking Route in Google Maps
+        <a href="{{ googleMapsUrl }}" target="_blank" rel="noopener" class="btn-maps">
+            Open walking route in Google Maps
         </a>
     </div>
     {% endif %}
 </div>
+
+<script src="/vendor/leaflet/leaflet.js"></script>
+<script src="/route-map.js"></script>
 {% endblock %}

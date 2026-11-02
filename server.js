@@ -48,7 +48,14 @@ app.use(helmet({
     }
   },
   crossOriginEmbedderPolicy: false, // allow the Maps embed
-  referrerPolicy: { policy: 'no-referrer' }
+  // Origin only, not the full URL. Two things need a Referer to exist:
+  //  - a Google Maps API key restricted to websites refuses a request with no
+  //    Referer at all, so 'no-referrer' silently disabled the business-page embed;
+  //  - OpenStreetMap's tile policy expects a client it can identify.
+  // 'strict-origin-when-cross-origin' sends the origin over https and nothing over
+  // http-to-https downgrades, which is the privacy-preserving choice that still
+  // lets both services see where a request came from.
+  referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
 }));
 
 app.use(noindexMiddleware);
@@ -81,19 +88,74 @@ app.get('/sitemap.xml', async (req, res) => {
 
     const base = app.locals.publicBaseUrl;
     const urls = [
-      '/', '/neighborhoods', '/businesses', '/itineraries', '/concierge', '/claim', '/privacy',
+      '/', '/neighborhoods', '/businesses', '/itineraries', '/concierge', '/claim', '/privacy', '/about',
       ...neighborhoods.map((n) => `/neighborhoods/${n.slug}`),
       ...businesses.map((b) => `/businesses/${b.slug}`),
       ...itineraries.map((i) => `/itineraries/${i.slug}`),
     ];
+    // Two escapes, for two different grammars. encodeURI handles the URL (accents,
+    // spaces), then the XML escape handles the ampersands and brackets the URL
+    // grammar leaves alone. Without both, 51 slugs containing "&" made the whole
+    // 3,014-URL file fail to parse, which would have handed search engines nothing.
+    const xmlEscape = (value) => String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
     const body = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-      ...urls.map((u) => `  <url><loc>${base}${u}</loc></url>`),
+      ...urls.map((u) => `  <url><loc>${xmlEscape(base + encodeURI(u))}</loc></url>`),
       '</urlset>'].join('\n');
     res.type('application/xml').send(body);
   } catch (error) {
     res.status(500).type('text/plain').send('sitemap unavailable');
   }
+});
+
+// llms.txt: a plain summary for assistants. It states what exists and what does
+// not, rather than promising a Markdown variant the site does not serve.
+app.get('/llms.txt', (req, res) => {
+  const base = app.locals.publicBaseUrl;
+  res.type('text/plain').send([
+    '# Vancouver Directory',
+    '',
+    '> A directory of Vancouver places with a rule-based planner that builds a walking day from real listings.',
+    '',
+    '## Directory',
+    `- [All places](${base}/businesses): 2,958 listings across 23 districts, with category, district and open-now filters.`,
+    `- [Districts](${base}/neighborhoods): 23 district pages with an editorial description and local listings.`,
+    `- [Itineraries](${base}/itineraries): 26 hand-built walking days.`,
+    `- [Concierge](${base}/concierge): describe what you feel like; the planner returns a timed route with swap options.`,
+    '',
+    '## One listing',
+    `${base}/businesses/{slug}: name, address, phone, website, opening hours and tags. Ratings, review counts, prices and "verified" badges are deliberately absent.`,
+    '',
+    '## For site owners',
+    `- [Claim a listing](${base}/claim).`,
+    '',
+    '## Notes',
+    '- HTML only. The site does not serve Markdown.',
+    '- Photographs marked "stand-in" are licensed stock images, not the venue.',
+    ''
+  ].join('\n'));
+});
+
+// security.txt, only when a real contact address is configured. A file with
+// contact@example.com in it would be worse than no file.
+app.get('/.well-known/security.txt', (req, res) => {
+  const email = String(process.env.CONTACT_EMAIL || '').trim();
+  if (!email || /@example\.(com|org)$/i.test(email)) {
+    return res.status(404).type('text/plain').send('no disclosure contact configured');
+  }
+  const expires = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString();
+  return res.type('text/plain').send([
+    `Contact: mailto:${email}`,
+    `Expires: ${expires}`,
+    'Preferred-Languages: en',
+    `Canonical: ${app.locals.publicBaseUrl}/.well-known/security.txt`,
+    ''
+  ].join('\n'));
 });
 
 // Configure Nunjucks view engine

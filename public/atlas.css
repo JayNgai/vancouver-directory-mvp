@@ -78,9 +78,12 @@
 }
 
 .atlas-stat {
-    padding: var(--s3) var(--s4) var(--s3) 0;
+    /* Padding on both sides, so a number never sits against the rule that
+       separates it from the cell before it. The first cell keeps the page edge. */
+    padding: var(--s3) var(--s4);
     border-right: 1px solid var(--rule);
 }
+.atlas-stat:first-child { padding-left: 0; }
 .atlas-stat:last-child { border-right: 0; }
 
 .atlas-stat b {
@@ -515,7 +518,8 @@
     background: var(--panel);
     border: 1px solid var(--rule);
     border-radius: var(--radius);
-    padding: 9px 11px;
+    /* Room for the native caret, so a long label never runs under it. */
+    padding: 9px 32px 9px 11px;
     min-height: 40px;
     min-width: 168px;
 }
@@ -571,6 +575,88 @@
     padding: var(--s3) 0 var(--s1);
 }
 .dir-count b { color: var(--ink); font-size: 1rem; }
+
+/* ---------------------------------------------------------------------------
+   Directory rows. Seven tracks for seven cells: 56px thumbnail, rank, name,
+   category, district, open state, action. The five-track default above belongs
+   to the homepage's thumbnail-less rows. Cells stretch to the row height, so
+   every cell shares the row's top and the action can never wrap under the rank.
+   ------------------------------------------------------------------------ */
+#listingRows .atlas-row {
+    grid-template-columns: 56px 38px minmax(0, 1.7fr) minmax(0, 1fr) minmax(0, .9fr) 132px 74px;
+    align-items: stretch;
+}
+
+#listingRows .atlas-row > * {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+#listingRows .atlas-row .nm {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#listingRows .atlas-row .go { justify-content: flex-end; }
+
+/* The photograph slot. One size, fixed, so a missing or slow image never moves
+   the row: the thumbnail is the row's anchor. */
+#listingRows .atlas-row .ph { flex: 0 0 56px; }
+
+#listingRows .row-thumb {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    background: var(--sunk);
+    overflow: hidden;
+}
+#listingRows .row-thumb img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+/* A 56px thumbnail cannot carry the stand-in caption, so the caption stays in
+   the markup for screen readers and the thumbnail carries a visible mark. */
+#listingRows .row-thumb .photo-credit {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+#listingRows .row-thumb:has(.photo-credit)::after {
+    content: "Stand-in";
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2px 0;
+    background: var(--ink);
+    color: var(--panel);
+    font-family: var(--font-data);
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* The designed no-photo state at thumbnail scale: a ruled square with an em
+   dash, never an empty box that reads as a failed load. */
+#listingRows .atlas-nophoto {
+    width: 56px;
+    height: 56px;
+    aspect-ratio: auto;
+    padding: 0;
+}
+#listingRows .atlas-nophoto .street,
+#listingRows .atlas-nophoto .note { display: none; }
+#listingRows .atlas-nophoto::before {
+    content: "\2014";
+    font-family: var(--font-data);
+    font-size: 0.8rem;
+    color: var(--muted);
+}
 
 .atlas-table .st .is-open { color: var(--brand); font-weight: 600; }
 .atlas-table .st .is-closed { color: var(--muted); }
@@ -687,6 +773,30 @@
     .atlas-bento { grid-template-columns: 1fr; }
     .atlas-tile.w3, .atlas-tile.w2 { grid-column: span 1; }
     .atlas-row { grid-template-columns: 24px 1fr 58px; }
+}
+
+/* The directory row keeps its thumbnail and open state on a phone. Rank and the
+   secondary columns are dropped rather than squeezed: a name has to stay legible. */
+@media (max-width: 980px) {
+    #listingRows .atlas-row {
+        grid-template-columns: 56px 26px minmax(0, 1fr) auto;
+    }
+    #listingRows .atlas-row .st {
+        white-space: nowrap;
+        font-size: 0.62rem;
+        letter-spacing: 0.04em;
+    }
+    #listingRows .atlas-row .cat,
+    #listingRows .atlas-row .dist,
+    #listingRows .atlas-row .go { display: none; }
+}
+
+@media (max-width: 520px) {
+    #listingRows .atlas-row {
+        grid-template-columns: 56px minmax(0, 1fr) auto;
+        gap: var(--s2);
+    }
+    #listingRows .atlas-row .rk { display: none; }
 }
 
 /* ============================================================================

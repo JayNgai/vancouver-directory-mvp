@@ -5,12 +5,22 @@
 {% block meta %}{% if neighborhood.metaDescription %}<meta name="description" content="{{ neighborhood.metaDescription }}">{% endif %}{% endblock %}
 
 {% block content %}
-<div class="hero">
+{# Compact masthead. This was a 240px dark band holding one word; the band cost a
+   third of a phone screen before any content. The count and the trail carry the
+   same information in 90px. #}
+<header class="hood-head">
     <div class="container">
-        <div class="hero-kicker">{{ neighborhood.citySection }}</div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="/neighborhoods">Neighbourhoods</a>
+            <span aria-hidden="true">/</span>
+            <span>{{ neighborhood.name }}</span>
+        </nav>
+        <span class="atlas-kicker">{{ neighborhood.citySection or 'Vancouver' }}{% if pagination and pagination.total %} &middot; {{ pagination.total }} places{% endif %}</span>
         <h1>{{ neighborhood.name }}</h1>
     </div>
-</div>
+</header>
 
 <div class="container pt-lg">
     <section class="neighbourhood-editorial editorial">
@@ -31,39 +41,36 @@
     </section>
 
     {% if itineraries.length > 0 %}
-    <h2 class="section-title">Curated Itineraries in {{ neighborhood.name }}</h2>
+    <h2 class="section-title">Curated itineraries in {{ neighborhood.name }}</h2>
     <div class="grid">
         {% for itin in itineraries %}
         <a href="/itineraries/{{ itin.slug }}" class="card accent-open">
             <div class="card-body">
-                <div class="card-subtitle">⏱️ {{ itin.duration }} &bull; {{ itin.difficulty }}</div>
+                <div class="card-subtitle">{{ itin.duration }} &bull; {{ itin.difficulty }}</div>
                 <h3 class="card-title">{{ itin.title }}</h3>
                 <p class="card-desc">{{ itin.description }}</p>
-                <span class="btn bg-open">Explore Itinerary &rarr;</span>
+                <span class="btn bg-open">Explore itinerary &rarr;</span>
             </div>
         </a>
         {% endfor %}
     </div>
     {% endif %}
 
-    <h2 class="section-title">Local Spots in {{ neighborhood.name }}</h2>
+    <h2 class="section-title">Local spots in {{ neighborhood.name }}</h2>
     <div class="grid">
         {% for b in businesses %}
         <div class="card">
             {% set photoItem = b %}{% include "_listing-photo.html" %}
             <div class="card-body">
                 {% if b.isVerified %}
-                <span class="badge-verified">✓ Owner-claimed listing</span>
+                <span class="badge-verified">Owner-claimed listing</span>
                 {% endif %}
                 <div class="card-subtitle">{{ b.primaryCategory or b.category }}</div>
                 <h3 class="card-title"><a class="c-inherit no-underline" href="/businesses/{{ b.slug }}">{{ b.name }}</a></h3>
-                {% if b.rating and b.reviewCount %}
-                <div class="rating-stars">★ {{ b.rating }} <span class="c-muted fs-sm fw-400">({{ b.reviewCount }} reviews)</span></div>
-                {% endif %}
                 {% if b.description %}<p class="card-desc mt-8">{{ b.description }}</p>{% endif %}
-                <div class="fs-sm c-muted mb-sm">📍 {{ b.address }}</div>
-                {% if b.displayPhone %}<div class="fs-sm c-muted mb-sm">📞 {{ b.displayPhone }}</div>{% endif %}
-                {% if b.displayHours %}<div class="fs-sm c-muted mb-sm">🕒 {{ b.displayHours }}</div>{% endif %}
+                <div class="fs-sm c-muted mb-sm">{{ b.address }}</div>
+                {% if b.displayPhone %}<div class="fs-sm c-muted mb-sm">{{ b.displayPhone }}</div>{% endif %}
+                {% if b.displayHours %}<div class="fs-sm c-muted mb-sm">{{ b.displayHours }}</div>{% endif %}
                 <div class="tag-list">
                     {% for tag in b.parsedTags %}
                     <span class="tag-badge">#{{ tag }}</span>

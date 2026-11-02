@@ -114,7 +114,11 @@
 /* Route canvas (slice 2). One DOM order reads steps -> map -> export -> swaps on a
    phone exactly as specified; on a wide screen the grid places the map beside the
    steps, so no markup is duplicated. */
-.results-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+/* minmax(0, 1fr), not 1fr: a bare fr track is sized by its content's minimum, so
+   one wide child (the map canvas) stretched every stop row to 1282px on a 375
+   screen and the meta line ran off the edge. */
+.results-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+#itinerarySteps, .map-col { min-width: 0; }
 .map-col { display: none; }
 .map-col.ready { display: block; }
 
@@ -149,7 +153,7 @@
   .swap-card { flex: 0 0 calc(50% - 6px); }
 }
 @media (min-width: 768px) {
-  .results-grid { grid-template-columns: 55fr 45fr; gap: 24px; align-items: start; }
+  .results-grid { grid-template-columns: minmax(0, 55fr) minmax(0, 45fr); gap: 24px; align-items: start; }
   #itinerarySteps { grid-column: 1; grid-row: 1; }
   #swapSection { grid-column: 1; grid-row: 2; }
   .map-col { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 16px; }
@@ -456,7 +460,7 @@
 }
 
 .composer-chip {
-    min-height: 30px;
+    min-height: 44px;
     padding: 5px 13px;
     border-radius: var(--radius-pill);
     border: 1px solid var(--rule);
@@ -589,3 +593,59 @@
     .composer-foot { align-items: flex-end; }
     .composer-foot .hint { font-size: 0.7rem; }
 }
+
+/* The route reads as a timetable, not a stack of cards.
+
+   A walking day is a schedule: times in one gutter, stops on rules, the walk to
+   the next stop hanging under the row it belongs to. The old cards put a pine
+   stripe on every stop, so four stops looked like four unrelated panels instead
+   of one day. Each line below overrides the card rules above; nothing here
+   removes the drag-drop target state.
+   ------------------------------------------------------------------------ */
+.step-card {
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+    background: transparent;
+    padding: 16px 0 14px;
+    margin-bottom: 0;
+}
+
+.step-card:first-child { border-top: 1px solid var(--ink); }
+
+.step-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+}
+
+/* A fixed gutter, so every time in the day starts at the same x. */
+.step-time {
+    display: inline-block;
+    min-width: 82px;
+    font-size: 0.86rem;
+    letter-spacing: 0.02em;
+}
+
+.step-walk {
+    border-left: 2px solid var(--rule-soft);
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+/* The drop target still has to be obvious while dragging, so it keeps a fill. */
+.step-card.is-drop-target {
+    background: var(--sunk);
+    border-bottom-color: var(--brand);
+    box-shadow: inset 3px 0 0 var(--brand);
+}
+
+/* Swap options are the alternatives to a row, not cards in their own right. */
+.swap-card {
+    border-radius: 0;
+    border: 1px solid var(--rule);
+    background: transparent;
+}
+

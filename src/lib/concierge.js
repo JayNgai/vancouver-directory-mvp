@@ -15,6 +15,12 @@ const TOTAL_MINUTES = { '2h': 120, '3h': 180, '4h': 240, '8h': 480 };
 const START_TIMES = { morning: 9 * 60, afternoon: 13 * 60, evening: 17 * 60 + 30, flexible: 11 * 60 };
 const WALK_METRES_PER_MIN = 80;
 
+// A walking day has a maximum leg and a tolerance. Both are planning limits, not
+// walking advice: 25 minutes at 80 m/min is about 2 km between two stops, and a
+// plan may run 15 minutes past the requested window before the clock trims a stop.
+const MAX_WALK_MIN = 25;
+const OVERSHOOT_TOLERANCE_MIN = 15;
+
 // Activity keywords -> rules. A rule matches a business by category or by a cleaned tag.
 const KEYWORD_RULES = [
   { words: ['coffee', 'espresso', 'latte', 'cafe', 'café'], categories: ['Cafe'], tags: ['coffee', 'coffee-shop', 'cafe'] },
@@ -232,6 +238,38 @@ function buildMulti(input, businesses, planned) {
   } else {
     scopeName = hoods.get(scopeId) || null;
   }
+
+  // A prompt with neither a district nor a named neighbourhood used to draw from
+  // all of Vancouver. Measured on 2026-11-02: "coffee, 3 hours" returned a 4h44m
+  // plan whose walking legs alone ran 184 minutes, including one of 92 minutes.
+  // Seeding a district keeps the day walkable. The seed is the district with the
+  // most venues that can serve any of the requested intents, so a two-intent
+  // prompt lands where both exist rather than where only the first does.
+  if (!scopeId) {
+    const byHood = new Map();
+    for (const b of businesses) {
+      if (!b.neighborhoodId || b.latitude == null || b.longitude == null) continue;
+      if (!contactable(b)) continue;
+      const hit = intents.findIndex((intent) => intentMatches(b, intent));
+      if (hit < 0) continue;
+      const rec = byHood.get(b.neighborhoodId) || { cover: new Set(), count: 0 };
+      rec.cover.add(hit);
+      rec.count += 1;
+      byHood.set(b.neighborhoodId, rec);
+    }
+    // Cover first, volume second: a district that can serve both intents beats a
+    // denser one that can serve only the first and leaves the second unfilled.
+    let bestId = null;
+    let best = null;
+    for (const [id, rec] of byHood) {
+      if (!best || rec.cover.size > best.cover.size
+        || (rec.cover.size === best.cover.size && rec.count > best.count)) {
+        best = rec;
+        bestId = id;
+      }
+    }
+    if (bestId) { scopeId = bestId; scopeName = hoods.get(bestId) || null; }
+  }
   const catSet = Array.isArray(input.categories) && input.categories.length ? new Set(input.categories.map(String)) : null;
   const eligible = businesses.filter((b) => (!scopeId || b.neighborhoodId === scopeId)
     && contactable(b) && b.latitude != null && b.longitude != null
@@ -260,24 +298,48 @@ function buildMulti(input, businesses, planned) {
     usedCats.add(pick.category);
   }
 
-  // Sequence the picks by proximity, starting from the first intent's venue.
+  // Sequence the picks by proximity, starting from the first intent's venue, and
+  // refuse a leg longer than MAX_WALK_MIN. A stop you cannot walk to is not a stop
+  // on a walking day, and a 92-minute leg is what produced the 14.7 km plan.
   const ordered = [];
+  const droppedFar = [];
   if (picks.length) {
     const rest = picks.slice();
     ordered.push(rest.shift());
     while (rest.length) {
       const last = ordered[ordered.length - 1].business;
       rest.sort((a, b) => haversine(last, a.business) - haversine(last, b.business));
+      const next = rest[0];
+      const legMinutes = Math.round(haversine(last, next.business) / WALK_METRES_PER_MIN) + 5;
+      if (legMinutes > MAX_WALK_MIN) {
+        droppedFar.push(next.intent.label);
+        rest.shift();
+        continue;
+      }
       ordered.push(rest.shift());
     }
+  }
+
+  // Then trim to the window that was asked for. Stop time AND walking time count;
+  // the old planner budgeted only stop time, which is why the plan could run 58%
+  // past a three-hour request.
+  const budget = TOTAL_MINUTES[duration] + OVERSHOOT_TOLERANCE_MIN;
+  const kept = [];
+  let budgetClock = START_TIMES[timeOfDay];
+  const dayStart = START_TIMES[timeOfDay];
+  for (let i = 0; i < ordered.length; i++) {
+    const walkIn = i ? Math.round(haversine(ordered[i - 1].business, ordered[i].business) / WALK_METRES_PER_MIN) + 5 : 0;
+    if (budgetClock + walkIn + slot > dayStart + budget) break;
+    budgetClock += walkIn + slot;
+    kept.push(ordered[i]);
   }
 
   let clock = START_TIMES[timeOfDay];
   const dayIndex = new Date().getDay();
   const startMinutes = START_TIMES[timeOfDay];
   const requestedHours = TOTAL_MINUTES[duration] / 60;
-  const steps = ordered.map((p, i) => {
-    const prev = i > 0 ? ordered[i - 1].business : null;
+  const steps = kept.map((p, i) => {
+    const prev = i > 0 ? kept[i - 1].business : null;
     const walkFromPrevMinutes = prev ? Math.round(haversine(prev, p.business) / WALK_METRES_PER_MIN) + 5 : null;
     const step = {
       time: formatClock(clock),
@@ -286,8 +348,8 @@ function buildMulti(input, businesses, planned) {
       business: decorate(p.business),
       intent: p.intent.label
     };
-    if (i < ordered.length - 1) {
-      const gap = Math.round(haversine(p.business, ordered[i + 1].business) / WALK_METRES_PER_MIN) + 5;
+    if (i < kept.length - 1) {
+      const gap = Math.round(haversine(p.business, kept[i + 1].business) / WALK_METRES_PER_MIN) + 5;
       step.walkToNextMinutes = gap;
       clock += slot + gap;
     }
@@ -295,10 +357,10 @@ function buildMulti(input, businesses, planned) {
   });
 
   // Swap options: other venues in the same category as each stop, nearest first.
-  const chosenIds = new Set(ordered.map((p) => p.business.id));
+  const chosenIds = new Set(kept.map((p) => p.business.id));
   const swapOptions = [];
   const seen = new Set();
-  for (const p of ordered) {
+  for (const p of kept) {
     const near = eligible
       .filter((b) => !chosenIds.has(b.id) && !seen.has(b.id) && b.category === p.business.category)
       .map((b) => ({ b, d: haversine(p.business, b) }))
@@ -330,7 +392,9 @@ function buildMulti(input, businesses, planned) {
       note: [
         unfilled.length ? `No listings yet for: ${unfilled.join(', ')}.` : null,
         unmatched.length ? `Not understood: ${unmatched.join(', ')}.` : null,
-        dropped.length ? `Repeated categories skipped: ${dropped.join(', ')}.` : null
+        dropped.length ? `Repeated categories skipped: ${dropped.join(', ')}.` : null,
+        droppedFar.length ? `Too far to walk for: ${droppedFar.join(', ')}.` : null,
+        kept.length < picks.length && !droppedFar.length ? 'Shortened to fit your window.' : null
       ].filter(Boolean).join(' ') || null
     }
   };
@@ -394,45 +458,68 @@ function buildConcierge(input, businesses) {
   const isCrawl = /\bcrawl\b/i.test(String(input.activity || ''));
   const route = diversifyRoute(chosen, candidates, isCrawl);
 
+  // A leg longer than MAX_WALK_MIN is not a walk, it is a transfer. Measured
+  // 2026-11-02: "coffee, 3 hours" produced a 92-minute leg and a 14.7 km day, so
+  // a stop that far from the previous one is dropped instead of published.
+  const walkRoute = [];
+  const droppedFar = [];
+  for (const b of route) {
+    const last = walkRoute[walkRoute.length - 1];
+    if (last) {
+      const leg = Math.round(haversine(last, b) / WALK_METRES_PER_MIN) + 5;
+      if (leg > MAX_WALK_MIN) { droppedFar.push(b.name); continue; }
+    }
+    walkRoute.push(b);
+  }
+
   // Walking legs. Computed BEFORE the slot size, because the dwell time has to be
   // whatever is left of the requested budget once the walking is paid for.
   // The old code budgeted dwell and ignored walking entirely, so a 4-hour request
   // produced a 4h18 route.
-  const gaps = route.map((b, i) => (i < route.length - 1
-    ? Math.round(haversine(b, route[i + 1]) / WALK_METRES_PER_MIN) + 5
+  const computeLegs = (r) => r.map((b, i) => (i < r.length - 1
+    ? Math.round(haversine(b, r[i + 1]) / WALK_METRES_PER_MIN) + 5
     : null));
-  const totalWalk = gaps.reduce((sum, g) => sum + (g || 0), 0);
   const budget = TOTAL_MINUTES[duration];
-  const slot = route.length
-    ? Math.max(25, Math.floor((budget - totalWalk) / route.length))
+  let legs = computeLegs(walkRoute);
+  let totalWalk = legs.reduce((sum, g) => sum + (g || 0), 0);
+  let slot = walkRoute.length
+    ? Math.max(25, Math.floor((budget - totalWalk) / walkRoute.length))
     : baseSlot;
+  // The 25-minute dwell floor can push a long-walk day past its window; drop the
+  // last stop until the whole plan fits inside the requested time plus tolerance.
+  while (walkRoute.length > 1 && walkRoute.length * slot + totalWalk > budget + OVERSHOOT_TOLERANCE_MIN) {
+    walkRoute.pop();
+    legs = computeLegs(walkRoute);
+    totalWalk = legs.reduce((sum, g) => sum + (g || 0), 0);
+    slot = Math.max(25, Math.floor((budget - totalWalk) / walkRoute.length));
+  }
 
   // Timed steps, with walking gaps between stops.
   let clock = START_TIMES[timeOfDay];
   const dayIndex = new Date().getDay();
   const startMinutes = START_TIMES[timeOfDay];
   const requestedHours = TOTAL_MINUTES[duration] / 60;
-  const steps = route.map((b, i) => {
-    const prev = i > 0 ? route[i - 1] : null;
-    const walkFromPrevMinutes = i > 0 ? gaps[i - 1] : null;
+  const steps = walkRoute.map((b, i) => {
+    const prev = i > 0 ? walkRoute[i - 1] : null;
+    const walkFromPrevMinutes = i > 0 ? legs[i - 1] : null;
     const step = {
       time: formatClock(clock),
       estimatedDuration: `${slot} min`,
       reasons: stopReasons(b, { nowMinutes: clock, dayIndex, prev, startMinutes, requestedHours, walkFromPrevMinutes }),
       business: decorate(b)
     };
-    if (i < route.length - 1) {
-      step.walkToNextMinutes = gaps[i];
-      clock += slot + gaps[i];
+    if (i < walkRoute.length - 1) {
+      step.walkToNextMinutes = legs[i];
+      clock += slot + legs[i];
     }
     return step;
   });
 
-  const used = new Set(route.map((c) => c.id));
+  const used = new Set(walkRoute.map((c) => c.id));
   const swapPool = (fallback ? eligible : eligible.filter((b) => matchesRules(b, parsed))).filter((b) => !used.has(b.id));
   const swapOptions = [];
   const seen = new Set();
-  for (const stop of route) {
+  for (const stop of walkRoute) {
     const near = swapPool
       .filter((b) => !seen.has(b.id))
       .map((b) => ({ b, d: haversine(stop, b) }))
@@ -452,16 +539,21 @@ function buildConcierge(input, businesses) {
     meta: {
       duration,
       timeOfDay,
-      stopCount: route.length,
+      stopCount: walkRoute.length,
       slotMinutes: slot,
       walkMinutes: totalWalk,
-      totalMinutes: route.length ? route.length * slot + totalWalk : 0,
+      totalMinutes: walkRoute.length ? walkRoute.length * slot + totalWalk : 0,
       usedFallback: fallback,
       matchedKeywords: parsed.matched,
       unsupportedRequests: parsed.unsupported,
-      note: parsed.unsupported.length
-        ? `No listing category for "${parsed.unsupported.join('", "')}" yet, so those words were not used.`
-        : null
+      note: [
+        parsed.unsupported.length
+          ? `No listing category for "${parsed.unsupported.join('", "')}" yet, so those words were not used.`
+          : null,
+        droppedFar.length
+          ? `Too far to walk from the previous stop: ${droppedFar.slice(0, 3).join(', ')}.`
+          : null
+      ].filter(Boolean).join(' ') || null
     }
   };
 }

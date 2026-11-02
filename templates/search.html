@@ -8,6 +8,21 @@
    narrow it. This is a filterable table: one row per place, every filter in the URL
    so a narrowed view can be linked and shared. #}
 
+{# One chip's link keeps every filter except the one it removes. It is built from the
+   selected values rather than from the page query, because the page query already
+   carries the chip's own parameter: reusing it would re-apply the filter the chip
+   claims to clear. #}
+{% macro filterHref(omit) -%}
+{%- set qs = [] -%}
+{%- if selectedCategory and omit != 'category' %}{% set qs = qs.concat(['category=' + (selectedCategory | urlencode)]) %}{% endif -%}
+{%- if selectedNeighborhood and omit != 'neighborhood' %}{% set qs = qs.concat(['neighborhood=' + (selectedNeighborhood | urlencode)]) %}{% endif -%}
+{%- if selectedTag and omit != 'tag' %}{% set qs = qs.concat(['tag=' + (selectedTag | urlencode)]) %}{% endif -%}
+{%- if filterOpen and omit != 'open' %}{% set qs = qs.concat(['open=1']) %}{% endif -%}
+{%- if filterVerified and omit != 'verified' %}{% set qs = qs.concat(['verified=1']) %}{% endif -%}
+{%- if selectedSort and selectedSort != 'completeness_desc' %}{% set qs = qs.concat(['sort=' + (selectedSort | urlencode)]) %}{% endif -%}
+/businesses{% if qs.length %}?{{ qs | join('&') }}{% endif %}
+{%- endmacro %}
+
 <div class="container">
 
     <header class="dir-head">
@@ -19,60 +34,75 @@
         </p>
     </header>
 
-    <form class="filterbar" action="/businesses" method="GET" id="filterForm">
+    <form class="filterbar" action="/businesses" method="GET" id="filterForm" data-filters="open">
         {% if selectedTag %}<input type="hidden" name="tag" value="{{ selectedTag }}">{% endif %}
 
-        <div class="filterbar-row">
-            <div class="field">
-                <label for="f-category">Category</label>
-                <select id="f-category" name="category">
-                    <option value="">All categories</option>
-                    {% for c in categories %}
-                    <option value="{{ c.value or c }}" {% if selectedCategory == (c.value or c) %}selected{% endif %}>{{ c.label or c }}</option>
-                    {% endfor %}
-                </select>
-            </div>
+        {# Below 600px the five controls fold behind this button, so the first screen
+           holds listings rather than chrome. The button ships hidden: without
+           JavaScript it never appears and the controls stay visible and usable. #}
+        <button type="button" class="filters-toggle" id="filtersToggle"
+                aria-expanded="true" aria-controls="filterControls" hidden>
+            <span class="filters-toggle-label">Filters</span>
+            {% if activeFilterCount %}<span class="filters-count">{{ activeFilterCount }}</span>{% endif %}
+        </button>
 
-            <div class="field">
-                <label for="f-hood">District</label>
-                <select id="f-hood" name="neighborhood">
-                    <option value="">All districts</option>
-                    {% for n in neighborhoods %}
-                    <option value="{{ n.slug }}" {% if selectedNeighborhood == n.slug %}selected{% endif %}>{{ n.name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
+        <div class="filterbar-controls" id="filterControls">
+            <div class="filterbar-row">
+                <div class="field">
+                    <label for="f-category">Category</label>
+                    <select id="f-category" name="category">
+                        <option value="">All categories</option>
+                        {% for c in categories %}
+                        <option value="{{ c.value or c }}" {% if selectedCategory == (c.value or c) %}selected{% endif %}>{{ c.label or c }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
 
-            <div class="field">
-                <label for="f-sort">Sort</label>
-                <select id="f-sort" name="sort">
-                    <option value="completeness_desc" {% if selectedSort == 'completeness_desc' %}selected{% endif %}>Most complete first</option>
-                    <option value="name_asc" {% if selectedSort == 'name_asc' %}selected{% endif %}>Name A &ndash; Z</option>
-                </select>
-            </div>
+                <div class="field">
+                    <label for="f-hood">District</label>
+                    <select id="f-hood" name="neighborhood">
+                        <option value="">All districts</option>
+                        {% for n in neighborhoods %}
+                        <option value="{{ n.slug }}" {% if selectedNeighborhood == n.slug %}selected{% endif %}>{{ n.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
 
-            <div class="field field--check">
-                <label class="chk" for="f-open">
-                    <input type="checkbox" id="f-open" name="open" value="1" {% if filterOpen %}checked{% endif %}>
-                    <span>Open now</span>
-                </label>
-                <label class="chk" for="f-verified">
-                    <input type="checkbox" id="f-verified" name="verified" value="1" {% if filterVerified %}checked{% endif %}>
-                    <span>Owner-claimed</span>
-                </label>
-            </div>
+                <div class="field">
+                    <label for="f-sort">Sort</label>
+                    <select id="f-sort" name="sort">
+                        <option value="completeness_desc" {% if selectedSort == 'completeness_desc' %}selected{% endif %}>Most complete first</option>
+                        <option value="name_asc" {% if selectedSort == 'name_asc' %}selected{% endif %}>Name A &ndash; Z</option>
+                    </select>
+                </div>
 
-            <div class="field field--go">
-                <button type="submit" class="btn">Apply</button>
+                <div class="field field--check">
+                    <label class="chk" for="f-open">
+                        <input type="checkbox" id="f-open" name="open" value="1" {% if filterOpen %}checked{% endif %}>
+                        <span>Open now</span>
+                    </label>
+                    <label class="chk" for="f-verified">
+                        <input type="checkbox" id="f-verified" name="verified" value="1" {% if filterVerified %}checked{% endif %}>
+                        <span>Owner-claimed</span>
+                    </label>
+                </div>
+
+                <div class="field field--go">
+                    <button type="submit" class="btn">Apply</button>
+                </div>
             </div>
         </div>
 
         {% if activeFilterCount %}
+        {# The chips stay outside the collapsible block, so a narrow view can always
+           see what is switched on and remove it in one tap. #}
         <div class="filterbar-active">
             <span>{{ activeFilterCount }} filter{{ 's' if activeFilterCount != 1 }} on</span>
-            {% if selectedCategory %}<a class="fchip" href="/businesses?{{ pagination.baseQuery }}">{{ selectedCategory }} &times;</a>{% endif %}
-            {% if selectedNeighborhood %}<a class="fchip" href="/businesses?{{ pagination.baseQuery }}">{{ selectedNeighborhood }} &times;</a>{% endif %}
-            {% if selectedTag %}<a class="fchip" href="/businesses?{{ pagination.baseQuery }}">#{{ selectedTag }} &times;</a>{% endif %}
+            {% if selectedCategory %}<a class="fchip" href="{{ filterHref('category') }}">{{ selectedCategory }} &times;</a>{% endif %}
+            {% if selectedNeighborhood %}<a class="fchip" href="{{ filterHref('neighborhood') }}">{{ selectedNeighborhood }} &times;</a>{% endif %}
+            {% if selectedTag %}<a class="fchip" href="{{ filterHref('tag') }}">#{{ selectedTag }} &times;</a>{% endif %}
+            {% if filterOpen %}<a class="fchip" href="{{ filterHref('open') }}">Open now &times;</a>{% endif %}
+            {% if filterVerified %}<a class="fchip" href="{{ filterHref('verified') }}">Owner-claimed &times;</a>{% endif %}
             <a class="filterbar-clear" href="/businesses">Clear all</a>
         </div>
         {% endif %}
@@ -80,14 +110,15 @@
 
     <p class="dir-count">
         {% if activeFilterCount %}
-        <b>{{ pagination.total }}</b> of {{ unfilteredCount }} places match
+        <b>{{ pagination.total | num }}</b> of {{ unfilteredCount | num }} places match
         {% else %}
-        <b>{{ pagination.total }}</b> places, showing {{ pagination.from }}&ndash;{{ pagination.to }}
+        <b>{{ pagination.total | num }}</b> places, showing {{ pagination.from | num }}&ndash;{{ pagination.to | num }}
         {% endif %}
     </p>
 
     <div class="atlas-table" id="listingRows">
         <div class="atlas-row hd">
+            <span class="ph" aria-hidden="true"></span>
             <span class="rk">#</span>
             <span>Place</span>
             <span class="cat">Category</span>
@@ -98,6 +129,12 @@
 
         {% for b in businesses %}
         <a href="/businesses/{{ b.slug }}" class="atlas-row">
+            <span class="ph">
+                {% set photoItem = b %}
+                {% set photoClass = 'row-thumb' %}
+                {% set photoStrict = true %}
+                {% include "_listing-photo.html" %}
+            </span>
             <span class="rk">{% if pagination.from + loop.index0 < 10 %}0{% endif %}{{ pagination.from + loop.index0 }}</span>
             <span class="nm">
                 {{ b.name }}
@@ -116,7 +153,7 @@
                 <span class="is-unknown">&mdash;</span>
                 {% endif %}
             </span>
-            <span class="go">Open &rarr;</span>
+            <span class="go">View &rarr;</span>
         </a>
         {% else %}
         <div class="dir-empty">
@@ -134,7 +171,7 @@
            data-next="{{ nextPage }}"
            data-base="/businesses?{{ qs }}{% if qs %}&amp;{% endif %}"
            data-total-pages="{{ pagination.totalPages }}">Load {{ pagination.perPage }} more</a>
-        <span class="morerow-note">{{ pagination.to }} of {{ pagination.total }} shown</span>
+        <span class="morerow-note">{{ pagination.to | num }} of {{ pagination.total | num }} shown</span>
     </div>
     {% endif %}
 
@@ -142,3 +179,4 @@
 
 <script src="/filter.js"></script>
 {% endblock %}
+

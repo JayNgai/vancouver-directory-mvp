@@ -89,7 +89,10 @@ a:hover { color: var(--brand-deep); }
 .btn-claim {
     background: var(--brand);
     color: var(--panel) !important;
-    padding: 9px 16px;
+    /* Matched to .btn's 22px horizontal rhythm, plus 2px on the right because the
+       0.06em letter-spacing adds a trailing gap after the final M that reads as the
+       text touching the edge. */
+    padding: 10px 24px 10px 22px;
     border-radius: var(--radius);
     border: 1px solid var(--brand);
     font-weight: 600;
@@ -221,6 +224,22 @@ a:hover { color: var(--brand-deep); }
     border: 1px solid var(--brand);
 }
 .btn-secondary:hover { background: var(--brand); color: var(--panel); }
+
+/* Buttons are pills.
+
+   Jay's call, and the right one: the chips, the tag badges and the composer are
+   already round, so a square button was the single shape on the page that did not
+   belong to the system. Radius comes from the token layer, not a new value. */
+.btn,
+.btn-claim,
+.btn-secondary,
+.export-btn,
+.filterbar button,
+.filterbar-apply,
+.dock-searchform button,
+form button[type="submit"] {
+    border-radius: var(--radius-pill);
+}
 
 .tag-badge {
     background: var(--sunk);
@@ -619,6 +638,176 @@ textarea:focus-visible,
 
 /* The main landmark must be focusable for the skip link to actually move focus. */
 #main:focus { outline: none; }
+
+/* Focus. One ring on every surface: 2px pine, offset 2px, never removed. The
+   skip-link target above is the one exception, because it is programmatic. */
+:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+}
+
+/* The panel is transparent to layout above 600px: its two children (the search
+   form and the link list) become the navbar's own flex items in the original
+   order. Below 600px it becomes the dropdown. */
+.nav-panel { display: contents; }
+
+/* The homepage script hides the navbar search while the dock is on screen. */
+
+/* Footer licence disclosure. The text inside is a licence obligation and stays
+   verbatim; the summary names the sources so the credit is visible shut. */
+.footer-licences {
+    margin-top: var(--s3);
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.footer-licences summary {
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px 0;
+    color: var(--ink-2);
+}
+
+.footer-licences summary:hover { color: var(--brand); }
+.footer-licences[open] .attribution { margin-top: var(--s2); }
+
+/* Reading measure. The district lede measured 820px at 16.5px, about 104
+   characters per line. 36rem (576px) lands near 73 average characters, inside the
+   45–75 band. Measured in rem, not ch: in Outfit the "0" glyph is wider than an
+   average character, so 68ch still rendered 736px and 93 characters. */
+.body-lede { max-width: 36rem; }
+
+/* About page. Print-style masthead over ruled sections, same tokens as the rest. */
+.about-page { padding: var(--s5) 0 var(--s6); }
+.about-head {
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: var(--s4);
+    margin-bottom: var(--s5);
+}
+.about-head h1 {
+    font-family: var(--font-display);
+    font-size: var(--t4);
+    line-height: 1.05;
+    font-weight: 500;
+    margin: var(--s2) 0;
+}
+.about-sec { margin-bottom: var(--s5); }
+.about-sec h2 {
+    font-family: var(--font-display);
+    font-size: var(--t2);
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: var(--s2);
+}
+.about-sec p { color: var(--ink-2); }
+
+/* The itineraries page: one primary action. The concierge is offered as an
+   alternative to browsing, in prose, not as a second button beside Search. */
+.iti-alt {
+    margin: 0 0 var(--s4);
+    font-size: 0.92rem;
+    color: var(--ink-2);
+}
+
+.iti-alt a { color: var(--brand); }
+
+/* Preset itinerary route map. Same pins and polyline as the concierge result. */
+.iti-map {
+    height: 380px;
+    margin: var(--s4) 0;
+    border: 1px solid var(--rule);
+    background: var(--sunk);
+}
+
+@media (max-width: 600px) {
+    .iti-map { height: 260px; }
+}
+
+/* The export link sits inside the dark hero band, so it takes a light pill.
+   Left as inherited text it was pine on pine and effectively invisible. */
+.hero .btn-maps {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 1px solid var(--surface);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero .btn-maps:hover { background: var(--rule); border-color: var(--rule); }
+
+/* Business detail: the page had no H2 at all, so it read as one undifferentiated
+   card. Section heads give the outline a shape for a reader and for a screen
+   reader's heading list. */
+.detail-h2 {
+    font-family: var(--font-display);
+    font-size: var(--t2);
+    font-weight: 500;
+    line-height: 1.15;
+    margin: var(--s4) 0 var(--s3);
+    padding-top: var(--s3);
+    border-top: 1px solid var(--rule);
+    color: var(--ink);
+}
+
+/* District masthead. Replaces a 240px dark band that held a single word: the
+   trail, the count and the name now sit in about 90px. */
+.hood-head {
+    background: var(--ink);
+    color: var(--surface);
+    padding: var(--s5) 0 var(--s4);
+}
+
+.hood-head .breadcrumb {
+    font-family: var(--font-data);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--rule);
+    margin-bottom: var(--s3);
+}
+
+.hood-head .breadcrumb a { color: var(--surface); text-decoration: none; }
+.hood-head .breadcrumb a:hover { text-decoration: underline; }
+.hood-head .breadcrumb span[aria-hidden] { padding: 0 6px; color: var(--rule); }
+
+.hood-head .atlas-kicker { color: var(--rule); }
+
+.hood-head h1 {
+    font-family: var(--font-display);
+    font-size: var(--t4);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: var(--s2) 0 0;
+    color: var(--surface);
+}
+
+
+/* Mobile menu button. Hidden above 600px, where the six links show as a row;
+   public/mobile.css reveals it and folds the links into a panel. Styled here so
+   the header carries no inline style attribute, which check-design-tokens.js
+   forbids. */
+.nav-toggle {
+    display: none;
+    flex: 0 0 44px;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 0;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink);
+    cursor: pointer;
+}
+
+.nav-toggle:hover { border-color: var(--ink-2); }
+.nav-toggle[aria-expanded="true"] { background: var(--sunk); }
+
 
 /* Motion is decoration here: nothing in this site conveys meaning by moving.
    So when the visitor asks for less of it, all of it goes. */

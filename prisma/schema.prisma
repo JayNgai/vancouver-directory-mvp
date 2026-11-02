@@ -60,8 +60,16 @@ model Business {
   imageAttribution    String?
   // 'standin' = a licensed stock photograph used as a generic stand-in, clearly
   // labelled as such in the UI. 'owner' = supplied by the business after claiming.
-  // null = no photograph; the designed no-photo state renders instead.
+  // 'licensed' = a licensed photograph of THIS venue, which requires the
+  // provenance fields below. null = no photograph; the designed no-photo state
+  // renders instead.
   imageKind           String?
+  // Provenance, per image. A photo may claim a venue only when the licence terms,
+  // the attribution string and the reviewer are all present on the row.
+  imageLicence        String?
+  imageLicenceUrl     String?
+  imageReviewer       String?
+  imageReviewedAt     DateTime?
 
   neighborhood   Neighborhood    @relation(fields: [neighborhoodId], references: [id])
   itinerarySteps ItineraryStep[]
@@ -81,6 +89,10 @@ model Itinerary {
   difficulty     String
   description    String
   highlights     String   @default("[]") // JSON string array
+  // 'published' routes are the curated set a visitor sees. 'draft' holds the
+  // generated routes retired on 2026-11-02: kept in the database so the work is
+  // recoverable and the counts stay honest, never listed on the site.
+  status         String   @default("published")
   createdAt      DateTime @default(now())
 
   neighborhood Neighborhood?   @relation(fields: [neighborhoodId], references: [id])

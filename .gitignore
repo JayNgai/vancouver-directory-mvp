@@ -3,6 +3,7 @@ node_modules/
 
 # Database + backups (contains real data; do not commit)
 prisma/*.db
+prisma/*.db.bak*
 prisma/*.db-journal
 prisma/*.db-wal
 prisma/*.db-shm
@@ -37,6 +38,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Audit working material (baseline, squirrel report, punch list, screenshots).
+# The audit pipeline produces these; spec.md and tasks.md are the committed contract.
+.audit/
 
 # Large generated data dumps
 osm_data.json

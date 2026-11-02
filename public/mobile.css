@@ -8,8 +8,16 @@ p, li, dd, dt, h1, h2, h3, h4 { overflow-wrap: anywhere; }
 
 /* Touch targets: at least 44px on anything tappable. */
 a.btn, .btn, .btn-claim, .page-link, .tag-badge, button, .pill, .pill-group a,
-.nav-links a, .breadcrumb a { min-height: 44px; display: inline-flex; align-items: center; }
-.nav-links a { padding: 6px 2px; }
+.nav-links a, .breadcrumb a, .atlas-more, .dock-quick a, .footer-licences summary {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+/* Nav links get a small vertical pad for the touch target. The claim button is
+   excluded on purpose: `.nav-links a` is a more specific selector than `.btn-claim`,
+   so this rule was silently overriding the pill's own padding and leaving the
+   letters touching the edge. */
+.nav-links a:not(.btn-claim) { padding: 6px 2px; }
 
 input[type="text"], input[type="search"], input[type="email"], input[type="tel"], textarea, select {
     font-size: 16px; /* stops iOS zooming on focus */
@@ -39,17 +47,60 @@ input[type="text"], input[type="search"], input[type="email"], input[type="tel"]
 }
 
 @media (max-width: 600px) {
-    /* Navigation: logo, search and links stack. Search gets a full row. */
-    .navbar { padding: 0.75rem 0; }
-    .nav-container { flex-direction: column; align-items: stretch; gap: 10px; }
-    .logo { font-size: 1.25rem; text-align: center; }
-    .navbar form[action="/search"] { margin: 0 !important; max-width: none !important; flex: none !important; width: 100%; }
-    .navbar form[action="/search"] input { width: 100%; }
-    .nav-links {
-        flex-wrap: wrap; justify-content: center; gap: 4px 14px; font-size: 0.95rem;
+    /* Navigation: one row, 56px, six links folded behind the menu button.
+       The old block stacked logo, search and links into 260px of sticky chrome. */
+    .navbar { padding: 0; }
+    .nav-container {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        min-height: 56px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
-    .nav-links li { display: flex; }
-    .btn-claim { padding: 6px 14px; }
+    .logo {
+        font-size: 1.05rem;
+        text-align: left;
+        white-space: nowrap;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .navbar form[action="/search"] { margin: 0 !important; max-width: none !important; }
+    .navbar form[action="/search"] input { width: 100%; padding: 8px 10px; }
+    .nav-toggle { display: inline-flex; }
+    /* The panel is the dropdown below 600px. Above it, styles.css keeps it
+       `display: contents` so the bar stays one row. */
+    .nav-panel {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px 12px;
+        background: var(--panel);
+        border-bottom: 1px solid var(--rule);
+        z-index: 101;
+    }
+    .nav-panel[data-open="true"] { display: flex; }
+    .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        font-size: 0.95rem;
+    }
+    .nav-links li { display: block; border-top: 1px solid var(--rule-soft); }
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 2px;
+    }
+    .btn-claim { justify-content: center; margin: 8px 0; min-height: 44px; }
 
     /* Single-column cards that fill the width. */
     .grid, [style*="minmax(280px"], [style*="minmax(240px"] { grid-template-columns: 1fr !important; gap: 14px; }
@@ -98,4 +149,83 @@ input[type="text"], input[type="search"], input[type="email"], input[type="tel"]
     /* Footer */
     .footer { padding: 28px 0; }
     .footer p { font-size: 0.85rem; }
+}
+
+/* ---------------------------------------------------------------------------
+   Directory filters on a phone.
+   Five controls used to take the whole first screen. Below 600px they fold
+   behind one button whose count says how narrow the current view is. The
+   controls ship visible and the button ships hidden, so without JavaScript the
+   form still renders open and usable; filter.js is what closes it.
+   ------------------------------------------------------------------------ */
+.filterbar-controls[hidden] { display: none; }
+
+.filters-toggle {
+    display: none;
+    align-items: center;
+    gap: var(--s2);
+    width: 100%;
+    min-height: 44px;
+    margin-bottom: var(--s3);
+    padding: 10px 14px;
+    background: var(--panel);
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.filters-toggle:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+
+/* A caret drawn from the text colour: no colour value of its own, and it turns
+   over when the filters are open. */
+.filters-toggle::after {
+    content: "";
+    margin-left: auto;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid currentColor;
+    transition: transform var(--dur) var(--ease);
+}
+.filters-toggle[aria-expanded="true"]::after { transform: rotate(180deg); }
+
+.filters-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    background: var(--brand);
+    color: var(--panel);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-data);
+    font-size: 0.72rem;
+    letter-spacing: 0;
+}
+
+@media (max-width: 599px) {
+    .filters-toggle:not([hidden]) { display: inline-flex; }
+
+    /* One control per line. At 46% wide the sort select cut "Most complete
+       first" to "Most complete firs" with the caret over the text. */
+    .filterbar .field { flex: 1 1 100%; }
+    .filterbar select { width: 100%; }
+    .filterbar-row { align-items: stretch; }
+
+    /* The two switches sit side by side and start at the same left edge as the
+       selects. `.filterbar .field` outranks `.field--check`, so the row direction
+       has to be stated here. */
+    .filterbar .field--check {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--s2) var(--s3);
+    }
 }

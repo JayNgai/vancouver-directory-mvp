@@ -16,29 +16,36 @@
     </form>
 
     <!-- Quick Pill Links (No Dropdowns) -->
-    <div class="flex gap-sm flex-wrap mb-xl items-center">
-        <span class="fs-sm c-muted fw-600">Popular Itineraries:</span>
-        <a href="/search?q=Gastown" class="tag-badge no-underline fs-sm">📍 Gastown Stroll</a>
-        <a href="/search?q=Kitsilano" class="tag-badge no-underline fs-sm">🏖️ Kitsilano Beach & Brews</a>
-        <a href="/search?q=Yaletown" class="tag-badge no-underline fs-sm">🍸 Yaletown Nightlife</a>
-        <a href="/concierge" class="tag-badge bg-marker no-underline">Smart Concierge (Custom Day)</a>
+    <div class="flex gap-sm flex-wrap mb-md items-center">
+        <span class="fs-sm c-muted fw-600">Popular:</span>
+        <a href="/search?q=Gastown" class="tag-badge no-underline fs-sm">Gastown Stroll</a>
+        <a href="/search?q=Kitsilano" class="tag-badge no-underline fs-sm">Kitsilano Beach &amp; Brews</a>
+        <a href="/search?q=Yaletown" class="tag-badge no-underline fs-sm">Yaletown Nightlife</a>
     </div>
 
+    {# The red "Smart Concierge" chip sat beside the search button as a second
+       primary action, two competing calls to action in one row. It is now one line
+       of prose below the chips: the concierge is the alternative to browsing, not a
+       rival to searching. #}
+    <p class="iti-alt">
+        Not sure where to start? <a href="/concierge">Build a custom day with the concierge &rarr;</a>
+    </p>
+
     <div class="mb-lg fw-600 c-body">
-        Showing {{ itineraries.length }} curated itinerary(ies)
+        Showing {{ itineraries.length }} curated itineraries
     </div>
 
     <div class="grid">
         {% for itin in itineraries %}
         <a href="/itineraries/{{ itin.slug }}" class="card accent-brand">
             <div class="card-body">
-                <div class="card-subtitle">⏱️ {{ itin.duration }} &bull; {{ itin.difficulty }} &bull; {{ itin.neighborhood.name if itin.neighborhood else "Vancouver" }}</div>
+                <div class="card-subtitle">{{ itin.duration }} &bull; {{ itin.difficulty }} &bull; {{ itin.neighborhood.name if itin.neighborhood else "Vancouver" }}</div>
                 <h3 class="card-title">{{ itin.title }}</h3>
                 <p class="card-desc">{{ itin.description }}</p>
                 <div class="fs-sm c-muted mb-md">
-                    📍 {{ itin.steps.length }} Stops &bull; Interactive Directions Included
+                    {{ itin.steps.length }} stops &bull; interactive directions included
                 </div>
-                <span class="btn bg-brand self-start">Explore Route & Export &rarr;</span>
+                <span class="btn bg-brand self-start">Explore route &amp; export &rarr;</span>
             </div>
         </a>
         {% endfor %}

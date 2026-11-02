@@ -1,14 +1,41 @@
 /**
- * Load-more for the directory table.
+ * Directory interactions: the filter disclosure and load-more.
  *
- * The link is a real link first: it points at page N, so it works with JavaScript
- * off and in a new tab. This only upgrades it to append the next page in place, so
- * a reader does not lose their scroll position every 24 rows.
+ * Both controls are real first. The filters render open and the load-more link
+ * points at page N, so the page works with JavaScript off. This file only
+ * upgrades them: it folds the filters on a phone and appends the next page in
+ * place instead of moving the reader to page 2.
  *
  * No inline handlers anywhere - the CSP sets script-src-attr 'none'.
  */
 (function () {
     'use strict';
+
+    var form = document.getElementById('filterForm');
+    var toggle = document.getElementById('filtersToggle');
+    var panel = document.getElementById('filterControls');
+    var phone = window.matchMedia('(max-width: 599px)');
+
+    // The button ships hidden and the controls ship open. Showing the button is
+    // the signal that JavaScript is here, so a no-JS page never carries a control
+    // that does nothing.
+    function applyFilterState(collapsed) {
+        form.setAttribute('data-filters', collapsed ? 'closed' : 'open');
+        toggle.hidden = false;
+        toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+        if (collapsed) panel.setAttribute('hidden', '');
+        else panel.removeAttribute('hidden');
+    }
+
+    if (form && toggle && panel) {
+        applyFilterState(phone.matches);
+        toggle.addEventListener('click', function () {
+            applyFilterState(form.getAttribute('data-filters') !== 'closed');
+        });
+        var syncViewport = function () { applyFilterState(phone.matches); };
+        if (phone.addEventListener) phone.addEventListener('change', syncViewport);
+        else if (phone.addListener) phone.addListener(syncViewport);
+    }
 
     var btn = document.getElementById('loadMore');
     var rows = document.getElementById('listingRows');
@@ -22,7 +49,7 @@
             var rk = body[i].querySelector('.rk');
             if (rk) rk.textContent = (i + 1 < 10 ? '0' : '') + (i + 1);
         }
-        if (note) note.textContent = body.length + ' shown';
+        if (note) note.textContent = body.length.toLocaleString('en-CA') + ' shown';
     }
 
     function setBusy(busy, label) {

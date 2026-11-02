@@ -63,6 +63,7 @@ router.get('/', async (req, res) => {
       return a.name.localeCompare(b.name);
     });
     const itineraries = await prisma.itinerary.findMany({
+      where: { status: 'published' },
       take: 3,
       include: { neighborhood: true, steps: true }
     });
@@ -106,6 +107,11 @@ router.get('/businesses/:slug', async (req, res) => {
         where: { slugAliases: { contains: `"${req.params.slug}"` } },
         include: { neighborhood: true }
       });
+      // An old slug is a permanent move, not a second address for the page: one
+      // canonically-slugged URL per listing, and 301 from everything else.
+      if (business && business.slug && business.slug !== req.params.slug) {
+        return res.redirect(301, `/businesses/${business.slug}`);
+      }
     }
 
     if (!business) {
@@ -129,6 +135,11 @@ router.get('/businesses/:slug', async (req, res) => {
 
     res.render('business-detail.html', {
       business: decorate(business),
+      jsonLd: require('../lib/jsonld').buildBusinessJsonLd(decorate(business), {
+        base: req.app.locals.publicBaseUrl,
+        districtName: business.neighborhood && business.neighborhood.name,
+        districtSlug: business.neighborhood && business.neighborhood.slug
+      }),
       mapsQuery,
       mapsEmbedUrl
     });
@@ -421,7 +432,7 @@ router.get('/itineraries', async (req, res) => {
     else if (sort === 'duration_asc') orderBy = { duration: 'asc' };
 
     const itineraries = await prisma.itinerary.findMany({
-      where,
+      where: { ...where, status: 'published' },
       include: {
         neighborhood: true,
         steps: {
@@ -450,8 +461,8 @@ router.get('/itineraries', async (req, res) => {
 // Itinerary detail page
 router.get('/itineraries/:slug', async (req, res) => {
   try {
-    const itinerary = await prisma.itinerary.findUnique({
-      where: { slug: req.params.slug },
+    const itinerary = await prisma.itinerary.findFirst({
+      where: { slug: req.params.slug, status: 'published' },
       include: {
         neighborhood: true,
         steps: {
@@ -490,6 +501,13 @@ router.get('/concierge', async (req, res) => {
 // Business claim / Portal page
 router.get('/claim', (req, res) => {
   res.render('claim.html');
+});
+
+// About. Every claim on this page is drawn from data the site already holds: the
+// listing counts, the rule-based planner, the stand-in disclosure, and the
+// statement on business pages that ratings and prices are not shown.
+router.get('/about', (req, res) => {
+  res.render('about.html');
 });
 
 router.get('/admin', (req, res) => {

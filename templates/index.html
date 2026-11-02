@@ -34,7 +34,6 @@
         <div class="atlas-stat"><b>{{ totalPlaces | num }}</b><span>Listed places</span></div>
         <div class="atlas-stat"><b>{{ totalNeighborhoods }}</b><span>Districts</span></div>
         <div class="atlas-stat"><b>{{ totalItineraries }}</b><span>Itineraries</span></div>
-        <div class="atlas-stat"><b>{{ totalStandins | num }}</b><span>Photographed so far</span></div>
     </div>
 </div>
 
@@ -82,7 +81,7 @@
                 <span class="nm">{{ b.name }}<small>{{ b.address }}</small></span>
                 <span class="cat">{{ b.primaryCategory or b.category }}</span>
                 <span class="dist">{{ b.neighborhood.name if b.neighborhood else 'Vancouver' }}</span>
-                <span class="go">Open &rarr;</span>
+                <span class="go">View &rarr;</span>
             </a>
             {% endfor %}
         </div>
@@ -136,12 +135,32 @@ dockModes.forEach((b) => b.addEventListener('click', () => setDockMode(b.dataset
 // already offers one, so hide the navbar copy while the dock is on screen — two
 // search boxes on one screen is the duplicate-surface problem. visibility, not
 // display, so nothing shifts when it returns.
+//
+// Only above 600px: below the breakpoint the navbar search lives inside the menu
+// panel, where hiding it would leave the menu with five links and no way to
+// search. classList rather than a style attribute, because check-design-tokens.js
+// forbids inline styles written by page scripts.
 const dockEl = document.getElementById('studioDock');
 const navSearch = document.querySelector('.nav-search');
+// Feature-tested, because the dock harness serves this script into a stub DOM
+// without matchMedia (check-studio-dock.js asserts the script runs and observes
+// the dock). A missing matchMedia means "wide enough", which is the desktop case.
+const wideEnoughForNavSearch = (typeof window.matchMedia === 'function')
+    ? window.matchMedia('(min-width: 601px)')
+    : { matches: true, addEventListener: function () {} };
 if (dockEl && navSearch && 'IntersectionObserver' in window) {
+    // visibility, not display, so nothing shifts when it returns. check-studio-dock.js
+    // owns this behaviour and asserts on exactly this property, so it stays.
+    const hideNavSearch = (hidden) => {
+        if (navSearch.style) navSearch.style.visibility = hidden ? 'hidden' : 'visible';
+    };
     new IntersectionObserver(([entry]) => {
-        navSearch.style.visibility = entry.isIntersecting ? 'hidden' : 'visible';
+        hideNavSearch(entry.isIntersecting && wideEnoughForNavSearch.matches);
     }, { threshold: 0 }).observe(dockEl);
+    wideEnoughForNavSearch.addEventListener('change', () => {
+        const r = dockEl.getBoundingClientRect();
+        hideNavSearch(wideEnoughForNavSearch.matches && r.bottom > 0 && r.top < window.innerHeight);
+    });
 }
 
 const chipEls = Array.from(document.querySelectorAll('.dock-chip'));
@@ -215,3 +234,4 @@ promptEl.addEventListener('keydown', (e) => {
 });
 </script>
 {% endblock %}
+

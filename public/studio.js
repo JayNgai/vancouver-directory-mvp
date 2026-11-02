@@ -151,12 +151,35 @@ function ensureMap() {
   if (routeMap) return routeMap;
   if (typeof L === 'undefined') return null;
   routeMap = L.map('routeMap', { scrollWheelZoom: false });
-  // OpenStreetMap tiles: free, no key - and the tile policy REQUIRES attribution on the map surface,
-  // so Leaflet's default control is left exactly as it comes.
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  // Basemap, with one fallback.
+
+  // Primary: OpenStreetMap tiles. Free, no key, and their policy REQUIRES the
+  // attribution on the map surface, so Leaflet's control is left as it comes.
+  //
+  // Why the fallback: osm.org serves a 403 "Access blocked" tile when its policy
+  // engine decides a client is not compliant, and it did so on this site on
+  // 2026-11-02. The block is not reproducible from here (every header combination
+  // returns 200 on request), which is the point: a volunteer-run tile server can
+  // refuse browser traffic for reasons a page cannot see. A route map that silently
+  // turns into a wall of "Access blocked" images is worse than a different basemap,
+  // so the first tile error swaps once and never flaps back.
+  const primary = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(routeMap);
+
+  let swapped = false;
+  primary.on('tileerror', () => {
+    if (swapped) return;
+    swapped = true;
+    routeMap.removeLayer(primary);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd',
+      maxZoom: 20,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(routeMap);
+  });
+
   return routeMap;
 }
 

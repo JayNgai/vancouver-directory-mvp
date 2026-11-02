@@ -41,21 +41,41 @@
         <div class="container nav-container">
             <a href="/" class="logo">Vancouver Directory</a>
 
-            <form action="/search" method="GET" class="nav-search">
-                <label class="visually-hidden" for="nav-q">Search Vancouver listings</label>
-                <input id="nav-q" type="text" name="q" placeholder="Venue, street, phone or tag" value="{{ searchQuery }}">
-            </form>
+            {# Below 600px this button folds the search and the six links into one
+               panel, so the sticky bar stays 57px instead of the 260px the stacked
+               version needed. public/nav.js owns the open state, Escape, and the
+               focus move. #}
+            <button type="button" class="nav-toggle" id="navToggle"
+                    aria-expanded="false" aria-controls="navPanel">
+                <span class="visually-hidden">Menu</span>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+                    <path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/>
+                </svg>
+            </button>
 
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/neighborhoods">Neighborhoods</a></li>
-                <li><a href="/businesses">Businesses</a></li>
-                <li><a href="/itineraries">Itineraries</a></li>
-                <li><a href="/concierge">Concierge</a></li>
-                <li><a href="/claim" class="btn-claim">Claim</a></li>
-            </ul>
+            {# One panel holds the search and the six links. Above 600px it is
+               `display: contents`, so the bar keeps its single row: logo, search,
+               links. Below 600px it becomes the dropdown. #}
+            <div class="nav-panel" id="navPanel" data-open="false">
+                <form action="/search" method="GET" class="nav-search">
+                    <label class="visually-hidden" for="nav-q">Search Vancouver listings</label>
+                    <input id="nav-q" type="text" name="q" placeholder="Venue, street, phone or tag" value="{{ searchQuery }}">
+                </form>
+
+                <ul class="nav-links" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/neighborhoods">Neighborhoods</a></li>
+                    <li><a href="/businesses">Businesses</a></li>
+                    <li><a href="/itineraries">Itineraries</a></li>
+                    <li><a href="/concierge">Concierge</a></li>
+                    <li><a href="/claim" class="btn-claim">Claim</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+    <script src="/nav.js" defer></script>
 
     <main class="main-content" id="main">
         {% block content %}{% endblock %}
@@ -64,9 +84,17 @@
     <footer class="footer">
         <div class="container text-center">
             <p>&copy; 2026 Vancouver Neighborhood Directory. Curated local guides &amp; experience itineraries.
+                &bull; <a href="/about">About</a>
                 &bull; <a href="/privacy">What we collect</a>
                 &bull; <a href="/claim">Claim a listing</a></p>
-            {% include "_attribution.html" %}
+            {# The licence block is a legal obligation, not decoration: CDLA-Permissive-2.0
+               requires the Overture credit, so every sentence stays verbatim inside. The
+               summary names the three sources so the credit is visible without opening,
+               and the ten-line wall at 320px becomes one line. #}
+            <details class="footer-licences">
+                <summary>Data and licences: OpenStreetMap, Overture Maps, Open Government Licence</summary>
+                {% include "_attribution.html" %}
+            </details>
         </div>
     </footer>
 </body>
