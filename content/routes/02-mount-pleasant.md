@@ -14,7 +14,7 @@ district makes things: coffee at the roastery, chocolate and pastry on 10th, bru
 Main, a brewery tasting room at half past two, then Spanish small plates on 7th. 900m,
 no transport.
 
-### 09:00 — Elysian Coffee Roasters
+### 09:00 — Elysian Coffee Roasters, 2301 Ontario Street
 2301 Ontario Street · Cafe · Mon–Fri 07:00–18:00, Sat–Sun 08:00–18:00
 
 The company lists this address as its roastery and tasting room, at 7th and Ontario,
@@ -24,7 +24,7 @@ by subscription, through the same site.
 *If it is shut or full:* **Modus**, 242m, open 08:00–16:00 weekdays. **Milano Cafe**,
 282m, open 07:00–18:00 daily.
 
-### 10:30 — Thierry
+### 10:30 — Thierry, 265 East 10th Avenue
 265 East 10th Avenue · Cafe · Mon–Thu 08:00–21:00, Fri–Sat 08:00–22:00
 
 Thierry Busset is a maître artisan chocolatier from Auvergne, and the Mount Pleasant
@@ -74,8 +74,8 @@ seasonal, first come, first served while it is open.
 | leg | distance | walk |
 |---|---|---|
 | Elysian → Thierry | 461 m | 8 min |
-| Thierry → Barney's | 76 m | 2 min |
-| Barney's → Main Street Brewing | 271 m | 5 min |
+| Thierry → Barney's On Main | 76 m | 2 min |
+| Barney's On Main → Main Street Brewing | 271 m | 5 min |
 | Main Street Brewing → Como Taperia | 92 m | 2 min |
 | **total** | **900 m** | **~17 min** |
 
@@ -92,8 +92,8 @@ street factor of 1.25 on the straight line at 75 m per minute, rounded up.
 | Thierry Busset, maître artisan chocolatier, Auvergne; three shops | thierrychocolates.com (2026-11-02) |
 | Thierry counter range: pastries, cakes and tarts, macarons, chocolates, canapés; breakfast and lunch | thierrychocolates.com menu (2026-11-02) |
 | Thierry Mount Pleasant hours, including Sunday | thierrychocolates.com/locations (2026-11-02) |
-| Barney's daytime menu to 15:30; $13, $16, $17 | barneysonmain.com/daytime-menu (2026-11-02) |
-| Barney's hours; weekend and holiday brunch menu | barneysonmain.com (2026-11-02) |
+| Barney's On Main daytime menu to 15:30; $13, $16, $17 | barneysonmain.com/daytime-menu (2026-11-02) |
+| Barney's On Main hours; weekend and holiday brunch menu | barneysonmain.com (2026-11-02) |
 | Main Street Brewing happy hour, Tuesday to Sunday 14:00–18:00; draft $6, cask $6.75; beer names | mainstreetbeer.ca/happy-hour (2026-11-02) |
 | Main Street Brewing tasting room food | mainstreetbeer.ca/tasting-room-menu-brathaus (2026-11-02) |
 | Como in the Michelin Guide 2022–2026; Restaurants from Spain, one of two in Canada | comotaperia.com (2026-11-02) |
@@ -102,17 +102,17 @@ street factor of 1.25 on the straight line at 75 m per minute, rounded up.
 ## Still not verified, and therefore not written
 
 Whether the Elysian room has seats at 09:00 or is a standing counter · whether Elysian
-serves food · which menu Barney's runs at noon on a Tuesday, given the separate weekend
-brunch card · whether the Main Street Brewing kitchen is open at 14:30 · whether Como's
-patio is open in November, since it is seasonal · whether Thierry has a free table at
-10:30 · what the Thierry breakfast and lunch dishes are.
+serves food · which menu Barney's On Main runs at noon on a Tuesday, given the separate
+weekend brunch card · whether the Main Street Brewing kitchen is open at 14:30 · whether
+Como's patio is open in November, since it is seasonal · whether Thierry has a free table
+at 10:30 · what the Thierry breakfast and lunch dishes are.
 
 ## Hour conflicts, recorded rather than resolved
 
-- **Thierry**: the database row carries no Sunday hours. The shop's own locations page
-  lists Sunday to Thursday 08:00–21:00 and Friday and Saturday 08:00–22:00. On the
-  database's account the route stops at Saturday; on the venue's account it would run
+- **Thierry, 265 East 10th**: the database row carries no Sunday hours. The shop's own
+  locations page lists Sunday to Thursday 08:00–21:00 and Friday and Saturday 08:00–22:00.
+  On the database's account the route stops at Saturday; on the venue's account it would run
   Sunday too. The doubt is printed here rather than argued away. The database row needs
   a Sunday entry.
-- **Barney's**: checked, no conflict. The venue's site and the database agree exactly,
-  down to the Friday and Saturday midnight close.
+- **Barney's On Main**: checked, no conflict. The venue's site and the database agree
+  exactly, down to the Friday and Saturday midnight close.
