@@ -64,7 +64,8 @@ served. There is no upstairs bar — the second-floor space is private dining.
 18:00–02:00**
 
 Live music, two shows a night, in an underground room at Alexander and Water. Money
-taken at the door goes to the musicians.
+taken at the door goes to the musicians. Programming changes from night to night, so
+confirm the show and the door price with the venue before you go.
 
 *If it is full:* **The Portside Pub**, 20m, open from 11:00. **Six Acres**, 39m,
 until 23:30.
