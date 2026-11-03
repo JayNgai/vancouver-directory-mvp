@@ -9,62 +9,63 @@ could be verified, the copy says nothing rather than guessing.
 
 ---
 
-Start at Timbertrain on West Cordova at 10:00. Finish at Guilt & Co on Alexander,
+Start at Timbertrain on West Cordova at 10:00 [[s1]]. Finish at Guilt & Co on Alexander,
 which closes at midnight Sunday to Wednesday, 01:00 Thursday and 02:00 Friday and
-Saturday. Coffee on West Cordova, lunch on Carrall, a bean-to-bar chocolate stop,
+Saturday [[s10]]. Coffee on West Cordova, lunch on Carrall, a bean-to-bar chocolate stop,
 dinner back down the same street, live music last. 692m on foot, no transport.
 
 ### 10:00 — Timbertrain Coffee Roasters
 311 West Cordova Street · Cafe · Mon–Fri 08:00–16:00, Sat–Sun 09:00–17:00
 
-Open by 10:00 every day the route runs. Order from the rotating slow-bar pour-over
-list, or the nitro cold brew on tap. The room is sixteen seats, built as pairs in
-booths along one wall.
+Open by 10:00 every day the route runs [[s1]]. Order from the rotating slow-bar pour-over
+list, or the nitro cold brew on tap [[s2]]. The room was built as sixteen seats, in pairs
+in booths along one wall [[s3]].
 
-*If it is shut or full:* **Trees Organic Coffee**, 71m, open 07:30–22:00 weekdays.
-**Revolver**, 82m, opens 07:30, closes 18:00.
+*If it is shut or full:* **Trees Organic Coffee**, 71m, open 07:30–22:00 weekdays [[s1]].
+**Revolver**, 82m, opens 07:30, closes 18:00 [[s1]].
 
 ### 12:00 — Six Acres
 203 Carrall Street · Bar / Pub · Sun–Thu 11:30–23:30, Fri–Sat 11:30–00:30
 
 Lunch, and the turn onto Carrall the rest of the route follows. Poutine is $16 and the
-beef burger $25. The beer list leans on local breweries and Belgian classics.
-The patio is small and allows dogs.
+beef burger $25 [[s4]]. The beer list leans on local breweries and Belgian classics [[s4]].
+The patio is small and allows dogs [[s5]].
 
-*If it is shut or full:* **The Portside Pub**, 45m, open from 11:00 daily.
-**The Blarney Stone**, 67m, open from 11:00.
+*If it is shut or full:* **The Portside Pub**, 45m, open from 11:00 daily [[s1]].
+**The Blarney Stone**, 67m, open from 11:00 [[s1]].
 
 ### 15:00 — East Van Roasters
 319 Carrall Street · Cafe · Tue–Sat 10:00–17:00
 
 This stop fixes the days: it closes at 17:00 and is shut Sunday and Monday, so the walk
-runs Tuesday to Saturday. A bean-to-bar chocolate shop and coffee roaster with a cafe
-inside the Rainier Hotel, where parts of the chocolate making are visible from the room. It operates as a social enterprise of the Atira Women's Art Society.
+runs Tuesday to Saturday [[s1]]. A bean-to-bar chocolate shop and coffee roaster with a
+cafe inside the Rainier Hotel, where parts of the chocolate making are visible from the
+room [[s6]]. It operates as a social enterprise of the Atira Women's Art Society [[s6]].
 
-*If it is shut:* **Buro Coffee Bar**, 155m, open Tue–Fri until 20:30.
+*If it is shut:* **Buro Coffee Bar**, 155m, open Tue–Fri until 20:30 [[s1]].
 
 ### 17:00 — L'Abattoir
 217 Carrall Street · Restaurant · Tue–Sat 17:00–23:00
 
 Dinner at opening. A restored brick-and-beam room with seats at the bar, a mezzanine
-and an atrium, Michelin-recommended since 2022. Two ways to order: the $140 chef's
-tasting menu with a $95 pairing, or à la carte with mains $29–$69. Reservations are
+and an atrium, Michelin-recommended since 2022 [[s7]]. Two ways to order: the $140 chef's
+tasting menu with a $95 pairing, or à la carte with mains $29–$69 [[s8]]. Reservations are
 recommended and walk-ins welcome; the 17:00–18:00 bar hour is first come, first
-served. The house lists a bar without naming which floor it is on.
+served [[s9]]. The house lists a bar without naming which floor it is on.
 
-*If it is shut or full:* **Oku Izakaya**, 35m, opens 17:00. **The Greek Gastown**,
-7m, open 11:30–22:00.
+*If it is shut or full:* **Oku Izakaya**, 35m, opens 17:00 [[s1]]. **The Greek Gastown**,
+7m, open 11:30–22:00 [[s1]].
 
 ### 20:00 — Guilt & Co
 1 Alexander Street · Bar / Pub · **Sun–Wed 18:00–24:00, Thu 18:00–01:00, Fri–Sat
 18:00–02:00**
 
-Live music, two shows a night, in an underground room. Money taken at the door goes
-to the musicians. Programming changes from night to night, so
+Live music, two shows a night, in an underground room [[s10]]. Money taken at the door goes
+to the musicians [[s10]]. Programming changes from night to night, so
 confirm the show and the door price with the venue first.
 
-*If it is full:* **The Portside Pub**, 20m, open from 11:00. **Six Acres**, 39m,
-until 23:30.
+*If it is full:* **The Portside Pub**, 20m, open from 11:00 [[s1]]. **Six Acres**, 39m,
+until 23:30 [[s1]].
 
 ---
 
@@ -80,18 +81,18 @@ until 23:30.
 
 ## Sources
 
-| fact | source |
-|---|---|
-| open at their time on a Tuesday | database, OpenStreetMap `opening_hours`, merged 2026-11-02 |
-| Timbertrain pour-over list, nitro | timbertraincoffeeroasters.com (2026-11-02) |
-| Timbertrain sixteen seats, pairs | Scout Magazine, 2013 design piece (2026-11-02) |
-| Six Acres poutine $16, burger $25, beer list | sixacres.ca menu; Vancouver Magazine patio piece |
-| Six Acres patio, dogs | sixacres.ca; Vancouver Magazine |
-| East Van Roasters bean-to-bar, Rainier Hotel, Atira | Scout Magazine place page |
-| L'Abattoir room, Michelin since 2022 | Scout Magazine place page |
-| L'Abattoir tasting $140 / pairing $95, mains $29–$69 | labattoir.ca menus |
-| L'Abattoir reservations, 17:00–18:00 bar hour | labattoir.ca reservations, contact |
-| Guilt & Co two shows, door money to musicians | guiltandcompany.com |
+| key | source | read |
+|---|---|---|
+| s1 | database, stored coordinates and OpenStreetMap `opening_hours`, merged | 2026-11-02 |
+| s2 | timbertraincoffeeroasters.com — pour-over list, nitro | 2026-11-02 |
+| s3 | Scout Magazine, Timbertrain 2013 design piece — sixteen seats, pairs in booths | 2026-11-02 |
+| s4 | sixacres.ca menu; Vancouver Magazine patio piece — poutine $16, burger $25, beer list | not recorded |
+| s5 | sixacres.ca; Vancouver Magazine — patio, dogs | not recorded |
+| s6 | Scout Magazine place page — East Van Roasters bean-to-bar, Rainier Hotel, Atira | not recorded |
+| s7 | Scout Magazine place page — L'Abattoir room, Michelin since 2022 | not recorded |
+| s8 | labattoir.ca menus — tasting $140, pairing $95, mains $29–$69 | not recorded |
+| s9 | labattoir.ca reservations, contact — reservations, 17:00–18:00 bar hour | not recorded |
+| s10 | guiltandcompany.com — two shows, door money to musicians, closing times | not recorded |
 
 ## Still not verified, and therefore not written
 
@@ -103,8 +104,8 @@ amount · whether to arrive at Guilt & Co before 20:00.
 
 ## Two hour conflicts found, one resolved
 
-- **Guilt & Co**: OpenStreetMap says 19:00–02:00 daily; the venue's own site says
-  18:00–24:00 Sunday to Wednesday, to 01:00 Thursday, 02:00 Friday and Saturday.
+- **Guilt & Co**: OpenStreetMap says 19:00–02:00 daily [[s1]]; the venue's own site says
+  18:00–24:00 Sunday to Wednesday, to 01:00 Thursday, 02:00 Friday and Saturday [[s10]].
   The route now carries the venue's own times, and the database row is corrected to
   match.
 - **Timbertrain**: the venue's hours block omits Friday entirely; OpenStreetMap says

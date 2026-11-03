@@ -299,3 +299,61 @@ in the file, but a comparative claim is still a claim.
 **Mount Pleasant, one route clean.** No claim in the Mount Pleasant daytime route lost
 its source. Every figure in it, including all three Barney's prices and both brewery
 prices, is carried by a row for that venue.
+
+---
+
+## Claims cut by the marker pass
+
+The five routes now carry claim-level provenance. A sentence with a price, a capacity
+or count, a date, a year, an opening time in prose, or a distance that is not in the
+legs table carries a `[[sN]]` marker, and each marker resolves to a row in that file's
+`## Sources` register (`| key | source | read |`). `src/scripts/check-route-copy.js`
+enforces both directions: a claim sentence with no resolvable marker fails, a marker
+with no row fails, a register row that no marker references fails, and so does a marker
+that is not exactly `[[sN]]`. The old version of the gate asked a venue-level question —
+does some row name this stop — which a single "Scout Magazine place page" row answered
+for a seat count, a price and an opening year at once. That is gone.
+
+Three specific claims had no row to point at. They were cut rather than sourced.
+
+**Chinatown, intro: "all inside the district".** The sentence was "481m end to end, all
+inside the district." The 481m is the legs-table total and now carries its marker. The
+second clause was added by the earlier proof pass with no row behind it, and 620 Quebec
+Street sits east of Gore Avenue, normally the district's eastern edge, so a reader with
+a map can read it as false. The clause is gone; the distance stays.
+
+**Chinatown, New Town Bakery: "Dine-in closes at 19:00."** Nothing in the file states
+19:00. The venue row carries the last order at 18:45, the hours line below the heading
+carries 20:30, and the file's own "still not verified" section already flagged 19:30 as
+its site's claim against 20:30 as the database's. The sentence now reads "The last order
+is at 18:45", which is the figure the row carries, marked `[[s4]]`.
+
+**Kitsilano, 49th Parallel: "Espresso and filter; beans sold by the bag."** The only row
+for this venue counts its cafés in Vancouver and Montreal and says nothing about retail.
+The claim had no row before the earlier edit and none after it, which is what the
+provenance section above records. The sentence went; the café count stands, marked
+`[[s5]]`.
+
+Two things changed without being cut, and both are worth reading next to the cuts:
+
+- **Gastown, Timbertrain: "The room is sixteen seats."** The row behind it is a 2013
+  design piece and the research note says the room may have changed since, so the
+  sentence is back to "The room was built as sixteen seats", which is what the row
+  supports, with `[[s3]]` sitting next to the 2013 date it rests on. This answers the
+  second item in "Claims that lost their source" above without inventing anything.
+- **Rows that carry no read date.** Eight of the forty-nine register rows name a source
+  but no date it was read — seven in Gastown, one in Kitsilano (Au Comptoir's site,
+  whose URL this file never recorded). Their `read` cells say `not recorded`. No date
+  was filled in for them here: an invented read date is the same failure as an invented
+  price.
+
+The register also lost a row. Gastown's "Guilt & Co two shows" row now carries the
+closing times it was already the evidence for, and Chinatown's Keefer Bar hours row is
+part of the bars-with-hours row (`s8`) that the closing section actually cites;
+Kitsilano's Au Comptoir row is new, because that conflict section cites the site and had
+nothing to point at. Mount Pleasant evening lost its Burdock Scout row: the two facts it
+carried, the east end of Main and the natural wine, were cut from the copy before this
+pass, so the row had no sentence left to support.
+
+**Left blank.** Every item in each file's "still not verified" section is still open.
+No gap was filled, and no price, count, date or hour was added anywhere.
