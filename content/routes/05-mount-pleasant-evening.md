@@ -14,12 +14,10 @@ at five, dinner at half past six, an ice cream cone at half past eight, then the
 room, which closes at two or three in the morning. 695m, no transport.
 
 The walk goes south to the dining room, back up the block for the cone, then south
-again for the last room, because the ice cream shuts at nine or ten and the bar does
-not.
+again for the last room: the ice cream shuts at nine or ten, the bar does not.
 
-Thursday to Monday are the days all four are open at their listed hours. Burdock closes
-Tuesday and Wednesday. The other three are open daily at those hours, so those two days
-are the only ones the route cannot run.
+Thursday to Monday are the only days all four are open at their listed hours. Burdock
+closes Tuesday and Wednesday; the other three are open daily.
 
 | stop | listed time | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|---|---|
@@ -35,12 +33,12 @@ on the September–May rule, which is the rule running in November.
 2616 Main Street · Bar / Pub · Mon–Wed 16:00–23:00, Thu 16:00–24:00, Fri–Sat
 16:00–01:00, Sun 16:00–23:00
 
-The room is named for Brewery Creek, the name this neighbourhood carried when the
-original Vancouver Brewery stood in it and brewed a flagship beer called Cascade. It
-opened in 2007. Happy hour is the reason for the hour: 16:00–18:00 Tuesday to Saturday,
-all day Monday, and on Sunday the happy-hour drink prices run from 16:00 to close. A
-16oz Main Street pilsner is $6, the 20oz $7, a cocktail on tap $10, a pitcher $25.
-Snacks start at $7 for hand-cut fries.
+Named for Brewery Creek, the name this neighbourhood carried when the original
+Vancouver Brewery stood in it and brewed a flagship beer called Cascade. Opened in 2007.
+The hour is set for happy hour: 16:00–18:00 Tuesday to Saturday, all day Monday, and on
+Sunday the happy-hour drink prices run from 16:00 to close. A 16oz Main Street pilsner
+is $6, the 20oz $7, a cocktail on tap $10, a pitcher $25. Snacks start at $7, hand-cut
+fries.
 
 *If it is shut or full:* **Sing Sing**, 113m, open 11:30–01:00 Sunday to Thursday and to
 02:00 Friday and Saturday. **Key Party**, 304m, opens 17:00 and closes 01:00 Sunday to
@@ -49,12 +47,11 @@ Wednesday, 02:00 Thursday to Saturday.
 ### 18:30 — Burdock & Co
 2702 Main Street · Restaurant · Thu–Mon 17:00–22:00, closed Tuesday and Wednesday
 
-Andrea Carlson opened it in 2013 at the east end of Main. In 2022 it took a Michelin
-star, the first Canadian restaurant owned and operated by a female chef to hold one.
-The dining room serves a seven-course tasting at $175 a person. The bar and the kitchen
-counter take walk-ins and serve an abridged version of that menu, or dishes ordered one
-at a time. Corkage is $50 a bottle, one bottle per two guests. The kitchen closes at
-22:00.
+Andrea Carlson opened it in 2013. In 2022 it took a Michelin star, the first Canadian
+restaurant owned and operated by a female chef to hold one. The dining room serves seven
+courses at $175 a person. The bar and kitchen counter take walk-ins: an abridged version
+of that menu, or dishes ordered one at a time. Corkage is $50 a bottle, one bottle per
+two guests. The kitchen closes at 22:00.
 
 *If it is shut or full:* **Mali Thai Food**, 16m, open 16:00–22:00 Monday to Friday and
 11:30–22:00 Saturday and Sunday. **Kaori Izakaya**, 337m, open 12:00–24:00 daily.
@@ -62,12 +59,9 @@ at a time. Corkage is $50 a bottle, one bottle per two guests. The kitchen close
 ### 20:30 — Kobo Ice Cream
 2541 Main Street · Dessert · Sep–May: Sun–Thu 14:00–21:00, Fri–Sat 14:00–22:00
 
-Ice cream made in small batches to family recipes, from local ingredients. The case runs
-vanilla, pistachio, orange-chocolate chip, London Fog, tahini and roasted walnut, and
-caramelized banana, with rotating dairy-free and vegan flavours beside them. The hours
-column holds two seasonal rules and no marker for which one is running; the
-September–May rule applies in November, and the shop's own winter hours give the same
-window.
+Small-batch ice cream to family recipes, from local ingredients. The case runs vanilla,
+pistachio, orange-chocolate chip, London Fog, tahini, roasted walnut and caramelized
+banana, with rotating dairy-free and vegan flavours beside them.
 
 *If it is shut:* no second dessert room within 400m publishes hours. **Rollz**, 105m at
 2685 Main, is the nearest, and its row carries no hours, so it is not offered as a
@@ -77,12 +71,11 @@ substitute.
 3032 Main Street · Bar / Pub · Mon–Thu 16:00–02:00, Fri 16:00–03:00, Sat 12:00–03:00,
 Sun 12:00–02:00
 
-The last room, and the longest one. A neighbourhood bar with a covered, heated patio
-that runs all year and takes dogs. No reservations, at any hour. It shares its space
-with Monarch Burger, whose counter lists hours to 01:00 on Thursday and Sunday and to
-02:00 on Friday and Saturday. Happy hour is 16:00–18:00 every day, at $10 for a 2oz
-cocktail, $5 for a 16oz lager and $5 for a pickleback. The route arrives after it, so
-those are not the prices in force at 21:15, and the regular list was not read.
+The last room, and the latest close. A covered, heated patio runs all year; dogs are
+allowed. No reservations, at any hour. Monarch Burger shares the space, its counter open
+to 01:00 Thursday and Sunday and to 02:00 Friday and Saturday. Happy hour is 16:00–18:00
+daily, and its drink prices are published; the route arrives after it, so the happy-hour
+prices are not the prices at 21:15, and the regular list was not read.
 
 *If it is full:* **The Watson**, 37m, open to 24:00 Monday to Thursday and Sunday, to
 01:00 Friday and Saturday. **Sing Sing**, 287m, to 01:00 Sunday to Thursday and 02:00

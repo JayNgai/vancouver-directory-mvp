@@ -9,17 +9,17 @@ could be verified, the copy says nothing rather than guessing.
 
 ---
 
-Coffee at a roaster, lunch on Carrall, a bean-to-bar chocolate stop while it is
-still open, dinner back down the same street, then live music in an underground
-room until late. Four blocks, one afternoon, no transport.
+Start at Timbertrain on West Cordova at 10:00. Finish at Guilt & Co on Alexander,
+which closes at midnight Sunday to Wednesday, 01:00 Thursday and 02:00 Friday and
+Saturday. Coffee on West Cordova, lunch on Carrall, a bean-to-bar chocolate stop,
+dinner back down the same street, live music last. 692m on foot, no transport.
 
 ### 10:00 — Timbertrain Coffee Roasters
 311 West Cordova Street · Cafe · Mon–Fri 08:00–16:00, Sat–Sun 09:00–17:00
 
-Start here because it opens at eight and it roasts on site. Order from the rotating
-slow-bar pour-over list, or the nitro cold brew on tap. The room was built as
-sixteen seats in pairs, in booths along one wall, so plan on sitting two and two
-rather than as one group.
+Open by 10:00 every day the route runs. Order from the rotating slow-bar pour-over
+list, or the nitro cold brew on tap. The room is sixteen seats, built as pairs in
+booths along one wall.
 
 *If it is shut or full:* **Trees Organic Coffee**, 71m, open 07:30–22:00 weekdays.
 **Revolver**, 82m, opens 07:30, closes 18:00.
@@ -27,10 +27,9 @@ rather than as one group.
 ### 12:00 — Six Acres
 203 Carrall Street · Bar / Pub · Sun–Thu 11:30–23:30, Fri–Sat 11:30–00:30
 
-Lunch, and the turn onto Carrall that the rest of the day follows. The poutine is
-$16 and the beef burger $25; the beer list leans on local breweries and Belgian
-classics. There is a small patio, dogs allowed, and it is the people-watching seat
-on this block.
+Lunch, and the turn onto Carrall the rest of the route follows. Poutine is $16 and the
+beef burger $25. The beer list leans on local breweries and Belgian classics.
+The patio is small and allows dogs.
 
 *If it is shut or full:* **The Portside Pub**, 45m, open from 11:00 daily.
 **The Blarney Stone**, 67m, open from 11:00.
@@ -38,23 +37,20 @@ on this block.
 ### 15:00 — East Van Roasters
 319 Carrall Street · Cafe · Tue–Sat 10:00–17:00
 
-The stop that fixes the route's days: it closes at 17:00 and is **shut Sunday and
-Monday**, so the walk runs Tuesday to Saturday. It is a bean-to-bar chocolate shop
-and coffee roaster with a cafe inside the Rainier Hotel, where parts of the
-chocolate making are visible from the room. It operates as a social enterprise of
-the Atira Women's Art Society.
+This stop fixes the days: it closes at 17:00 and is shut Sunday and Monday, so the walk
+runs Tuesday to Saturday. A bean-to-bar chocolate shop and coffee roaster with a cafe
+inside the Rainier Hotel, where parts of the chocolate making are visible from the room. It operates as a social enterprise of the Atira Women's Art Society.
 
-*If it is shut:* **Aiyaohno Cafe**, 103m, Tue–Sat 08:00–15:00 — only if you are
-early. **Buro Coffee Bar**, 155m, open Tue–Fri until 20:30.
+*If it is shut:* **Buro Coffee Bar**, 155m, open Tue–Fri until 20:30.
 
 ### 17:00 — L'Abattoir
 217 Carrall Street · Restaurant · Tue–Sat 17:00–23:00
 
 Dinner at opening. A restored brick-and-beam room with seats at the bar, a mezzanine
-and an atrium, Michelin-recommended since 2022. Two ways in: the $140 chef's tasting
-menu with a $95 pairing, or à la carte with mains $29–$69. Reservations are
+and an atrium, Michelin-recommended since 2022. Two ways to order: the $140 chef's
+tasting menu with a $95 pairing, or à la carte with mains $29–$69. Reservations are
 recommended and walk-ins welcome; the 17:00–18:00 bar hour is first come, first
-served. There is no upstairs bar — the second-floor space is private dining.
+served. The house lists a bar without naming which floor it is on.
 
 *If it is shut or full:* **Oku Izakaya**, 35m, opens 17:00. **The Greek Gastown**,
 7m, open 11:30–22:00.
@@ -63,9 +59,9 @@ served. There is no upstairs bar — the second-floor space is private dining.
 1 Alexander Street · Bar / Pub · **Sun–Wed 18:00–24:00, Thu 18:00–01:00, Fri–Sat
 18:00–02:00**
 
-Live music, two shows a night, in an underground room at Alexander and Water. Money
-taken at the door goes to the musicians. Programming changes from night to night, so
-confirm the show and the door price with the venue before you go.
+Live music, two shows a night, in an underground room. Money taken at the door goes
+to the musicians. Programming changes from night to night, so
+confirm the show and the door price with the venue first.
 
 *If it is full:* **The Portside Pub**, 20m, open from 11:00. **Six Acres**, 39m,
 until 23:30.

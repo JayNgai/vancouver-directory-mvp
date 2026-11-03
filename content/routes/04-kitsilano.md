@@ -9,17 +9,17 @@ could be verified, the copy says nothing rather than guessing.
 
 ---
 
-One direction, west along the strip: Belgian pastry at eight, brunch at half past
-eleven, coffee at half past one, oysters at five, then the vegetarian room at the far
-end at seven. 2038m in one line, no transport. The days are Tuesday to Saturday,
-because the pastry shop closes on Sunday and Monday and the oyster bar closes on
-Monday.
+One direction, west from 1728 West 2nd to 2724 West 4th: Belgian pastry, brunch, coffee,
+oysters, then the vegetarian room at the far end. 2038m walked, no transport. The days
+are Tuesday to Saturday, because the pastry shop closes Sunday and Monday and the oyster
+bar closes Monday.
 
 ### 08:00 — Pâtisserie Lebeau
 1728 West 2nd Avenue · Cafe · Tue–Sat 07:30–16:00
 
-Belgian pastry since 1995: waffles and a case of European pastries, made fresh daily.
-The shop also sells wholesale and takes pre-orders for pickup and delivery.
+Belgian pastry since 1995. Waffles are worked each morning, and the case carries
+European pastries. The shop also sells wholesale and takes pre-orders for pickup and
+delivery.
 
 *If it is shut or full:* **TV Dinner Market & Café**, 129m, open 07:30–18:30 weekdays.
 **Pane From Heaven**, 301m, open 06:30–18:00 Monday to Saturday.
@@ -27,8 +27,8 @@ The shop also sells wholesale and takes pre-orders for pickup and delivery.
 ### 11:30 — Sophies Cosmic Cafe
 2095 West 4th Avenue · Restaurant · Mon 08:00–14:30, Tue–Sun 08:00–20:00
 
-Open since 1988, with a menu that is brunch and comfort food, a kids' card, and
-original artwork through the dining room and on the outside of the building.
+Open since 1988. Brunch and comfort food, a kids' card, and original artwork through the
+dining room and on the outside of the building.
 
 *If it is shut or full:* **TurF**, 71m, open 07:00–16:00 weekdays. **GlassHouse**,
 269m, open 11:30–22:00 daily.
@@ -36,8 +36,8 @@ original artwork through the dining room and on the outside of the building.
 ### 13:30 — 49th Parallel & Lucky's Doughnuts
 2198 West 4th Avenue · Cafe · Mon–Thu 07:00–18:00, Fri–Sun 07:00–19:00
 
-The roaster's West 4th café, one of four in Vancouver and five in all, counting the
-Montreal room. Espresso and filter, with beans sold by the bag from the same company.
+The roaster's West 4th café, one of four in Vancouver and five counting the Montreal
+room. Espresso and filter; beans sold by the bag.
 
 *If it is shut or full:* **Provisions Kitsilano**, 182m, open 08:00–20:00 daily.
 **Kokomo**, 185m, open 08:00–21:00 weekdays.
@@ -46,21 +46,20 @@ Montreal room. Espresso and filter, with beans sold by the bag from the same com
 2201 West 1st Avenue · Bar / Pub · Tue–Thu 17:00–23:30, Fri 16:00–23:30, Sat–Sun
 15:00–23:30
 
-New Orleans-inspired food with an oyster bar, in the restaurant's own description, plus
-a separate line for large parties and events. Doors open at 17:00 Tuesday to Thursday,
+New Orleans-inspired food and an oyster bar, in the restaurant's own description. A
+separate line takes large parties and events. Doors open at 17:00 Tuesday to Thursday,
 so five is the earliest weekday seat.
 
 *If it is full:* **Local Public Eatery**, 156m, open 11:00–24:00 Monday to Wednesday.
-It is a small chain, and it is the only bar within 400m that publishes hours — the two
-independent rooms next door, The Ellis and Mount Everest Kitchen & Bar, publish none.
+It is the only bar within 400m that publishes hours; the two independent rooms next
+door, The Ellis and Mount Everest Kitchen & Bar, publish none.
 
 ### 19:00 — The Naam
 2724 West 4th Avenue · Restaurant · Mon–Fri 11:00–23:00, Sat–Sun 09:00–23:00
 
 The restaurant calls itself the city's oldest vegetarian restaurant and puts its run at
-50 years. Vegetarian and vegan dishes, organic tofu and tempeh made locally, organic
-Canadian maple syrup. No reservations: first come, first served, with pickup ordered by
-phone.
+50 years. Vegetarian and vegan dishes, organic tofu and tempeh, organic Canadian maple
+syrup. No reservations: first come, first served, with pickup ordered by phone.
 
 *If it is full:* **Healthy Noodle House**, 15m, open 11:00–21:00 Monday to Saturday.
 

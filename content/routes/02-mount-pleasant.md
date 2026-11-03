@@ -9,27 +9,26 @@ could be verified, the copy says nothing rather than guessing.
 
 ---
 
-The route holds to the blocks between Ontario Street and Main, in the order the
-district makes things: coffee at the roastery, chocolate and pastry on 10th, brunch on
-Main, a brewery tasting room at half past two, then Spanish small plates on 7th. 900m,
-no transport.
+Five stops between Ontario Street and Main: coffee at the roastery, pastry on 10th,
+lunch on Main, a brewery tasting room at 14:30, Spanish small plates on 7th at 17:00.
+900m on foot, no transport.
 
-### 09:00 — Elysian Coffee Roasters, 2301 Ontario Street
+### 09:00 — Elysian Coffee Roasters
 2301 Ontario Street · Cafe · Mon–Fri 07:00–18:00, Sat–Sun 08:00–18:00
 
 The company lists this address as its roastery and tasting room, at 7th and Ontario,
-one of four Elysian cafés in Vancouver. The roasts are sold as espresso and filter, and
-by subscription, through the same site.
+one of four Elysian cafés in Vancouver. Beans are sold as espresso and filter, and by
+subscription, through the same site.
 
 *If it is shut or full:* **Modus**, 242m, open 08:00–16:00 weekdays. **Milano Cafe**,
 282m, open 07:00–18:00 daily.
 
-### 10:30 — Thierry, 265 East 10th Avenue
+### 10:30 — Thierry
 265 East 10th Avenue · Cafe · Mon–Thu 08:00–21:00, Fri–Sat 08:00–22:00
 
 Thierry Busset is a maître artisan chocolatier from Auvergne, and the Mount Pleasant
-shop is one of three. The counter runs pastries, cakes and tarts, macarons, chocolates
-and canapés, with a breakfast and lunch menu behind it.
+shop is one of three. The counter runs pastries, cakes and tarts, macarons,
+chocolates and canapés, with a breakfast and lunch menu behind it.
 
 *If it is shut or full:* **Bean Around The World**, 71m, open 07:30–21:30 weekdays.
 **Trees**, 99m, open 07:00–21:00 weekdays.
@@ -38,10 +37,9 @@ and canapés, with a breakfast and lunch menu behind it.
 2526 Main Street · Restaurant · Mon–Thu 10:00–22:00, Fri 10:00–24:00, Sat 09:00–24:00,
 Sun 09:00–22:00
 
-The daytime menu is served until 15:30. Two eggs, hash browns and toast is $13; the
-same with bacon, bangers, ham or avocado is $16; avocado toast with two eggs is $17.
-A separate weekend and holiday brunch menu is published, so the weekday card may not
-be the same one.
+The daytime menu runs to 15:30: two eggs, hash browns and toast $13, the same with
+bacon, bangers, ham or avocado $16, avocado toast with two eggs $17. A separate weekend
+and holiday brunch card is published, so the weekday card may differ.
 
 *If it is shut or full:* **Ignite Pizzeria**, 42m, open 11:00–22:00. **Tamaly Shop**,
 43m, open 09:00–20:00. **Sushi Kaido**, 67m, open 11:00–21:00.
@@ -50,7 +48,7 @@ be the same one.
 261 East 7th Avenue · Bar / Pub · Mon–Thu 14:00–23:00, Fri–Sun 12:00–23:00
 
 Happy hour in the tasting room runs 14:00–18:00 Tuesday to Sunday, and all day Monday:
-16oz drafts at $6, 20oz cask at $6.75, from the pilsner, the Naked Fox IPA, the
+16oz drafts at $6 and 20oz cask at $6.75, on the pilsner, the Naked Fox IPA, the
 Kingpin pale ale and the Krush lager. Food comes off the tasting room menu.
 
 *If it is shut or full:* **Steamworks Brewing Co.**, 139m, open 11:30–23:00 Tuesday
@@ -61,8 +59,8 @@ to Thursday.
 
 Spanish, in the Michelin Guide's Vancouver selection from 2022 through 2026, and one
 of two Canadian restaurants holding the Restaurants from Spain certification.
-Reservations run inside and walk-ins are welcome. The patio is covered, unheated and
-seasonal, first come, first served while it is open.
+Reservations are for the inside room and walk-ins are welcome. The patio is covered,
+unheated and seasonal, first come, first served while it is open.
 
 *If it is shut or full:* **Slim's BBQ**, 50m, open 11:30–01:00 Sunday to Wednesday.
 **The Pleasant**, 143m, open from 15:00.

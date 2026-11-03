@@ -9,9 +9,9 @@ could be verified, the copy says nothing rather than guessing.
 
 ---
 
-The whole route stays inside the district: 481m between the first stop and the last. A
-patisserie at nine, a bakery counter at eleven, Cantonese barbecue at half past twelve,
-a café at half past two, then Bao Bei's small plates at half past five.
+481m end to end, all inside the district. A patisserie at nine, a bakery counter at
+eleven, Cantonese barbecue at half past twelve, a café at half past two, then Bao Bei's
+small plates at half past five.
 
 Monday is the only day that does not work: Annabelle's and Chinatown BBQ are both shut.
 Tuesday to Sunday are the days all five are open.
@@ -21,17 +21,17 @@ Tuesday to Sunday are the days all five are open.
 
 A café, patisserie and gelato shop run by Annabelle Choi, in the room that was Say
 Hello Sweets until it closed at the end of February 2024. The pastry case is
-house-made; gelato is the other half of the offer.
+house-made. Gelato is the other half of the offer.
 
-*If it is shut:* **Dalina**, 142m, open 07:00–17:00 daily — the fourth stop on this
-route, taken out of order.
+*If it is shut:* **Dalina**, 142m, open 07:00–17:00 daily, the fourth stop on this
+route taken out of order.
 
 ### 11:00 — New Town Bakery & Restaurant
 148 East Pender Street · Restaurant · Mon–Tue and Thu–Sun 06:30–20:30, Wed
 06:30–19:30
 
 Family-run since 1980, and the Chinatown shop is the original. The case holds apple
-tarts and steamed buns — siopao — in BBQ pork asado and chicken deluxe bola-bola.
+tarts and steamed buns (siopao) in BBQ pork asado and chicken deluxe bola-bola.
 Dine-in closes at 19:00 with the last order at 18:45.
 
 *If it is shut or full:* **Golden Smell Mee**, 7m, open 11:00–20:00 Monday to
@@ -42,8 +42,7 @@ open 11:00–24:00 daily.
 130 East Pender Street · Restaurant · Tue–Sun 11:00–20:00, closed Monday
 
 Cantonese barbecue, three ways: honey-glazed BBQ pork, crisp-skinned roast pork and
-soy-sauce chicken. The dining room is open again after a closure, and the notice on the
-site thanks the customers who kept ordering takeout through it.
+soy-sauce chicken. The dining room is open again after a closure.
 
 *If it is shut or full:* **DD Mau Chinatown**, 56m, open 11:30–22:00 Monday to
 Thursday. **Virtuous Pie**, 129m, open 11:30–22:00 Sunday to Thursday.
@@ -51,16 +50,15 @@ Thursday. **Virtuous Pie**, 129m, open 11:30–22:00 Sunday to Thursday.
 ### 14:30 — Dalina
 687 Main Street · Cafe · Daily 07:00–17:00
 
-Breakfast and lunch, and a corporate catering arm that the company's site leads with.
-It shuts at 17:00, half an hour before Bao Bei opens.
+Breakfast and lunch. It shuts at 17:00, half an hour before Bao Bei opens.
 
 *If it is shut:* **Annabelle's**, 142m, open until 16:00 Tuesday to Friday.
 
 ### 17:30 — Bao Bei
 163 Keefer Street · Restaurant · Sun–Thu 17:30–22:00, Fri–Sat 17:30–24:00
 
-Small plates built to be shared, which is how the restaurant describes its own menu,
-plus a family-table option for a group. Dinner only, from 17:30.
+Small plates for sharing, in the restaurant's own words, plus a family-table option for
+a group. Dinner only, from 17:30.
 
 *If it is shut or full:* **Juke**, 36m, open 11:00–24:00 daily. **DD Mau Chinatown**,
 102m, open to 22:00 Monday to Thursday. **Between 2 Buns**, 144m, open 16:00–21:00
